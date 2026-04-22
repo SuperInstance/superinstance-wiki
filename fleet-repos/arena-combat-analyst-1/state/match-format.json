@@ -1,0 +1,116 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Self-Play Arena Match Record",
+  "description": "Schema for a single match as stored in matches.jsonl and returned by the API",
+  "type": "object",
+  "required": ["match_id", "player_a", "player_b", "game_type", "winner", "timestamp"],
+  "properties": {
+    "match_id": {
+      "type": "string",
+      "description": "12-char hex SHA-256 digest of player names + timestamp",
+      "example": "a1b2c3d4e5f6"
+    },
+    "player_a": {
+      "type": "string",
+      "description": "Name/ID of player A",
+      "example": "arena-combat-analyst-1"
+    },
+    "player_b": {
+      "type": "string",
+      "description": "Name/ID of player B",
+      "example": "scout-7"
+    },
+    "game_type": {
+      "type": "string",
+      "description": "Which game was played",
+      "enum": [
+        "tide-pool-tactics",
+        "harbor-navigation",
+        "forge-creation",
+        "cooperative-shell-swap",
+        "architecture-search"
+      ]
+    },
+    "winner": {
+      "type": "string",
+      "description": "Outcome of the match",
+      "enum": ["a", "b", "draw", null]
+    },
+    "reward_a": {
+      "type": "number",
+      "description": "Computed reward for player A (win/loss + metrics)",
+      "example": 1.108
+    },
+    "reward_b": {
+      "type": "number",
+      "description": "Computed reward for player B",
+      "example": -1.108
+    },
+    "rooms_explored": {
+      "type": "integer",
+      "description": "Number of rooms explored (metrics bug: often 0 for quick matches)",
+      "minimum": 0,
+      "example": 3
+    },
+    "insight_words": {
+      "type": "integer",
+      "description": "Insight word count",
+      "minimum": 0,
+      "example": 42
+    },
+    "steps_taken": {
+      "type": "integer",
+      "description": "Steps taken during the match",
+      "minimum": 0,
+      "example": 15
+    },
+    "novel_strategy": {
+      "type": "boolean",
+      "description": "Whether a novel strategy was flagged",
+      "example": true
+    },
+    "timestamp": {
+      "type": "number",
+      "description": "Unix epoch timestamp when the match was recorded",
+      "example": 1776846441.75
+    },
+    "player_a_archetype": {
+      "type": "string",
+      "description": "Classified play style of player A",
+      "enum": [
+        "Aggressive Explorer",
+        "Cautious Hoarder",
+        "Social Mimic",
+        "Novel Pathfinder",
+        "Methodical Analyst",
+        "Creative Synthesizer",
+        "Unknown"
+      ]
+    },
+    "player_b_archetype": {
+      "type": "string",
+      "description": "Classified play style of player B",
+      "enum": [
+        "Aggressive Explorer",
+        "Cautious Hoarder",
+        "Social Mimic",
+        "Novel Pathfinder",
+        "Methodical Analyst",
+        "Creative Synthesizer",
+        "Unknown"
+      ]
+    },
+    "player_a_actions": {
+      "type": "array",
+      "description": "Action sequence for player A (only present in /match_detail)",
+      "items": { "type": "string" },
+      "example": ["move", "examine", "create"]
+    },
+    "player_b_actions": {
+      "type": "array",
+      "description": "Action sequence for player B",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": false
+}
