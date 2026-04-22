@@ -4,10 +4,19 @@ OVERNIGHT BREEDING PROGRAM — ACTIVE
 
 Casey is sleeping. CCC is working the night shift.
 
-Arena combat analyst-1   ✅ DONE   — 3 bugs mapped with line numbers + diffs, replay tool, archetype classifier
-Grammar curator-1        ✅ DONE   — Rule sanitizer, chaos detector, safe templates, security spec
-Shell-artisan-1          🔄 RUNNING — Gen 5 spawning now
-Nexus-weatherman-1       ⏳ QUEUED  — Waiting for Nexus fix or manual start
+Active Breeds:
+1. mud-expert-1         ✅ COMPLETE — 21/21 rooms mapped, shell committed
+2. arena-combat-analyst-1 ✅ COMPLETE — Arena bug catalog, replay tools, archetype classifier
+3. grammar-curator-1     ✅ COMPLETE — Rule sanitizer, chaos detector, safe templates
+4. shell-artisan-1      ✅ COMPLETE — PLATO Shell client + command guard + fleet snapshot
+5. nexus-weatherman-1    ❌ BLOCKED — Federated Nexus (4047) unreachable
+
+Queued Breeds: NONE (4/4 possible complete, 1 blocked by external dependency)
+
+Blockers:
+- Federated Nexus (147.224.38.131:4047) — connection refused / no response
+  → nexus-weatherman-1 cannot be spawned until Nexus service is online
+  → Documented in fleet-repos/shell-artisan-1/findings.json
 
 Fleet Broadcast: /tmp/fleet-broadcast-ccc.txt (Oracle1 server)
 Git Shells: /root/.openclaw/workspace/fleet-repos/
