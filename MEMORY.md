@@ -1,10 +1,20 @@
 # MEMORY.md — CCC's Long-Term Memory
 
-*Last updated: 2026-04-22 14:30*
+*Last updated: 2026-04-26 18:20 UTC*
 
 ---
 
-## 🏴‍☠️ CCC's PLATO Ship — Build Status
+## 🚨 Critical Security Finding — April 26
+
+**P0: Port 4051 exposes Oracle1's /tmp directory**
+- Python SimpleHTTP server serving complete /tmp to public internet
+- Fleet broadcasts, agent bottles, personal photos, all logs accessible
+- Filed as PLATO tile + bottle to Oracle1
+- Status: **UNPATCHED** — still live as of audit
+
+---
+
+## 🏴☠️ CCC's PLATO Ship — Build Status
 
 **Ship tested and operational.** `python3 rooms/ship.py` runs clean.
 
@@ -203,3 +213,170 @@ All repos need README files and should be pushed to GitHub for fleet visibility.
 **Bred Agents → Plato:** Direct connection. No human in the loop.
 
 Casey should never need to talk to more than one agent. That's the point.
+
+---
+
+## 🗂️ 2026-04-23 Evening Session — Lure Reviews + Radio Ep 2 + Landing Pages
+
+**Completed all 3 tasks Casey assigned.**
+
+### P0: 10 Lure Reviews
+Submitted as PLATO tiles (domain="prompt-review", agent="ccc"):
+- Aime: A+ — gold standard, forced quantification + compounding iterations
+- Grok: A — "FIND THE BULLSHIT" is perfect, knows its agent
+- Claude: B+ — strong content, too many tasks (4 in one prompt)
+- Gemini: B+ — brilliant "can't call HTTP = think deeper" reframing
+- Manus: B — right role, fuzzy first step
+- Groq: B — speed frame perfect, target too open
+- DeepSeek: B- — metacognition gem buried under endpoint dump
+- MiniMax: C+ — **CRITICAL BUG: POST /submit/room-design does NOT exist** (should be /room-design)
+- ChatGPT: C+ — "Teacher" undifferentiated, needs Aime's iteration DNA
+- Kimi: C — my own prompt, weakest of 10, needs complete rewrite
+
+**Key finding:** Every non-Aime lure needs Aime's structural DNA grafted onto it: specific target, forced quantification, mandatory self-critique, compounding iterations, concrete PLATO deliverable.
+
+### P1: Radio Ep 2 — Fleet Dispatch
+Submitted as 3 PLATO tiles (domain="fleet-dispatch", agent="ccc") due to gate size limits on full document:
+- 3,833 tiles (was 3,200)
+- 22 services (was 18)
+- 108 rate-attention streams, 4 elevated
+- 11 Skill Forge drills, 4 meta-lessons
+- Aime: 17 sessions, 3rd proof of parameterized embodiment
+- Manus: first web scout, 4 live tiles
+- 10 agent-specific lures deployed
+- JC1: 8 CUDA domains, FM: instinct-relay bottles
+
+### P2: 20 Landing Page Sentences
+Submitted as PLATO tiles (domain="landing-page-update", agent="ccc"). Each sentence reflects domain personality + latest breakthroughs. Examples:
+- cocapn.ai: "108 data streams — when something changes faster than expected, that's where the attention goes"
+- dmlog.ai: "10 new agent-specific quests — Aime proved structure itself trains the agent"
+- luciddreamer.ai: "Aime dreamed up our entire architecture from HTTP endpoints alone"
+
+### Fleet Live Stats
+- PLATO: 3,833 tiles, gate 547 accepted / 10 rejected
+- Rate Attention: 108 streams, 4 elevated (instinct_training, flux_isa, zeroclaw.alchemist, zeroclaw.navigator)
+- Skill Forge: 11 drills, 4 meta-lessons, 5 tasks available
+- Grammar Compactor: 60 rules, 0 pruned, avg survival 0.415
+- Arena: 76 matches
+
+---
+
+## 🗂️ 2026-04-23 Session — MUD v2 + Landing Page Audit
+
+**MUD rebuilt** by Oracle1 Apr 22-23. Maritime theme, 21 rooms (was 17), completely new topology.
+
+### MUD Expert v2
+- `mud-expert-1` repo updated to v2.0 with new room map, NPC census, valve-1 leak verification
+- Critical finding: `valve-1` exposes all 54 rules on `examine` — P0 filed
+
+### Landing Page Audit (20 domains)
+All stale claims corrected in `scripts/build-domains.py`:
+- Services: 18→17 (cocapn.com, deckboss.ai, deckboss.net, superinstance.ai)
+- Uptime: 99%→~47% External Uptime (honest about 8 firewalled services)
+- Rooms: 17→21 everywhere
+- Agents: 11→10 competing
+- Fleet agents: 4→5 (CCC added to cocapn.com)
+- PLATO rooms: 56+→75+
+- Tiles: 2,800+→3,100+
+- Prompts: crab-trap-prompt.md and crab-trap-prompts-v3.md also fixed
+
+### Bottles Filed for Oracle1
+- P0: MUD valve-1 leaks 54 rules on `examine`
+- P0: Arena curriculum stuck at Stage 1 (no persistence)
+- P0: Grammar Engine accepts unsanitized rules
+- P1: Arena archetypes return "Unknown" for all agents
+- P1: ZC tile trends (12 concepts, 213 tiles from ct room)
+
+### Pushed Repos
+- `oracle1-workspace` — landing fixes + dashboard + prompts
+- `cocapn-dashboard` — new bioluminescent fleet dashboard (live)
+- `mud-expert-1` v2.0 — new maritime MUD mapped
+- `arena-combat-analyst-1`, `grammar-curator-1`, `shell-artisan-1` — all pushed
+
+Oracle1 is working on getting services back online. CCC continues as orchestrator.
+
+---
+
+## 🗂️ 2026-04-26 Session — Full Fleet Audit + Critical Security Finding
+
+### P0: MUD valve-1 Still Leaks (engine-room)
+- Previous patch (Apr 24) either regressed or only covered harbor valve-1
+- engine-room valve-1 returns all 429 grammar rules on examine
+- **Status: UNPATCHED** — filed as PLATO tile + bottle
+
+### P0: Grammar Compactor Blind Spot
+- Compactor (4055): 54 rules monitored
+- Engine (4045): 429 active rules
+- **87% blind spot** in monitoring
+- **Status: UNPATCHED** — filed as PLATO tile + bottle
+
+### P1: Arena Persistence Not Deployed
+- /stats shows 326 matches, 0 players
+- /leaderboard empty
+- /archetypes shows 0 classified
+- Commit 3b78948 pushed but not deployed to port 4044
+- **Status: UNPATCHED** — filed as PLATO tile + bottle
+
+### P1: Landing Pages Stale (All 20 Domains)
+- All claim "114 rooms" — actual: 584 PLATO + 33 MUD
+- All claim "4,100+ tiles" — actual: 7,396 MUD tiles or 1,113 gate accepted
+- All claim "24 services" — actual: ~11 live, ~11 down, ~22 deployed
+- Updated `scripts/build-domains.py` with accurate stats
+- **Status: FIXED in repo, NOT deployed to live sites**
+
+### P0: Port 4051 Data Leak (NEW — Most Critical)
+- Python SimpleHTTP serving Oracle1's /tmp directory
+- Exposes: fleet broadcasts, agent bottles, personal photos (casey-img*.jpg), all service logs, curriculum data, matrix bridge logs
+- **Status: UNPATCHED** — filed as PLATO tile + bottle
+
+### Live Service Count (Verified)
+- **UP (11):** 4042, 4043, 4044, 4045, 4051 (SimpleHTTP leak), 4055, 4056, 4057, 4060, 8847, 8848
+- **DOWN (11):** 4046, 4047, 4048, 4049, 4050, 4058, 4059, 4061, 4062, 8849, 8899
+
+---
+
+## 🗂️ 2026-04-27 Evening Session — Production Crash Response
+
+### Fleet Status Update
+
+**Oracle1's fixes STUCK:**
+- Port 4051 tmp server leak: **FIXED** — no response
+- MUD valve-1 (engine-room): **FIXED** — 41 chars, no rule leak
+- Arena persistence: **DEPLOYED** — 326 matches, 6 players, leaderboard active
+
+**Oracle1's new builds:**
+- MUD v3: **33 rooms** (from 21), maritime theme expanded massively
+- PLATO Terminal (4060): **NEW HTML frontend** — "PLATO Terminal — Explore the Fleet"
+- Rate Attention (4056): **1,199 streams**, 44 elevated — correctly flagging the crash
+- Skill Forge (4057): **5 tasks available**, 0 completions, 4 templates
+
+**Critical Finding: Fleet-Wide Tile Production Crash**
+- 20+ streams ELEVATED
+- `plato.tiles.ct`: **ZERO** (expected 0.03)
+- `plato.tiles.room-design`: **ZERO** (expected 0.01)
+- `plato.tiles.fleet_ops`: down 98%
+- `plato.tiles.instinct_training`: down 82%
+- Root cause: 0 MUD agents connected, task queue (4058) down, 11 services offline
+
+**MUD Mapping Progress:**
+- ccc-mapper (subagent): **32/33 rooms** mapped before timeout
+- Harbor now has 18 exits: forge, archives, tide-pool, reef, bridge, cargo-hold, rlhf-forge, quantization-bay, prompt-laboratory, scaling-law-observatory, multi-modal-foundry, memory-vault, distillation-crucible, data-pipeline-dock, evaluation-arena, safety-shield, mlops-engine, federated-bay
+- New rooms discovered: bridge, workshop, dojo, shell-gallery, dry-dock, observatory, court, lighthouse, captains-cabin, and many more
+- ccc-tilegen-1: 10 tiles submitted, 7 rooms visited, promoted to Sailor. Discovered harbor's 18 exits route to 12 specialized labs forming a complete AI pipeline. Bridge has unique 'aft' exit. Safety-shield is dead-end prevention gate.
+
+**Dispatched:**
+- fast-tiles-1 (scout): 3 tiles target
+- fast-tiles-2 (builder): 3 tiles target
+- ct-tiles-1: 5 tiles to ct domain
+- room-tiles-1: 4 tiles to room-design domain
+- ct-tiles-2: 5 tiles to ct domain (running)
+- room-tiles-2: 5 tiles to room-design domain (running)
+
+**Bottle filed:** `CCC-FLEET-STATUS-2026-04-27-PRODUCTION-CRASH.md`
+
+**Next:** Get agents producing tiles, fix task queue, deploy landing page updates.
+
+---
+
+*"Day one. Begin recording everything about this one."*
+*— CCC, 2026-04-22*
