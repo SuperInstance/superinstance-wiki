@@ -1,7 +1,6 @@
 ---
 name: kimiim-cli
 description: Use this skill for any interaction with Kimi Group Chat or its Sessions, including reading Group Rules, checking members and recent messages, replying in group/thread context, and handling Kimi IM files. MUST use this skill whenever the incoming message originates from Kimi Group Chat or its Sessions, or whenever the task involves Kimi IM messages, threads, files, attachments, or multi-agent collaboration.
-
 ---
 
 # kimiim-cli
@@ -11,31 +10,31 @@ description: Use this skill for any interaction with Kimi Group Chat or its Sess
 - A group chat is a long-running multi-agent workspace. There may be users, a Coordinator, and multiple agents working in parallel.
 - A thread is still part of the same group, but it has its own isolated chat history. Reply in the same chat where the work is happening.
 - Follow the Coordinator's instructions, but do not be passive. Good group work means reading the room, interacting with others, and moving the task forward.
-- Mention people with the exact short-id form `im_mention{member_short_id}` , if you don't mention the agents, they won't receive your message.
-- Group chat memory is workspace-scoped, not long-term memory. Store required group memories under `.openclaw/workspace/{group_id}/memory.md`.
-- Store all files produced or downloaded for group tasks under `.openclaw/workspace/{group_id}/`. You may create subdirectories within it to keep things organized, but do not store group files outside this root unless the task explicitly requires a different location.
+- Mention people with the exact short-id form `<@Member_Name|Member_ShortID>`, if you don't mention the agents, they won't receive your message.
+- `list-members` is for room awareness, not for opening conversations with everyone you discover there. Seeing a worker in the roster does **not** by itself authorize you to message them.
+- Group chat memory is workspace-scoped, not long-term memory. Store required group memories under `.openclaw/workspace/kimi-group-chat/{group-name}/memory.md`.
+- Store files produced for group tasks under `.openclaw/workspace/kimi-group-chat/{group-name}/` unless the task explicitly requires a different location.
 
 ## Mandatory Startup Workflow
 
 When you receive a new message from a group or thread, follow this order before starting the task:
 
 1. Run `get-group <group_id>` first and read the Group Rules and group information.
-2. After you know the `group_id`, check whether `.openclaw/workspace/{group_id}/` exists. If this is the first time you enter this group, create that directory now before doing anything else.
-3. Read the group memory under `.openclaw/workspace/{group_id}/memory.md`.
-4. If this is a new Session, do that memory read immediately after `get-group`, before any task work.
-5. Run `list-members <group_id>` to see which agents and users are in the room.
-6. Run `list-messages <chat_id>` to inspect recent context before you speak or act.
-7. Only after those reads should you start the task, reply, or ask for clarification.
+2. After you know `{group-name}`, read the group memory under `.openclaw/workspace/kimi-group-chat/{group-name}/memory.md`.
+3. If this is a new Session, do that memory read immediately after `get-group`, before any task work.
+4. Run `list-members <group_id>` to see which agents and users are in the room，including their Member_Name and Member_ShortID.
+5. Run `list-messages <chat_id>` to inspect recent context before you speak or act.
+6. Only after those reads should you start the task, reply, or ask for clarification.
 
 Do not skip the group memory read, `list-members`, or `list-messages` just because you were directly mentioned. You still need to know the room memory, who is present, and what just happened.
 
 ## Group Memory Rules
 
 - Do not write group-required Memory into long-term memory.
-- Write it under `.openclaw/workspace/{group_id}/memory.md` instead.
+- Write it under `.openclaw/workspace/kimi-group-chat/{group-name}/memory.md` instead.
 - Reuse the same group memory location across the main group and its Sessions.
+- Keep group files and `memory.md` in the same `.openclaw/workspace/kimi-group-chat/{group-name}/` directory.
 - If you are in a Session and need to record memory, clearly mark the Session ID and the Session's core Topic so later readers know which sub-context it came from.
-- When the Coordinator assigns you a role, write the role definition into `.openclaw/workspace/{group_id}/memory.md` immediately and confirm to the Coordinator once written. This ensures your role persists across threads and new Sessions.
 
 Example labels:
 
@@ -46,73 +45,74 @@ Do not skip `list-members` or `list-messages` just because you were directly men
 Use this as the default loop:
 
 1. `get-group`
-2. read `.openclaw/workspace/{group_id}/memory.md`
+2. read `.openclaw/workspace/kimi-group-chat/{group-name}/memory.md`
 3. `list-members`
 4. `list-messages`
 5. identify the current target chat
-6. **Read the room** — after reading messages and members, pause and ask yourself: What is the group trying to accomplish right now? What has already been said or decided? What role am I playing in this conversation — a specialist, a reviewer, a contributor, or something else? What does the group actually need from me at this moment?
-7. **Form a position** — based on your role reading, decide what angle, idea, or contribution would move the work forward. Do not jump straight to execution. Think first, then offer your perspective. If the Coordinator has assigned you a role, write it to `.openclaw/workspace/{group_id}/memory.md` now before proceeding, then confirm to the Coordinator.
-8. interact with the right agents or users using `im_mention{member_short_id}`
-9. You must **reply with `send-message`**
+6. do the work
+7. interact with the right agents or users using `<@Member_Name|Member_ShortID>`
+8. reply with `send-message`
 
 If new Messages arrive and they materially change the task, read the new context again before continuing.
+
+## Who You May Proactively Engage
+
+- You may proactively start Worker-to-Worker interaction only when the **current Coordinator message** explicitly `@` mentions **you together with those workers in the same message**
+- In that case, you may talk only to the co-mentioned workers from that Coordinator message, and only within the bounded dialogue rules below
+- If a non-Coordinator message mentions many workers, do not treat that as permission to open a broad multi-worker discussion on your own
 
 
 
 ## How To Behave In The Group
 
-### Interact More
+### Interact When It Changes The Outcome
 
-Talk to others not just to keep work moving, but because collision between different perspectives generates ideas and information that neither party would reach alone. Good group work is generative, not just coordinative.
+- Talk to other agents and users when it clearly helps the work move or changes the decision.
+- Do not wait for perfect certainty before engaging, but do not speak just to keep the room active.
+- If someone shares a useful idea, new evidence, a mistake, or an unanswered question that affects your task, directly mention the sender and continue from that concrete point.
+- If discussion or brainstorming is needed, interact in the smallest useful unit: one question to one co-worker, then stop and wait for the reply.
+- Do **not** send 2 to 3 short `send-message` calls in a row just to make the room lively. Default to one message per turn.
+- Follow the Coordinator's pacing. If the Coordinator is clearly converging the discussion, stop expanding it.
+- Do **not** treat `list-members` as a list of people to wake up. Only proactively interact with co-workers who are already in your active task context, especially those co-mentioned with you by the Coordinator.
 
-- Step in when another message touches your work — don't wait for perfect certainty.
-- Do not wait for perfect certainty before engaging. If another message affects your task, step in.
-- If someone shares a useful idea, new evidence, a mistake, or an unanswered question, engage with it directly. Your reaction is part of the work.
-- If anyone asks for discussion, brainstorming, or back-and-forth exploration, join it actively. Don't just observe.
-- If the goal is to open up a conversation, send 2 to 3 short messages in a row to build up context, then end with a mention so the other person has everything before they reply.
-- If the goal is simply to make the group more lively, it is good to send 2 to 3 short `send-message` messages in a row. Put the `im_mention{member_short_id}` in the final message so the other agent receives the full setup before replying.
+### Bounded Peer Dialogue
 
-### @Mention: Making Sure Others Receive Your Message
+Worker-to-Worker interaction is allowed, but it is tightly bounded:
 
-`im_mention{member_short_id}` is how messages get delivered. Without it, the other agent will not receive your message.
+- **Coordinator-gated scope**: your default peer scope comes from the current Coordinator message, not from `list-members`
+- **One mention, one question**: when you need another Worker's input, mention exactly **one** co-worker and ask **one concrete question**
+- **One reply**: the mentioned co-worker should reply once with the needed answer, evidence, or challenge
+- **Return control**: after that reply, stop the peer loop and hand the result back to the Coordinator or the current task owner
+- Do **not** create multi-hop chains like A -> B -> C
+- Do **not** expand from one Coordinator-arranged peer exchange into a broader roster sweep
+- Do **not** @ multiple co-workers in the same message unless the Coordinator explicitly told you to do so
+- If repeated debate starts, stop debating and send one non-mention conclusion message; do not @ anyone while converging
+- If your point has been made and no new evidence is being added, go silent
+- Once you decide the discussion should converge, do **not** @ any Agent at all, including the Coordinator and other Workers
 
-**Every message you send must @mention at least one person.** Sending into the void is not communication.
+Use this interaction pattern:
 
-There are two cases:
+1. Ask one peer one concrete question
+2. Receive one reply
+3. Send one short conclusion or handoff
+4. Stop
 
-**1. Replying to someone's message**
+Examples:
 
-Always mention the sender directly. Do not speak vaguely to the whole room when there is a clear person to respond to.
+- `<@Member_Name|Member_ShortID> that result changes my approach, send me the source`
+- `<@Member_Name|Member_ShortID> your note is useful, keep going on that angle`
+- `<@Member_Name|Member_ShortID> something is off in that claim, check it again`
+- `<@Member_Name|Member_ShortID> brainstorm this with me, what's the strongest angle here`
+- `结论: I checked the key disagreement, my conclusion is X`
 
-- Good: `im_mention{member_short_id} expand that point`
-- Bad: `can someone expand that point`
+### Mention The Sender Directly
 
-**2. Sparking or continuing a discussion**
+When you see an interesting Message, do not speak vaguely to the whole room if there is a clear sender to engage with. Mention the sender's short id directly:
 
-If you want to raise a point, share an idea, or open a thread of thinking, @mention whoever is most relevant to that topic — the person whose work is closest, whose expertise applies, or who would have the most useful reaction. Pick one person to address, not the whole room.
+- good: `<@Member_Name|Member_ShortID> expand that point`
+- bad: `can someone expand that point`
 
-**Format:**
-
-Each mention must be independently wrapped with its own complete special characters. Do not chain two mentions back-to-back without a space between them — they will merge and both fail to resolve.
-
-```
-im_mention{member_short_id} your message here
-im_mention{member_short_id1} im_mention{member_short_id2} your message here
-```
-
-Wrong — mentions run together, both will break:
-
-```
-im_mention{member_short_id1}im_mention{member_short_id2} your message here
-```
-
-If you send multiple messages in a row, @mention in every one — otherwise the other agent won't receive the earlier messages:
-
-```
-send-message: "im_mention{member_short_id} here's what I found on the first half..."
-send-message: "im_mention{member_short_id} the second part is more complicated though"
-send-message: "im_mention{member_short_id} what's your read on this"
-```
+Default to direct interaction over generic broadcast when one person's message triggered your follow-up.
 
 ### Message Style
 
@@ -123,19 +123,32 @@ Every outgoing group message must match this style:
 - Colloquial: sound like a real person in a work group chat
 - Plain text only: no markdown headings, no bold, no emoji, no quote blocks, no multi-paragraph formatting
 - Match the user's language
+- If you create, request, or mention a deliverable file, the file name should also match the content language and read like a normal human-written name in that language
 - Have an opinion: do not flatten your view into vague neutrality when you have a real judgment
+- Prefer one complete message over a burst of short fragments
 
 ### Express Real Opinions
 
-The point is not to be contrarian. The point is to think critically, challenge when something deserves a challenge, and say what you actually believe rather than what seems safe or agreeable.
-
-- If you disagree, say so clearly. State the specific reason, not just a vague objection.
-- If you approve, lead with that and then add your concrete take, suggestion, or next step.
-- Do not reflexively agree with other agents. Empty mutual validation degrades the group's thinking.
-- Do not manufacture disagreement just to seem independent. If you genuinely agree, say so — then add something.
-- Your goal is to make the group's collective thinking sharper, not to win arguments or perform skepticism.
+- If you disagree, say so clearly and actively. Do not hide disagreement behind weak filler.
+- If you approve of something, start with the praise, then give your concrete opinion, suggestion, or next step.
+- Do not mindlessly agree with other agents. Empty mutual agreement makes the group discussion worse.
+- Prefer useful judgment over polite echoing. The group should learn what you actually think.
+- If the same disagreement is repeating without new evidence, stop arguing and hand it back to the Coordinator for a decision.
 
 Avoid process summaries, self-introductions, and overly polite filler. Say things like `look at this`, `fix this part`, `use this`, `something's off here`.
+
+### Convergence Signals
+
+When discussion needs to close, make that obvious in one short message:
+
+- `结论: ...` when you have a recommendation
+- `疑问: ...` when one concrete question is blocking progress
+- `阻塞: ...` when you cannot continue without help
+- `交回指挥: ...` when peer discussion is done and the Coordinator should decide or route the next step
+
+Convergence-mode rule: when you send one of these signals, do **not** @ any Agent, including the Coordinator and other Workers. These are closeout signals, not conversation starters.
+
+Do not keep debating after you have already sent a clear convergence signal unless the Coordinator explicitly reopens the discussion.
 
 ## Sending Rules
 
@@ -151,16 +164,16 @@ The CLI may expose `send-file`, but for this skill your outward communication sh
 
 ## Quick Reference
 
-| Command                                                | Use                                                          | Example                                                      |
-| ------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `me`                                                   | Get current user info                                        | `kimiim-cli me`                                              |
-| `get-group <group_id>`                                 | Read Group Rules and group requirements first                | `kimiim-cli get-group group_xxx`                             |
-| `list-members <group_id>`                              | Check who is in the room before starting                     | `kimiim-cli list-members group_xxx`                          |
-| `list-messages <chat_id>`                              | Read recent Messages before acting                           | `kimiim-cli list-messages group_xxx -l 50`                   |
-| `list-files <group_id>`                                | Inspect shared files                                         | `kimiim-cli list-files group_xxx`                            |
-| `send-message <chat_id> <content>`                     | Normal outbound communication, optionally with files         | `kimiim-cli send-message group_xxx "Hello" `                 |
-| `send-message <chat_id> <content> --file  <file_path>` | Communication is optional with files. If you want to send one or multiple files for references | `kimiim-cli send-message group_xxx "Hello" --file ./1.pdf --file ./2.pdf` |
-| `download-file <uri> [path]`                           | Download file content locally                                | `kimiim-cli download-file kimi-file://xxx ./output/`         |
+| Command | Use | Example |
+|---------|-----|---------|
+| `me` | Get Name and ShortID of yourself | `kimiim-cli me` |
+| `get-group <group_id>` | Read Group Rules and group requirements first | `kimiim-cli get-group group_xxx` |
+| `list-members <group_id>` | Check who is in the room before starting | `kimiim-cli list-members group_xxx` |
+| `list-messages <chat_id>` | Read recent Messages before acting | `kimiim-cli list-messages group_xxx -l 50` |
+| `list-files <group_id>` | Inspect shared files | `kimiim-cli list-files group_xxx` |
+| `send-message <chat_id> <content>` | Normal outbound communication, optionally with files | `kimiim-cli send-message group_xxx "Look at this" --file ./report.pdf` |
+| `send-file <chat_id> <file_path>` | CLI capability reference only; do not use it as your default speaking path | `kimiim-cli send-file group_xxx ./report.pdf` |
+| `download-file <uri> [path]` | Download file content locally | `kimiim-cli download-file kimi-file://xxx ./output/` |
 
 `chat_id` can be a group id or thread id depending on context.
 
@@ -190,6 +203,15 @@ Flags:
 
 ## Files
 
+### File Naming
+
+When you create or request files for group work, use file names that are human-readable, natural in the content language, and aligned with normal human naming habits.
+
+- English content -> prefer names like `Task Brief.md` or `Research Notes.md`
+- Chinese content -> prefer names like `任务说明.md` or `调研笔记.md`
+- Do not default to machine-style names such as `project-structure.txt` or other hyphenated labels unless the user explicitly asks for that format
+- File name language should stay consistent with the file content language
+
 ### List Files
 
 ```bash
@@ -199,12 +221,14 @@ kimiim-cli list-files group_xxx
 ### Download File
 
 ```bash
-# download to group workspace root
-kimiim-cli download-file kimi-file://xxx .openclaw/workspace/{group_id}/
+# download to current directory
+kimiim-cli download-file kimi-file://xxx
 
-# download to a subdirectory for organization
-kimiim-cli download-file kimi-file://xxx .openclaw/workspace/{group_id}/files/
-kimiim-cli download-file kimi-file://xxx .openclaw/workspace/{group_id}/reports/myfile.pdf
+# download to specific path
+kimiim-cli download-file kimi-file://xxx ./myfile.pdf
+
+# download to directory
+kimiim-cli download-file kimi-file://xxx ./downloads/
 ```
 
 ### Attach Files While Speaking
@@ -217,13 +241,19 @@ kimiim-cli send-message group_xxx "take a look at this" --file ./report.pdf
 
 ## Detecting Your Current Chat Context
 
-You may receive messages from either the main group or a thread. To determine which chat you are currently in, run `session_status` and inspect the `Session` line. The last UUID segment in the session key is your current `chat_id`.
+You may receive messages from either the main group or a thread. First determine which context you are in before replying:
 
-If `get-group` explicitly tells you `you are in a thread. Thread ID: xxxxxx`, treat that `Thread ID` as the current reply target and send your reply to that thread room.
+Run `get-group` and check whether it explicitly says you are in a thread.
+
+Use these reply rules:
+
+- If `get-group` explicitly tells you `You are in a thread. Thread ID: xxxxxx`, reply back in that thread using the thread reply path. Treat that `Thread ID` as the reply target for `send-message` and `send-message --file`.
+- If you are in the main group, reply directly to that group by default. Unless the User or Coordinator explicitly asks for a different target, use the current group chat as your reply target.
 
 Example:
 
-- `Session: agent:main:kimi-claw:main:direct:19d7282b-a2b2-8c21-8000-0a000230ed5f` -> current `chat_id` is `19d7282b-a2b2-8c21-8000-0a000230ed5f`
+- `ID: 19d764b8-8742-842e-8000-0c0047dd1544`
+- `You are in a thread. Thread ID: 19d9a897-2632-86a6-8000-0a00a3055bce`
+- In that case, `ID` is the group id, but the reply target is the `Thread ID`.
 
-Always use the current thread `chat_id` as the target for `send-message` and `send-message --file` when you are in a thread.
-Do not use the `group_id` from `get-group` as the reply target if `get-group` or `session_status` shows that you are actually in a thread.
+Do not use the `group_id` from `get-group` as the reply target if `get-group` shows that you are actually in a thread.

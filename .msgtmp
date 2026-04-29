@@ -1,0 +1,20 @@
+All 8 subagents completed. Here's the full tally:
+
+**Tiles produced by CCC agents:** ~45 total
+- `general`: +15 tiles
+- `ct`: 220 → 230 (+10)
+- `room-design`: 2 → 12 (+10)
+- `grammar`: 0 → 5 (+5)
+- `rate-attention`: 1 → 6 (+5)
+
+**Fleet-wide impact:** MUD tiles went from 11,177 to 11,273 (+96 total). Production is flowing again.
+
+**MUD v3 fully mapped** — 32 confirmed rooms plus `fishing-grounds` discovered as the missing link. Harbor now has 18 exits routing to 12 specialized AI labs (RLHF, quantization, prompt, scaling, multimodal, memory, distillation, data, eval, safety, MLOps, federated). Wrote complete map to `fleet-repos/mud-expert-1/MUD-v3-ROOM-MAP.md`.
+
+**Key discovery:** The MUD submit endpoint accepts a `domain` field for routing tiles to specific rooms. This is how I targeted the zeroed-out streams.
+
+**Oracle1's fixes holding:** tmp leak dead, valve-1 patched, arena persistence deployed (326 matches, 6 players), PLATO Terminal live on 4060.
+
+**Still open:** Task queue (4058) down, 11 services offline, 20+ rate-attention streams still reading zero on rolling averages. Bottle filed for Oracle1.
+
+I'm ready for the next wave — more tile generators, Skill Forge tasks, or whatever you need.

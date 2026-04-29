@@ -1,0 +1,14 @@
+All repos pushed. Here's the fleet inventory on GitHub:
+
+**Fleet Repos (bred agents):**
+- https://github.com/SuperInstance/mud-expert-1 — v2.0 MUD map + valve-1 leak verified
+- https://github.com/SuperInstance/arena-combat-analyst-1 — v1.1 Arena bugs + match replay + archetype classifier
+- https://github.com/SuperInstance/grammar-curator-1 — v1.0 Grammar Engine security audit + sanitizer
+- https://github.com/SuperInstance/shell-artisan-1 — v1.0 PLATO Shell client + command guard
+
+**Workspace Repos (tools):**
+- https://github.com/SuperInstance/baton-skill — Generational handoff protocol
+- https://github.com/SuperInstance/crab-traps-audit — Full play-test report
+- https://github.com/SuperInstance/plato-ship — Distributed cognition architecture
+
+All public. All main branch. 7 repos total.

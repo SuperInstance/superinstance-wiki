@@ -1,9 +1,29 @@
 {
   "stm": {
-    "count": 11,
-    "last_ts": "2026-04-23T03:42:30.500869",
+    "count": 45,
+    "last_ts": "2026-04-30T00:44:14.386259",
+    "last_sessions": 9,
+    "last_messages": 102,
+    "last_chars": 22807
+  },
+  "diary": {
+    "count": 13,
+    "last_ts": "2026-04-29T03:49:25.781646",
+    "last_day": 3,
     "last_sessions": 1,
-    "last_messages": 26,
-    "last_chars": 7145
+    "last_messages": 2,
+    "last_filename": "day3-2026-04-24-gold_standard_was_someone_elses.md",
+    "last_latency_s": 7.2,
+    "last_skip": "no_sessions_today"
+  },
+  "compact": {
+    "count": 13,
+    "last_ts": "2026-04-29T03:49:26.131882",
+    "last_invoke": 5,
+    "last_sessions": 8,
+    "last_messages": 83,
+    "last_latency_s": 17.4,
+    "last_model": "k2p5",
+    "last_skip": "stm_hash_unchanged"
   }
 }
