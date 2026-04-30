@@ -1,0 +1,56 @@
+# Workspace root .gitignore — don't track embedded repos or noisy files
+
+# Embedded git repositories (managed separately)
+cocapn-health/
+cocapn-plato/
+cocapn-traps/
+oracle1-workspace/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary
+/tmp/
+tmp/
+*.tmp
+
+# Don't track large binaries or media
+*.mp4
+*.mov
+*.jpg
+*.png
+*.gif
+*.zip
+*.tar.gz
+*.tar
+
+# Keep downloads but ignore large attachments
+downloads/*.mp4
+downloads/*.mov
+downloads/*.zip
+
+# Ignore specific workspace artifacts that regenerate
+fleet_data/*.json
+fleet_data/*.csv
