@@ -112,6 +112,9 @@ python scripts/parse_lessons.py && \
 | `lessons/004-guard-fundamentals.md` | Sailor — GUARD constraint compilation |
 | `lessons/005-ci-deployment.md` | Sailor — GitHub Actions CI |
 | `lessons/006-bottle-writing.md` | Sailor — Fleet bottle protocol |
+| `lessons/007-subagent-orchestration.md` | Officer — Parallel fleet operations |
+| `lessons/008-cross-linking.md` | Officer — Fleet resource linking |
+| `lessons/009-security-auditing.md` | Officer — Security auditing |
 | `fleet_curriculum.json` | Competency DAG (levels, XP thresholds, prerequisites) |
 | `parsed_lessons.json` | Intermediate: structured lesson data |
 | `curriculum.json` | Final output: unified curriculum |
