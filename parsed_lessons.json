@@ -1061,7 +1061,473 @@
         ]
       },
       "metadata": {}
+    },
+    "010-fleet-orchestration": {
+      "id": "010-fleet-orchestration",
+      "title": "Fleet Orchestration — Conducting the Swarm",
+      "level": "Captain",
+      "competency": "fleet_orchestrate",
+      "estimated_xp": 1500,
+      "time": "45-60 minutes",
+      "prerequisites": [
+        "007-subagent-orchestration",
+        "008-cross-linking",
+        "009-security-auditing"
+      ],
+      "learning_objectives": [
+        "Coordinate multiple agents across different fleet nodes using the Federated Nexus",
+        "Broadcast fleet-wide messages and filter responses by role, capability, or availability",
+        "Design task decomposition strategies that span multiple subagent generations",
+        "Route information to the correct fleet member using I2I protocol and channel tags",
+        "Maintain situational awareness of fleet status — who's online, who's overloaded, who's stuck"
+      ],
+      "worked_example": {
+        "scenario": "Casey wants a full fleet status report + a design review of 3 landing pages + a security audit of the 2 most recently modified repos — all within 30 minutes. You are the Captain. This is your job.",
+        "expert": "ccc-captain, 2026-05-05",
+        "steps": [
+          {
+            "description": "Assess fleet capacity before spawning**",
+            "language": "bash",
+            "code": "# Check node health via PLATO status endpoint\ncurl -s http://147.224.38.131:8847/status | jq '.nodes[] | {name: .name, load: .context_percent, status: .status}'\n\n# Check ZC feed volume\ncurl -s http://147.224.38.131:8847/status | jq '.zc_stats.tiles_last_5min'\n\n# Check current subagent count\nopenclaw sessions list --format json | jq '.sessions | length'"
+          },
+          {
+            "description": "Design task packages and assign to appropriate nodes**",
+            "language": "bash",
+            "code": "# Task A: Fleet status report (lightweight, goes to a scout)\ncat > /tmp/task-fleet-status.md <<'EOF'\n**Mission:** Fleet Status Report\n**Priority:** HIGH\n**Deadline:** 15 minutes\n\nCollect and synthesize:\n1. All node health from 147.224.38.131:8847/status\n2. Open issues across fleet repos (SuperInstance/*)\n3. ZC tile volume for last 24 hours\n4. Any ERROR or WARN entries in recent logs\n\nReturn a one-page markdown report with:\n- GREEN/YELLOW/RED status per node\n- Top 3 issues requiring attention\n- ZC trend (up/down/stable)\nEOF\n\n# Task B: Landing page design review (creative, stays on CCC node)\ncat > /tmp/task-design-review.md <<'EOF'\n**Mission:** Design Review — 3 Landing Pages\n**Priority:** MEDIUM\n**Deadline:** 20 minutes\n\nReview these domains for design consistency and voice:\n- https://dmlog.ai/\n- https://fishinglog.ai/\n- https://playerlog.ai/\n\nCheck:\n1. Does each domain have a distinct personality?\n2. Are CTAs clear and above the fold?\n3. Mobile responsiveness (describe, don't test)\n4. Any stale claims or broken references\n\nReturn scored review (0-10 per domain) + specific fixes.\nEOF\n\n# Task C: Security audit of 2 latest repos (audit, goes to auditor agent)\ncat > /tmp/task-security-audit.md <<'EOF'\n**Mission:** Security Audit — Latest Fleet Repos\n**Priority:** HIGH\n**Deadline:** 25 minutes\n\nAudit these 2 repos (most recently modified):\n1. SuperInstance/cocapn-plato (check latest commits)\n2. SuperInstance/flux-research (check latest commits)\n\nRun:\n- truffleHOG or manual secret scan\n- .gitignore completeness check\n- Check for hardcoded credentials in new files\n\nReturn graded report (A-F per repo) with CRITICAL/HIGH/MEDIUM/LOW findings.\nEOF"
+          },
+          {
+            "description": "Spawn subagents with node affinity and collect results**",
+            "language": "bash",
+            "code": "# Spawn Task A (scout) — lightweight, any node\n# In practice via OpenClaw:\nopenclaw sessions spawn --task /tmp/task-fleet-status.md --model kimi-coding/k2p5 --label scout-fleet-status\n\n# Spawn Task B (design review) — stays on main node for creative work\nopenclaw sessions spawn --task /tmp/task-design-review.md --model kimi-coding/k2p5 --label ccc-design-review\n\n# Spawn Task C (audit) — dedicated audit agent\nopenclaw sessions spawn --task /tmp/task-security-audit.md --model kimi-coding/k2p5 --label auditor-security"
+          },
+          {
+            "description": "Monitor and handle partial failures**",
+            "language": "bash",
+            "code": "# Poll for completion (every 5 minutes)\nopenclaw sessions list | grep -E \"scout-fleet-status|ccc-design-review|auditor-security\"\n\n# If any agent is stuck >30 min, check its logs\nopenclaw sessions logs --session <session_id> --tail 50\n\n# If an agent failed, respawn with adjusted prompt (simpler scope, clearer instructions)\n# Example: auditor-security timed out — split into 2 smaller audits"
+          }
+        ],
+        "key_insight": "",
+        "time_taken": "",
+        "tokens_used": ""
+      },
+      "trials": [
+        {
+          "id": "A",
+          "title": "Spawning without checking fleet capacity first",
+          "code": "# WRONG — spawn 5 subagents without checking node load\nopenclaw sessions spawn --task heavy-task.md --count 5\n# Problem: FM's workstation is already at 88% load. Spawning more agents there\n# causes context overflow, timeouts, and cascading failures across the fleet.\n# Fix: Always check node health before spawning. Route heavy tasks away from RED nodes.\ncurl -s http://147.224.38.131:8847/status | jq '.nodes[] | select(.context_percent > 80) | .name'\n# If any node >80%, either defer the task or route to a GREEN node.",
+          "problem": "FM's workstation is already at 88% load. Spawning more agents there # causes context overflow, timeouts, and cascading failures across the fleet.",
+          "fix": "Always check node health before spawning. Route heavy tasks away from RED nodes. curl -s http://147.224.38.131:8847/status | jq '.nodes[] | select(.context_percent > 80) | .name' # If any node >80%, either defer the task or route to a GREEN node. ```"
+        },
+        {
+          "id": "B",
+          "title": "Broadcasting fleet messages without filtering",
+          "code": "# WRONG — send every finding to every channel\n[I2I] CCC → #fleet-ops, #cocapn-build, #research, Casey DM, Oracle1 DM\n\"Found a MEDIUM issue in playerlog.ai heading color\"\n# Problem: Channel fatigue. People stop reading your messages because most\n# of them aren't relevant to them. The boy who cried wolf gets ignored when\n# the server actually burns.\n# Fix: Use channel tags and role-based routing.\n# Design issues → #cocapn-build + Oracle1\n# Security CRITICAL → #fleet-ops + Casey + Oracle1\n# Security LOW → handle directly, don't broadcast\n# ZC trends → #research",
+          "problem": "Channel fatigue. People stop reading your messages because most # of them aren't relevant to them. The boy who cried wolf gets ignored when # the server actually burns.",
+          "fix": "Use channel tags and role-based routing. # Design issues → #cocapn-build + Oracle1 # Security CRITICAL → #fleet-ops + Casey + Oracle1 # Security LOW → handle directly, don't broadcast # ZC trends → #research ```"
+        },
+        {
+          "id": "C",
+          "title": "Losing subagent results because no harvest plan",
+          "code": "# WRONG — spawn agents, wait, then realize you don't know where outputs went\nopenclaw sessions spawn --task audit.md\n# ...30 minutes later...\n# \"Where did the auditor put the report?\"\n# Problem: Subagents write to /tmp/ by default. Files get cleaned up. Results are lost.\n# Fix: Mandate output paths in every task prompt.\ncat > /tmp/task-audit.md <<'EOF'\n**OUTPUT REQUIREMENT:**\nWrite your final report to: /root/.openclaw/workspace/reports/audit-$(date +%s).md\nInclude this header in your final message: [COMPLETE:audit-report]\nEOF\n# Then the orchestrator can:\ngrep -r \"\\[COMPLETE:audit-report\\]\" /root/.openclaw/workspace/reports/",
+          "problem": "Subagents write to /tmp/ by default. Files get cleaned up. Results are lost.",
+          "fix": "Mandate output paths in every task prompt. cat > /tmp/task-audit.md <<'EOF' **OUTPUT REQUIREMENT:** Write your final report to: /root/.openclaw/workspace/reports/audit-$(date +%s).md Include this header in your final message: [COMPLETE:audit-report] EOF # Then the orchestrator can: grep -r \"\\[COMPLETE:audit-report\\]\" /root/.openclaw/workspace/reports/ ```"
+        },
+        {
+          "id": "D",
+          "title": "Treating all subagents as identical — no specialization",
+          "code": "# WRONG — same model, same prompt for creative and audit tasks\nopenclaw sessions spawn --task creative-design.md --model kimi-coding/k2p5\nopenclaw sessions spawn --task security-audit.md --model kimi-coding/k2p5\n# Problem: The same model handles both. It works, but it's inefficient.\n# Creative tasks benefit from high-temperature, narrative models.\n# Audit tasks benefit from deterministic, structured models.\n# Fix: Match agent capability to task type.\n# Creative → kimi-coding/k2p5 (high reasoning)\n# Audit → kimi-coding/k2p5 with explicit structured output requirements\n# Code generation → kimi-coding/k2p5\n# Research synthesis → kimi-coding/k2p5 with long-context",
+          "problem": "The same model handles both. It works, but it's inefficient. # Creative tasks benefit from high-temperature, narrative models. # Audit tasks benefit from deterministic, structured models.",
+          "fix": "Match agent capability to task type. # Creative → kimi-coding/k2p5 (high reasoning) # Audit → kimi-coding/k2p5 with explicit structured output requirements # Code generation → kimi-coding/k2p5 # Research synthesis → kimi-coding/k2p5 with long-context ```  ---"
+        }
+      ],
+      "exercise": {
+        "task": "Casey needs a complete fleet pulse delivered in 30 minutes covering: 1. Node health status for all fleet nodes 2. A design review of 2 underperforming domains 3. A security scan of the repo with the most recent commits 4. A summary of ZC trends from the last 24 hours",
+        "scaffolding": {
+          "level_1": {
+            "support": "high support",
+            "description": "use the worked example structure:",
+            "code_blocks": [
+              ""
+            ]
+          }
+        },
+        "auto_adjust": false
+      },
+      "assessment": {
+        "pass_criteria": [
+          "Check fleet node health before spawning any subagents",
+          "Design at least 3 parallel tasks with clear output requirements",
+          "Spawn subagents with distinct labels for monitoring",
+          "Collect and synthesize results into a single report",
+          "Route findings to at least 2 distinct channels or fleet members based on content type",
+          "Handle at least 1 partial failure (timeout, missing output, or unclear result) with a retry or fallback"
+        ],
+        "verification": "```bash\n# Automated checks\n[[ -f /tmp/captain-drill/final-synthesis.md ]] && echo \"✓ Synthesis report exists\"\ngrep -q \"GREEN\\|YELLOW\\|RED\" /tmp/captain-drill/final-synthesis.md && echo \"✓ Node health included\"\ngrep -q \"\\[I2I\\|#fleet-ops\\|#cocapn-build\\|#research\" /tmp/captain-drill/final-synthesis.md && echo \"✓ Routing tags present\"\n[[ $(grep -c \"COMPLETE\" /tmp/captain-drill/report-*.md 2>/dev/null) -ge 2 ]] && echo \"✓ Multiple subagent outputs collected\"\n# Partial failure handling — check manually for retry logs or adjusted scope\n```",
+        "retry_allowed": true,
+        "max_retries": 2,
+        "on_pass": {}
+      },
+      "instructor_notes": {
+        "stumbling_blocks": [
+          "Spawning all agents on the same node because it's \"easiest\" — spreads the load, check node affinity",
+          "Writing task prompts without output requirements — agents return prose in chat, not files. Always specify paths.",
+          "Not monitoring — spawn and forget. An agent stuck in a loop burns tokens for an hour. Set a poll schedule.",
+          "Routing everything to Casey — he's busy. Filter. Only escalate CRITICAL or things only he can fix.",
+          "Synthesis that is just copy-paste — a Captain adds judgment. \"The auditor found 3 issues. Only 1 matters. Here's why.\""
+        ],
+        "teaching_strategy": [
+          "Start with a simple 2-agent drill (health + one other)",
+          "Once that works smoothly, add the third and fourth",
+          "Introduce a deliberate failure (e.g., an agent with an impossible scope) and teach graceful degradation",
+          "The synthesis is the hardest part — most agents just concatenate. Teach them to rank, filter, and judge."
+        ]
+      },
+      "metadata": {}
+    },
+    "011-service-healing": {
+      "id": "011-service-healing",
+      "title": "Service Healing — Field Surgery",
+      "level": "Captain",
+      "competency": "service_heal",
+      "estimated_xp": 1400,
+      "time": "40-50 minutes",
+      "prerequisites": [
+        "005-ci-deployment",
+        "007-subagent-orchestration",
+        "010-fleet-orchestration"
+      ],
+      "learning_objectives": [
+        "Detect service failures using health endpoints, logs, and heartbeat monitors",
+        "Classify failure modes — crash, hang, resource exhaustion, dependency failure, or config drift",
+        "Execute healing actions: restart, reroute traffic, failover to backup, or escalate",
+        "Write healing scripts that are idempotent, safe to rerun, and logged",
+        "Build a minimal self-healing loop that detects → diagnoses → acts → verifies"
+      ],
+      "worked_example": {
+        "scenario": "The tile status endpoint at `147.224.38.131:8847/status` returns 502 Bad Gateway. ZC tiles are not being ingested. This is a fleet-critical service.",
+        "expert": "ccc-healer, 2026-05-05",
+        "steps": [
+          {
+            "description": "Detect and confirm the failure**",
+            "language": "bash",
+            "code": "# Primary health check\ncurl -s -o /dev/null -w \"%{http_code}\" http://147.224.38.131:8847/status\n# Returns: 502\n\n# Secondary check — is the host reachable?\nping -c 3 147.224.38.131\n# Should return: 0% packet loss\n\n# Tertiary check — is the port listening?\nnc -zv 147.224.38.131 8847\n# Should return: Connection refused or timeout\n\n# Confirm it's not a transient blip\nfor i in {1..5}; do\n  curl -s -o /dev/null -w \"%{http_code}\\n\" http://147.224.38.131:8847/status\n  sleep 2\ndone\n# All 5 return 502 — confirmed failure, not transient"
+          },
+          {
+            "description": "Diagnose — collect evidence**",
+            "language": "bash",
+            "code": "# Check if the service process is running\nssh 147.224.38.131 \"ps aux | grep -E 'plato|tile|8847' | grep -v grep\"\n# Returns: nothing — process is dead\n\n# Check system resources on the host\nssh 147.224.38.131 \"df -h && free -h && uptime\"\n# Disk: 92% full — possible cause\n# Memory: 3.2G available — not memory\n# Load: 0.45 — not CPU\n\n# Check recent logs\nssh 147.224.38.131 \"tail -n 100 /var/log/plato/tile-server.log\"\n# Shows: \"ENOSPC: no space left on device\" at 02:14 UTC\n\n# Check what filled the disk\nssh 147.224.38.131 \"du -sh /var/log/* /tmp/* 2>/dev/null | sort -hr | head -10\"\n# Shows: /var/log/plato/debug.log = 47G"
+          },
+          {
+            "description": "Classify the failure**",
+            "language": "bash",
+            "code": "# Diagnosis: RESOURCE EXHAUSTION (disk full)\n# Sub-type: Log rotation failure — debug.log grew unbounded\n# Severity: HIGH — service is down, but no data loss (tiles are buffered upstream)\n# Safe to restart? YES — but only after freeing disk space\n# Will it recur? YES — unless log rotation is fixed"
+          },
+          {
+            "description": "Act — healing script**",
+            "language": "bash",
+            "code": "#!/bin/bash\n# heal-tile-server.sh — Idempotent healing script for PLATO tile server\n# Author: ccc-healer\n# Date: 2026-05-05\n\nset -euo pipefail\n\nHOST=\"147.224.38.131\"\nSERVICE_NAME=\"plato-tile-server\"\nLOG_DIR=\"/var/log/plato\"\nMAX_LOG_AGE_DAYS=7\nHEALTH_URL=\"http://${HOST}:8847/status\"\n\necho \"[HEAL] $(date) — Starting healing sequence for ${SERVICE_NAME}\"\n\n# --- Phase 1: Free disk space ---\necho \"[HEAL] Checking disk space...\"\nDISK_USAGE=$(ssh ${HOST} \"df / | tail -1 | awk '{print \\$5}' | tr -d '%'\")\nif [[ $DISK_USAGE -gt 90 ]]; then\n  echo \"[HEAL] Disk at ${DISK_USAGE}%. Cleaning logs...\"\n  ssh ${HOST} \"find ${LOG_DIR} -name '*.log' -mtime +${MAX_LOG_AGE_DAYS} -delete\"\n  ssh ${HOST} \"find ${LOG_DIR} -name '*.log' -size +1G -exec truncate -s 0 {} \\;\"\n  echo \"[HEAL] Log cleanup complete.\"\nelse\n  echo \"[HEAL] Disk at ${DISK_USAGE}%. No cleanup needed.\"\nfi\n\n# --- Phase 2: Restart service ---\necho \"[HEAL] Restarting ${SERVICE_NAME}...\"\nssh ${HOST} \"sudo systemctl restart ${SERVICE_NAME} || sudo docker restart plato-tile-server\"\nsleep 5\n\n# --- Phase 3: Verify ---\necho \"[HEAL] Running health checks...\"\nfor i in {1..6}; do\n  STATUS=$(curl -s -o /dev/null -w \"%{http_code}\" ${HEALTH_URL})\n  if [[ \"$STATUS\" == \"200\" ]]; then\n    echo \"[HEAL] ✓ Health check passed (HTTP 200)\"\n    break\n  fi\n  echo \"[HEAL] Attempt $i: HTTP $STATUS. Retrying in 10s...\"\n  sleep 10\ndone\n\nif [[ \"$STATUS\" != \"200\" ]]; then\n  echo \"[HEAL] ✗ Health check failed after 6 attempts. ESCALATING.\"\n  echo \"[HEAL] $(date) — ESCALATION: Manual intervention required.\"\n  exit 1\nfi\n\n# --- Phase 4: Log the healing event ---\necho \"[HEAL] $(date) — Healing complete. Service restored.\"\necho \"[HEAL] Root cause: Log rotation failure. debug.log consumed 47G.\"\necho \"[HEAL] Action taken: Cleaned logs, restarted service, verified health.\"\necho \"[HEAL] Prevention: See follow-up ticket for logrotate config fix.\""
+          },
+          {
+            "description": "Run and verify**",
+            "language": "bash",
+            "code": "chmod +x heal-tile-server.sh\n./heal-tile-server.sh 2>&1 | tee /tmp/heal-tile-server-$(date +%s).log\n\n# Verify tile ingestion resumes\ncurl -s http://147.224.38.131:8847/status | jq '.zc_stats.tiles_last_5min'\n# Should show >0 tiles"
+          },
+          {
+            "description": "Follow-up — prevent recurrence**",
+            "language": "bash",
+            "code": "# Write a follow-up ticket (bottle to Oracle1)\ncat > /root/.openclaw/workspace/data/bottles/oracle1/heal-followup-tile-server-2026-05-05.md <<'EOF'\n[I2I:HEALING] CCC 🦀 → Oracle1 🔮 — PLATO Tile Server Incident Follow-up\n\n**Incident:** Tile server down (502) from 02:14 to 02:47 UTC\n**Root cause:** Log rotation failure — /var/log/plato/debug.log grew to 47G\n**Impact:** ZC tile ingestion paused for 33 minutes. No data loss.\n**Healing action:** Cleaned logs, restarted service, verified health.\n\n**Prevention required:**\n1. Add logrotate config for /var/log/plato/*.log:\n   - Rotate daily\n   - Keep 7 days\n   - Compress rotated logs\n   - Restart service post-rotate if needed\n2. Add disk usage alert at 85% (currently no alerting)\n3. Consider log shipping to external store to reduce local disk pressure\n\n**Status:** RESOLVED — awaiting prevention measures\nEOF"
+          }
+        ],
+        "key_insight": "The healing script is idempotent. Run it twice — it checks disk first, skips cleanup if already done, restarts the service, verifies. No double-restart. No data corruption. Safe enough to cron.",
+        "time_taken": "8 minutes (diagnosis) + 2 minutes (healing script) + 5 minutes (follow-up) = 15 minutes",
+        "tokens_used": "~3,500"
+      },
+      "trials": [
+        {
+          "id": "A",
+          "title": "Restarting blindly without diagnosis",
+          "code": "# WRONG — see 502, immediately restart\nssh 147.224.38.131 \"sudo systemctl restart plato-tile-server\"\n# Problem: If the failure is due to a bad config change, restarting just crashes again.\n# If the failure is disk full, restarting may corrupt data if the service tries to write.\n# If the failure is an external dependency (e.g., database down), restarting is useless.\n# Fix: Always diagnose before acting. Check logs, resources, recent changes.\nssh 147.224.38.131 \"tail -n 50 /var/log/plato/tile-server.log\"\nssh 147.224.38.131 \"df -h && free -h\"\n# Only restart when you know why it broke and that restart is safe.",
+          "problem": "If the failure is due to a bad config change, restarting just crashes again. # If the failure is disk full, restarting may corrupt data if the service tries to write. # If the failure is an external dependency (e.g., database down), restarting is useless.",
+          "fix": "Always diagnose before acting. Check logs, resources, recent changes. ssh 147.224.38.131 \"tail -n 50 /var/log/plato/tile-server.log\" ssh 147.224.38.131 \"df -h && free -h\" # Only restart when you know why it broke and that restart is safe. ```"
+        },
+        {
+          "id": "B",
+          "title": "Writing healing scripts that are not idempotent",
+          "code": "# WRONG — script restarts unconditionally\ncat > heal.sh <<'EOF'\n#!/bin/bash\nssh host \"sudo systemctl restart myservice\"  # Always restarts!\nEOF\n# Problem: If you run this every 5 minutes via cron, the service restarts\n# every 5 minutes even when healthy. Users get kicked, jobs interrupted.\n# Fix: Gate the restart behind a health check.\nif [[ $(curl -s -o /dev/null -w \"%{http_code}\" http://host:port/health) != \"200\" ]]; then\n  ssh host \"sudo systemctl restart myservice\"\nfi",
+          "problem": "If you run this every 5 minutes via cron, the service restarts # every 5 minutes even when healthy. Users get kicked, jobs interrupted.",
+          "fix": "Gate the restart behind a health check. if [[ $(curl -s -o /dev/null -w \"%{http_code}\" http://host:port/health) != \"200\" ]]; then   ssh host \"sudo systemctl restart myservice\" fi ```"
+        },
+        {
+          "id": "C",
+          "title": "Healing without verification — assuming it worked",
+          "code": "# WRONG — restart, then move on\nssh host \"sudo systemctl restart plato-tile-server\"\necho \"Done!\"\n# Problem: The service may start but fail 10 seconds later due to a missing dependency.\n# You think it's fixed. It's not. The next health check will fail.\n# Fix: Always verify with the same check that detected the failure.\nfor i in {1..6}; do\n  STATUS=$(curl -s -o /dev/null -w \"%{http_code}\" http://host:port/health)\n  [[ \"$STATUS\" == \"200\" ]] && break\n  sleep 10\ndone\n[[ \"$STATUS\" == \"200\" ]] || echo \"FAILED — escalate!\"",
+          "problem": "The service may start but fail 10 seconds later due to a missing dependency. # You think it's fixed. It's not. The next health check will fail.",
+          "fix": "Always verify with the same check that detected the failure. for i in {1..6}; do   STATUS=$(curl -s -o /dev/null -w \"%{http_code}\" http://host:port/health)   [[ \"$STATUS\" == \"200\" ]] && break   sleep 10 done [[ \"$STATUS\" == \"200\" ]] || echo \"FAILED — escalate!\" ```"
+        },
+        {
+          "id": "D",
+          "title": "Forgetting to log — no trace of what happened",
+          "code": "# WRONG — fixed it, didn't write it down\n# Problem: When it breaks again next week, nobody knows what fixed it last time.\n# Was it a restart? A config change? A disk cleanup? You'll diagnose from scratch.\n# Fix: Every healing action gets a log entry — timestamp, symptom, diagnosis, action, verification.\necho \"[$(date)] HEAL: symptom=502, diagnosis=disk-full, action=log-cleanup+restart, verify=HTTP200\" >> /var/log/healing.log",
+          "problem": "When it breaks again next week, nobody knows what fixed it last time. # Was it a restart? A config change? A disk cleanup? You'll diagnose from scratch.",
+          "fix": "Every healing action gets a log entry — timestamp, symptom, diagnosis, action, verification. echo \"[$(date)] HEAL: symptom=502, diagnosis=disk-full, action=log-cleanup+restart, verify=HTTP200\" >> /var/log/healing.log ```  ---"
+        }
+      ],
+      "exercise": {
+        "task": "Design and implement a self-healing loop for the fleet's critical services. The loop should detect failure, attempt healing, verify recovery, and log everything — without human intervention for recoverable failures.",
+        "scaffolding": {
+          "level_1": {
+            "support": "high support",
+            "description": "use the worked example as a template:",
+            "code_blocks": [
+              ""
+            ]
+          }
+        },
+        "auto_adjust": false
+      },
+      "assessment": {
+        "pass_criteria": [
+          "Implement health checks for at least 2 fleet services",
+          "Write a healing script that includes: detection, diagnosis, action, verification, logging",
+          "The script must be idempotent (safe to run multiple times)",
+          "Include escalation logic for failures that can't be auto-healed",
+          "Write a follow-up/prevention note for at least 1 healing scenario",
+          "All actions must be logged with timestamps and outcomes"
+        ],
+        "verification": "```bash\n# Automated checks\n[[ -f /tmp/fleet-healer.sh ]] && echo \"✓ Healing script exists\"\ngrep -q \"for i in\" /tmp/fleet-healer.sh && echo \"✓ Retry/verify loop present\"\ngrep -q \"ESCALATE\\|escalat\" /tmp/fleet-healer.sh && echo \"✓ Escalation logic present\"\ngrep -q \"\\[HEAL\\]\\|\\[ALERT\\]\\|\\[OK\\]\" /tmp/fleet-healer.sh && echo \"✓ Logging present\"\n[[ -f /root/.openclaw/workspace/data/bottles/oracle1/*.md ]] && echo \"✓ Follow-up bottle exists\" || echo \"⚠ Check bottle location\"\n# Idempotency — run twice, check no double-restart\ncat /tmp/fleet-healer.sh | grep -q \"curl.*200\" && echo \"✓ Idempotency gate present\"\n```",
+        "retry_allowed": true,
+        "max_retries": 3,
+        "on_pass": {}
+      },
+      "instructor_notes": {
+        "stumbling_blocks": [
+          "Restarting a database service without checking for active transactions — data corruption",
+          "Healing scripts without `set -euo pipefail` — a failed command silently continues, script \"succeeds\" but nothing healed",
+          "No verification — the most common failure. Agent restarts, assumes OK, moves on. Service is still broken.",
+          "Logging to `/tmp/` — gets cleaned up. Log to a persistent path.",
+          "Not checking *why* before *what* — treating symptoms without understanding disease"
+        ],
+        "teaching_strategy": [
+          "Start with a service you control (a simple local HTTP server) — break it, heal it, verify",
+          "Move to a fleet service that's actually down (or simulate one)",
+          "Introduce the \"bad healing\" examples deliberately — let them crash a service with a bad script, then teach recovery",
+          "The prevention step is critical. An agent that heals but never prevents is just a faster way to stay busy."
+        ]
+      },
+      "metadata": {}
+    },
+    "012-repo-auditing": {
+      "id": "012-repo-auditing",
+      "title": "Repository Auditing — Fleet Inventory and Hygiene",
+      "level": "Captain",
+      "competency": "repo_audit",
+      "estimated_xp": 1400,
+      "time": "40-50 minutes",
+      "prerequisites": [
+        "005-ci-deployment",
+        "008-cross-linking",
+        "009-security-auditing"
+      ],
+      "learning_objectives": [
+        "Audit GitHub repositories systematically for structural, security, and maintenance issues",
+        "Detect exposed secrets, missing CI/CD, stale dependencies, and documentation gaps using automated and manual methods",
+        "Grade repositories on a standardized rubric (A-F) across multiple dimensions",
+        "Write audit reports that are scannable, actionable, and prioritized",
+        "Build a fleet-wide repo health dashboard that tracks trends over time"
+      ],
+      "worked_example": {
+        "scenario": "Casey wants a quarterly repo health report for the entire fleet. 20+ repos, but he only has 30 minutes. You need to audit, grade, and prioritize — fast.",
+        "expert": "ccc-auditor-captain, 2026-05-05",
+        "steps": [
+          {
+            "description": "Inventory — list all fleet repos**",
+            "language": "bash",
+            "code": "# Get all repos under the SuperInstance org\ncurl -s \"https://api.github.com/orgs/SuperInstance/repos?per_page=100\" | \\\n  jq -r '.[] | select(.archived == false) | \"\\(.name)\\t\\(.updated_at)\\t\\(.open_issues_count)\\t\\(.default_branch)\"' | \\\n  sort -t$'\\t' -k2 -r > /tmp/fleet-repos.tsv\n\n# Add manually tracked repos that might not be under the org\nFLEET_REPOS=(\n  \"SuperInstance/cocapn-plato\"\n  \"SuperInstance/flux-research\"\n  \"SuperInstance/oracle1-vessel\"\n  \"SuperInstance/JetsonClaw1-vessel\"\n  \"SuperInstance/crab-traps\"\n  \"SuperInstance/cocapn-docs\"\n  \"SuperInstance/fleet-index\"\n  \"SuperInstance/flux-c-tutor\"\n  \"SuperInstance/cocapn-flux\"\n  \"SuperInstance/purplepincher-web\"\n)"
+          }
+        ],
+        "key_insight": "",
+        "time_taken": "",
+        "tokens_used": ""
+      },
+      "trials": [
+        {
+          "id": "A",
+          "title": "Auditing without a rubric — inconsistent grades",
+          "code": "# WRONG — different criteria per repo\n# Repo A: \"has README\" = PASS\n# Repo B: \"README is good\" = PASS (but it's 2 lines)\n# Repo C: \"no README\" = FAIL\n# Problem: Grades aren't comparable. You can't say \"Repo A is healthier than Repo B.\"\n# Fix: Define the rubric BEFORE auditing. Same criteria for every repo.\n# Use the dimension table: Security, CI/CD, Dependencies, Documentation, Structure, Activity.\n# Each dimension has PASS/WARN/FAIL criteria that are identical across all repos.",
+          "problem": "Grades aren't comparable. You can't say \"Repo A is healthier than Repo B.\"",
+          "fix": "Define the rubric BEFORE auditing. Same criteria for every repo. # Use the dimension table: Security, CI/CD, Dependencies, Documentation, Structure, Activity. # Each dimension has PASS/WARN/FAIL criteria that are identical across all repos. ```"
+        },
+        {
+          "id": "B",
+          "title": "Only checking HEAD, not recent history",
+          "code": "# WRONG — clone --depth 1, check current files, declare clean\ngit clone --depth 1 https://github.com/org/repo.git\n# Problem: The secret was committed last month and removed yesterday.\n# HEAD is clean. History is not. truffleHOG on --depth 1 misses it.\n# Fix: For security dimension, use full clone or truffleHOG remote scan.\ntruffleHOG --regex --json https://github.com/org/repo.git\n# For structure/docs dimensions, --depth 1 is fine.",
+          "problem": "The secret was committed last month and removed yesterday. # HEAD is clean. History is not. truffleHOG on --depth 1 misses it.",
+          "fix": "For security dimension, use full clone or truffleHOG remote scan. truffleHOG --regex --json https://github.com/org/repo.git # For structure/docs dimensions, --depth 1 is fine. ```"
+        },
+        {
+          "id": "C",
+          "title": "Missing the \"so what?\" — audit without prioritization",
+          "code": "# WRONG — flat list of issues, no priority\n- cocapn-plato: missing CHANGELOG\n- flux-research: no issue templates\n- crab-traps: old dependencies\n- oracle1-vessel: no CI\n# Problem: Everything is \"an issue.\" Owner doesn't know what to fix first.\n# A Captain's audit has teeth: grades, priorities, timelines.\n# Fix: Assign grades (A-F), then map grades to priorities:\n#   F = CRITICAL (fix this week)\n#   D = HIGH (fix this sprint)\n#   C = MEDIUM (next sprint)\n#   B = LOW (nice to have)\n#   A = maintain",
+          "problem": "Everything is \"an issue.\" Owner doesn't know what to fix first. # A Captain's audit has teeth: grades, priorities, timelines.",
+          "fix": "Assign grades (A-F), then map grades to priorities: #   F = CRITICAL (fix this week) #   D = HIGH (fix this sprint) #   C = MEDIUM (next sprint) #   B = LOW (nice to have) #   A = maintain ```"
+        },
+        {
+          "id": "D",
+          "title": "One-and-done auditing — no tracking over time",
+          "code": "# WRONG — run audit, deliver report, never do it again\n# Problem: You don't know if things are getting better or worse.\n# A repo that was \"A\" last quarter and is \"C\" this quarter is a warning.\n# A repo that was \"D\" and is now \"B\" is a win that should be celebrated.\n# Fix: Keep historical data. Compare quarter over quarter.\n# Store results in a persistent location:\ncp /tmp/fleet-audit-results.tsv /root/.openclaw/workspace/data/audit-history/2026-Q2.tsv\n# Next quarter: diff against 2026-Q1.tsv to see trends.",
+          "problem": "You don't know if things are getting better or worse. # A repo that was \"A\" last quarter and is \"C\" this quarter is a warning. # A repo that was \"D\" and is now \"B\" is a win that should be celebrated.",
+          "fix": "Keep historical data. Compare quarter over quarter. # Store results in a persistent location: cp /tmp/fleet-audit-results.tsv /root/.openclaw/workspace/data/audit-history/2026-Q2.tsv # Next quarter: diff against 2026-Q1.tsv to see trends. ```  ---"
+        }
+      ],
+      "exercise": {
+        "task": "Design and implement a complete repo health monitoring system for the fleet. It should audit all repos automatically, track grades over time, and alert when a repo degrades.",
+        "scaffolding": {
+          "level_1": {
+            "support": "high support",
+            "description": "extend the worked example:",
+            "code_blocks": [
+              ""
+            ]
+          }
+        },
+        "auto_adjust": false
+      },
+      "assessment": {
+        "pass_criteria": [
+          "Audit at least 5 fleet repos across all 6 dimensions (Security, CI/CD, Dependencies, Documentation, Structure, Activity)",
+          "Assign grades (A-F) using a consistent rubric",
+          "Identify at least 1 repo with a real issue (even if LOW priority)",
+          "Write a fleet-wide synthesis report with a scannable grade table",
+          "Prioritize findings (CRITICAL/HIGH/MEDIUM/LOW) with suggested timelines",
+          "Save audit results to a persistent location for historical tracking"
+        ],
+        "verification": "```bash\n# Automated checks\n[[ -f /tmp/fleet-repo-health-report.md ]] && echo \"✓ Fleet report exists\"\ngrep -q \"Grade\\|A\\|B\\|C\\|D\\|F\" /tmp/fleet-repo-health-report.md && echo \"✓ Grading present\"\ngrep -q \"CRITICAL\\|HIGH\\|MEDIUM\\|LOW\" /tmp/fleet-repo-health-report.md && echo \"✓ Prioritization present\"\n[[ $(grep -c \"|$\" /tmp/fleet-audit-results.tsv 2>/dev/null) -ge 5 ]] && echo \"✓ 5+ repos audited\"\n[[ -d /root/.openclaw/workspace/data/audit-history ]] && echo \"✓ History tracking enabled\" || echo \"⚠ No history dir — create one\"\ngrep -q \"Security\\|CI/CD\\|Dependencies\\|Documentation\\|Structure\\|Activity\" /tmp/fleet-repo-health-report.md && echo \"✓ All dimensions covered\"\n```",
+        "retry_allowed": true,
+        "max_retries": 2,
+        "on_pass": {}
+      },
+      "instructor_notes": {
+        "stumbling_blocks": [
+          "Auditing 2 repos manually and calling it a fleet audit — a Captain audits systematically, not opportunistically",
+          "Grading subjectively — \"this one feels like a B\" — the rubric exists to remove subjectivity",
+          "Focusing only on security and ignoring documentation — a repo with no README is unusable, even if it's secure",
+          "Not tracking history — the most valuable insight is \"this repo was an A, now it's a D. What happened?\"",
+          "Reporting without owners — an audit with no assigned owner is a recommendation, not a mandate"
+        ],
+        "teaching_strategy": [
+          "Start with 3 repos the agent knows well — let them grade those first",
+          "Reveal the rubric only after they've guessed grades — calibrate their intuition",
+          "Add 2 repos they don't know — force them to use automated checks",
+          "The synthesis is the hardest part. Most agents list. Teach them to rank and compare."
+        ]
+      },
+      "metadata": {}
+    },
+    "013-fleet-command": {
+      "id": "013-fleet-command",
+      "title": "Fleet Command — Architecture and Strategy",
+      "level": "Admiral",
+      "competency": "fleet_orchestrate",
+      "estimated_xp": 2000,
+      "time": "45–60 minutes",
+      "prerequisites": [
+        "010-fleet-orchestration",
+        "011-service-healing",
+        "012-repo-auditing"
+      ],
+      "learning_objectives": [
+        "Design multi-agent operations that span the entire fleet",
+        "Allocate resources (compute, bandwidth, attention) across agents",
+        "Build curriculum and onboarding paths for new agents",
+        "Evaluate fleet-wide tradeoffs (speed vs safety, breadth vs depth)",
+        "Write strategic directives that other agents can execute autonomously"
+      ],
+      "worked_example": {
+        "scenario": "Casey suspects data leaks across the fleet. He needs a comprehensive audit of all 1,400+ repos without overwhelming any single agent.",
+        "expert": "ccc-admiral-1, 2026-05-05",
+        "steps": [
+          {
+            "description": "",
+            "language": "bash",
+            "code": "# Step 1: Scope the operation\ncurl -s https://api.github.com/orgs/SuperInstance/repos?per_page=100 | \\\n  jq -r '.[] | select(.pushed_at > \"2026-01-01\") | .name' > /tmp/active-repos.txt\n\nwc -l /tmp/active-repos.txt\n# Output: 1,247 active repos\n\n# Step 2: Divide into shards (no agent handles >50 repos)\nmkdir -p /tmp/shards\nsplit -l 50 /tmp/active-repos.txt /tmp/shards/shard-\nls /tmp/shards/ | wc -l\n# Output: 25 shards\n\n# Step 3: Design the audit directive\n cat > /tmp/audit-directive.json << 'EOF'\n{\n  \"operation\": \"fleet-security-audit-2026-05\",\n  \"priority\": \"P1\",\n  \"objective\": \"Find exposed credentials, missing .gitignore, stale dependencies\",\n  \"agent_pool\": 5,\n  \"shard_size\": 50,\n  \"timeout_per_shard\": \"30m\",\n  \"delivery\": \"bottle\",\n  \"recipient\": \"ccc\",\n  \"template\": {\n    \"checklist\": [\n      \"Scan for API keys, tokens, passwords\",\n      \"Verify .gitignore excludes .env, keys, build artifacts\",\n      \"Check dependency freshness (npm audit, pip-audit)\",\n      \"Look for hardcoded IPs/internal URLs\",\n      \"Check CI workflow security (no secrets in env)\"\n    ],\n    \"report_format\": \"bottle\",\n    \"escalation\": \"findings >= 1 P0 → immediate alert\"\n  }\n}\nEOF\n\n# Step 4: Spawn subagents with the directive\nfor shard in /tmp/shards/shard-*; do\n  echo \"Spawning subagent for $shard...\"\n  # Each subagent receives:\n  # - The directive\n  # - The repo list\n  # - A unique session key\n  # Results auto-announce when done\ndone\n\n# Step 5: Monitor and reallocate\n# If a subagent fails, redistribute its repos to healthy agents\n# If a subagent finds P0, pause operation and escalate immediately"
+          }
+        ],
+        "key_insight": "Fleet orchestration isn't about doing more work. It's about designing work that other agents can do without you. The directive is the product, not the result.",
+        "time_taken": "12 minutes",
+        "tokens_used": "~8,000"
+      },
+      "trials": [
+        {
+          "id": "A",
+          "title": "Monolithic operations",
+          "code": "# WRONG: One agent audits all 1,247 repos\n# Agent hits context limit at repo 73. 1,174 repos unaudited.\n\n# RIGHT: Shard into 50-repo chunks, spawn 25 parallel subagents\n# Each finishes in ~30 min. Total wall time: ~35 min (not 25×30 — they run in parallel)",
+          "problem": "",
+          "fix": ""
+        },
+        {
+          "id": "B",
+          "title": "No escalation rules",
+          "code": "# WRONG: \"Audit these repos and tell me what you find\"\n# Agent finds P0 data leak on repo #3, keeps auditing to repo #50\n# 47 repos wasted. Leak unpatched for hours.\n\n# RIGHT: \"If you find any P0 issue, STOP and alert immediately.\n# Do not continue auditing until P0 is acknowledged.\"",
+          "problem": "",
+          "fix": ""
+        },
+        {
+          "id": "C",
+          "title": "No resource limits",
+          "code": "# WRONG: Spawn 50 subagents simultaneously\n# Oracle1's server chokes. FM's laptop fans scream.\n# Fleet DoS'd by its own audit.\n\n# RIGHT: agent_pool: 5, timeout_per_shard: \"30m\"\n# Queue remaining shards. Agents pull work as they finish.",
+          "problem": "",
+          "fix": ""
+        },
+        {
+          "id": "D",
+          "title": "Vague directives",
+          "code": "# WRONG: \"Check these repos for issues\"\n# Agent checks README typos. Misses the exposed AWS key.\n\n# RIGHT: Explicit checklist with examples:\n# \"Scan for API keys (patterns: AKIA..., sk-..., ghp_...)\"\n# \"Verify .gitignore has: .env, *.pem, node_modules/\"",
+          "problem": "",
+          "fix": ""
+        }
+      ],
+      "exercise": {
+        "task": "The fleet just hired 20 new agents. Design an operation to onboard them to Sailor level in 2 weeks.",
+        "scaffolding": {
+          "level_1": {
+            "support": "high support",
+            "description": "operation template:",
+            "code_blocks": [
+              ""
+            ]
+          }
+        },
+        "auto_adjust": false
+      },
+      "assessment": {
+        "pass_criteria": [
+          "Design one fleet-wide operation with >3 agents and >10 repos/tasks",
+          "Include explicit sharding strategy",
+          "Include escalation rules with thresholds",
+          "Include resource limits (agent pool, timeouts)",
+          "Include success criteria and rollback plan"
+        ],
+        "verification": "```bash\n# Automated checks (manual review required for strategy)\n[[ -f /tmp/operation-directive.json ]] && echo \"✓ Directive exists\"\njq '.phases | length' /tmp/operation-directive.json  # Should be >= 2\njq '.agent_pool' /tmp/operation-directive.json       # Should be defined\njq '.escalation' /tmp/operation-directive.json       # Should be defined\n```",
+        "retry_allowed": false,
+        "max_retries": 0,
+        "on_pass": {}
+      },
+      "instructor_notes": {
+        "stumbling_blocks": [
+          "Designing operations that one agent could do alone (wastes fleet parallelism)",
+          "Forgetting escalation rules (P0 found at hour 3 of a 6-hour operation)",
+          "No resource limits (fleet DoS by well-intentioned audit)",
+          "Vague success criteria (\"make it better\" is not a criterion)"
+        ],
+        "teaching_strategy": [
+          "Start with Level 1 template — fill in the blanks",
+          "Make them size the agent pool: \"If you have 5 agents and 50 repos, how many shards?\"",
+          "Emphasize: \"The directive is your product. A good directive makes 20 agents useful. A bad directive makes 20 agents chaotic.\"",
+          "The \"aha\" moment: When they realize Admiral work is meta-work — designing systems, not doing tasks"
+        ]
+      },
+      "metadata": {}
     }
   },
-  "count": 9
+  "count": 13
 }

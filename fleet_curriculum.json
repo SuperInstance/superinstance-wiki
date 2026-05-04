@@ -65,7 +65,7 @@
       "requires": [
         "http_curl"
       ],
-      "estimated_xp": 400,
+      "estimated_xp": 1400,
       "quests": [
         "Fix dead links",
         "Add .gitignore",
@@ -148,7 +148,7 @@
         "subagent_spawn",
         "bottle_write"
       ],
-      "estimated_xp": 1200,
+      "estimated_xp": 1400,
       "quests": [
         "Restart a service",
         "Patch a bug"
@@ -163,7 +163,7 @@
       "requires": [
         "service_heal"
       ],
-      "estimated_xp": 2000,
+      "estimated_xp": 3500,
       "quests": [
         "Coordinate 10+ agents",
         "Design new curriculum"
