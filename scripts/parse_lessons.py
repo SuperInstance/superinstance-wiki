@@ -312,7 +312,7 @@ def parse_assessment(section: str) -> dict[str, Any]:
         if unlock_match:
             result["on_pass"]["unlock_competency"] = unlock_match.group(1).strip()
         # Level up
-        level_match = re.search(r"advance\s+toward\s+(\w+)|level_up\s*[:=]\s*["']?(\w+)", on_pass_text, re.IGNORECASE)
+        level_match = re.search(r"advance\s+toward\s+(\w+)|level_up\s*[:=]\s*[\"']?(\w+)", on_pass_text, re.IGNORECASE)
         if level_match:
             result["on_pass"]["advance_to"] = level_match.group(1) or level_match.group(2)
 
