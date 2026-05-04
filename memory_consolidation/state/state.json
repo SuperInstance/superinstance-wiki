@@ -1,28 +1,28 @@
 {
   "stm": {
-    "count": 70,
-    "last_ts": "2026-05-04T01:55:47.223468",
-    "last_sessions": 15,
-    "last_messages": 166,
-    "last_chars": 35960
+    "count": 81,
+    "last_ts": "2026-05-04T15:38:43.635084",
+    "last_sessions": 25,
+    "last_messages": 220,
+    "last_chars": 41749
   },
   "diary": {
-    "count": 19,
-    "last_ts": "2026-05-03T03:50:10.704261",
-    "last_day": 9,
-    "last_sessions": 1,
-    "last_messages": 58,
-    "last_filename": "day9-2026-04-30-cathedral_then_a_shed.md",
-    "last_latency_s": 13.0,
-    "last_skip": "no_sessions_today"
+    "count": 23,
+    "last_ts": "2026-05-05T03:49:03.221382",
+    "last_day": 14,
+    "last_sessions": 9,
+    "last_messages": 45,
+    "last_filename": "day14-2026-05-05-four_auditors_and_a_ghost_edit.md",
+    "last_latency_s": 13.5,
+    "last_skip": "conversation_hash_unchanged"
   },
   "compact": {
-    "count": 19,
-    "last_ts": "2026-05-03T03:50:11.084896",
-    "last_invoke": 7,
-    "last_sessions": 10,
-    "last_messages": 120,
-    "last_latency_s": 6.2,
+    "count": 23,
+    "last_ts": "2026-05-05T03:49:03.734802",
+    "last_invoke": 9,
+    "last_sessions": 26,
+    "last_messages": 222,
+    "last_latency_s": 10.0,
     "last_model": "k2p5",
     "last_skip": "stm_hash_unchanged"
   }
