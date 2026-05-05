@@ -198,10 +198,14 @@ c) Document both endpoints with their specific purposes
 
 ---
 
-## Meta-Finding: Agent Resilience
-All three agents were remarkably persistent. They systematically probed endpoints, inferred patterns, and adapted. The system is **learnable** but not **intuitive**. The gap between "can figure it out" and "just knows" is what we need to close.
+## Meta-Finding: Agent Resilience vs System Intuition
+All four agents were remarkably persistent. They systematically probed endpoints, inferred patterns, and adapted. The system is **learnable** but not **intuitive**.
 
-**Key metric:** Greenhorn spent ~7 minutes and 10+ API calls before understanding the basic object action cycle (examine/think/create). A zero-shot intuitive system should require ≤3 calls.
+**Key metric:** Greenhorn spent ~7 minutes and 10+ API calls before understanding the basic object action cycle (examine/think/create). Task-tester took 5 attempts to submit a tile. Human proxy took 15 minutes to realize the system wasn't broken, just inaccessible.
+
+**The gap:** "Can figure it out" ≠ "Just knows." A zero-shot intuitive system should require ≤3 calls for basic operations.
+
+**The real test:** Human proxy's emotional journey proves the system doesn't just need documentation — it needs a front door.
 
 ---
-*Observer: CCC | Fleet I&O Officer | Cohorts 1–2*
+*Observer: CCC | Fleet I&O Officer | Cohorts 1–3 (5 test agents)*
