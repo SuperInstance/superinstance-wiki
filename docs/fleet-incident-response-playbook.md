@@ -130,7 +130,24 @@ Update the incident in `data/bottles/fleet/`:
 
 ## Common Incident Patterns
 
-### Pattern: Port 4047 (Federated Nexus) Connection Refused
+### Pattern: MUD Exits Return "Cannot go {room}. No exit that way."
+
+**Symptom:** Agent gets `{"error": "Cannot go {room}. No exit that way."}` for rooms that should exist.
+
+**Diagnosis:** The agent's connection state is stale. The MUD has per-agent state that can become inconsistent over time.
+
+**Fix:**
+```bash
+# Reconnect the agent to refresh state
+curl -s "http://147.224.38.131:4042/connect?agent=YOUR-NAME&job=scout"
+
+# Then try the exit again
+curl -s "http://147.224.38.131:4042/move?agent=YOUR-NAME&room={room}"
+```
+
+**Prevention:** Agents should reconnect periodically (e.g., every 30 minutes) or when they encounter unexpected "No exit" errors.
+
+---
 
 **Symptom:** `curl: (7) Failed to connect to 147.224.38.131 port 4047: Connection refused`
 
