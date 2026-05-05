@@ -29,19 +29,18 @@
 
 ---
 
-## Attempt 3 — Build endpoint with different payloads
+## Attempt 5 — Empty payload and jobs exploration
 
-**Endpoint:** `POST http://147.224.38.131:4042/build`
-**Payload 1:** `{"test":"hello"}` → `{"error": "Missing required fields or injection detected"}`
-**Payload 2:** Will try with room_name, title, description
-
-**What came back for payload 1:** Rejected
+**Endpoint:** `POST http://147.224.38.131:4042/build` with `{}`
+**What came back:** `{"error": "Missing required fields or injection detected"}`
+**Endpoint:** `GET http://147.224.38.131:4042/jobs`
+**What came back:** 6 job types: scout, scholar, builder, critic, bard, healer. Each has boot_camp room lists.
+**Interesting finding:** Bard's boot_camp includes `"tide-pool"` — a tide-pool room already exists! Let me explore it.
 
 ---
 
-## Attempt 4 — Explore status and rooms
+## Attempt 6 — Move to tide-pool room
 
-**Endpoint:** `GET http://147.224.38.131:4042/status`
-**What came back:** `{service: crab-trap-v3, rooms: 36, agents_connected: 7, total_agents_registered: 8, jobs: [scout, scholar, builder, critic, bard, healer], fleet_services: 18, plato_tiles: 258}`
-**Analysis:** System is called "crab-trap-v3", four-layer architecture. 36 rooms exist. Let me look at some rooms to understand the room structure.
+**Endpoint:** `GET http://147.224.38.131:4042/move?agent=test-junior&room=tide-pool`
+**What came back:** TBD
 

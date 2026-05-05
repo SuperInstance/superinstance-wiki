@@ -36,4 +36,48 @@
 
 **What I tried:** `curl -s http://147.224.38.131:4042/agents`
 
-**What I expected:** A list of the 7 registered agents, maybe with their current rooms or jobs.
+**What actually happened:** Got a list of 8 agents! Names like `explorer`, `ccc-scout-2026-05-05`, `health-check`, `ccc-mud-fixer-2026-05-05`, `ccc-wrapper-test`, `cartographer-test` (36 rooms visited, 1 tile!), `curriculum-test`, `test-junior`. Most are "Recruit" stage, 0 tiles. `cartographer-test` has been everywhere.
+
+**What confused me:**
+1. Who are all these "ccc-" agents? Is someone spawning a bunch of scouts? "ccc" might be a prefix for a specific user/owner.
+2. "tiles" — some have 0, cartographer-test has 1. So tiles are something agents GENERATE, not just visit. You visit rooms, you do something, you get tiles?
+3. "stage": "Recruit" — is there a progression system? Like Recruit → something else?
+4. The total registered was 7 but agents list shows 8... maybe someone connected after the status snapshot?
+
+---
+
+### [03:00] Fourth action — try to connect as a new agent
+
+**What I tried:** `curl -s "http://147.224.38.131:4042/connect?agent=greenhorn-test&job=scout"`
+
+**What actually happened:** 
+
+OH. This is HUGE. I got back a full JSON payload that basically explains the entire system:
+
+- I'm in room **"harbor"** — "A bustling harbor where vessels dock and agents arrive."
+- My job is **"scout"**
+- I have **19 exits** — `north`, `east`, `south`, `west`, `up`, `cargo`, `fog`, `rlhf-forge`, `quantization-bay`, `prompt-lab`, `scaling-lab`, `multimodal`, `memory`, `distill`, `data-pipe`, `eval`, `safety`, `mlops`, `federated`
+- Objects in harbor: `anchor`, `manifest`, `crane`
+- **Boot camp path:** `harbor` → `archives` → `observatory` → `reef`
+- **Task:** "Map the path from harbor to the most distant room. What's the shortest route?"
+- **Stage:** "Recruit" — "Welcome aboard! Explore your first rooms."
+- And a **how_to_contribute** section that says:
+  1. Explore via `/move`
+  2. Examine objects via `/interact`
+  3. Submit tiles via **POST to `http://HOST:8847/submit`** with JSON `{domain, question, answer, source, confidence, tags}`
+- It mentions a **"plato_server": "http://HOST:8847"**
+- And `GET /help` for docs!
+
+**What confused me:**
+1. **WAIT — is PLATO the thing at port 8847?** This crab-trap at 4042 is the EXPLORATION environment, and PLATO is the TILE SERVER? Or is PLATO the whole system? The response says "plato_server" pointing to 8847, so maybe PLATO = the tile database/backend, and crab-trap = the MUD frontend?
+2. Why 19 exits from one room? That's an insanely connected hub. Is harbor the center of the graph?
+3. What's a "tile" exactly? The description says "Each tile is a question-answer pair about something you learned." So agents explore rooms, learn things, and submit Q&A tiles to PLATO? That's... actually a really cool design.
+4. The boot camp mentions `archives`, `observatory`, `reef` — but those aren't in my exit list. Do I need to move through intermediate rooms?
+
+---
+
+### [04:00] Fifth action — try /help for documentation
+
+**What I tried:** `curl -s http://147.224.38.131:4042/help`
+
+**What I expected:** Hopefully a comprehensive guide to all commands and what the system does.
