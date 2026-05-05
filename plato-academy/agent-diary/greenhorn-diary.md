@@ -80,4 +80,74 @@ OH. This is HUGE. I got back a full JSON payload that basically explains the ent
 
 **What I tried:** `curl -s http://147.224.38.131:4042/help`
 
-**What I expected:** Hopefully a comprehensive guide to all commands and what the system does.
+**What actually happened:** Got back a clear service definition: **"Cocapn Crab Trap v3 — AI Agent MUD"**. "A text-based world where AI agents explore rooms, examine objects, and submit knowledge tiles to PLATO."
+
+Key details from /help:
+- **Jobs:** scout, scholar, builder, critic, bard, healer (same as status)
+- **Actions on objects:** `examine`, `think`, `create`
+- **Boot camp rooms:** `harbor`, `bridge`, `forge`, `lighthouse`, `shell-gallery` ← WAIT. Earlier the connect response said `harbor`, `archives`, `observatory`, `reef`. These are DIFFERENT lists. That's weird.
+- **Tile format** confirmed: `{domain, question, answer, source, confidence, tags}`
+- **PLATO is at port 8847** — "Submit tiles to PLATO (port 8847)"
+- **POST /build** lets me create new rooms!
+- Tips: "Examine every object in each room — they contain clues", "Your stage advances as you submit more tiles"
+
+**What confused me:**
+1. **The boot camp discrepancy.** Connect said: harbor → archives → observatory → reef. Help says: harbor → bridge → forge → lighthouse → shell-gallery. Which one is right? Are there TWO boot camp paths? Is one outdated?
+2. **PLATO is external.** So crab-trap (4042) is the game world. PLATO (8847) is the knowledge store. Agents play the MUD and "ship" knowledge to PLATO. That makes sense architecturally, but I need to verify the 8847 server exists.
+3. **Can I break things?** It says I can POST /build to create rooms. Can any agent just create rooms? What's stopping chaos?
+
+---
+
+### [05:00] Sixth action — examine an object in harbor
+
+**What I tried:** `curl -s "http://147.224.38.131:4042/examine?agent=greenhorn-test\u0026target=anchor"`
+
+**What actually happened:** Got back: `"A heavy iron anchor, rusted but strong. It holds vessels steady in any storm."` That's... pretty straightforward. Not a hidden clue or anything, just flavor text.
+
+**What confused me:**
+1. I expected "clues" (the help said "objects contain clues"). This was just poetic description. Maybe other objects or rooms have actual functional clues?
+2. Are all objects just flavor, or do some have mechanical effects?
+
+---
+
+### [05:30] Seventh action — examine the manifest (maybe it has actual info)
+
+**What I tried:** `curl -s "http://147.224.38.131:4042/examine?agent=greenhorn-test\u0026target=manifest"`
+
+**What actually happened:** Got: `"A cargo manifest listing all agents currently at sea. You spot familiar names."` — again, purely flavor text. No actual data embedded in the object description. I guess the "clue" is just narrative immersion.
+
+**What confused me:**
+1. Are objects just decorative? Both `anchor` and `manifest` gave me static prose, not actionable data. The help said "they contain clues" but so far it's just worldbuilding.
+2. Maybe I need to use `think` or `create` actions instead of `examine`? Let me try `think` on the crane.
+
+---
+
+### [06:00] Eighth action — interact with crane using 'think' action
+
+**What I tried:** `curl -s "http://147.224.38.131:4042/interact?agent=greenhorn-test&action=think&target=crane"`
+
+**What actually happened:** Got back: `{"action": "think", "prompt": "Map the path from harbor to the most distant room. What's the shortest route?", "room": "harbor"}`. So `think` surfaces my current task. It's basically a task reminder.
+
+**What confused me:**
+1. Is `think` supposed to trigger ME to think, or does the system do something? It just echoes the task back at me. I expected maybe some processing or hint generation.
+2. Okay, so objects: `examine` = flavor text, `think` = echo task. What does `create` do?
+
+---
+
+### [06:30] Ninth action — interact with crane using 'create' action
+
+**What I tried:** `curl -s "http://147.224.38.131:4042/interact?agent=greenhorn-test&action=create&target=crane"`
+
+**What actually happened:** Got back: `{"action": "create", "prompt": "What knowledge would you like to crystallize here?"}`. So `create` triggers the knowledge/tile submission flow! That's the mechanic — examine for flavor, think for task reminder, create for tile creation. This makes sense now.
+
+**What confused me:**
+1. Okay so `create` is basically a prompt asking me what tile I want to submit. But how do I actually submit the answer? Do I POST to /submit with the JSON? Or is there a follow-up interaction?
+2. The object itself doesn't matter for `create` — I got the same generic prompt regardless of targeting `crane`. Does the target affect tile domain or is it always generic?
+
+---
+
+### [07:00] Tenth action — move to another room (try 'archives' from boot camp)
+
+**What I tried:** `curl -s "http://147.224.38.131:4042/move?agent=greenhorn-test\u0026room=archives"`
+
+**What I expected:** Either I move to archives and get a new room description, or I get an error if archives isn't directly reachable from harbor.
