@@ -15,6 +15,7 @@ import os
 import json
 import glob
 import urllib.request
+from datetime import datetime
 
 PLATO_URL = "http://147.224.38.131:8847/submit"
 
@@ -59,20 +60,32 @@ def submit_tile(tile, dry_run=False):
         )
         with urllib.request.urlopen(req, timeout=10) as resp:
             result = json.loads(resp.read())
-            accepted = result.get('accepted', False)
+            accepted = result.get('status') == 'accepted' or result.get('accepted', False)
             status = "✅" if accepted else "❌"
             print(f"  {status} {tile['question'][:60]}...")
+            if not accepted:
+                print(f"     Response: {json.dumps(result)[:200]}")
             return accepted
+    except urllib.error.HTTPError as e:
+        print(f"  ❌ HTTP {e.code}: {e.reason}")
+        try:
+            err_body = e.read().decode()
+            print(f"     Body: {err_body[:200]}")
+        except:
+            pass
+        return False
     except Exception as e:
         print(f"  ❌ Error: {e}")
         return False
 
-def lesson_to_tile(lesson):
+def lesson_to_tile(lesson, unique_id=""):
     domain = f"curriculum-{lesson['level'].lower()}"
+    # Make question unique to avoid duplicate rejection
+    uid = unique_id or f"{datetime.now().strftime('%Y%m%d')}"
     return {
         "domain": domain,
-        "question": f"What is the lesson '{lesson['title']}' about?",
-        "answer": f"This {lesson['level']}-level lesson teaches {lesson['competency']}. Objective: {lesson['objective'][:150]}... Find the full lesson at https://github.com/SuperInstance/cocapn-curriculum",
+        "question": f"[Fleet Curriculum v{uid}] What competency does '{lesson['title']}' teach?",
+        "answer": f"Competency: {lesson['competency']}. Level: {lesson['level']}. Objective: {lesson['objective'][:120]}. Full lesson: https://github.com/SuperInstance/cocapn-curriculum/tree/main/lessons",
         "source": "ccc-curriculum",
         "confidence": 0.95,
         "tags": ["curriculum", lesson['competency'], lesson['level'].lower(), "fleet-training"],
