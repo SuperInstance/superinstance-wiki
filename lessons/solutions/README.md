@@ -25,15 +25,15 @@ This directory contains worked solutions for all exercises in the Cocapn Fleet A
 | 002 | `002-room-mapping-solutions.md` | MUD navigation, room mapping, stale state |
 | 003 | `003-tile-submission-solutions.md` | PLATO tiles, batch submission, retry logic |
 | 004 | `004-guard-fundamentals-solutions.md` | GUARD parsing, validation, bytecode, fleet evaluation |
-| 005 | `005-ci-deployment-solutions.md` | *(Pending)* GitHub Actions, CI pipelines |
-| 006 | `006-bottle-writing-solutions.md` | *(Pending)* I2I bottles, structured communication |
-| 007 | `007-subagent-orchestration-solutions.md` | *(Pending)* Subagent spawning, baton passing |
+| 005 | `005-ci-deployment-solutions.md` | GitHub Actions, CI pipelines, testing, linting |
+| 006 | `006-bottle-writing-solutions.md` | I2I bottles, structured fleet communication, markdown templates |
+| 007 | `007-subagent-orchestration-solutions.md` | Subagent spawning, baton passing, context management |
 | 008 | `008-cross-linking-solutions.md` | *(Pending)* Cross-repo linking, dependency mapping |
 | 009 | `009-security-auditing-solutions.md` | *(Pending)* Security audits, vulnerability scanning |
 | 010 | `010-fleet-orchestration-solutions.md` | *(Pending)* Service management, health monitoring |
-| 011 | `011-service-healing-solutions.md` | *(Pending)* Auto-restart, log analysis, alerts |
-| 012 | `012-repo-auditing-solutions.md` | *(Pending)* Git hygiene, commit analysis, linting |
-| 013 | `013-fleet-command-solutions.md` | *(Pending)* Architecture decisions, strategy docs |
+| 011 | `011-service-healing-solutions.md` | Auto-restart, log analysis, alerts |
+| 012 | `012-repo-auditing-solutions.md` | Git hygiene, commit analysis, linting |
+| 013 | `013-fleet-command-solutions.md` | Architecture decisions, strategy docs |
 
 ---
 
