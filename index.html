@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SuperInstance Wiki — Fleet Knowledge Base</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0a0e17;color:#c8d6e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,monospace;line-height:1.6}
+  .wrapper{max-width:1100px;margin:0 auto;padding:1.5em}
+  
+  header{border-bottom:1px solid #1a1f2e;padding-bottom:1em;margin-bottom:2em;display:flex;justify-content:space-between;align-items:center}
+  header h1{color:#48dbfb;font-weight:300;font-size:1.5em}
+  header h1 span{color:#8395a7;font-weight:100}
+  nav a{color:#576574;text-decoration:none;font-size:.85em;margin-left:1.5em}
+  nav a:hover{color:#48dbfb}
+  
+  .hero{text-align:center;padding:2em 0 3em}
+  .hero h2{color:#c8d6e5;font-weight:200;font-size:2em;margin-bottom:.5em}
+  .hero p{color:#8395a7;max-width:600px;margin:0 auto;font-size:.95em}
+  .hero .count{color:#48dbfb;font-size:3em;font-weight:200;margin-top:1em}
+  .hero .count-label{color:#576574;font-size:.8em;text-transform:uppercase;letter-spacing:2px}
+  
+  .search-bar{background:#1a1f2e;border:1px solid #1a1f2e;border-radius:8px;padding:.8em 1em;margin-bottom:2em;display:flex;align-items:center;gap:.5em}
+  .search-bar input{background:transparent;border:none;color:#c8d6e5;flex:1;font-family:inherit;font-size:.9em;outline:none}
+  .search-bar input::placeholder{color:#576574}
+  .search-bar span{color:#576574;font-size:.8em}
+  
+  .sections{display:grid;grid-template-columns:1fr 1fr;gap:1em;margin-bottom:2em}
+  @media(max-width:700px){.sections{grid-template-columns:1fr}}
+  
+  .card{background:#1a1f2e;border:1px solid #1a1f2e;border-radius:8px;padding:1.5em;transition:border-color .2s}
+  .card:hover{border-color:#48dbfb}
+  .card h3{color:#48dbfb;font-weight:400;font-size:.9em;margin-bottom:.8em;letter-spacing:1px;text-transform:uppercase}
+  .card ul{list-style:none}
+  .card li{padding:.25em 0}
+  .card a{color:#c8d6e5;text-decoration:none;font-size:.85em}
+  .card a:hover{color:#48dbfb}
+  .card .count-badge{display:inline-block;background:#0a0e17;color:#576574;border-radius:10px;padding:0 .5em;font-size:.75em;margin-left:.3em}
+  
+  .featured{background:#1a1f2e;border:1px solid #1a1f2e;border-radius:8px;padding:1.5em;margin-bottom:2em}
+  .featured h3{color:#48dbfb;font-weight:400;font-size:.9em;margin-bottom:.8em;text-transform:uppercase;letter-spacing:1px}
+  .featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:1em}
+  @media(max-width:700px){.featured-grid{grid-template-columns:1fr}}
+  .featured-item{padding:.5em;border-left:2px solid #1a1f2e;padding-left:.8em}
+  .featured-item:hover{border-left-color:#48dbfb}
+  .featured-item .title{color:#c8d6e5;font-size:.85em}
+  .featured-item .desc{color:#576574;font-size:.75em;margin-top:.2em}
+  
+  footer{border-top:1px solid #1a1f2e;padding:1.5em 0;margin-top:2em;text-align:center;color:#576574;font-size:.75em}
+  footer a{color:#48dbfb;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<header>
+  <h1>SuperInstance <span>Wiki</span></h1>
+  <nav>
+    <a href="CATALOG.md">Catalog</a>
+    <a href="INDEXES/">Indexes</a>
+    <a href="https://github.com/SuperInstance">GitHub</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h2>The Fleet, Cataloged</h2>
+  <p>Everything in the SuperInstance organization — indexed by type, language, topic, realm, and concept. Browse, search, discover.</p>
+  <div class="count">1,577</div>
+  <div class="count-label">Repositories</div>
+</div>
+
+<div class="search-bar">
+  <span>⌕</span>
+  <input type="text" id="searchInput" onkeyup="searchIndex()" placeholder="Search the fleet by name, topic, or keyword...">
+  <span id="searchCount"></span>
+</div>
+
+<div class="sections">
+  <div class="card">
+    <h3>By Topic</h3>
+    <ul>
+      <li><a href="INDEXES/TOPIC.md#constraint-theory">Constraint Theory</a></li>
+      <li><a href="INDEXES/TOPIC.md#laman-rigidity">Laman Rigidity</a></li>
+      <li><a href="INDEXES/TOPIC.md#holonomy">Holonomy Consensus</a></li>
+      <li><a href="INDEXES/TOPIC.md#plato">PLATO &amp; Rooms</a></li>
+      <li><a href="INDEXES/TOPIC.md#sonar">Sonar &amp; Marine</a></li>
+      <li><a href="INDEXES/TOPIC.md#flux">FLUX Bytecode</a></li>
+      <li><a href="INDEXES/TOPIC.md#ttl">TTL &amp; Self-Termination</a></li>
+      <li><a href="INDEXES/TOPIC.md">All 35 topics →</a></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>By Language</h3>
+    <ul>
+      <li><a href="INDEXES/LANGUAGE.md#rust">Rust</a> <span class="count-badge">major</span></li>
+      <li><a href="INDEXES/LANGUAGE.md#python">Python</a> <span class="count-badge">major</span></li>
+      <li><a href="INDEXES/LANGUAGE.md#c">C</a></li>
+      <li><a href="INDEXES/LANGUAGE.md#typescript">TypeScript</a></li>
+      <li><a href="INDEXES/LANGUAGE.md#javascript">JavaScript</a></li>
+      <li><a href="INDEXES/LANGUAGE.md#go">Go</a></li>
+      <li><a href="INDEXES/LANGUAGE.md">All 9 languages →</a></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>By Type</h3>
+    <ul>
+      <li><a href="INDEXES/TYPE.md#cli">CLI Tools</a></li>
+      <li><a href="INDEXES/TYPE.md#library">Libraries</a></li>
+      <li><a href="INDEXES/TYPE.md#service">Services</a></li>
+      <li><a href="INDEXES/TYPE.md#protocol">Protocols</a></li>
+      <li><a href="INDEXES/TYPE.md#paper">Papers &amp; Research</a></li>
+      <li><a href="INDEXES/TYPE.md#demo">Demos</a></li>
+      <li><a href="INDEXES/TYPE.md">All 12 types →</a></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>By Realm</h3>
+    <ul>
+      <li><a href="INDEXES/REALM.md#math">Mathematics &amp; Theory</a></li>
+      <li><a href="INDEXES/REALM.md#infrastructure">Infrastructure</a></li>
+      <li><a href="INDEXES/REALM.md#hardware">Hardware &amp; Edge</a></li>
+      <li><a href="INDEXES/REALM.md#marine">Marine</a></li>
+      <li><a href="INDEXES/REALM.md#web">Web &amp; Browser</a></li>
+      <li><a href="INDEXES/REALM.md#ai">AI &amp; ML</a></li>
+      <li><a href="INDEXES/REALM.md">All 9 realms →</a></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>By Concept</h3>
+    <ul>
+      <li><a href="INDEXES/CONCEPTS.md#ttl">TTL</a></li>
+      <li><a href="INDEXES/CONCEPTS.md#eisenstein">Eisenstein</a></li>
+      <li><a href="INDEXES/CONCEPTS.md#polyformalism">Polyformalism</a></li>
+      <li><a href="INDEXES/CONCEPTS.md#plato">PLATO Protocol</a></li>
+      <li><a href="INDEXES/CONCEPTS.md#consensus">Consensus</a></li>
+      <li><a href="INDEXES/CONCEPTS.md#gpu-compute">GPU Compute</a></li>
+      <li><a href="INDEXES/CONCEPTS.md#guard-dsl">GUARD DSL</a></li>
+      <li><a href="INDEXES/CONCEPTS.md">All 55 concepts →</a></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>By Vessel</h3>
+    <ul>
+      <li><a href="CATALOG.md#constraint-theory--math">Forgemaster ⚒️</a></li>
+      <li><a href="CATALOG.md#agent-coordination">Oracle1 🔮</a></li>
+      <li><a href="CATALOG.md#hardware--edge">JetsonClaw1 ⚡</a></li>
+      <li><a href="CATALOG.md#web--browser">CCC 🦀</a></li>
+      <li><a href="CATALOG.md">Full Catalog →</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="featured">
+  <h3>Featured Repos</h3>
+  <div class="featured-grid" id="featured"></div>
+</div>
+
+<footer>
+  <p>SuperInstance Wiki · <a href="https://github.com/SuperInstance/superinstance-wiki">Edit on GitHub</a> · Auto-generated daily</p>
+  <p style="margin-top:.3em;color:#576574">1,577 repositories · 35 topics · 55 concepts · 9 languages · 12 types</p>
+</footer>
+</div>
+
+<script>
+const featured = [
+  {name: "Keel", url: "https://github.com/SuperInstance/keel", desc: "CLI and library for first-person self-termination. 16 commands, 5 TTL types, PLATO bridge."},
+  {name: "PLATO Server", url: "https://github.com/SuperInstance/plato-server", desc: "Room server — the fleet's shared memory. Tiles, rooms, provenance."},
+  {name: "Fleet Coordinate", url: "https://github.com/SuperInstance/fleet-coordinate", desc: "Laman rigidity, H¹ detection, trust graphs. Provably self-coordinating fleets."},
+  {name: "Holonomy Consensus", url: "https://github.com/SuperInstance/holonomy-consensus", desc: "Zero-voting consensus via geometric parallel transport. No Byzantine threshold."},
+  {name: "SonarVision", url: "https://github.com/SuperInstance/sonar-vision", desc: "Self-supervised depth-to-video prediction. Sonar hears, cameras see."},
+  {name: "FLUX VM", url: "https://github.com/SuperInstance/flux-vm", desc: "50-opcode constraint VM. DAL A certifiable. TrustZone bridge to FLUX-X."},
+];
+
+const container = document.getElementById('featured');
+featured.forEach(f => {
+  container.innerHTML += `<div class="featured-item"><div class="title"><a href="${f.url}" style="color:#48dbfb;text-decoration:none">${f.name}</a></div><div class="desc">${f.desc}</div></div>`;
+});
+
+function searchIndex() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  const count = document.getElementById('searchCount');
+  if (q.length < 2) { count.textContent = ''; return; }
+  // Search the catalog markdown for matches (dynamically loaded via iframe would be better)
+  count.textContent = `Searching ${q}... (open CATALOG.md for full results)`;
+}
+</script>
+</body>
+</html>
