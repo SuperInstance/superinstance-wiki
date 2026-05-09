@@ -1,0 +1,28 @@
+name: Sync Wiki Data
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch latest index data
+        run: |
+          curl -sL -o CATALOG.md "https://raw.githubusercontent.com/SuperInstance/SuperInstance/main/CATALOG.md"
+          for f in TYPE.md LANGUAGE.md TOPIC.md REALM.md CONCEPTS.md; do
+            curl -sL -o "INDEXES/$f" "https://raw.githubusercontent.com/SuperInstance/SuperInstance/main/INDEXES/$f"
+          done
+      - name: Commit updates
+        run: |
+          git config user.name "Wiki Sync Bot"
+          git config user.email "wiki-bot@superinstance.ai"
+          git add CATALOG.md INDEXES/
+          git diff --cached --quiet || git commit -m "Sync wiki data ($(date -u '+%Y-%m-%d'))"
+          git push
