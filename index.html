@@ -47,6 +47,19 @@
   .featured-item .title{color:#c8d6e5;font-size:.85em}
   .featured-item .desc{color:#576574;font-size:.75em;margin-top:.2em}
   
+  .search-results{background:#1a1f2e;border:1px solid #1a1f2e;border-radius:8px;padding:1em;margin-bottom:2em;max-height:400px;overflow-y:auto;display:none}
+  .search-results.active{display:block}
+  .search-results h3{color:#48dbfb;font-weight:400;font-size:.85em;margin-bottom:.5em;text-transform:uppercase}
+  .result-item{padding:.4em 0;border-bottom:1px solid #0a0e17}
+  .result-item:last-child{border-bottom:none}
+  .result-item a{color:#c8d6e5;text-decoration:none;font-size:.85em}
+  .result-item a:hover{color:#48dbfb}
+  .result-item .meta{color:#576574;font-size:.75em}
+  .result-item .badge{display:inline-block;background:#0a0e17;color:#48dbfb;border-radius:4px;padding:0 .4em;font-size:.7em;margin-left:.3em}
+  .result-item .badge.private{color:#ff6b6b}
+  .result-item .badge.archive{color:#feca57}
+  .result-item .badge.keep{color:#1dd1a1}
+  
   footer{border-top:1px solid #1a1f2e;padding:1.5em 0;margin-top:2em;text-align:center;color:#576574;font-size:.75em}
   footer a{color:#48dbfb;text-decoration:none}
 </style>
@@ -73,6 +86,11 @@
   <span>⌕</span>
   <input type="text" id="searchInput" onkeyup="searchIndex()" placeholder="Search the fleet by name, topic, or keyword...">
   <span id="searchCount"></span>
+</div>
+
+<div class="search-results" id="searchResults">
+  <h3>Search Results</h3>
+  <div id="resultsList"></div>
 </div>
 
 <div class="sections">
@@ -177,13 +195,69 @@ featured.forEach(f => {
   container.innerHTML += `<div class="featured-item"><div class="title"><a href="${f.url}" style="color:#48dbfb;text-decoration:none">${f.name}</a></div><div class="desc">${f.desc}</div></div>`;
 });
 
-function searchIndex() {
-  const q = document.getElementById('searchInput').value.toLowerCase();
-  const count = document.getElementById('searchCount');
-  if (q.length < 2) { count.textContent = ''; return; }
-  // Search the catalog markdown for matches (dynamically loaded via iframe would be better)
-  count.textContent = `Searching ${q}... (open CATALOG.md for full results)`;
+// --- Live Search ---
+let allRepos = [];
+let reposLoaded = false;
+
+async function loadRepos() {
+  if (reposLoaded) return;
+  try {
+    const resp = await fetch('data/repos.json');
+    const data = await resp.json();
+    allRepos = data.repos || [];
+    reposLoaded = true;
+  } catch (e) {
+    console.error('Failed to load repos.json:', e);
+  }
 }
+
+function searchIndex() {
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  const countEl = document.getElementById('searchCount');
+  const resultsEl = document.getElementById('searchResults');
+  const listEl = document.getElementById('resultsList');
+
+  if (q.length < 2) {
+    countEl.textContent = '';
+    resultsEl.classList.remove('active');
+    return;
+  }
+
+  if (!reposLoaded) {
+    countEl.textContent = 'Loading...';
+    loadRepos().then(() => searchIndex());
+    return;
+  }
+
+  const matches = allRepos.filter(r => {
+    const text = `${r.name} ${r.description} ${r.language} ${r.relevance} ${r.tier}`.toLowerCase();
+    return text.includes(q);
+  }).slice(0, 50);
+
+  countEl.textContent = `${matches.length} match${matches.length !== 1 ? 'es' : ''}`;
+
+  if (matches.length === 0) {
+    listEl.innerHTML = '<div class="result-item"><span style="color:#576574">No matches found</span></div>';
+  } else {
+    listEl.innerHTML = matches.map(r => {
+      const statusBadge = r.is_archived ? '<span class="badge archive">ARCHIVED</span>' :
+                           r.visibility === 'PRIVATE' ? '<span class="badge private">PRIVATE</span>' :
+                           '<span class="badge keep">PUBLIC</span>';
+      return `<div class="result-item">
+        <a href="https://github.com/SuperInstance/${r.name}" target="_blank">${r.name}</a>
+        ${statusBadge}
+        <span class="badge">${r.language}</span>
+        <span class="badge">${r.relevance}</span>
+        <div class="meta">${r.description || 'No description'} · ${r.tier} · ${r.lifecycle}</div>
+      </div>`;
+    }).join('');
+  }
+
+  resultsEl.classList.add('active');
+}
+
+// Pre-load repos in background
+loadRepos();
 </script>
 </body>
 </html>
