@@ -25,6 +25,11 @@ in the [SuperInstance](https://github.com/SuperInstance) organization.
 | [**INDEXES/STRATEGIC-ACTION.md**](INDEXES/STRATEGIC-ACTION.md) | KEEP / PRIVATE / ARCHIVE / MONITOR / REVIEW |
 | [**INDEXES/CHRONOLOGY-BY-MONTH.md**](INDEXES/CHRONOLOGY-BY-MONTH.md) | Every repo by creation month |
 | [**INDEXES/MASTER-INDEX.md**](INDEXES/MASTER-INDEX.md) | One-page summary of all indexes |
+| [**ONBOARDING.md**](ONBOARDING.md) | New to the fleet? Start here. 30-second orientation + 5-minute deep dive |
+| [**TOPOLOGY.md**](TOPOLOGY.md) | How the 1,700 repos connect — Mermaid diagrams of fleet architecture |
+| [**DASHBOARD.md**](DASHBOARD.md) | Fleet health at a glance — red flags, velocity, public face |
+| [**CLEANUP.md**](CLEANUP.md) | Exact commands to private/archive repos from triage recommendations |
+| [**scripts/regenerate-triage.py**](scripts/regenerate-triage.py) | Self-regenerating script — run weekly to refresh all indexes |
 | [**index.html**](index.html) | Visual landing page (open in browser) |
 
 ## Auto-Indexing
@@ -34,4 +39,4 @@ The generation scripts are in the [SuperInstance](https://github.com/SuperInstan
 
 ---
 
-*1,577 repositories · 35 topics · 55 concepts · 9 languages · 12 types · 6 domains · 5 eras · 6 triage indexes*
+*1,700 repositories · 35 topics · 55 concepts · 9 languages · 12 types · 6 domains · 5 eras · 6 triage indexes · self-regenerating*
