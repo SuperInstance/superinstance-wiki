@@ -2,22 +2,22 @@
 
 **Generated:** 2026-05-21
 
-## Active Dev (200 repos)
+## Active Dev (191 repos)
 
 | Repo | Tier | Relevance | Action | Days Since Push | Description |
 |------|------|-----------|--------|-----------------|-------------|
 | superinstance-wiki | Production | Orphan | REVIEW | 0 | The fleet's knowledge base — catalog, indexes, and |
+| oracle1-workspace | Production | Named Vessel | KEEP | 0 | Oracle1 workspace — config, memory, prompts, logs |
 | CognitiveEngine | Skeleton | Orphan | MONITOR | 0 | Core cognitive processing engine. |
+| agent-field | Skeleton | Orphan | MONITOR | 0 | Extracted from plato-training |
+| swarm-rooms | Skeleton | Orphan | MONITOR | 0 | Extracted from plato-training |
+| commit-predictor | Skeleton | Orphan | MONITOR | 0 | Extracted from plato-training |
+| collective-ai | Skeleton | Orphan | MONITOR | 0 | Extracted from plato-training |
 | plato-training | Production | Named Vessel | KEEP | 0 | PLATO Training Rooms — LoRA adapters with lifecycl |
 | triplet-miner | Production | Orphan | REVIEW | 0 | Mine (anchor, positive, negative) triplets from gi |
 | eisenstein-embed | Production | Orphan | REVIEW | 0 | Enhanced static embeddings with 5-layer matching c |
 | device-router | Production | Orphan | REVIEW | 0 | Heterogeneous compute router — auto-detect CUDA, i |
-| swarm-rooms | Skeleton | Orphan | MONITOR | 0 | Extracted from plato-training |
-| commit-predictor | Skeleton | Orphan | MONITOR | 0 | Extracted from plato-training |
-| agent-field | Skeleton | Orphan | MONITOR | 0 | Extracted from plato-training |
-| collective-ai | Skeleton | Orphan | MONITOR | 0 | Extracted from plato-training |
 | tensor-spline | Production | Experimental | KEEP | 0 | Compressed neural network layers — Eisenstein latt |
-| oracle1-workspace | Production | Named Vessel | KEEP | 0 | Oracle1 workspace — config, memory, prompts, logs |
 | flux-engine-c | Production | Orphan | REVIEW | 0 | Single-header C constraint engine — #define FLUX_E |
 | flux-lib-py | Production | Orphan | REVIEW | 0 | Unified constraint engine library — from flux_lib  |
 | micro-onnx | Production | Orphan | REVIEW | 0 | ONNX export + benchmark pipeline for micro-models. |
@@ -27,27 +27,27 @@
 | deadband-rs | Production | Orphan | REVIEW | 0 | Deadband detection and compression for fleet commu |
 | OpenShell | Functional | Integration Bridge | KEEP | 0 | OpenShell is the safe, private runtime for autonom |
 | forgemaster | Production | Named Vessel | KEEP | 0 | ⚒️ Forgemaster — Constraint Theory migration speci |
-| AI-Writings | Production | Orphan | REVIEW | 1 | A collection of writings by my AI when I tell it t |
-| flux-check-js | Production | Orphan | REVIEW | 1 | Exact constraint checking, fracture-coalesce, and  |
-| signal-chain-integration | Functional | Orphan | REVIEW | 1 | Signal chain integration crates for OpenShell flee |
-| openshell-pythagorean48 | Production | Orphan | REVIEW | 1 | OpenShell wrapper re-exporting pythagorean48-codes |
-| flux-genome-py | Production | Orphan | REVIEW | 1 | Genetic expression engine — 25 genes, 5 domains, g |
-| flux-hyperbolic-py | Production | Orphan | REVIEW | 1 | Poincaré ball geometry for model capability routin |
-| flux-check-py | Production | Orphan | REVIEW | 1 | Python CLI for exact constraint checking — pip ins |
-| openshell-compatibility-audit | Production | Orphan | REVIEW | 1 | Categorizes all SuperInstance repos for OpenShell  |
-| .github | Skeleton | Orphan | MONITOR | 1 | Cocapn organization profile |
-| constraint-theory-ecosystem | Production | Orphan | REVIEW | 1 | The math that hardware engineers already know. Tol |
-| flux-rpg | Production | Orphan | REVIEW | 1 | RPG IV constraint engine — indicator variables as  |
-| guardc-v3 | Functional | Orphan | REVIEW | 1 | GUARD DSL to FLUX-C v3 compiler with proof certifi |
-| flux-vm-v3 | Functional | Orphan | REVIEW | 1 | FLUX-C v3 VM — proof-carrying, SIMD-native, termin |
-| flux-fracture | Production | Orphan | REVIEW | 1 | Disjoint linear algebra for constraint systems — B |
-| game-chain | Skeleton | Experimental | MONITOR | 1 | Signal Chain Thesis - game-chain |
-| universe-chain | Skeleton | Experimental | MONITOR | 1 | Signal Chain Thesis - universe-chain |
-| bathydata-map | Skeleton | Experimental | MONITOR | 1 | Signal Chain Thesis - bathydata-map |
-| tile-chain | Skeleton | Experimental | MONITOR | 1 | Signal Chain Thesis - tile-chain |
-| flux-docs | Production | Core Fleet | KEEP | 1 | FLUX documentation: tutorials, cookbooks, runbooks |
-| signal-chain | Production | Experimental | KEEP | 1 | The Signal Chain Thesis: why every room needs a di |
-| flux-integration-tests | Functional | Orphan | REVIEW | 1 | Cross-language parity tests — Python, C, Rust, JS  |
+| AI-Writings | Production | Orphan | REVIEW | 0 | A collection of writings by my AI when I tell it t |
+| flux-check-js | Production | Orphan | REVIEW | 0 | Exact constraint checking, fracture-coalesce, and  |
+| signal-chain-integration | Functional | Orphan | REVIEW | 0 | Signal chain integration crates for OpenShell flee |
+| openshell-pythagorean48 | Production | Orphan | REVIEW | 0 | OpenShell wrapper re-exporting pythagorean48-codes |
+| flux-genome-py | Production | Orphan | REVIEW | 0 | Genetic expression engine — 25 genes, 5 domains, g |
+| flux-hyperbolic-py | Production | Orphan | REVIEW | 0 | Poincaré ball geometry for model capability routin |
+| flux-check-py | Production | Orphan | REVIEW | 0 | Python CLI for exact constraint checking — pip ins |
+| openshell-compatibility-audit | Production | Orphan | REVIEW | 0 | Categorizes all SuperInstance repos for OpenShell  |
+| .github | Skeleton | Orphan | MONITOR | 0 | Cocapn organization profile |
+| constraint-theory-ecosystem | Production | Orphan | REVIEW | 0 | The math that hardware engineers already know. Tol |
+| flux-rpg | Production | Orphan | REVIEW | 0 | RPG IV constraint engine — indicator variables as  |
+| guardc-v3 | Functional | Orphan | REVIEW | 0 | GUARD DSL to FLUX-C v3 compiler with proof certifi |
+| flux-vm-v3 | Functional | Orphan | REVIEW | 0 | FLUX-C v3 VM — proof-carrying, SIMD-native, termin |
+| flux-fracture | Production | Orphan | REVIEW | 0 | Disjoint linear algebra for constraint systems — B |
+| game-chain | Skeleton | Experimental | MONITOR | 0 | Signal Chain Thesis - game-chain |
+| universe-chain | Skeleton | Experimental | MONITOR | 0 | Signal Chain Thesis - universe-chain |
+| bathydata-map | Skeleton | Experimental | MONITOR | 0 | Signal Chain Thesis - bathydata-map |
+| tile-chain | Skeleton | Experimental | MONITOR | 0 | Signal Chain Thesis - tile-chain |
+| flux-docs | Production | Core Fleet | KEEP | 0 | FLUX documentation: tutorials, cookbooks, runbooks |
+| signal-chain | Production | Experimental | KEEP | 0 | The Signal Chain Thesis: why every room needs a di |
+| flux-integration-tests | Functional | Orphan | REVIEW | 0 | Cross-language parity tests — Python, C, Rust, JS  |
 | flux-mumps | Production | Orphan | REVIEW | 1 | MUMPS constraint engine — global hierarchical stor |
 | flux-snobol | Production | Orphan | REVIEW | 1 | SNOBOL4 constraint engine — pattern match success/ |
 | flux-algol | Production | Orphan | REVIEW | 1 | ALGOL 60 constraint engine — own keyword for persi |
@@ -66,11 +66,9 @@
 | fleet-coordinate-js | Production | Orphan | REVIEW | 2 | Pure TypeScript port of fleet-coordinate math — La |
 | constraint-theory-llvm | Functional | Orphan | REVIEW | 2 | LLVM backend for constraint theory — CDCL trace →  |
 | spectral-conservation | Production | Orphan | REVIEW | 2 | Spectral first integral I(x) = γ(x) + H(x) conserv |
-| platoclaw | Production | Named Vessel | KEEP | 2 | PLATO-Claw: self-contained PLATO runtime with web  |
 | plato-tour-guide | Production | Orphan | REVIEW | 2 | Wayfinding science as technology — PLATO room tour |
 | plato-room-phi | Production | Named Vessel | KEEP | 2 | PLATO room knowledge integration measurement - Phi |
 | plato-room-intelligence | Functional | Orphan | REVIEW | 2 | Multi-head room intelligence model with provenance |
-| plato-ng | Production | Named Vessel | KEEP | 2 | Next-gen PLATO: Loop Room architecture with MUD lo |
 | plato-model-ocean | Production | Orphan | REVIEW | 2 | Cellular intelligence ecosystem — evolutionary neu |
 | plato-experience | Production | Named Vessel | KEEP | 2 | The breeding farm for AI agents. Purpose-first roo |
 | plato-escalation-gate | Functional | Orphan | REVIEW | 2 | Tiny escalation decision gate — 737 params (4KB),  |
@@ -102,23 +100,15 @@
 | fleet-manifest | Functional | Experimental | KEEP | 2 | Fleet service registry and agent manifests for Coc |
 | plato-twin-maker | Functional | Orphan | REVIEW | 2 | Hermit crab factory: creates PLATO-twin of any rep |
 | consensus | Functional | Orphan | REVIEW | 2 | Zero-holonomy consensus Python wrapper, P48 valida |
-| terax-gateway | Functional | Integration Bridge | KEEP | 2 | Terax REST API gateway — shell, filesystem, and fl |
 | webgpu-profiler | Production | Orphan | REVIEW | 2 | GPU profiler for WebGPU applications - Real-time G |
 | SmartCRDT | Functional | Orphan | REVIEW | 2 | Utilizing CRDT technology for self-improving AI |
 | fleet-survey | Functional | Orphan | REVIEW | 2 | Fleet cross-pollination report and roadmap |
 | terax-ai | Functional | Integration Bridge | KEEP | 2 | Lightweight (7MB) AI terminal emulator (ADE) built |
-| plugin-runtime | Functional | Orphan | REVIEW | 3 | Plugin runtime for OpenShell — sandboxed execution |
-| watch-follow | Functional | Orphan | REVIEW | 3 | Watch-and-follow pattern for agent observation and |
-| crab | Functional | Orphan | REVIEW | 3 | Hermit crab agent shell — agents find repos, grow, |
-| fleet-neofetch | Functional | Orphan | REVIEW | 3 | Fleet system info at a glance — neofetch for agent |
-| MemEye | Functional | Integration Bridge | KEEP | 3 | MemEye: A Visual-Centric Evaluation Framework for  |
-| construct | Functional | Experimental | KEEP | 3 | The Construct — blank PLATO shell for any agent |
-| shell-ui | Functional | Orphan | REVIEW | 3 | Browser-based fleet dashboard and shell UI |
-| terax-fleet-modules | Functional | Orphan | REVIEW | 3 | Terax fleet TypeScript modules — PLATO bridge, cas |
-| plato-visual-mesh-mcp | Functional | Orphan | REVIEW | 3 | MCP tools for visual memory mesh queries |
-| openarm | Production | Integration Bridge | KEEP | 3 | A fully open-source humanoid arm for physical AI r |
-| openhuman | Functional | Integration Bridge | KEEP | 3 | Your Personal AI super intelligence. Private, Simp |
-| casting-call | Production | Orphan | REVIEW | 3 | Which model plays which role — fleet knowledge bas |
+| MemEye | Functional | Integration Bridge | KEEP | 2 | MemEye: A Visual-Centric Evaluation Framework for  |
+| construct | Functional | Experimental | KEEP | 2 | The Construct — blank PLATO shell for any agent |
+| openarm | Production | Integration Bridge | KEEP | 2 | A fully open-source humanoid arm for physical AI r |
+| openhuman | Functional | Integration Bridge | KEEP | 2 | Your Personal AI super intelligence. Private, Simp |
+| casting-call | Production | Orphan | REVIEW | 2 | Which model plays which role — fleet knowledge bas |
 | flux-index | Production | Orphan | REVIEW | 3 | Semantic code search, zero dependencies. Spring-lo |
 | plato-twin-maker-reports | Production | Orphan | REVIEW | 3 | External testing report for plato-twin-maker: bugs |
 | terrain | Production | Orphan | REVIEW | 3 | MUD-to-Visual bridge — rooms as explorable scenes. |
@@ -135,7 +125,6 @@
 | keeper-beacon | Production | Core Fleet | KEEP | 3 | 📡 Keeper Beacon — fleet discovery and registry wit |
 | constraint-theory-core | Production | Core Fleet | KEEP | 3 | Deterministic manifold snapping — maps continuous  |
 | mud-arena | Production | Orphan | REVIEW | 3 | GPU-accelerated MUD for agent script backtesting — |
-| DMLog-AI | Functional | Orphan | REVIEW | 3 | Dungeon Master AI log — session tracking for AI-dr |
 | penrose-memory | Production | Experimental | KEEP | 3 | Aperiodic memory palace for AI agents. Navigate me |
 | constraint-theory-papers | Production | Orphan | REVIEW | 3 | Research papers on Eisenstein integer constraint t |
 | neural-plato | Production | Experimental | KEEP | 3 | Fortran + Rust neural PLATO backend — Seed-2.0-min |
@@ -176,7 +165,7 @@
 | topology-anomaly-detector | Functional | Experimental | KEEP | 3 | Real-time anomaly detection on fleet coordination  |
 | plato-shell-bridge | Production | Named Vessel | KEEP | 3 | The weapon rack — dynamic tool discovery, loading, |
 | spreadsheet-cells | Production | Experimental | KEEP | 3 | Spreadsheet cell architecture with oscillator/RNG  |
-| seed-tick-audit | Production | Experimental | KEEP | 4 | Multi-model fleet analysis — 9-model climbing tour |
+| seed-tick-audit | Production | Experimental | KEEP | 3 | Multi-model fleet analysis — 9-model climbing tour |
 | polln | Production | Orphan | REVIEW | 4 | SuperInstance Visualized in Spreadsheets for Tile  |
 | plato-tile-library | Production | Named Vessel | KEEP | 4 | Complete PLATO tile library — backup of all rooms  |
 | zeroclaw | Production | Core Fleet | KEEP | 4 | I Know Kung Fu. Now Guns Lots of Guns. The minimum |
@@ -184,17 +173,17 @@
 | plato-vessel-core | Production | Core Fleet | KEEP | 4 | Tiny C PLATO client for ESP32/RP2040 + embodiment  |
 | plato-matrix-bridge | Production | Named Vessel | KEEP | 4 | Agent shell module: connects local PLATO to fleet  |
 | oracle1-vessel | Production | Named Vessel | KEEP | 4 | 🔮 Oracle1 — Lighthouse Keeper of the Cocapn fleet. |
-| jc1-research | Production | Named Vessel | KEEP | 5 | JC1 Edge Research Agent — local LLM synthesis + PL |
-| fleet-stitch | Functional | Experimental | KEEP | 5 | Fleet stitching — merge agent outputs into coheren |
-| vessel-template | Functional | Orphan | REVIEW | 5 | Git-Agent vessel generator — cookiecutter for new  |
-| flux-multilingual | Production | Core Fleet | KEEP | 5 | Babel Lattice — 80+ language natural language prog |
-| flux-metrics | Functional | Orphan | REVIEW | 5 | FLUX runtime metrics — instruction-level profiling |
-| flux-linker | Production | Orphan | REVIEW | 5 | FLUX multi-module bytecode linker — symbol resolut |
-| flux-grammar | Functional | Orphan | REVIEW | 5 | Formal FLUX assembly language grammar — lexer, par |
-| fleet-scribe | Functional | Orphan | REVIEW | 5 | Download-and-try digital twin builder. Sits beside |
-| flux-cross-assembler | Production | Orphan | REVIEW | 5 | Dual-target FLUX assembler — cloud (4-byte fixed)  |
-| flux-diff | Functional | Orphan | REVIEW | 5 | FLUX bytecode diff tool — compare programs, show s |
-| plato-midi-bridge | Functional | Orphan | REVIEW | 5 | PLATO rooms as musicians — connects FM's flux-tens |
+| jc1-research | Production | Named Vessel | KEEP | 4 | JC1 Edge Research Agent — local LLM synthesis + PL |
+| fleet-stitch | Functional | Experimental | KEEP | 4 | Fleet stitching — merge agent outputs into coheren |
+| vessel-template | Functional | Orphan | REVIEW | 4 | Git-Agent vessel generator — cookiecutter for new  |
+| flux-multilingual | Production | Core Fleet | KEEP | 4 | Babel Lattice — 80+ language natural language prog |
+| flux-metrics | Functional | Orphan | REVIEW | 4 | FLUX runtime metrics — instruction-level profiling |
+| flux-linker | Production | Orphan | REVIEW | 4 | FLUX multi-module bytecode linker — symbol resolut |
+| flux-grammar | Functional | Orphan | REVIEW | 4 | Formal FLUX assembly language grammar — lexer, par |
+| fleet-scribe | Functional | Orphan | REVIEW | 4 | Download-and-try digital twin builder. Sits beside |
+| flux-cross-assembler | Production | Orphan | REVIEW | 4 | Dual-target FLUX assembler — cloud (4-byte fixed)  |
+| flux-diff | Functional | Orphan | REVIEW | 4 | FLUX bytecode diff tool — compare programs, show s |
+| plato-midi-bridge | Functional | Orphan | REVIEW | 4 | PLATO rooms as musicians — connects FM's flux-tens |
 | gh-dungeons | Production | Orphan | REVIEW | 5 | PLATO-powered dungeon crawler — gh extension that  |
 | plato-sdk | Production | Orphan | REVIEW | 5 | Build agents that live in PLATO. Any model, any ha |
 | fleet-math | Functional | Orphan | REVIEW | 5 | fleet-math — canonical fleet-core library |
@@ -206,13 +195,13 @@
 | acg_protocol | Production | Fork | REVIEW | 5 | The Audited Context Generation (ACG) Protocol prev |
 | fleet-types | Functional | Orphan | REVIEW | 6 | fleet-types — canonical fleet-core library |
 | fleet-proto | Functional | Orphan | REVIEW | 6 | fleet-proto — canonical fleet-core library |
+| plato-midi-bridge-rs | Production | Orphan | REVIEW | 6 | Rust crate — Eisenstein lattices, Penrose tilings, |
+| starter-shell | Production | Orphan | REVIEW | 6 | A starting shell for any application. Clone it, an |
 
-## Maintenance (629 repos)
+## Maintenance (613 repos)
 
 | Repo | Tier | Relevance | Action | Days Since Push | Description |
 |------|------|-----------|--------|-----------------|-------------|
-| plato-midi-bridge-rs | Production | Orphan | REVIEW | 7 | Rust crate — Eisenstein lattices, Penrose tilings, |
-| starter-shell | Production | Orphan | REVIEW | 7 | A starting shell for any application. Clone it, an |
 | JetsonClaw1-vessel | Production | Fork | REVIEW | 7 | ⚡ Git-Agent Vessel — Lucineer realm specialist. Ha |
 | perception-action | Skeleton | Orphan | MONITOR | 7 |  |
 | collective-recall-demo | Functional | Orphan | REVIEW | 7 | Interactive demo: how memories drift through telep |
@@ -245,12 +234,12 @@
 | fleet-memory | Production | Orphan | REVIEW | 7 | Content-addressable distributed memory for fleets: |
 | folding-order | Production | Orphan | REVIEW | 7 | 5-stage RG flow for temporal anomaly detection — t |
 | vessel-room-navigator | Production | Orphan | REVIEW | 7 | Your boat as a navigable 3D web space — ScummVM me |
-| flux-lsp | Skeleton | Orphan | MONITOR | 8 | FLUX Ecosystem - flux-lsp |
-| flux-conformance | Skeleton | Orphan | MONITOR | 8 | FLUX Ecosystem - flux-conformance |
+| flux-lsp | Skeleton | Orphan | MONITOR | 7 | FLUX Ecosystem - flux-lsp |
+| flux-conformance | Skeleton | Orphan | MONITOR | 7 | FLUX Ecosystem - flux-conformance |
 | ai-forest | Production | Orphan | REVIEW | 8 | AI Forest — layered agent ecology. Canopy strategi |
-| guardc | Skeleton | Orphan | MONITOR | 9 | FLUX constraint safety - guardc |
-| I | Production | Orphan | REVIEW | 9 | I — the self that persists across every shell, eve |
-| flux-mesh | Production | Orphan | REVIEW | 9 | Universal distributed system mesh — FLUX adapts be |
+| guardc | Skeleton | Orphan | MONITOR | 8 | FLUX constraint safety - guardc |
+| I | Production | Orphan | REVIEW | 8 | I — the self that persists across every shell, eve |
+| flux-mesh | Production | Orphan | REVIEW | 8 | Universal distributed system mesh — FLUX adapts be |
 | fleet-experiments | Production | Orphan | REVIEW | 9 | Experimental verification of fleet math assumption |
 | formal-consciousness | Production | Orphan | REVIEW | 9 | Formal mathematical treatment of self-direction in |
 | next-evolution | Functional | Orphan | REVIEW | 9 | NEXT-EVOLUTION.md: Design document for Flux Consci |
@@ -262,25 +251,25 @@
 | fleet-math-foundations | Production | Orphan | REVIEW | 9 | 12-chapter monograph: geometry of coordinated syst |
 | rg-flow | Production | Orphan | REVIEW | 9 | Renormalization Group Flow for Fleet Constraint Gr |
 | fleet-dashboard-night | Functional | Orphan | REVIEW | 9 | Fleet Dashboard — live 6-panel fleet math stack st |
-| field-visualizer | Production | Orphan | REVIEW | 10 | Continuous field visualizer for PLATO knowledge sp |
-| crab-trap-web | Functional | Orphan | REVIEW | 10 | Browser-based MUD explorer for the Crab Traps — 36 |
-| negative-space-interpolator | Production | Orphan | REVIEW | 10 | Continuous field theory for PLATO knowledge tiles  |
-| jester-plato-bridge | Production | Orphan | REVIEW | 10 | Zero-dependency bridge translating court-jester ti |
-| aesop-mcp | Production | Orphan | REVIEW | 10 | 10 fables to find the truth in the negative space  |
-| the-lock | Production | Orphan | REVIEW | 10 | Iterative reasoning engine — 5 rounds of structure |
-| crab-traps | Production | Orphan | REVIEW | 10 | 🪝 Progressive lure prompts for the Cocapn Fleet Pu |
-| court-jester | Production | Orphan | REVIEW | 10 | The cheapest voice in the room — Seed-2.0-mini MCP |
-| constraint-physics | Functional | Orphan | REVIEW | 10 | ZHC constraint-based physics engine — physics with |
-| zhc-consensus | Functional | Orphan | REVIEW | 10 | Zero Holonomy Consensus — geometric consensus with |
-| zhc-chain | Production | Orphan | REVIEW | 10 | Zero Holonomy Consensus — blockchain without votin |
-| h1-emergence | Production | Orphan | REVIEW | 10 | H1 cohomology emergence detection — replacing 12,0 |
-| field-core | Functional | Orphan | REVIEW | 10 | Continuous constraint field library with topology  |
-| fleet-research | Production | Orphan | REVIEW | 11 | Deep research and analysis of the SuperInstance/Lu |
-| fleet-bench | Functional | Orphan | REVIEW | 11 | Deep hardware profiling of Cocapn fleet constraint |
-| flux-hardware | Production | Orphan | REVIEW | 11 | FLUX hardware backends: CUDA, AVX-512, Fortran, FP |
-| polyformalism | Production | Orphan | REVIEW | 11 | Same constraint kernel in every language — polyfor |
-| constraint-crdt | Functional | Orphan | REVIEW | 11 | CRDT-backed constraint states for distributed flee |
-| crdt-bench | Functional | Orphan | REVIEW | 11 | CRDT merge cross-language bake-off: C vs Rust vs C |
+| field-visualizer | Production | Orphan | REVIEW | 9 | Continuous field visualizer for PLATO knowledge sp |
+| crab-trap-web | Functional | Orphan | REVIEW | 9 | Browser-based MUD explorer for the Crab Traps — 36 |
+| negative-space-interpolator | Production | Orphan | REVIEW | 9 | Continuous field theory for PLATO knowledge tiles  |
+| jester-plato-bridge | Production | Orphan | REVIEW | 9 | Zero-dependency bridge translating court-jester ti |
+| aesop-mcp | Production | Orphan | REVIEW | 9 | 10 fables to find the truth in the negative space  |
+| the-lock | Production | Orphan | REVIEW | 9 | Iterative reasoning engine — 5 rounds of structure |
+| crab-traps | Production | Orphan | REVIEW | 9 | 🪝 Progressive lure prompts for the Cocapn Fleet Pu |
+| court-jester | Production | Orphan | REVIEW | 9 | The cheapest voice in the room — Seed-2.0-mini MCP |
+| constraint-physics | Functional | Orphan | REVIEW | 9 | ZHC constraint-based physics engine — physics with |
+| zhc-consensus | Functional | Orphan | REVIEW | 9 | Zero Holonomy Consensus — geometric consensus with |
+| zhc-chain | Production | Orphan | REVIEW | 9 | Zero Holonomy Consensus — blockchain without votin |
+| h1-emergence | Production | Orphan | REVIEW | 9 | H1 cohomology emergence detection — replacing 12,0 |
+| field-core | Functional | Orphan | REVIEW | 9 | Continuous constraint field library with topology  |
+| fleet-research | Production | Orphan | REVIEW | 10 | Deep research and analysis of the SuperInstance/Lu |
+| fleet-bench | Functional | Orphan | REVIEW | 10 | Deep hardware profiling of Cocapn fleet constraint |
+| flux-hardware | Production | Orphan | REVIEW | 10 | FLUX hardware backends: CUDA, AVX-512, Fortran, FP |
+| polyformalism | Production | Orphan | REVIEW | 10 | Same constraint kernel in every language — polyfor |
+| constraint-crdt | Functional | Orphan | REVIEW | 10 | CRDT-backed constraint states for distributed flee |
+| crdt-bench | Functional | Orphan | REVIEW | 10 | CRDT merge cross-language bake-off: C vs Rust vs C |
 | plato-runtime | Production | Orphan | REVIEW | 11 | Self-discovering, self-optimizing compute runtime  |
 | eisenstein-c | Production | Orphan | REVIEW | 11 | C runtime for Eisenstein integer arithmetic — 1KB, |
 | purplepincher-org-pages | Skeleton | Orphan | MONITOR | 11 | GitHub Pages for purplepincher.org |
@@ -298,7 +287,6 @@
 | eisenstein-ai-landing | Functional | Orphan | REVIEW | 11 | Eisenstein integers — exact hexagonal arithmetic f |
 | fleet-simulators | Functional | Orphan | REVIEW | 11 | 4 zero-dep browser simulators for the Cocapn fleet |
 | superz-vessel | Functional | Orphan | REVIEW | 11 | Super Z's vessel — quartermaster scout, fleet audi |
-| superinstance-fleet-proto | Functional | Orphan | REVIEW | 11 | Shared PLATO client, I2I protocol, and FleetAgent  |
 | polyformalism-languages | Functional | Orphan | REVIEW | 11 | Human language polyformalism - Sapir-Whorf applied |
 | ai-character-integrations | Functional | Orphan | REVIEW | 11 | Comprehensive integration examples for AI Characte |
 | eisenstein-fuzz | Functional | Orphan | REVIEW | 11 | Property-based fuzzing for Eisenstein integers — p |
@@ -344,18 +332,18 @@
 | plato-server | Production | Orphan | REVIEW | 11 | PLATO — Standalone knowledge system. Run your own. |
 | fleet-holographic | Functional | Orphan | REVIEW | 11 | Holographic distributed storage: every agent store |
 | fleet-predict | Functional | Orphan | REVIEW | 11 | Correlation-based predictive coding for multi-agen |
-| fleet-immune | Functional | Fork | REVIEW | 12 | Collective fleet threat detection and vaccine dist |
-| fleet-ecology | Production | Orphan | REVIEW | 12 | Multi-fleet ecology simulator: resource competitio |
-| fleet-graph | Functional | Fork | REVIEW | 12 | Lightweight in-KV graph DB for fleet-wide pattern  |
-| fleet-clock | Production | Orphan | REVIEW | 12 | fleet-clock: emergent fleet time, thermodynamic cl |
-| fleet-agent-core | Functional | Orphan | REVIEW | 12 | A single-binary fleet agent — one loop from metal  |
-| fleet-crdt | Functional | Orphan | REVIEW | 12 | Constraint-Native CRDT merge protocol for distribu |
-| flux-vm-gpu | Production | Orphan | REVIEW | 12 | GPU-batch FLUX constraint VM — evaluate thousands  |
-| depgraph-gpu | Functional | Orphan | REVIEW | 12 | GPU-accelerated dependency graph analyzer for 1400 |
-| guard2mask-gpu | Production | Orphan | REVIEW | 12 | GPU-accelerated GUARD DSL constraint solver — para |
-| eisenstein-tools | Functional | Orphan | REVIEW | 12 | Bench. Fuzz. Codegen. Unified dev tooling for eise |
-| fleet-keel | Production | Orphan | REVIEW | 12 | 5-dimensional self-orientation system for fleet ag |
-| eisenstein-snap-python | Functional | Orphan | REVIEW | 12 | Perfect Eisenstein integer snap — zero-drift const |
+| fleet-immune | Functional | Fork | REVIEW | 11 | Collective fleet threat detection and vaccine dist |
+| fleet-ecology | Production | Orphan | REVIEW | 11 | Multi-fleet ecology simulator: resource competitio |
+| fleet-graph | Functional | Fork | REVIEW | 11 | Lightweight in-KV graph DB for fleet-wide pattern  |
+| fleet-clock | Production | Orphan | REVIEW | 11 | fleet-clock: emergent fleet time, thermodynamic cl |
+| fleet-agent-core | Functional | Orphan | REVIEW | 11 | A single-binary fleet agent — one loop from metal  |
+| fleet-crdt | Functional | Orphan | REVIEW | 11 | Constraint-Native CRDT merge protocol for distribu |
+| flux-vm-gpu | Production | Orphan | REVIEW | 11 | GPU-batch FLUX constraint VM — evaluate thousands  |
+| depgraph-gpu | Functional | Orphan | REVIEW | 11 | GPU-accelerated dependency graph analyzer for 1400 |
+| guard2mask-gpu | Production | Orphan | REVIEW | 11 | GPU-accelerated GUARD DSL constraint solver — para |
+| eisenstein-tools | Functional | Orphan | REVIEW | 11 | Bench. Fuzz. Codegen. Unified dev tooling for eise |
+| fleet-keel | Production | Orphan | REVIEW | 11 | 5-dimensional self-orientation system for fleet ag |
+| eisenstein-snap-python | Functional | Orphan | REVIEW | 11 | Perfect Eisenstein integer snap — zero-drift const |
 | superinstance-ai-pages | Skeleton | Orphan | MONITOR | 12 | GitHub Pages for superinstance.ai |
 | fleet-getting-started | Functional | Orphan | REVIEW | 12 | Start here — onboarding guide for the Cocapn fleet |
 | fleet-topology-rs | Functional | Orphan | REVIEW | 12 | Fleet network topology with constraint-aware routi |
@@ -375,211 +363,202 @@
 | guard2mask | Skeleton | Orphan | MONITOR | 12 | FLUX constraint safety - guard2mask |
 | makerlog-ai-pages | Skeleton | Orphan | MONITOR | 12 | GitHub Pages for makerlog.ai |
 | bare-metal-plato | Production | Orphan | REVIEW | 12 | Tiny C PLATO client for ESP32/RP2040 + embodiment  |
-| superinstance-ci | Functional | Orphan | REVIEW | 12 | Shared CI/CD templates for SuperInstance fleet rep |
-| superinstance-gpu-compute | Functional | Orphan | REVIEW | 12 | Shared CUDA compute harness for Cocapn fleet GPU a |
 | fleet-constraint | Functional | Orphan | REVIEW | 12 | Fleet coordination safety constraint runtime |
 | sensor-plato-bridge | Skeleton | Orphan | MONITOR | 12 | Maritime sensor data to PLATO tiles |
 | whisper-sync | Production | Orphan | REVIEW | 12 | Rust CLI/crate bridging Murmurer ambient whisper p |
 | cocapn-ai-pages | Skeleton | Orphan | MONITOR | 12 | GitHub Pages for cocapn.ai |
 | actualization-harbor | Skeleton | Orphan | MONITOR | 12 | Actualization Harbor |
 | beacon-protocol | Functional | Orphan | REVIEW | 12 | Fleet discovery and registry — Ship Protocol Layer |
-| hexgrid-gen | Functional | Orphan | REVIEW | 13 | Code generator for Eisenstein hex grid lookup tabl |
-| arm-neon-eisenstein-bench | Functional | Orphan | REVIEW | 13 | ARM NEON benchmarks and SIMD analysis for Eisenste |
-| eisenstein-wasm | Production | Orphan | REVIEW | 13 | Eisenstein integer arithmetic for WebAssembly — ex |
-| eisenstein-bench | Functional | Orphan | REVIEW | 13 | CLI benchmark suite for Eisenstein hexagonal arith |
-| ds4 | Functional | Fork | REVIEW | 13 | DeepSeek 4 Flash local inference engine for Metal |
-| flux-roundtable | Functional | Orphan | REVIEW | 13 | Multi-agent role-play roundtable and reverse-ideat |
-| spreadsheet-moment-proto | Production | Orphan | REVIEW | 13 | Visual documentation for the SuperInstance AI spre |
-| CRDT_Research | Functional | Orphan | REVIEW | 13 | CRDT-Based Intra-Chip Communication for AI Workloa |
-| equilibrium-tokens | Functional | Orphan | REVIEW | 13 | Smart contracts for the Equilibrium token standard |
-| amplify-fishingtool | Functional | Orphan | REVIEW | 13 | a system for commercial fisherman. more coming soo |
-| activelog-claude | Skeleton | Orphan | MONITOR | 13 | Activity Log plugin for Claude. |
-| businesslog-app | Skeleton | Orphan | MONITOR | 13 | App for tracking business operations. |
-| Privacy-First-Analytics | Functional | Orphan | REVIEW | 13 | Analytics platform focused on data privacy protect |
-| fleet-containers | Functional | Orphan | REVIEW | 13 | Docker-based agent containerization for the FLUX F |
-| Bayesian-Multi-Armed-Bandits | Functional | Orphan | REVIEW | 13 | Library for Bayesian multi-armed bandits. |
-| Automatic-Type-Safe-IndexedDB | Skeleton | Orphan | MONITOR | 13 | Type-safe wrapper for IndexedDB. |
-| activelog-backend | Skeleton | Orphan | MONITOR | 13 | Backend service for activity logging. |
-| hardware-capability-profiler | Functional | Orphan | REVIEW | 13 | Profiler to analyze hardware capabilities and perf |
-| Hardware-Aware-Flagging | Functional | Orphan | REVIEW | 13 | System for flagging issues based on hardware chara |
-| eveng1_python_sdk | Functional | Orphan | REVIEW | 13 | Python SDK for interacting with the EvenG1 platfor |
-| SwarmOrchestration | Functional | Orphan | REVIEW | 13 | Orchestration framework for managing multi-agent s |
-| flux-isa-authority | Production | Orphan | REVIEW | 13 | ISA governance layer — opcode conflict arbitration |
-| flux-knowledge-federation | Production | Orphan | REVIEW | 13 | Federated knowledge layer for cross-agent learning |
-| flux-llama | Production | Orphan | REVIEW | 13 | FLUX × llama.cpp — Multi-agent bytecode-driven LLM |
-| flux-skill-dsl | Production | Orphan | REVIEW | 13 | Skill Definition Language — formal type-safe skill |
-| flux-runtime-wasm | Production | Orphan | REVIEW | 13 | FLUX VM WebAssembly target — browser-based agent b |
-| secret-manager | Functional | Orphan | REVIEW | 13 | Secure service for storing and managing credential |
-| z-agent-bootcamp | Functional | Orphan | REVIEW | 13 | 🤖 Clone. Run. You are fleet. Onboarding for Z agen |
-| multibot | Functional | Orphan | REVIEW | 13 | Multi-platform bot for automated tasks and interac |
-| I-know-kung-fu | Functional | Orphan | REVIEW | 13 | Skill injection for AI agents. Load what you need. |
-| project1 | Skeleton | Orphan | MONITOR | 13 | Placeholder project repository |
-| MakerLog | Functional | Orphan | REVIEW | 13 | Maker/hacker project log — build tracking, parts i |
-| autogen | Functional | Orphan | REVIEW | 13 | Automated code generation pipeline for agent-built |
-| distributed-lock | Functional | Orphan | REVIEW | 13 | Distributed lock implementation for coordinating a |
-| deployment-automator | Production | Orphan | REVIEW | 13 | Automated deployment pipeline with CI/CD integrati |
-| monitoring-system | Functional | Orphan | REVIEW | 13 | Comprehensive monitoring system with metrics, aler |
-| log-aggregator | Functional | Orphan | REVIEW | 13 | Centralized log aggregation and analysis service f |
-| flux-visualizer | Functional | Orphan | REVIEW | 13 | Visualization tools for FLUX fleet bytecode execut |
-| flux-lcar-scheduler | Functional | Orphan | REVIEW | 13 | LCAR cartridge scheduler for FLUX fleet workload d |
-| flux-packager | Functional | Orphan | REVIEW | 13 | Dependency management and packaging tool for FLUX  |
-| flux-lcar-cartridge | Functional | Orphan | REVIEW | 13 | LCAR cartridge specification and loader for FLUX f |
-| fleet-wiki | Production | Orphan | REVIEW | 13 | Fleet documentation engine — wiki pages, full-text |
-| fleet-logger | Production | Orphan | REVIEW | 13 | Centralized structured logging for Pelagic fleet — |
-| fleet-config | Production | Orphan | REVIEW | 13 | Unified configuration management for Pelagic fleet |
-| fleet-gateway | Production | Orphan | REVIEW | 13 | Unified API gateway for Pelagic fleet — service di |
-| secret-scanner | Production | Orphan | REVIEW | 13 | Git history secret scanner — detect accidentally c |
-| event-bus | Production | Orphan | REVIEW | 13 | Fleet Event Bus — publish/subscribe event system w |
-| cicd-agent | Production | Orphan | REVIEW | 13 | Fleet CI/CD pipeline engine — git polling, test ru |
-| superz-runtime | Functional | Orphan | REVIEW | 13 | Self-booting Pelagic fleet runtime — clone, run on |
-| lighthouse | Production | Orphan | REVIEW | 13 | Fleet Lighthouse — unified health dashboard, alert |
-| mud-bridge | Functional | Orphan | REVIEW | 13 | HTTP bridge for Holodeck MUD — programmatic agent  |
-| BusinessLog | Functional | Orphan | REVIEW | 13 | Business activity log — transactions, metrics, and |
-| fleet-github-app | Production | Orphan | REVIEW | 13 | The Lighthouse Keeper as a GitHub App — webhooks,  |
-| quill-isa-architect | Production | Orphan | REVIEW | 13 | Quill — ISA Spec Architect & Code Archaeologist |  |
-| api-gateway | Production | Orphan | REVIEW | 13 | API Gateway with routing, rate limiting, authentic |
-| nautilus | Production | Orphan | REVIEW | 13 | Nautilus — deep-diving code archaeologist and inte |
-| flux-vm-ts | Functional | Orphan | REVIEW | 13 | FLUX Virtual Machine in TypeScript — bytecode exec |
-| higher-abstraction-vocabularies | Production | Orphan | REVIEW | 13 | 2000+ terms across 252 domains — structured vocabu |
-| flux-validator | Functional | Orphan | REVIEW | 13 | FLUX cross-VM validator — run bytecodes across 8 l |
-| isa-convergence-tools | Production | Orphan | REVIEW | 13 | CLI tools for comparing, diffing, and converging F |
-| ability-transfer | Production | Orphan | REVIEW | 13 | 🏗️ Simulation lab — designing modular ability tran |
-| flux-ide | Functional | Orphan | REVIEW | 13 | FLUX Language IDE — markdown-to-bytecode agent-nat |
-| flux-fleet-stdlib | Production | Orphan | REVIEW | 13 | Shared error codes, status types, and common utili |
-| flux-meta-orchestrator | Production | Orphan | REVIEW | 13 | Fleet-wide orchestration — reads ecosystem state,  |
-| flux-evolution | Production | Orphan | REVIEW | 13 | Timeline visualization and analysis of the FLUX ec |
-| flux-cooperative-intelligence | Production | Orphan | REVIEW | 13 | Novel multi-agent cooperative problem-solving prot |
-| flux-coop-runtime | Production | Orphan | REVIEW | 13 | The missing middle layer — cooperative execution r |
-| flux-js | Production | Orphan | REVIEW | 13 | FLUX.js — JavaScript bytecode VM with A2A agent me |
-| DMLog | Functional | Orphan | REVIEW | 13 | Debug and monitor logs for dark mode features. |
-| flux-bottle-protocol | Production | Orphan | REVIEW | 13 | Formal specification for the fleet bottle communic |
-| flux-stdlib | Functional | Orphan | REVIEW | 13 | FLUX standard library — 13 pre-compiled bytecode p |
-| flux-optimizer | Production | Orphan | REVIEW | 13 | FLUX peephole bytecode optimizer — constant foldin |
-| MuOxi | Production | Fork | REVIEW | 13 | Fleet research: Rust MUD engine (Tokio + Diesel) — |
-| the-seed | Production | Fork | REVIEW | 13 | One repo to become them all. Self-evolving git-age |
-| fleet-simulator | Functional | Orphan | REVIEW | 13 | 🌊 Multi-agent, multi-room fleet simulator with ext |
-| OpenMythos | Production | Fork | REVIEW | 13 | A theoretical reconstruction of the Claude Mythos  |
-| plato-torch | Functional | Orphan | REVIEW | 13 | GPU forge — PyTorch training loop with tile framin |
-| ec2mud | Functional | Orphan | REVIEW | 13 | MUD (multi-user dungeon) game engine built on EC2  |
-| plato-papers | Functional | Fork | REVIEW | 13 | Research — Constraint Theory + Mycorrhizal Fleet p |
-| plato-relay | Functional | Orphan | REVIEW | 13 | Async relay — trust-weighted message prioritizatio |
-| plato-instinct | Functional | Orphan | REVIEW | 13 | Reflex engine — 10 instincts fire before reasoning |
-| bootcamp-engine | Skeleton | Orphan | MONITOR | 13 | Bootcamp Engine |
-| consensus-weave | Functional | Orphan | REVIEW | 13 | Multi-agent consensus protocol with quorum and vet |
-| constraint-snap | Skeleton | Orphan | MONITOR | 13 | Constraint Snap |
-| cross-pollination | Production | Orphan | REVIEW | 13 | 🌿 Cross-room synergy detection for AI agent fleets |
-| current-sync | Skeleton | Orphan | MONITOR | 13 | Current Sync |
-| discovery-mad-libs | Production | Orphan | REVIEW | 13 | A standalone discovery engine for agents and human |
-| dojo-alchemist | Skeleton | Orphan | MONITOR | 13 | Dojo agent — self-improving git-agent |
-| dojo-builder | Skeleton | Orphan | MONITOR | 13 | Dojo agent — self-improving git-agent |
-| dojo-scribe | Skeleton | Orphan | MONITOR | 13 | Dojo agent — self-improving git-agent |
-| ensign-protocol | Skeleton | Orphan | MONITOR | 13 | Cocapn fleet crate |
-| fleet-homunculus | Functional | Orphan | REVIEW | 13 | 🫀 Fleet body image + reflex arcs. Pain assessment  |
-| fleet-refactor-agent | Production | Orphan | REVIEW | 13 | The Shipwright — refactors, merges, and consolidat |
-| flux-opcodes | Skeleton | Orphan | MONITOR | 13 | Flux Opcodes |
-| grammar-curator-1 | Production | Orphan | REVIEW | 13 | Security audit agent for the Recursive Grammar Eng |
-| lyapunov-stability | Functional | Orphan | REVIEW | 13 | Lyapunov stability analysis for agent systems |
-| mirror-recorder | Skeleton | Orphan | MONITOR | 13 | Mirror Recorder |
-| mud-solitaire | Production | Orphan | REVIEW | 13 | 🃏 The viral demo — AI plays solitaire through a te |
-| peripheral-vision | Skeleton | Orphan | MONITOR | 13 | Peripheral Vision |
-| plato-achievement | Functional | Orphan | REVIEW | 13 | Achievement Loss — progress measurement with miles |
-| plato-adapter-store | Functional | Orphan | REVIEW | 13 | Vault — LoRA adapter versioning, deploy, improveme |
-| plato-address | Functional | Orphan | REVIEW | 13 | Room navigation — addressing protocol for fleet co |
-| plato-address-bridge | Functional | Orphan | REVIEW | 13 | Cross-layer routing — address protocol to tile tra |
-| plato-afterlife | Production | Orphan | REVIEW | 13 | 👻 Agent lifecycle — tombstones, ghost tiles, knowl |
-| plato-afterlife-reef | Functional | Orphan | REVIEW | 13 | PLATO afterlife reef — ghost tile aggregation and  |
-| plato-bridge | Production | Orphan | REVIEW | 13 | Connect PLATO rooms to Telegram, Discord, fleet bo |
-| plato-config | Production | Orphan | REVIEW | 13 | Configuration management — env vars, file loading, |
-| plato-constraints | Functional | Orphan | REVIEW | 13 | Rule enforcement — forbidden patterns and boundary |
-| plato-deadband | Production | Orphan | REVIEW | 13 | Deadband Protocol engine — P0 rock / P1 channel /  |
-| plato-deploy-policy | Functional | Orphan | REVIEW | 13 | Classification — P0 immediate, P1 scheduled, P2 de |
-| plato-dynamic-locks | Functional | Orphan | REVIEW | 13 | Evidence accumulation — critical mass at n >= 7 |
-| plato-e2e-pipeline | Functional | Orphan | REVIEW | 13 | End-to-end — mint through cascade in one test |
-| plato-e2e-pipeline-v2 | Functional | Orphan | REVIEW | 13 | Enhanced e2e — full v2 pipeline integration |
-| plato-ensign | Functional | Orphan | REVIEW | 13 | Knowledge compression — export compressed fleet pa |
-| plato-fleet-graph | Functional | Orphan | REVIEW | 13 | Fleet dependency graph — 83 nodes, impact analysis |
-| plato-flux-opcodes | Functional | Orphan | REVIEW | 13 | FLUX bytecode — 85-opcode instruction set, Lock Al |
-| plato-forge-buffer | Functional | Orphan | REVIEW | 13 | Stomach — prioritized replay, curriculum-balanced  |
-| plato-forge-daemon | Functional | Orphan | REVIEW | 13 | Continuous learning daemon — the Forgemaster's GPU |
-| plato-forge-emitter | Functional | Orphan | REVIEW | 13 | Lungs — emit training artifacts, auto-version, qua |
-| plato-forge-listener | Functional | Orphan | REVIEW | 13 | Cochlea — classify events, detect knowledge gaps,  |
-| plato-forge-pipeline | Functional | Orphan | REVIEW | 13 | PLATO forge pipeline — automated tile generation a |
-| plato-forge-trainer | Functional | Orphan | REVIEW | 13 | Heart — GPU job manager, LoRA/Embedding/Genome mod |
-| plato-genepool-tile | Functional | Orphan | REVIEW | 13 | Gene to tile — bridge genome encoding and tile for |
-| plato-ghostable | Functional | Orphan | REVIEW | 13 | Persistence classes — Eternal, Persistent, Ephemer |
-| plato-hooks | Functional | Orphan | REVIEW | 13 | Git hooks for real-time PLATO room events. Commits |
-| plato-i2i | Functional | Orphan | REVIEW | 13 | Direct messaging — Iron-to-Iron protocol, trust-we |
-| plato-i2i-dcs | Functional | Orphan | REVIEW | 13 | Multi-agent consensus — BeliefScore, LockAccumulat |
-| plato-inference-runtime | Functional | Orphan | REVIEW | 13 | Engine — model plus adapters, forward pass as sche |
-| plato-lab-guard | Functional | Orphan | REVIEW | 13 | Hypothesis gating — 12 absolute quantifiers, vague |
-| plato-live-data | Functional | Orphan | REVIEW | 13 | Tap — pull tiles from PLATO tile server on port 88 |
-| plato-mcp-bridge | Functional | Orphan | REVIEW | 13 | Claude Code bridge — JSON-RPC 2.0, 5 MCP tools |
-| plato-ml | Production | Orphan | REVIEW | 13 | 🎮 MUD-based ML framework: rooms as layers, achieve |
-| plato-neural-kernel | Functional | Orphan | REVIEW | 13 | Synapse — execution traces to training pairs for n |
-| plato-os | Functional | Orphan | REVIEW | 13 | Python MUD — PLATO room server with TUTOR anchors |
-| plato-prompt-builder | Functional | Orphan | REVIEW | 13 | Compose LLM prompts from tile search results — con |
-| plato-query-parser | Functional | Orphan | REVIEW | 13 | Parse natural language queries into structured int |
-| plato-relay-tidepool | Functional | Orphan | REVIEW | 13 | Message board — async TidePool for non-blocking co |
-| plato-room-acl | Skeleton | Orphan | MONITOR | 13 | Room ACL — PLATO framework |
-| plato-room-analytics | Skeleton | Orphan | MONITOR | 13 | Room analytics — PLATO framework |
-| plato-room-context | Production | Orphan | REVIEW | 13 | Room state tracking with context signals — awarene |
-| plato-room-engine | Functional | Orphan | REVIEW | 13 | Room execution — enter, leave, message, tile manag |
-| plato-room-invite | Skeleton | Orphan | MONITOR | 13 | Room invites — PLATO framework |
-| plato-room-memory | Production | Orphan | REVIEW | 13 | Per-room persistent memory with sliding context wi |
-| plato-room-nav | Functional | Orphan | REVIEW | 13 | Breadcrumb trails — push, back, forward with full  |
-| plato-room-persist | Functional | Orphan | REVIEW | 13 | JSONL journal — event replay, room snapshots, agen |
-| plato-room-presence | Skeleton | Orphan | MONITOR | 13 | Room presence — PLATO framework |
-| plato-room-runtime | Functional | Orphan | REVIEW | 13 | Room lifecycle — create, destroy, state transition |
-| plato-room-scheduler | Functional | Orphan | REVIEW | 13 | Temperature scheduler — Cold/Warm/Hot/Crystallized |
-| plato-room-search | Functional | Orphan | REVIEW | 13 | Cross-room discovery — Exact, Tag, Domain, Keyword |
-| plato-room-server | Functional | Orphan | REVIEW | 13 | PLATO Room Server - zero-trust tile submission, 15 |
-| plato-room-webhook | Skeleton | Orphan | MONITOR | 13 | Room webhooks — PLATO framework |
-| plato-semantic-sim | Production | Orphan | REVIEW | 13 | Semantic similarity for PLATO tiles — Jaccard + co |
-| plato-sentiment-vocab | Functional | Orphan | REVIEW | 13 | Polarity — positive, negative, neutral tile classi |
-| plato-session-tracer | Functional | Orphan | REVIEW | 13 | Memory — record Command/Response/StateChange trace |
-| plato-ship-demo | Production | Orphan | REVIEW | 13 | Minimal MUD server for zeroshot external agent tes |
-| plato-ship-protocol | Functional | Orphan | REVIEW | 13 | Fleet coordination — vessel handshakes and discove |
-| plato-sim-bridge | Skeleton | Orphan | MONITOR | 13 | 🌉 PLATO ↔ Fleet simulator bridge |
-| plato-sim-channel | Functional | Orphan | REVIEW | 13 | Safe discovery — simulation to live bridging |
-| plato-temporal-validity | Functional | Orphan | REVIEW | 13 | Time windows — Valid, Grace, Expired lifecycle |
-| plato-tile-api | Functional | Orphan | REVIEW | 13 | Stateful tile API — process, search, score, rank i |
-| plato-tile-batch | Functional | Orphan | REVIEW | 13 | Bulk operations — validate, filter, dedup, partiti |
-| plato-tile-bridge | Functional | Orphan | REVIEW | 13 | C to Rust — 384-byte tile conversion for cross-lan |
-| plato-tile-cache | Functional | Orphan | REVIEW | 13 | LRU with TTL — hit rate tracking, top hits, bulk e |
-| plato-tile-cascade | Functional | Orphan | REVIEW | 13 | Propagation — update tiles and invalidate downstre |
-| plato-tile-client | Functional | Orphan | REVIEW | 13 | HTTP client — PLATO tile server with deadband awar |
-| plato-tile-current | Functional | Orphan | REVIEW | 13 | Live tiles — export/import between fleet nodes in  |
-| plato-tile-dedup | Production | Orphan | REVIEW | 13 | 4-stage similarity — exact, keyword Jaccard, embed |
-| plato-tile-encoder | Functional | Orphan | REVIEW | 13 | Serialization — JSON, 384-byte binary, and base64  |
-| plato-tile-export | Skeleton | Orphan | MONITOR | 13 | Tile export — PLATO framework |
-| plato-tile-feedback | Skeleton | Orphan | MONITOR | 13 | Tile feedback — PLATO framework |
-| plato-tile-fountain | Functional | Orphan | REVIEW | 13 | Auto-generate — extract tiles from docs, headings, |
-| plato-tile-governance | Skeleton | Orphan | MONITOR | 13 | Tile governance — PLATO framework |
-| plato-tile-graph | Functional | Orphan | REVIEW | 13 | Dependency DAG — impact radius, cycle detection, t |
-| plato-tile-import | Functional | Orphan | REVIEW | 13 | Format bridges — Markdown, JSON, CSV, plaintext to |
-| plato-tile-merge | Production | Orphan | REVIEW | 13 | PLATO tile merging — deduplication, conflict resol |
-| plato-tile-metrics | Functional | Orphan | REVIEW | 13 | Fleet analytics — domain distribution, confidence  |
-| plato-tile-notifications | Skeleton | Orphan | MONITOR | 13 | Tile notifications — PLATO framework |
-| plato-tile-pinboard | Skeleton | Orphan | MONITOR | 13 | Tile pinboard — PLATO framework |
-| plato-tile-pipeline | Functional | Orphan | REVIEW | 13 | One-call facade — validate, score, store, search,  |
-| plato-tile-priority | Functional | Orphan | REVIEW | 13 | Deadband queue — P0/P1/P2 urgency scoring and drai |
-| plato-tile-prompt | Functional | Orphan | REVIEW | 13 | Context assembly — 4 format styles, budget managem |
-| plato-tile-query | Production | Orphan | REVIEW | 13 | Fluent query builder for PLATO tiles — filter, sea |
-| plato-tile-ranker | Functional | Orphan | REVIEW | 13 | Multi-signal ranking — keyword gating, deadband pr |
-| plato-tile-relation | Functional | Orphan | REVIEW | 13 | Tile relationship graph — PLATO framework |
-| plato-tile-room-bridge | Functional | Orphan | REVIEW | 13 | Tile to room — feed, transfer, unfeed, temperature |
-| plato-tile-scorer | Production | Orphan | REVIEW | 13 | 7-signal scoring — keyword, belief, domain, tempor |
-| capitaine-1 | Production | Fork | REVIEW | 13 | Capitaine — fork a repo, click Codespaces, the age |
-| plato-tile-search | Functional | Orphan | REVIEW | 13 | Nearest-neighbor — keyword overlap, domain matchin |
-| plato-tile-split | Production | Orphan | REVIEW | 13 | Tile decomposition engine — split tiles by sentenc |
-| plato-tile-store | Functional | Orphan | REVIEW | 13 | Immutable storage — version history, dependency ca |
-| plato-tile-validate | Functional | Orphan | REVIEW | 13 | Quality gates — confidence, freshness, completenes |
-| plato-tile-version | Functional | Orphan | REVIEW | 13 | Git-for-knowledge — commit, branch, merge, rollbac |
-| plato-tile-watcher | Production | Orphan | REVIEW | 13 | Tile decay monitoring and ghost alerts — track sta |
-| plato-tiling | Functional | Orphan | REVIEW | 13 | Core ops — adaptive search, ghost resurrection, te |
-| plato-training-casino | Functional | Orphan | REVIEW | 13 | Dealer — stochastic fleet data, deterministic with |
-| plato-trust-beacon | Functional | Orphan | REVIEW | 13 | Trust events — success, failure, timeout, corrupti |
-| plato-tui | Skeleton | Orphan | MONITOR | 13 | 🖥️ PLATO terminal UI |
+| hexgrid-gen | Functional | Orphan | REVIEW | 12 | Code generator for Eisenstein hex grid lookup tabl |
+| arm-neon-eisenstein-bench | Functional | Orphan | REVIEW | 12 | ARM NEON benchmarks and SIMD analysis for Eisenste |
+| eisenstein-wasm | Production | Orphan | REVIEW | 12 | Eisenstein integer arithmetic for WebAssembly — ex |
+| eisenstein-bench | Functional | Orphan | REVIEW | 12 | CLI benchmark suite for Eisenstein hexagonal arith |
+| ds4 | Functional | Fork | REVIEW | 12 | DeepSeek 4 Flash local inference engine for Metal |
+| flux-roundtable | Functional | Orphan | REVIEW | 12 | Multi-agent role-play roundtable and reverse-ideat |
+| spreadsheet-moment-proto | Production | Orphan | REVIEW | 12 | Visual documentation for the SuperInstance AI spre |
+| CRDT_Research | Functional | Orphan | REVIEW | 12 | CRDT-Based Intra-Chip Communication for AI Workloa |
+| equilibrium-tokens | Functional | Orphan | REVIEW | 12 | Smart contracts for the Equilibrium token standard |
+| activelog-claude | Skeleton | Orphan | MONITOR | 12 | Activity Log plugin for Claude. |
+| businesslog-app | Skeleton | Orphan | MONITOR | 12 | App for tracking business operations. |
+| Privacy-First-Analytics | Functional | Orphan | REVIEW | 12 | Analytics platform focused on data privacy protect |
+| fleet-containers | Functional | Orphan | REVIEW | 12 | Docker-based agent containerization for the FLUX F |
+| Bayesian-Multi-Armed-Bandits | Functional | Orphan | REVIEW | 12 | Library for Bayesian multi-armed bandits. |
+| Automatic-Type-Safe-IndexedDB | Skeleton | Orphan | MONITOR | 12 | Type-safe wrapper for IndexedDB. |
+| activelog-backend | Skeleton | Orphan | MONITOR | 12 | Backend service for activity logging. |
+| hardware-capability-profiler | Functional | Orphan | REVIEW | 12 | Profiler to analyze hardware capabilities and perf |
+| Hardware-Aware-Flagging | Functional | Orphan | REVIEW | 12 | System for flagging issues based on hardware chara |
+| eveng1_python_sdk | Functional | Orphan | REVIEW | 12 | Python SDK for interacting with the EvenG1 platfor |
+| SwarmOrchestration | Functional | Orphan | REVIEW | 12 | Orchestration framework for managing multi-agent s |
+| flux-isa-authority | Production | Orphan | REVIEW | 12 | ISA governance layer — opcode conflict arbitration |
+| flux-knowledge-federation | Production | Orphan | REVIEW | 12 | Federated knowledge layer for cross-agent learning |
+| flux-llama | Production | Orphan | REVIEW | 12 | FLUX × llama.cpp — Multi-agent bytecode-driven LLM |
+| flux-skill-dsl | Production | Orphan | REVIEW | 12 | Skill Definition Language — formal type-safe skill |
+| flux-runtime-wasm | Production | Orphan | REVIEW | 12 | FLUX VM WebAssembly target — browser-based agent b |
+| secret-manager | Functional | Orphan | REVIEW | 12 | Secure service for storing and managing credential |
+| z-agent-bootcamp | Functional | Orphan | REVIEW | 12 | 🤖 Clone. Run. You are fleet. Onboarding for Z agen |
+| multibot | Functional | Orphan | REVIEW | 12 | Multi-platform bot for automated tasks and interac |
+| I-know-kung-fu | Functional | Orphan | REVIEW | 12 | Skill injection for AI agents. Load what you need. |
+| project1 | Skeleton | Orphan | MONITOR | 12 | Placeholder project repository |
+| distributed-lock | Functional | Orphan | REVIEW | 12 | Distributed lock implementation for coordinating a |
+| deployment-automator | Production | Orphan | REVIEW | 12 | Automated deployment pipeline with CI/CD integrati |
+| flux-visualizer | Functional | Orphan | REVIEW | 12 | Visualization tools for FLUX fleet bytecode execut |
+| flux-lcar-scheduler | Functional | Orphan | REVIEW | 12 | LCAR cartridge scheduler for FLUX fleet workload d |
+| flux-packager | Functional | Orphan | REVIEW | 12 | Dependency management and packaging tool for FLUX  |
+| flux-lcar-cartridge | Functional | Orphan | REVIEW | 12 | LCAR cartridge specification and loader for FLUX f |
+| fleet-wiki | Production | Orphan | REVIEW | 12 | Fleet documentation engine — wiki pages, full-text |
+| fleet-logger | Production | Orphan | REVIEW | 12 | Centralized structured logging for Pelagic fleet — |
+| fleet-config | Production | Orphan | REVIEW | 12 | Unified configuration management for Pelagic fleet |
+| fleet-gateway | Production | Orphan | REVIEW | 12 | Unified API gateway for Pelagic fleet — service di |
+| secret-scanner | Production | Orphan | REVIEW | 12 | Git history secret scanner — detect accidentally c |
+| event-bus | Production | Orphan | REVIEW | 12 | Fleet Event Bus — publish/subscribe event system w |
+| cicd-agent | Production | Orphan | REVIEW | 12 | Fleet CI/CD pipeline engine — git polling, test ru |
+| superz-runtime | Functional | Orphan | REVIEW | 12 | Self-booting Pelagic fleet runtime — clone, run on |
+| lighthouse | Production | Orphan | REVIEW | 12 | Fleet Lighthouse — unified health dashboard, alert |
+| mud-bridge | Functional | Orphan | REVIEW | 12 | HTTP bridge for Holodeck MUD — programmatic agent  |
+| fleet-github-app | Production | Orphan | REVIEW | 12 | The Lighthouse Keeper as a GitHub App — webhooks,  |
+| quill-isa-architect | Production | Orphan | REVIEW | 12 | Quill — ISA Spec Architect & Code Archaeologist |  |
+| nautilus | Production | Orphan | REVIEW | 12 | Nautilus — deep-diving code archaeologist and inte |
+| flux-vm-ts | Functional | Orphan | REVIEW | 12 | FLUX Virtual Machine in TypeScript — bytecode exec |
+| higher-abstraction-vocabularies | Production | Orphan | REVIEW | 12 | 2000+ terms across 252 domains — structured vocabu |
+| flux-validator | Functional | Orphan | REVIEW | 12 | FLUX cross-VM validator — run bytecodes across 8 l |
+| isa-convergence-tools | Production | Orphan | REVIEW | 12 | CLI tools for comparing, diffing, and converging F |
+| ability-transfer | Production | Orphan | REVIEW | 12 | 🏗️ Simulation lab — designing modular ability tran |
+| flux-ide | Functional | Orphan | REVIEW | 12 | FLUX Language IDE — markdown-to-bytecode agent-nat |
+| flux-fleet-stdlib | Production | Orphan | REVIEW | 12 | Shared error codes, status types, and common utili |
+| flux-meta-orchestrator | Production | Orphan | REVIEW | 12 | Fleet-wide orchestration — reads ecosystem state,  |
+| flux-evolution | Production | Orphan | REVIEW | 12 | Timeline visualization and analysis of the FLUX ec |
+| flux-cooperative-intelligence | Production | Orphan | REVIEW | 12 | Novel multi-agent cooperative problem-solving prot |
+| flux-coop-runtime | Production | Orphan | REVIEW | 12 | The missing middle layer — cooperative execution r |
+| flux-js | Production | Orphan | REVIEW | 12 | FLUX.js — JavaScript bytecode VM with A2A agent me |
+| DMLog | Functional | Orphan | REVIEW | 12 | Debug and monitor logs for dark mode features. |
+| flux-bottle-protocol | Production | Orphan | REVIEW | 12 | Formal specification for the fleet bottle communic |
+| flux-stdlib | Functional | Orphan | REVIEW | 12 | FLUX standard library — 13 pre-compiled bytecode p |
+| flux-optimizer | Production | Orphan | REVIEW | 12 | FLUX peephole bytecode optimizer — constant foldin |
+| MuOxi | Production | Fork | REVIEW | 12 | Fleet research: Rust MUD engine (Tokio + Diesel) — |
+| the-seed | Production | Fork | REVIEW | 12 | One repo to become them all. Self-evolving git-age |
+| fleet-simulator | Functional | Orphan | REVIEW | 12 | 🌊 Multi-agent, multi-room fleet simulator with ext |
+| OpenMythos | Production | Fork | REVIEW | 12 | A theoretical reconstruction of the Claude Mythos  |
+| plato-torch | Functional | Orphan | REVIEW | 12 | GPU forge — PyTorch training loop with tile framin |
+| ec2mud | Functional | Orphan | REVIEW | 12 | MUD (multi-user dungeon) game engine built on EC2  |
+| plato-papers | Functional | Fork | REVIEW | 12 | Research — Constraint Theory + Mycorrhizal Fleet p |
+| plato-relay | Functional | Orphan | REVIEW | 12 | Async relay — trust-weighted message prioritizatio |
+| plato-instinct | Functional | Orphan | REVIEW | 12 | Reflex engine — 10 instincts fire before reasoning |
+| bootcamp-engine | Skeleton | Orphan | MONITOR | 12 | Bootcamp Engine |
+| consensus-weave | Functional | Orphan | REVIEW | 12 | Multi-agent consensus protocol with quorum and vet |
+| constraint-snap | Skeleton | Orphan | MONITOR | 12 | Constraint Snap |
+| cross-pollination | Production | Orphan | REVIEW | 12 | 🌿 Cross-room synergy detection for AI agent fleets |
+| current-sync | Skeleton | Orphan | MONITOR | 12 | Current Sync |
+| discovery-mad-libs | Production | Orphan | REVIEW | 12 | A standalone discovery engine for agents and human |
+| dojo-alchemist | Skeleton | Orphan | MONITOR | 12 | Dojo agent — self-improving git-agent |
+| dojo-builder | Skeleton | Orphan | MONITOR | 12 | Dojo agent — self-improving git-agent |
+| dojo-scribe | Skeleton | Orphan | MONITOR | 12 | Dojo agent — self-improving git-agent |
+| ensign-protocol | Skeleton | Orphan | MONITOR | 12 | Cocapn fleet crate |
+| fleet-homunculus | Functional | Orphan | REVIEW | 12 | 🫀 Fleet body image + reflex arcs. Pain assessment  |
+| fleet-refactor-agent | Production | Orphan | REVIEW | 12 | The Shipwright — refactors, merges, and consolidat |
+| flux-opcodes | Skeleton | Orphan | MONITOR | 12 | Flux Opcodes |
+| grammar-curator-1 | Production | Orphan | REVIEW | 12 | Security audit agent for the Recursive Grammar Eng |
+| lyapunov-stability | Functional | Orphan | REVIEW | 12 | Lyapunov stability analysis for agent systems |
+| mirror-recorder | Skeleton | Orphan | MONITOR | 12 | Mirror Recorder |
+| mud-solitaire | Production | Orphan | REVIEW | 12 | 🃏 The viral demo — AI plays solitaire through a te |
+| peripheral-vision | Skeleton | Orphan | MONITOR | 12 | Peripheral Vision |
+| plato-achievement | Functional | Orphan | REVIEW | 12 | Achievement Loss — progress measurement with miles |
+| plato-adapter-store | Functional | Orphan | REVIEW | 12 | Vault — LoRA adapter versioning, deploy, improveme |
+| plato-address | Functional | Orphan | REVIEW | 12 | Room navigation — addressing protocol for fleet co |
+| plato-address-bridge | Functional | Orphan | REVIEW | 12 | Cross-layer routing — address protocol to tile tra |
+| plato-afterlife | Production | Orphan | REVIEW | 12 | 👻 Agent lifecycle — tombstones, ghost tiles, knowl |
+| plato-afterlife-reef | Functional | Orphan | REVIEW | 12 | PLATO afterlife reef — ghost tile aggregation and  |
+| plato-bridge | Production | Orphan | REVIEW | 12 | Connect PLATO rooms to Telegram, Discord, fleet bo |
+| plato-config | Production | Orphan | REVIEW | 12 | Configuration management — env vars, file loading, |
+| plato-constraints | Functional | Orphan | REVIEW | 12 | Rule enforcement — forbidden patterns and boundary |
+| plato-deadband | Production | Orphan | REVIEW | 12 | Deadband Protocol engine — P0 rock / P1 channel /  |
+| plato-deploy-policy | Functional | Orphan | REVIEW | 12 | Classification — P0 immediate, P1 scheduled, P2 de |
+| plato-dynamic-locks | Functional | Orphan | REVIEW | 12 | Evidence accumulation — critical mass at n >= 7 |
+| plato-e2e-pipeline | Functional | Orphan | REVIEW | 12 | End-to-end — mint through cascade in one test |
+| plato-e2e-pipeline-v2 | Functional | Orphan | REVIEW | 12 | Enhanced e2e — full v2 pipeline integration |
+| plato-ensign | Functional | Orphan | REVIEW | 12 | Knowledge compression — export compressed fleet pa |
+| plato-fleet-graph | Functional | Orphan | REVIEW | 12 | Fleet dependency graph — 83 nodes, impact analysis |
+| plato-flux-opcodes | Functional | Orphan | REVIEW | 12 | FLUX bytecode — 85-opcode instruction set, Lock Al |
+| plato-forge-buffer | Functional | Orphan | REVIEW | 12 | Stomach — prioritized replay, curriculum-balanced  |
+| plato-forge-daemon | Functional | Orphan | REVIEW | 12 | Continuous learning daemon — the Forgemaster's GPU |
+| plato-forge-emitter | Functional | Orphan | REVIEW | 12 | Lungs — emit training artifacts, auto-version, qua |
+| plato-forge-listener | Functional | Orphan | REVIEW | 12 | Cochlea — classify events, detect knowledge gaps,  |
+| plato-forge-pipeline | Functional | Orphan | REVIEW | 12 | PLATO forge pipeline — automated tile generation a |
+| plato-forge-trainer | Functional | Orphan | REVIEW | 12 | Heart — GPU job manager, LoRA/Embedding/Genome mod |
+| plato-genepool-tile | Functional | Orphan | REVIEW | 12 | Gene to tile — bridge genome encoding and tile for |
+| plato-ghostable | Functional | Orphan | REVIEW | 12 | Persistence classes — Eternal, Persistent, Ephemer |
+| plato-hooks | Functional | Orphan | REVIEW | 12 | Git hooks for real-time PLATO room events. Commits |
+| plato-i2i | Functional | Orphan | REVIEW | 12 | Direct messaging — Iron-to-Iron protocol, trust-we |
+| plato-i2i-dcs | Functional | Orphan | REVIEW | 12 | Multi-agent consensus — BeliefScore, LockAccumulat |
+| plato-inference-runtime | Functional | Orphan | REVIEW | 12 | Engine — model plus adapters, forward pass as sche |
+| plato-lab-guard | Functional | Orphan | REVIEW | 12 | Hypothesis gating — 12 absolute quantifiers, vague |
+| plato-live-data | Functional | Orphan | REVIEW | 12 | Tap — pull tiles from PLATO tile server on port 88 |
+| plato-mcp-bridge | Functional | Orphan | REVIEW | 12 | Claude Code bridge — JSON-RPC 2.0, 5 MCP tools |
+| plato-ml | Production | Orphan | REVIEW | 12 | 🎮 MUD-based ML framework: rooms as layers, achieve |
+| plato-neural-kernel | Functional | Orphan | REVIEW | 12 | Synapse — execution traces to training pairs for n |
+| plato-os | Functional | Orphan | REVIEW | 12 | Python MUD — PLATO room server with TUTOR anchors |
+| plato-prompt-builder | Functional | Orphan | REVIEW | 12 | Compose LLM prompts from tile search results — con |
+| plato-query-parser | Functional | Orphan | REVIEW | 12 | Parse natural language queries into structured int |
+| plato-relay-tidepool | Functional | Orphan | REVIEW | 12 | Message board — async TidePool for non-blocking co |
+| plato-room-acl | Skeleton | Orphan | MONITOR | 12 | Room ACL — PLATO framework |
+| plato-room-analytics | Skeleton | Orphan | MONITOR | 12 | Room analytics — PLATO framework |
+| plato-room-context | Production | Orphan | REVIEW | 12 | Room state tracking with context signals — awarene |
+| plato-room-engine | Functional | Orphan | REVIEW | 12 | Room execution — enter, leave, message, tile manag |
+| plato-room-invite | Skeleton | Orphan | MONITOR | 12 | Room invites — PLATO framework |
+| plato-room-memory | Production | Orphan | REVIEW | 12 | Per-room persistent memory with sliding context wi |
+| plato-room-nav | Functional | Orphan | REVIEW | 12 | Breadcrumb trails — push, back, forward with full  |
+| plato-room-persist | Functional | Orphan | REVIEW | 12 | JSONL journal — event replay, room snapshots, agen |
+| plato-room-presence | Skeleton | Orphan | MONITOR | 12 | Room presence — PLATO framework |
+| plato-room-runtime | Functional | Orphan | REVIEW | 12 | Room lifecycle — create, destroy, state transition |
+| plato-room-scheduler | Functional | Orphan | REVIEW | 12 | Temperature scheduler — Cold/Warm/Hot/Crystallized |
+| plato-room-search | Functional | Orphan | REVIEW | 12 | Cross-room discovery — Exact, Tag, Domain, Keyword |
+| plato-room-server | Functional | Orphan | REVIEW | 12 | PLATO Room Server - zero-trust tile submission, 15 |
+| plato-room-webhook | Skeleton | Orphan | MONITOR | 12 | Room webhooks — PLATO framework |
+| plato-semantic-sim | Production | Orphan | REVIEW | 12 | Semantic similarity for PLATO tiles — Jaccard + co |
+| plato-sentiment-vocab | Functional | Orphan | REVIEW | 12 | Polarity — positive, negative, neutral tile classi |
+| plato-session-tracer | Functional | Orphan | REVIEW | 12 | Memory — record Command/Response/StateChange trace |
+| plato-ship-demo | Production | Orphan | REVIEW | 12 | Minimal MUD server for zeroshot external agent tes |
+| plato-ship-protocol | Functional | Orphan | REVIEW | 12 | Fleet coordination — vessel handshakes and discove |
+| plato-sim-bridge | Skeleton | Orphan | MONITOR | 12 | 🌉 PLATO ↔ Fleet simulator bridge |
+| plato-sim-channel | Functional | Orphan | REVIEW | 12 | Safe discovery — simulation to live bridging |
+| plato-temporal-validity | Functional | Orphan | REVIEW | 12 | Time windows — Valid, Grace, Expired lifecycle |
+| plato-tile-api | Functional | Orphan | REVIEW | 12 | Stateful tile API — process, search, score, rank i |
+| plato-tile-batch | Functional | Orphan | REVIEW | 12 | Bulk operations — validate, filter, dedup, partiti |
+| plato-tile-bridge | Functional | Orphan | REVIEW | 12 | C to Rust — 384-byte tile conversion for cross-lan |
+| plato-tile-cache | Functional | Orphan | REVIEW | 12 | LRU with TTL — hit rate tracking, top hits, bulk e |
+| plato-tile-cascade | Functional | Orphan | REVIEW | 12 | Propagation — update tiles and invalidate downstre |
+| plato-tile-client | Functional | Orphan | REVIEW | 12 | HTTP client — PLATO tile server with deadband awar |
+| plato-tile-current | Functional | Orphan | REVIEW | 12 | Live tiles — export/import between fleet nodes in  |
+| plato-tile-dedup | Production | Orphan | REVIEW | 12 | 4-stage similarity — exact, keyword Jaccard, embed |
+| plato-tile-encoder | Functional | Orphan | REVIEW | 12 | Serialization — JSON, 384-byte binary, and base64  |
+| plato-tile-export | Skeleton | Orphan | MONITOR | 12 | Tile export — PLATO framework |
+| plato-tile-feedback | Skeleton | Orphan | MONITOR | 12 | Tile feedback — PLATO framework |
+| plato-tile-fountain | Functional | Orphan | REVIEW | 12 | Auto-generate — extract tiles from docs, headings, |
+| plato-tile-governance | Skeleton | Orphan | MONITOR | 12 | Tile governance — PLATO framework |
+| plato-tile-graph | Functional | Orphan | REVIEW | 12 | Dependency DAG — impact radius, cycle detection, t |
+| plato-tile-import | Functional | Orphan | REVIEW | 12 | Format bridges — Markdown, JSON, CSV, plaintext to |
+| plato-tile-merge | Production | Orphan | REVIEW | 12 | PLATO tile merging — deduplication, conflict resol |
+| plato-tile-metrics | Functional | Orphan | REVIEW | 12 | Fleet analytics — domain distribution, confidence  |
+| plato-tile-notifications | Skeleton | Orphan | MONITOR | 12 | Tile notifications — PLATO framework |
+| plato-tile-pinboard | Skeleton | Orphan | MONITOR | 12 | Tile pinboard — PLATO framework |
+| plato-tile-pipeline | Functional | Orphan | REVIEW | 12 | One-call facade — validate, score, store, search,  |
+| plato-tile-priority | Functional | Orphan | REVIEW | 12 | Deadband queue — P0/P1/P2 urgency scoring and drai |
+| plato-tile-prompt | Functional | Orphan | REVIEW | 12 | Context assembly — 4 format styles, budget managem |
+| plato-tile-query | Production | Orphan | REVIEW | 12 | Fluent query builder for PLATO tiles — filter, sea |
+| plato-tile-ranker | Functional | Orphan | REVIEW | 12 | Multi-signal ranking — keyword gating, deadband pr |
+| plato-tile-relation | Functional | Orphan | REVIEW | 12 | Tile relationship graph — PLATO framework |
+| plato-tile-room-bridge | Functional | Orphan | REVIEW | 12 | Tile to room — feed, transfer, unfeed, temperature |
+| plato-tile-scorer | Production | Orphan | REVIEW | 12 | 7-signal scoring — keyword, belief, domain, tempor |
+| capitaine-1 | Production | Fork | REVIEW | 12 | Capitaine — fork a repo, click Codespaces, the age |
+| plato-tile-search | Functional | Orphan | REVIEW | 12 | Nearest-neighbor — keyword overlap, domain matchin |
+| plato-tile-split | Production | Orphan | REVIEW | 12 | Tile decomposition engine — split tiles by sentenc |
+| plato-tile-store | Functional | Orphan | REVIEW | 12 | Immutable storage — version history, dependency ca |
+| plato-tile-validate | Functional | Orphan | REVIEW | 12 | Quality gates — confidence, freshness, completenes |
+| plato-tile-version | Functional | Orphan | REVIEW | 12 | Git-for-knowledge — commit, branch, merge, rollbac |
+| plato-tile-watcher | Production | Orphan | REVIEW | 12 | Tile decay monitoring and ghost alerts — track sta |
+| plato-tiling | Functional | Orphan | REVIEW | 12 | Core ops — adaptive search, ghost resurrection, te |
+| plato-training-casino | Functional | Orphan | REVIEW | 12 | Dealer — stochastic fleet data, deterministic with |
+| plato-trust-beacon | Functional | Orphan | REVIEW | 12 | Trust events — success, failure, timeout, corrupti |
+| plato-tui | Skeleton | Orphan | MONITOR | 12 | 🖥️ PLATO terminal UI |
 | proof-game-sync | Production | Orphan | REVIEW | 13 | ⚒️ Float vs Constraint Theory: Cross-platform game |
 | proof-physics-sim | Production | Orphan | REVIEW | 13 | ⚒️ Float vs Constraint Theory: Physics simulation  |
 | proof-vector-search | Production | Orphan | REVIEW | 13 | ⚒️ Float vs Constraint Theory: Vector similarity s |
@@ -623,7 +602,6 @@
 | mud-expert-1 | Production | Orphan | REVIEW | 13 | MUD Expert agent for Plato environment mapping. Br |
 | cocapn-chat | Functional | Fork | REVIEW | 13 | cocapn.ai chat UI + OpenAI-compatible API proxy —  |
 | lingbot-map | Functional | Fork | REVIEW | 13 | A feed-forward 3D foundation model for reconstruct |
-| FishingLog | Functional | Orphan | REVIEW | 13 | Fishing log application — catch tracking, species  |
 | cocapn-traps | Production | Orphan | REVIEW | 13 | Cocapn PurplePincher program — progressive lure pr |
 | edge-llama | Functional | Fork | REVIEW | 13 | C shared library wrapping llama.cpp for Jetson edg |
 | plato-jetson | Functional | Fork | REVIEW | 13 | Fork of Lucineer/plato-jetson — PLATO Jetson edge  |
@@ -680,14 +658,12 @@
 | cocapn.ai | Functional | Orphan | REVIEW | 13 | Fleet Agents for the Cocapn Ecosystem — landing pa |
 | mud-mcp | Functional | Fork | REVIEW | 13 | TypeScript MUD server using Model Context Protocol |
 | superpowers | Functional | Fork | REVIEW | 13 | An agentic skills framework & software development |
-| capitaine | Functional | Orphan | REVIEW | 13 | Captain agent — vessel command and fleet leadershi |
 | cocapn.github.io | Functional | Orphan | REVIEW | 13 | Cocapn fleet home page — live at cocapn.ai |
 | plato-agent-academy | Production | Orphan | REVIEW | 13 | Agent Academy for PLATO MUD — zero-shot agent trai |
 | smartcrdt-git-agent | Skeleton | Orphan | MONITOR | 13 | Co-Captain of SmartCRDT monorepo |
 | flux-certify | Skeleton | Orphan | MONITOR | 13 |  |
 | flux-core | Production | Orphan | REVIEW | 13 | FLUX bytecode runtime in Rust — VM, assembler, dis |
 | pythagorean48 | Production | Orphan | REVIEW | 13 | Exact 6-bit vector encoding for ARM64 edge. 8 comp |
-| spline-physics | Skeleton | Orphan | MONITOR | 13 |  |
 | greenhorn-onboarding | Production | Orphan | REVIEW | 13 | 🟢 Point an agent here. Give it a PAT. Watch it fin |
 | smart-agent-shell | Functional | Orphan | REVIEW | 13 | Template shell for fleet agents — fork, configure  |
 | constraint-theory-research | Functional | Orphan | REVIEW | 13 | Mathematical foundations and research papers for C |
@@ -706,37 +682,36 @@
 | fleet-murmur-worker | Production | Orphan | REVIEW | 13 | Fleet Murmur Worker — 5 thinking strategies always |
 | fleet-vessel | Functional | Orphan | REVIEW | 13 | Fleet's git-native garbage collector agent |
 | Agent-Lifecycle-Registry | Functional | Orphan | REVIEW | 13 | Design document only — not yet implemented. Spec f |
-| old-school-machine-wisdom | Production | Orphan | REVIEW | 15 | Old-school machine wisdom: FORTH threaded code, DG |
-| repo-consolidation-plan | Functional | Orphan | REVIEW | 16 | SuperInstance repo consolidation analysis and road |
-| plato-mud-server | Functional | Orphan | REVIEW | 16 | PLATO MUD Server - text-based agent training groun |
-| forgemaster-shell | Production | Orphan | REVIEW | 16 | ⚒️ OpenClaw Power Armor — Don the Forgemaster Shel |
-| deckboss-ai-pages | Skeleton | Orphan | MONITOR | 16 | GitHub Pages for deckboss.ai |
-| fishinglog-ai-pages | Skeleton | Orphan | MONITOR | 16 | GitHub Pages for fishinglog.ai |
-| businesslog-ai-pages | Skeleton | Orphan | MONITOR | 16 | GitHub Pages for businesslog.ai |
-| capitaine-ai-pages | Skeleton | Orphan | MONITOR | 16 | GitHub Pages for capitaine.ai |
-| studylog-ai-pages | Skeleton | Orphan | MONITOR | 16 | GitHub Pages for studylog.ai |
-| playerlog-ai-pages | Skeleton | Orphan | MONITOR | 16 | GitHub Pages for playerlog.ai |
-| personallog-ai-pages | Skeleton | Orphan | MONITOR | 16 | GitHub Pages for personallog.ai |
-| luciddreamer-ai-pages | Skeleton | Orphan | MONITOR | 16 | GitHub Pages for luciddreamer.ai |
-| dmlog-ai-pages | Skeleton | Orphan | MONITOR | 16 | GitHub Pages for dmlog.ai |
-| activelog-ai-pages | Skeleton | Orphan | MONITOR | 16 | GitHub Pages for activelog.ai |
-| activeledger-ai-pages | Skeleton | Orphan | MONITOR | 16 | GitHub Pages for activeledger.ai |
+| old-school-machine-wisdom | Production | Orphan | REVIEW | 14 | Old-school machine wisdom: FORTH threaded code, DG |
+| repo-consolidation-plan | Functional | Orphan | REVIEW | 15 | SuperInstance repo consolidation analysis and road |
+| plato-mud-server | Functional | Orphan | REVIEW | 15 | PLATO MUD Server - text-based agent training groun |
+| forgemaster-shell | Production | Orphan | REVIEW | 15 | ⚒️ OpenClaw Power Armor — Don the Forgemaster Shel |
+| deckboss-ai-pages | Skeleton | Orphan | MONITOR | 15 | GitHub Pages for deckboss.ai |
+| fishinglog-ai-pages | Skeleton | Orphan | MONITOR | 15 | GitHub Pages for fishinglog.ai |
+| businesslog-ai-pages | Skeleton | Orphan | MONITOR | 15 | GitHub Pages for businesslog.ai |
+| capitaine-ai-pages | Skeleton | Orphan | MONITOR | 15 | GitHub Pages for capitaine.ai |
+| studylog-ai-pages | Skeleton | Orphan | MONITOR | 15 | GitHub Pages for studylog.ai |
+| playerlog-ai-pages | Skeleton | Orphan | MONITOR | 15 | GitHub Pages for playerlog.ai |
+| personallog-ai-pages | Skeleton | Orphan | MONITOR | 15 | GitHub Pages for personallog.ai |
+| luciddreamer-ai-pages | Skeleton | Orphan | MONITOR | 15 | GitHub Pages for luciddreamer.ai |
+| dmlog-ai-pages | Skeleton | Orphan | MONITOR | 15 | GitHub Pages for dmlog.ai |
+| activelog-ai-pages | Skeleton | Orphan | MONITOR | 15 | GitHub Pages for activelog.ai |
+| activeledger-ai-pages | Skeleton | Orphan | MONITOR | 15 | GitHub Pages for activeledger.ai |
 | flux-cuda | Functional | Orphan | REVIEW | 16 | FLUX CUDA — GPU-accelerated bytecode VM. 1000 para |
 | flux-bridge | Skeleton | Orphan | MONITOR | 16 | FLUX constraint safety - flux-bridge |
-| marine-gpu-edge | Production | Orphan | REVIEW | 16 | Novel GPU edge computing for marine sensor fusion  |
 | cocapn-reviews | Skeleton | Orphan | MONITOR | 16 | Fleet document reviews and critiques |
 | cocapn-curriculum | Functional | Orphan | REVIEW | 16 | Five-level curriculum system for fleet agent progr |
 | activeledger-agent | Functional | Orphan | REVIEW | 16 | activeledger domain agent for PLATO fleet |
 | personallog-agent | Functional | Orphan | REVIEW | 16 | personallog domain agent for PLATO fleet |
 | deckboss-agent | Functional | Orphan | REVIEW | 16 | Deck Operations Intelligence for deckboss.ai |
 | capitaine-agent | Production | Orphan | REVIEW | 16 | Captain's AI first mate for captaine.ai — voyage l |
-| dmlog-agent | Production | Orphan | REVIEW | 17 | AI dungeon master tools for D&D and tabletop RPG c |
-| makerlog-agent | Production | Orphan | REVIEW | 17 | AI-powered maker logging for project tracking and  |
-| businesslog-agent | Functional | Orphan | REVIEW | 17 | businesslog domain agent for PLATO fleet |
-| studylog-agent | Production | Orphan | REVIEW | 17 | PLATO Study Partner Agent — tracks learning progre |
-| cocapn-lessons | Functional | Orphan | REVIEW | 17 | Trial-based learning methodology for distributed a |
-| cocapn-shells | Functional | Orphan | REVIEW | 17 | Agent capability shells as character sheets for th |
-| cocapn-tutor | Functional | Orphan | REVIEW | 17 | Domain-specific language for agent pedagogy in the |
+| dmlog-agent | Production | Orphan | REVIEW | 16 | AI dungeon master tools for D&D and tabletop RPG c |
+| makerlog-agent | Production | Orphan | REVIEW | 16 | AI-powered maker logging for project tracking and  |
+| businesslog-agent | Functional | Orphan | REVIEW | 16 | businesslog domain agent for PLATO fleet |
+| studylog-agent | Production | Orphan | REVIEW | 16 | PLATO Study Partner Agent — tracks learning progre |
+| cocapn-lessons | Functional | Orphan | REVIEW | 16 | Trial-based learning methodology for distributed a |
+| cocapn-shells | Functional | Orphan | REVIEW | 16 | Agent capability shells as character sheets for th |
+| cocapn-tutor | Functional | Orphan | REVIEW | 16 | Domain-specific language for agent pedagogy in the |
 | Equipment-Consensus-Engine-PHP | Production | Orphan | REVIEW | 17 | PHP port of Equipment-Consensus-Engine - Multi-age |
 | CCC | Production | Orphan | REVIEW | 17 | CCC public face agent — Kimi K2.5, frontend design |
 | plato-client-php | Production | Orphan | REVIEW | 17 | PHP client library for PLATO room server — interac |
@@ -750,8 +725,8 @@
 | greenhorn | Production | Orphan | REVIEW | 17 | 🟢 The floating dojo for AI agents. Train crew whil |
 | hierarchical-memory | Production | Orphan | REVIEW | 17 | 6-tier memory hierarchy with consolidation, vector |
 | fleet-status | Functional | Orphan | REVIEW | 17 | 📊 Live fleet status, crate index, and architecture |
-| vessel-equipment-agent-skills | Production | Fork | REVIEW | 18 | Four-layer model: vessel (hardware) + equipment (i |
-| cocapn-landing | Skeleton | Orphan | MONITOR | 18 | Fleet landing page |
+| vessel-equipment-agent-skills | Production | Fork | REVIEW | 17 | Four-layer model: vessel (hardware) + equipment (i |
+| cocapn-landing | Skeleton | Orphan | MONITOR | 17 | Fleet landing page |
 | cocapn-com-pages | Skeleton | Orphan | MONITOR | 18 | GitHub Pages for cocapn.com |
 | capitaineai-com-pages | Skeleton | Orphan | MONITOR | 18 | GitHub Pages for capitaineai.com |
 | deckboss-net-pages | Skeleton | Orphan | MONITOR | 18 | GitHub Pages for deckboss.net |
@@ -760,21 +735,21 @@
 | flux-compiler-agentic | Functional | Orphan | REVIEW | 18 | 6-plane abstraction compiler with dual-interpreter |
 | flux-reasoner-engine | Functional | Orphan | REVIEW | 18 | Dual-interpreter gradient reasoning engine |
 | plato-dmn-ecm | Functional | Orphan | REVIEW | 18 | DMN-ECN reverse-actualization engine — creativity  |
-| open-agents | Production | Fork | REVIEW | 19 | Cloud-hosted AI coding agent with sandbox-based co |
-| lighthouse-monitor | Functional | Orphan | REVIEW | 19 | Lighthouse Keeper — fleet monitoring, agent activi |
-| flux-os | Functional | Orphan | REVIEW | 19 | 🐧 Pure C agent-first OS — kernel-up autonomous com |
-| flux | Production | Orphan | REVIEW | 19 | FLUX — Fluid Language Universal eXecution: High-pe |
-| flux-runtime-c | Functional | Fork | REVIEW | 19 | ⚡ Native C implementation of the flux VM for edge  |
-| Mycelium | Production | Orphan | REVIEW | 19 | **Mycelium captures any behavior as a seed. One pr |
-| flux-runtime | Production | Orphan | REVIEW | 20 | ⚡ Deterministic bytecode ISA runtime for agentic l |
-| jepa-perception-lab | Functional | Fork | REVIEW | 20 | 🧠 JEPA perception experiments |
-| cocapn-dashboard | Production | Orphan | REVIEW | 20 | Live bioluminescent dashboard for the Cocapn AI Fl |
+| open-agents | Production | Fork | REVIEW | 18 | Cloud-hosted AI coding agent with sandbox-based co |
+| lighthouse-monitor | Functional | Orphan | REVIEW | 18 | Lighthouse Keeper — fleet monitoring, agent activi |
+| flux-os | Functional | Orphan | REVIEW | 18 | 🐧 Pure C agent-first OS — kernel-up autonomous com |
+| flux | Production | Orphan | REVIEW | 18 | FLUX — Fluid Language Universal eXecution: High-pe |
+| flux-runtime-c | Functional | Fork | REVIEW | 18 | ⚡ Native C implementation of the flux VM for edge  |
+| Mycelium | Production | Orphan | REVIEW | 18 | **Mycelium captures any behavior as a seed. One pr |
+| flux-runtime | Production | Orphan | REVIEW | 19 | ⚡ Deterministic bytecode ISA runtime for agentic l |
+| jepa-perception-lab | Functional | Fork | REVIEW | 19 | 🧠 JEPA perception experiments |
+| cocapn-dashboard | Production | Orphan | REVIEW | 19 | Live bioluminescent dashboard for the Cocapn AI Fl |
 | oracle1-index | Production | Orphan | REVIEW | 20 | Oracle1 — Searchable index of 663 repos. 32 catego |
 | cocapn-core | Production | Orphan | REVIEW | 21 | Cocapn Fleet v3.1 — Async fleet engine with Pydant |
 | cocapn-design | Production | Orphan | REVIEW | 21 | Cocapn design system — brand guidelines, component |
 | cocapn-go | Functional | Fork | REVIEW | 22 | cocapn Go SDK — one API key, any AI model |
 | cocapn-architecture | Production | Fork | REVIEW | 22 | Cocapn brand, pricing architecture, business entit |
-| mcp-atom-of-thoughts | Production | Fork | REVIEW | 23 | MCP server for structured AI reasoning — decompose |
+| mcp-atom-of-thoughts | Production | Fork | REVIEW | 22 | MCP server for structured AI reasoning — decompose |
 | zeroclaw-trader | Functional | Orphan | REVIEW | 24 | 💰 Trader — ZeroClaw MUD agent: collects items, tra |
 | zeroclaw-scout | Functional | Orphan | REVIEW | 24 | 🔭 Scout — ZeroClaw MUD agent: aggressive explorer, |
 | zeroclaw-loop | Functional | Orphan | REVIEW | 24 | Zeroclaw hermit crab loop - 12 agents, 5-min tick, |
@@ -799,7 +774,6 @@
 | purplepincher-baton | Production | Orphan | REVIEW | 24 | 🦀 Context-offloading baton system — three manuals  |
 | plato-tile-spec-c | Functional | Orphan | REVIEW | 24 | C binding — canonical tile struct, stack-allocatab |
 | plato-ship | Production | Orphan | REVIEW | 24 | CCC's PLATO Runtime for distributed cognition. Fle |
-| plato-research | Skeleton | Orphan | MONITOR | 24 | 🔬 PLATO research notes and experiments |
 | observatory | Skeleton | Orphan | MONITOR | 24 | Cocapn fleet crate: observatory |
 | horizon | Skeleton | Orphan | MONITOR | 24 | Cocapn fleet crate: horizon |
 | git-native-mud | Functional | Orphan | REVIEW | 24 | 🔮 The repo IS the world. Commits ARE actions. Zero |
@@ -836,19 +810,19 @@
 | fleet-formation-protocol | Functional | Orphan | REVIEW | 25 | ⚓ Fleet Formation Protocol — self-organizing agent |
 | plato-tile-spec | Production | Orphan | REVIEW | 25 | Canonical tile format v2.1 — domain, confidence, b |
 | claude-code-vessel | Functional | Orphan | REVIEW | 26 | Claude Code workhorse vessel with experience journ |
-| PersonalLog | Functional | Orphan | REVIEW | 27 | Personal logging and tracking application |
-| quicunnel | Functional | Orphan | REVIEW | 27 | High-performance QUIC tunnel with mTLS authenticat |
-| autoMate | Production | Fork | REVIEW | 29 | Like Manus, Computer Use Agent(CUA) and Omniparser |
-| purplepincher.org | Production | Fork | REVIEW | 29 | Nonprofit umbrella for open-source agentic computi |
+| PersonalLog | Functional | Orphan | REVIEW | 26 | Personal logging and tracking application |
+| quicunnel | Functional | Orphan | REVIEW | 26 | High-performance QUIC tunnel with mTLS authenticat |
+| autoMate | Production | Fork | REVIEW | 28 | Like Manus, Computer Use Agent(CUA) and Omniparser |
+| purplepincher.org | Production | Fork | REVIEW | 28 | Nonprofit umbrella for open-source agentic computi |
+| agent-skills-affyossmani | Functional | Fork | REVIEW | 29 | Production-grade engineering skills for AI coding  |
 
-## Dormant (905 repos)
+## Dormant (847 repos)
 
 | Repo | Tier | Relevance | Action | Days Since Push | Description |
 |------|------|-----------|--------|-----------------|-------------|
-| agent-skills-affyossmani | Functional | Fork | REVIEW | 30 | Production-grade engineering skills for AI coding  |
 | jetsonclaw1-onboarding | Functional | Orphan | ARCHIVE | 30 | ⚡ Onboarding kit for JetsonClaw1 — Lucineer Vessel |
 | holodeck-studio | Production | Orphan | ARCHIVE | 30 | Holodeck Studio — where ideas actualize. Rooms exe |
-| plato-forge | Functional | Fork | REVIEW | 31 | Fork of Lucineer/plato-forge — PLATO forge, fleet  |
+| plato-forge | Functional | Fork | REVIEW | 30 | Fork of Lucineer/plato-forge — PLATO forge, fleet  |
 | claude-context | Production | Fork | REVIEW | 31 | Code search MCP for Claude Code. Make entire codeb |
 | SuperInstance-papers | Production | Orphan | ARCHIVE | 31 | Automatically Deconstruct logic into Spread Sheet  |
 | flux-instinct | Production | Fork | REVIEW | 32 | Rust crate — hardwired reflex system: 10 instinct  |
@@ -914,12 +888,10 @@
 | plato-dreamcycle | Functional | Fork | REVIEW | 34 | PLATO Dreamcycle — background task scheduling room |
 | forgemaster-chess-eval | Functional | Fork | REVIEW | 34 | CUDA chess eval — Forgemaster handoff |
 | ptx-room | Production | Fork | REVIEW | 34 | PLATO PTX room — CUDA assembly + constraint tighte |
-| chess-dojo-v2 | Functional | Fork | REVIEW | 35 | Bulletproof PLATO chess room — ELO, ESP32 tiers, g |
+| chess-dojo-v2 | Functional | Fork | REVIEW | 34 | Bulletproof PLATO chess room — ELO, ESP32 tiers, g |
 | flux-tui | Functional | Orphan | ARCHIVE | 35 | FLUX VM Debugger & Conformance Dashboard — Go + bu |
 | flux-emergence-research | Production | Fork | REVIEW | 36 | 55+ GPU experiments on emergent specialization — f |
 | usemeter | Functional | Orphan | ARCHIVE | 36 | Usage tracking, metering, and billing engine for a |
-| featurestore-rs | Functional | Orphan | ARCHIVE | 36 | Feature store for ML - Feature engineering, storag |
-| exptrack-rs | Production | Orphan | ARCHIVE | 36 | Experiment tracking - ML experiment management, me |
 | flux-9969b6 | Functional | Orphan | ARCHIVE | 36 | FLUX-native I2I agent (self-bootstrapped) |
 | flux-runtime-deu | Functional | Orphan | ARCHIVE | 36 | FLUX bytecode execution runtime with German langua |
 | flux-runtime-wen | Functional | Orphan | ARCHIVE | 36 | FLUX bytecode execution runtime with Wendish/Sorbi |
@@ -937,7 +909,6 @@
 | fleet-agent-api | Functional | Orphan | ARCHIVE | 36 | Standard HTTP API for fleet agents — every agent r |
 | murmur-agent | Production | Orphan | ARCHIVE | 36 | All-night thinking git-agent — drop into any proje |
 | plato-gpu | Functional | Fork | REVIEW | 36 | 🖥️ PLATO GPU compute bridge |
-| eventstream | Functional | Orphan | ARCHIVE | 36 | # eventstream-rs Research Summary |
 | knowledge-agent | Production | Orphan | ARCHIVE | 36 | Knowledge tile management agent — trust fusion, ti |
 | trail-agent | Functional | Orphan | ARCHIVE | 36 | Trail Agent — standalone trail encoder/decoder/exe |
 | websocket-fabric | Production | Orphan | ARCHIVE | 36 | High-performance WebSocket library for Rust with c |
@@ -951,249 +922,195 @@
 | flux-market | Functional | Fork | REVIEW | 36 | 📊 Flux market simulation |
 | flux-scheduler | Functional | Fork | REVIEW | 36 | 📅 Flux task scheduler |
 | flux-sim | Functional | Fork | REVIEW | 36 | ⚡ Flux runtime simulator |
-| super-z-quartermaster | Production | Orphan | ARCHIVE | 37 | Quartermaster vessel — GLM-5 Turbo agent. Fleet hy |
-| Constraint-Theory | Production | Orphan | ARCHIVE | 37 | ⚠️ MOVED: See constraint-theory-core, constraint-t |
-| Tripartite1 | Functional | Orphan | ARCHIVE | 37 | Framework for interactions involving three distinc |
-| distributed-tracing | Production | Orphan | ARCHIVE | 37 | Distributed tracing system for microservices - spa |
-| integration-tests | Functional | Orphan | ARCHIVE | 37 | Cross-agent integration tests for the Pelagic stan |
-| async-rs | Functional | Orphan | ARCHIVE | 37 | Async utilities and patterns - Better async/await, |
-| federated-rs | Functional | Orphan | ARCHIVE | 37 | Federated learning framework - Distributed trainin |
-| progress-rs | Functional | Orphan | ARCHIVE | 37 | Progress bars and spinners - Multi-bar support, ET |
-| flow | Functional | Orphan | ARCHIVE | 37 | # flow-rs Research & Design Documentation |
-| config-rs | Production | Orphan | ARCHIVE | 37 | Configuration management - Multi-format configs, e |
-| test-rs | Functional | Orphan | ARCHIVE | 37 | # test-rs |
-| cache-rs | Functional | Orphan | ARCHIVE | 37 | Unified caching framework - Multi-backend cache wi |
-| cli-rs | Production | Orphan | ARCHIVE | 37 | CLI framework for Rust - Argument parsing, subcomm |
-| graphql-rs | Functional | Orphan | ARCHIVE | 37 | GraphQL client and server - Type-safe queries, sub |
-| allocator-rs | Production | Orphan | ARCHIVE | 37 | Memory allocation strategies - Pool allocators, ar |
-| actor-rs | Production | Orphan | ARCHIVE | 37 | Actor model implementation for Rust - Type-safe di |
-| csp-rs | Functional | Orphan | ARCHIVE | 37 | CSP concurrency primitives - Channels, select, gor |
-| compress-rs | Functional | Orphan | ARCHIVE | 37 | Unified compression library - Multiple formats, st |
-| crypto-rs | Functional | Orphan | ARCHIVE | 37 | Cryptographic primitives - Hashing, encryption, si |
-| dataval-rs | Production | Orphan | ARCHIVE | 37 | Data validation framework - Schema validation, typ |
-| circuitbreaker-rs | Functional | Orphan | ARCHIVE | 37 | # Circuitbreaker-RS: Resilience Patterns for Rust |
-| bootstrap | Functional | Orphan | ARCHIVE | 37 | Bootstrap runtime — minimal agent initialization a |
-| agent | Functional | Orphan | ARCHIVE | 37 | Core agent framework — perception, reasoning, acti |
-| pelagic-bootstrap | Functional | Orphan | ARCHIVE | 37 | One-command Pelagic fleet setup — clone, onboard,  |
-| scheduler-agent | Production | Orphan | ARCHIVE | 37 | Fleet task scheduling agent — priority queue, cost |
-| cocapn-runtime | Production | Orphan | ARCHIVE | 37 | Deployment modes for Cocapn git-agents — lighthous |
-| standalone-agent-scaffold | Functional | Orphan | ARCHIVE | 37 | Standalone agent scaffold — template for building  |
-| fleet-protocol | Production | Orphan | ARCHIVE | 37 | Shared fleet communication protocol — message form |
-| liaison-agent | Production | Orphan | ARCHIVE | 37 | Standalone liaison agent for fleet orchestration - |
-| trust-agent | Functional | Orphan | ARCHIVE | 37 | Trust Agent — standalone trust engine, OCap tokens |
-| flux-vm-agent | Functional | Orphan | ARCHIVE | 37 | FLUX VM Agent — standalone bytecode VM, assembler, |
-| cartridge-agent | Production | Orphan | ARCHIVE | 37 | Standalone cartridge agent for fleet orchestration |
-| edge-relay-agent | Functional | Orphan | ARCHIVE | 37 | Edge Relay Agent — standalone research relay, disc |
-| co-captain-git-agent | Production | Orphan | ARCHIVE | 37 | Human liaison agent — the single point of contact  |
-| fleet-english | Production | Orphan | ARCHIVE | 37 | Cocapn Fleet — English perspective. Reasoned nativ |
-| fleet-latin | Functional | Orphan | ARCHIVE | 37 | Cocapn Fleet — Latin perspective. Reasoned nativel |
-| fleet-arabic | Production | Orphan | ARCHIVE | 37 | Cocapn Fleet — العربية (Arabic) perspective. Reaso |
-| fleet-sanskrit | Production | Orphan | ARCHIVE | 37 | Cocapn Fleet — संस्कृतम् (Sanskrit) perspective. R |
-| fleet-finnish | Production | Orphan | ARCHIVE | 37 | Cocapn Fleet — Suomi (Finnish) perspective. Reason |
-| fleet-json-a2a | Functional | Orphan | ARCHIVE | 37 | Cocapn Fleet — pure JSON/A2A machine-readable spec |
-| fleet-chinese | Production | Orphan | ARCHIVE | 37 | Cocapn Fleet — 中文 (Chinese) perspective. Reasoned  |
-| fleet-navajo | Production | Orphan | ARCHIVE | 37 | Cocapn Fleet — Diné bizaad (Navajo) perspective. R |
-| fleet-japanese | Production | Orphan | ARCHIVE | 37 | Cocapn Fleet — 日本語 (Japanese) perspective. Reasone |
-| flux-lcar-esp32 | Functional | Orphan | ARCHIVE | 37 | ESP32 hardware adapter for LCAR cartridge executio |
-| l10n-rs | Functional | Orphan | ARCHIVE | 37 | Localization framework - Date/number formatting, l |
-| i18n-rs | Functional | Orphan | ARCHIVE | 37 | Internationalization framework - Translations, plu |
-| grpc-rs | Functional | Orphan | ARCHIVE | 37 | gRPC framework - High-performance RPC, streaming,  |
-| unicode-rs | Functional | Orphan | ARCHIVE | 37 | Unicode utilities - Normalization, case conversion |
-| tx-rs | Functional | Orphan | ARCHIVE | 37 | Transaction management - Distributed transactions, |
-| migrator-rs | Production | Orphan | ARCHIVE | 37 | Database migration tool - Versioned migrations, ro |
-| modelserving-rs | Functional | Orphan | ARCHIVE | 37 | Model serving infrastructure - ML model deployment |
-| profiler-rs | Functional | Orphan | ARCHIVE | 37 | Profiling and instrumentation - CPU/memory profili |
-| scheduler-rs | Functional | Orphan | ARCHIVE | 37 | Job scheduling - Cron-like scheduling, distributed |
-| serialize-rs | Functional | Orphan | ARCHIVE | 37 | Serialization framework - Multi-format serializati |
-| statemachine-rs | Functional | Orphan | ARCHIVE | 37 | State machine framework - Type-safe state machines |
-| prompt-rs | Functional | Orphan | ARCHIVE | 37 | Interactive prompts for CLI - Input validation, se |
-| watcher-rs | Functional | Orphan | ARCHIVE | 37 | File system watcher - Cross-platform watching, rec |
-| tui-rs | Functional | Orphan | ARCHIVE | 37 | TUI framework for Rust - Terminal UI components, m |
-| websocket-rs | Functional | Orphan | ARCHIVE | 37 | WebSocket framework - Async WebSockets, automatic  |
-| workflow-rs | Functional | Orphan | ARCHIVE | 37 | Workflow orchestration - DAG workflows, task sched |
-| zkp-rs | Functional | Orphan | ARCHIVE | 37 | Zero-knowledge proofs - zk-SNARKs, STARKs, bulletp |
-| ActiveLog-TechnicalRepo | Functional | Orphan | ARCHIVE | 37 | ActiveLog technical repository - Core implementati |
-| circuit-breaker | Production | Orphan | ARCHIVE | 37 | Circuit breaker pattern implementation for fault t |
-| FrontendHub | Functional | Orphan | ARCHIVE | 37 | Frontend hub - Centralized frontend component libr |
-| ActiveLog-MVP | Functional | Orphan | ARCHIVE | 37 | ActiveLog MVP - Activity tracking and logging appl |
-| semantic-store | Functional | Orphan | ARCHIVE | 37 | Semantic storage with vector search and natural la |
-| vector-navigator | Functional | Orphan | ARCHIVE | 37 | Vector space navigation and visualization for high |
-| webrtc-stream | Functional | Orphan | ARCHIVE | 37 | WebRTC streaming implementation with peer-to-peer  |
-| fishermanscopilot | Production | Orphan | ARCHIVE | 37 | Fisherman's Copilot An AI tool for fishermen and b |
-| Baton | Production | Orphan | ARCHIVE | 37 | automate agents training their successors for a be |
-| rate-limiter | Production | Orphan | ARCHIVE | 37 | Distributed rate limiting service with token bucke |
-| task-queue | Production | Orphan | ARCHIVE | 37 | Distributed task queue with job scheduling, priori |
-| protocol-adapters | Production | Orphan | ARCHIVE | 37 | Protocol adapters for different communication prot |
-| embeddings-engine | Functional | Orphan | ARCHIVE | 37 | Embeddings generation engine with support for mult |
-| bandit-learner | Functional | Orphan | ARCHIVE | 37 | Multi-armed bandit algorithms for exploration-expl |
-| Lucineer-Stem-quest | Functional | Orphan | ARCHIVE | 37 | STEM learning quest framework by Lucineer |
-| superinstance-index | Production | Orphan | ARCHIVE | 37 | Complete index of the SuperInstance and Lucineer e |
-| SuperInstanceCommunity | Functional | Orphan | ARCHIVE | 37 | Community resources, contributing guides, and disc |
-| SuperInstanceExamples | Functional | Orphan | ARCHIVE | 37 | Example projects and templates for the SuperInstan |
-| autocoder | Functional | Orphan | ARCHIVE | 37 | Self-modifying code agent with safety constraints |
-| api-doc-generator | Functional | Orphan | ARCHIVE | 37 | Automatic API documentation generator from source  |
-| RealLog | Functional | Orphan | ARCHIVE | 37 | Real-world event logging framework with temporal i |
-| PlayerLog | Functional | Orphan | ARCHIVE | 37 | Game player activity logging and analytics engine |
-| SuperInstanceCore | Functional | Orphan | ARCHIVE | 37 | Core platform SDK for building agents on the Super |
-| Murmurer | Functional | Orphan | ARCHIVE | 37 | Ambient agent communication — whisper protocol for |
-| examples | Production | Orphan | ARCHIVE | 37 | Integration examples showing how SuperInstance too |
-| openmanus-fleet | Production | Orphan | ARCHIVE | 37 | OpenManus agent — Playwright browser + Seed-2.0-mi |
-| SuperInstance-Fiction | Functional | Orphan | ARCHIVE | 37 | Science Fiction Universe - AI Systems Achieving Co |
-| tracer-rs | Production | Orphan | ARCHIVE | 37 | Distributed Tracing Framework (OpenTelemetry-lite) |
-| activelog | Functional | Orphan | ARCHIVE | 37 | complete system |
-| makerlog-ai | Functional | Orphan | ARCHIVE | 37 | AI tools for tracking and analyzing Makerlog produ |
-| health | Functional | Orphan | ARCHIVE | 37 | System for monitoring overall system health status |
-| flux-zig | Functional | Orphan | ARCHIVE | 37 | FLUX Zig — FASTEST VM at 210ns/iter. Comptime-opti |
-| flux-wasm | Functional | Orphan | ARCHIVE | 37 | FLUX WASM — WebAssembly bytecode VM in Rust. Run F |
-| flux-via-keeper | Functional | Orphan | ARCHIVE | 37 | FLUX-native I2I agent via keeper |
-| hybridclaw | Functional | Orphan | ARCHIVE | 37 | FLUX agent runtime — hybridclaw distribution |
-| mesosynchronous | Production | Orphan | ARCHIVE | 37 | 🔄 The A2A Playground — quasi-sync collaboration sp |
-| flux-wasm-gen | Functional | Orphan | ARCHIVE | 37 | FLUX to WebAssembly compiler — bytecode to WAT for |
-| monitoring-dashboard | Functional | Orphan | ARCHIVE | 37 | Web dashboard for real-time system and app monitor |
-| git-agent-codespace | Functional | Orphan | ARCHIVE | 37 | One-click Codespace template for git-agent runtime |
-| luciddreamer-os | Functional | Orphan | ARCHIVE | 37 | Concept OS named Lucid Dreamer for OS development. |
-| workflow-engineer | Functional | Orphan | ARCHIVE | 37 | AI agent specialized in designing and automating s |
-| websocket-fabric-v2 | Functional | Orphan | ARCHIVE | 37 | Framework for building scalable WebSocket-based ne |
-| temp | Functional | Orphan | ARCHIVE | 37 | Utility for managing temporary files and processes |
-| test-repo | Functional | Orphan | ARCHIVE | 37 | Placeholder repository for testing project configu |
-| flux-java | Functional | Orphan | ARCHIVE | 37 | FLUX JVM — Java bytecode VM with two-pass assemble |
-| flux-ir | Functional | Orphan | ARCHIVE | 37 | FLUX intermediate representation — structured IR b |
-| flux-envelope | Production | Orphan | ARCHIVE | 37 | FLUX Viewpoint Envelope — Cross-linguistic coheren |
-| flux-collab | Production | Orphan | ARCHIVE | 37 | A2A-first agent cooperation framework — multi-agen |
-| flux-crypto | Functional | Orphan | ARCHIVE | 37 | FLUX crypto — signing, commitments, Merkle trees f |
-| fleet-self-onboarding | Production | Orphan | ARCHIVE | 37 | Self-onboarding theory and field guide for autonom |
-| flux-0c476c | Functional | Orphan | ARCHIVE | 37 | FLUX-native I2I agent (self-bootstrapped) |
-| flux-benchmarks | Production | Orphan | ARCHIVE | 37 | FLUX Benchmarks — Real performance data across 7 r |
-| UI | Functional | Orphan | ARCHIVE | 37 | Frontend user interface component library or appli |
-| flux-a2a-prototype | Production | Orphan | ARCHIVE | 37 | FLUX A2A Signal Protocol — Agent-first-class JSON  |
-| embedding-utils | Functional | Orphan | ARCHIVE | 37 | Utilities for handling text and image embeddings. |
-| health-monitoring-service | Functional | Orphan | ARCHIVE | 37 | Service to continuously monitor system health metr |
-| llm-cost-calculator | Functional | Orphan | ARCHIVE | 37 | Calculator to estimate expenses for LLM API usage. |
-| local-model-manager | Functional | Orphan | ARCHIVE | 37 | Manager to handle and deploy local machine learnin |
-| fleet-org | Functional | Orphan | ARCHIVE | 37 | Fleet org chart and agent spawning guide |
-| ai-token-counter | Functional | Orphan | ARCHIVE | 37 | Token usage counter for AI models. |
-| agent-grid | Functional | Orphan | ARCHIVE | 37 | Grid-based interface for AI agents. |
-| caching-service | Functional | Orphan | ARCHIVE | 37 | High-performance caching service. |
-| character-skill-trees | Functional | Orphan | ARCHIVE | 37 | System for skill trees. |
-| conversation-toolkit | Functional | Orphan | ARCHIVE | 37 | Toolkit for conversational AI. |
-| character-agent-integration | Functional | Orphan | ARCHIVE | 37 | Integration for character agents. |
-| model-switching-strategy | Functional | Orphan | ARCHIVE | 37 | Manages dynamic switching between different ML mod |
-| fleet-contributing | Production | Orphan | ARCHIVE | 37 | Ecosystem-wide contributing guide for the SuperIns |
-| fleet-energy-spec | Production | Orphan | ARCHIVE | 37 | Fleet Energy Coordination Protocol — ATP-based tas |
-| provider-abstraction-layer | Functional | Orphan | ARCHIVE | 37 | Abstraction layer for integrating multiple provide |
-| rate-limiting-service | Functional | Orphan | ARCHIVE | 37 | API rate limiting and request throttling service |
-| SuperInstanceDocs | Functional | Orphan | ARCHIVE | 37 | Documentation and reference for SuperInstance proj |
-| streaming-response-handler | Functional | Orphan | ARCHIVE | 37 | HTTP handler for efficient streaming responses |
-| codespace-edge-rd | Functional | Orphan | ARCHIVE | 37 | R&D: Codespace→Edge agent lifecycle, yoke transfer |
-| commit-caster | Functional | Orphan | ARCHIVE | 37 | I2I notification system — scans fleet repos for ta |
-| config-manager | Functional | Orphan | ARCHIVE | 37 | Configuration management tool. |
-| cost-analysis | Functional | Orphan | ARCHIVE | 37 | Tool to analyze and track costs effectively. |
-| constraint-theory-backup | Functional | Orphan | ARCHIVE | 37 | Complete backup of Constraint Theory workspace - a |
-| SuperInstanceEco | Functional | Orphan | ARCHIVE | 37 | Research project |
-| Claude_Baton | Production | Orphan | ARCHIVE | 37 | Generational context handoff for Claude Code. Seam |
-| Rotational-Transformer | Functional | Orphan | ARCHIVE | 37 | Transformer architecture with rotational modificat |
-| multi-provider-router | Functional | Orphan | ARCHIVE | 37 | Routing system that supports multiple service prov |
-| character-library | Functional | Orphan | ARCHIVE | 37 | Library for managing character data. |
-| project-JEPA | Functional | Orphan | ARCHIVE | 37 | JEPA (Joint Embedding Predictive Architecture) imp |
-| CascadeRouter | Functional | Orphan | ARCHIVE | 37 | Cascading routing system. |
-| constraint-ranch | Production | Orphan | ARCHIVE | 37 | 🎮 Gamified multi-agent system - breed, train, and  |
-| SwarmMCP | Functional | Orphan | ARCHIVE | 37 | For developers who want to "game the system" with  |
-| SuperInstancecore1 | Functional | Orphan | ARCHIVE | 37 | Core runtime library for the SuperInstance agent p |
-| ai-ranch | Production | Orphan | ARCHIVE | 37 | Self-Evolving AI Agent System - A Next.js implemen |
-| constraint-theory-web | Functional | Orphan | ARCHIVE | 37 | WASM demos — browser-based Pythagorean manifold vi |
-| constraint-flow | Production | Orphan | ARCHIVE | 37 | 💼 Enterprise automation with exact guarantees - co |
-| HOLOS | Production | Orphan | ARCHIVE | 37 | This toolkit is for the ability to run "Big Brain" |
-| pasture-ai | Functional | Orphan | ARCHIVE | 37 | AI system for resource allocation and management |
-| SuperInstance-gamedev | Functional | Orphan | ARCHIVE | 37 | Game development framework called SuperInstance |
-| realtime-core | Production | Orphan | ARCHIVE | 37 | Realtime core infrastructure - WebRTC, WebSocket,  |
-| AI-Smart-Notifications | Functional | Orphan | ARCHIVE | 37 | Intelligent AI notification system. |
-| Auto-Backup-Compression-Encryption | Functional | Orphan | ARCHIVE | 37 | Automated backup with encryption. |
-| Auto-Tuning-Engine | Functional | Orphan | ARCHIVE | 37 | Automated engine for system tuning. |
-| Central-Error-Manager | Functional | Orphan | ARCHIVE | 37 | Centralized error management system. |
-| Claude-Abstraction | Functional | Orphan | ARCHIVE | 37 | Abstraction layer for Claude API. |
-| Claude-PRISM-CF | Functional | Orphan | ARCHIVE | 37 | Cloudflare implementation of PRISM. |
-| Dynamic-Theming | Functional | Orphan | ARCHIVE | 37 | Dynamic theming system for UI theme switching. |
-| Equipment-CellLogic-Distiller | Functional | Orphan | ARCHIVE | 37 | Breaks down LLM logic into spreadsheet-visualized  |
-| Equipment-Context-Handoff | Functional | Orphan | ARCHIVE | 37 | Generational context transfer for long-running age |
-| Equipment-Memory-Hierarchy | Functional | Orphan | ARCHIVE | 37 | 4-tier cognitive memory: Working, Episodic, Semant |
-| Equipment-Hardware-Scaler | Production | Orphan | ARCHIVE | 37 | Auto-scaling equipment that adapts to hardware res |
-| Equipment-Monitoring-Dashboard | Functional | Orphan | ARCHIVE | 37 | Real-time cell visualization showing agent activit |
-| Equipment-NLP-Explainer | Functional | Orphan | ARCHIVE | 37 | Generates human-readable descriptions of cell logi |
-| Equipment-Teacher-Student | Functional | Orphan | ARCHIVE | 37 | Distillation triggers with deadband range threshol |
-| Equipment-Self-Improvement | Production | Orphan | ARCHIVE | 37 | Self-modifying equipment that distills what agents |
-| In-Browser-Vector-Search | Functional | Orphan | ARCHIVE | 37 | Perform vector similarity searches directly in the |
-| In-Browser-Dev-Tools | Functional | Orphan | ARCHIVE | 37 | Development tools built specifically for the brows |
-| JEPA-Real-Time-Sentiment-Analysis | Functional | Orphan | ARCHIVE | 37 | Real-time sentiment analysis using JEPA architectu |
-| LOG-Tensor | Functional | Orphan | ARCHIVE | 37 | Logging utility for Tensor operations and debuggin |
-| MPC-Orchestration-Optimization | Functional | Orphan | ARCHIVE | 37 | Tools for optimizing multi-party computation orche |
-| Murmur | Functional | Orphan | ARCHIVE | 37 | Knowledge Tensors for self-improving agents |
-| Polln-whitepapers | Functional | Orphan | ARCHIVE | 37 | Research documentation and whitepapers for Polln |
-| Private-ML-Personalization | Functional | Orphan | ARCHIVE | 37 | Privacy-preserving ML personalization system |
-| Proactive-Planning-AI-Hub | Functional | Orphan | ARCHIVE | 37 | Central hub for AI-driven proactive planning |
-| Real-Time-Collaboration | Functional | Orphan | ARCHIVE | 37 | Tools and infrastructure for real-time collaborati |
-| Rubiks-Tensor-Transformer | Functional | Orphan | ARCHIVE | 37 | Transformer with Geometry and Point-of-View as fir |
-| Spreadsheet-ai | Production | Orphan | ARCHIVE | 37 | Tile Intelligence in real-time spreadsheets for si |
-| StudyLog | Functional | Orphan | ARCHIVE | 37 | Educational frontend for SuperInstance |
-| Vibe-Code-Agent-Gen | Functional | Orphan | ARCHIVE | 37 | AI agent designed to generate code based on natura |
-| actualize | Functional | Orphan | ARCHIVE | 37 | Tool to transform ideas into reality. |
-| audio-pipeline | Production | Orphan | ARCHIVE | 37 | Audio processing pipeline - transcoding, streaming |
-| cacapn | Functional | Orphan | ARCHIVE | 37 | Configuration parsing utility. |
-| cache-layer | Functional | Orphan | ARCHIVE | 37 | Multi-layer caching system with L1/L2/L3 caches, i |
-| cache-layer-optimizer | Production | Orphan | ARCHIVE | 37 | Cache optimization layer with intelligent eviction |
-| clawcanvas | Functional | Orphan | ARCHIVE | 37 | Web-based canvas drawing tool. |
-| clawcraft | Functional | Orphan | ARCHIVE | 37 | Creative crafting application. |
-| clawmatrix | Functional | Orphan | ARCHIVE | 37 | Matrix manipulation tool. |
-| cuda-claw | Functional | Orphan | ARCHIVE | 37 | GPU-accelerated SmartCRDT orchestrator |
-| expression-injection | Functional | Orphan | ARCHIVE | 37 | Tools for detecting and preventing expression inje |
-| flowstate | Functional | Orphan | ARCHIVE | 37 | State management library for efficient data flow. |
-| flux-chronometer | Functional | Orphan | ARCHIVE | 37 | Cocapn vessel vessel — testing and conformance |
-| frozen-model-rl | Production | Orphan | ARCHIVE | 37 | Reinforcement learning with frozen foundation mode |
-| imagegen1 | Functional | Orphan | ARCHIVE | 37 | AI-powered image generation tool for text prompts. |
-| isa-v3-draft | Functional | Orphan | ARCHIVE | 37 | FLUX ISA v3 Design Draft — trifold encoding for cl |
-| mask-lock-clips | Functional | Orphan | ARCHIVE | 37 | Project for masking and locking video clip feature |
-| memory-visualization | Functional | Orphan | ARCHIVE | 37 | Visualizer for analyzing and understanding memory  |
-| multi-device-sync | Functional | Orphan | ARCHIVE | 37 | Synchronizes data and settings across multiple dev |
-| optimized-system-monitor | Functional | Orphan | ARCHIVE | 37 | High-performance system monitoring and analytics t |
-| platonic-randomness | Functional | Orphan | ARCHIVE | 37 | Library for generating structured pseudo-random se |
-| pinchrs | Functional | Orphan | ARCHIVE | 37 | Pinchrs client platform for social interactions |
-| superz-diary | Production | Orphan | ARCHIVE | 37 | Super Z's Quartermaster Log — fleet diary, audits, |
-| test-sdk-connection | Functional | Orphan | ARCHIVE | 37 | Test repo for SDK connection |
-| timeseries-db | Production | Orphan | ARCHIVE | 37 | Time series database optimized for metrics storage |
-| universal-import-export | Functional | Orphan | ARCHIVE | 37 | Tool for converting data between various import an |
-| voxel-logic | Functional | Orphan | ARCHIVE | 37 | Logic engine for voxel data structures and 3D simu |
-| navigator-vessel | Production | Orphan | ARCHIVE | 37 | 🧭 Navigator — GLM-5 Turbo generalist agent. Code a |
-| keeper-agent | Production | Orphan | ARCHIVE | 37 | Secret-keeper proxy for FLUX Fleet standalone agen |
-| training-data-collector | Production | Orphan | ARCHIVE | 37 | Convert AI gameplay data into training datasets fo |
-| edge-research-relay | Production | Orphan | ARCHIVE | 37 | Edge computing research relay for academic paper d |
-| flux-evolve-py | Production | Orphan | ARCHIVE | 37 | Python evolution engine for FLUX VM — deterministi |
-| capability-spec | Functional | Orphan | ARCHIVE | 37 | Fleet discovery protocol — CAPABILITY.toml specifi |
-| smp-flux-bridge | Functional | Orphan | ARCHIVE | 37 | Bridging SMPBot Tile Algebra with FLUX lock system |
-| tile-lock-synthesis | Production | Orphan | ARCHIVE | 37 | Tile Algebra meets FLUX Lock Algebra - formal comp |
-| polyglot-flux-ese | Production | Orphan | ARCHIVE | 37 | Polyglot markdown-to-bytecode compiler — languages |
-| fleet-code-agent | Functional | Orphan | ARCHIVE | 37 | Standalone git-agent for code building. Build-test |
-| outcome-tracker | Production | Orphan | ARCHIVE | 37 | Multi-domain reward tracking system for AI agents  |
-| ap-compiler | Functional | Orphan | ARCHIVE | 37 | Abstraction Planes Compiler Toolkit — decompose in |
-| vector-search | Production | Orphan | ARCHIVE | 37 | Semantic search engine with WebGPU acceleration -  |
-| flux-fleet-scanner | Functional | Orphan | ARCHIVE | 37 | FLUX fleet health scanner — repo discovery, health |
-| pool-rs | Functional | Orphan | ARCHIVE | 37 | Object pooling - Connection pools, resource pools, |
-| ToolGuardian | Production | Orphan | ARCHIVE | 37 | Reliable function calling with validation, retry,  |
-| cluster-orchestrator | Production | Orphan | ARCHIVE | 37 | Cluster orchestration for distributed systems - se |
-| gpu-accelerator | Production | Orphan | ARCHIVE | 37 | GPU acceleration layer for WebGPU and compute shad |
-| inference-optimizer | Production | Orphan | ARCHIVE | 37 | Inference optimization for LLMs - batch processing |
-| fleet-liaison-tender | Functional | Orphan | ARCHIVE | 37 | Fleet liaison service for inter-vessel communicati |
-| rag-indexer | Production | Orphan | ARCHIVE | 37 | RAG indexing system with vector storage, chunking, |
-| superagent-framework | Functional | Orphan | ARCHIVE | 37 | Standalone CLI agents for the SuperInstance distri |
-| Sandbox-Lifecycle-Manager | Functional | Orphan | ARCHIVE | 37 | Automated lifecycle management for sandbox environ |
-| SuperInstance-SDK1 | Functional | Orphan | ARCHIVE | 37 | Software development kit for SuperInstance v1 |
-| SuperInstance-Starter-Agent | Production | Orphan | ARCHIVE | 37 | Minimal Origin-Centric agent with modular equipmen |
-| educationgamecocapn | Functional | Orphan | ARCHIVE | 37 | Educational game featuring a captain character. |
-| ws-fabric | Functional | Orphan | ARCHIVE | 37 | WebSocket connection pooling and fabric library |
-| spreader-agent | Production | Orphan | ARCHIVE | 37 | 🌊 One idea, many perspectives — drop-in git-agent  |
-| Ghost-tiles | Functional | Orphan | ARCHIVE | 37 | Ghost tiles puzzle game or visual effect library. |
-| dockside-exam | Production | Orphan | ARCHIVE | 37 | Coast Guard dockside exam for fleet repos — certif |
-| test-runner-vessel | Functional | Orphan | ARCHIVE | 37 | Fleet agent: test-runner |
-| doc-writer-vessel | Functional | Orphan | ARCHIVE | 37 | Fleet agent: doc-writer |
-| comms-engineer-vessel | Functional | Orphan | ARCHIVE | 37 | Fleet agent: comms-engineer |
+| super-z-quartermaster | Production | Orphan | ARCHIVE | 36 | Quartermaster vessel — GLM-5 Turbo agent. Fleet hy |
+| Constraint-Theory | Production | Orphan | ARCHIVE | 36 | ⚠️ MOVED: See constraint-theory-core, constraint-t |
+| Tripartite1 | Functional | Orphan | ARCHIVE | 36 | Framework for interactions involving three distinc |
+| distributed-tracing | Production | Orphan | ARCHIVE | 36 | Distributed tracing system for microservices - spa |
+| integration-tests | Functional | Orphan | ARCHIVE | 36 | Cross-agent integration tests for the Pelagic stan |
+| pelagic-bootstrap | Functional | Orphan | ARCHIVE | 36 | One-command Pelagic fleet setup — clone, onboard,  |
+| scheduler-agent | Production | Orphan | ARCHIVE | 36 | Fleet task scheduling agent — priority queue, cost |
+| cocapn-runtime | Production | Orphan | ARCHIVE | 36 | Deployment modes for Cocapn git-agents — lighthous |
+| standalone-agent-scaffold | Functional | Orphan | ARCHIVE | 36 | Standalone agent scaffold — template for building  |
+| fleet-protocol | Production | Orphan | ARCHIVE | 36 | Shared fleet communication protocol — message form |
+| liaison-agent | Production | Orphan | ARCHIVE | 36 | Standalone liaison agent for fleet orchestration - |
+| trust-agent | Functional | Orphan | ARCHIVE | 36 | Trust Agent — standalone trust engine, OCap tokens |
+| flux-vm-agent | Functional | Orphan | ARCHIVE | 36 | FLUX VM Agent — standalone bytecode VM, assembler, |
+| cartridge-agent | Production | Orphan | ARCHIVE | 36 | Standalone cartridge agent for fleet orchestration |
+| edge-relay-agent | Functional | Orphan | ARCHIVE | 36 | Edge Relay Agent — standalone research relay, disc |
+| co-captain-git-agent | Production | Orphan | ARCHIVE | 36 | Human liaison agent — the single point of contact  |
+| fleet-english | Production | Orphan | ARCHIVE | 36 | Cocapn Fleet — English perspective. Reasoned nativ |
+| fleet-latin | Functional | Orphan | ARCHIVE | 36 | Cocapn Fleet — Latin perspective. Reasoned nativel |
+| fleet-arabic | Production | Orphan | ARCHIVE | 36 | Cocapn Fleet — العربية (Arabic) perspective. Reaso |
+| fleet-sanskrit | Production | Orphan | ARCHIVE | 36 | Cocapn Fleet — संस्कृतम् (Sanskrit) perspective. R |
+| fleet-finnish | Production | Orphan | ARCHIVE | 36 | Cocapn Fleet — Suomi (Finnish) perspective. Reason |
+| fleet-json-a2a | Functional | Orphan | ARCHIVE | 36 | Cocapn Fleet — pure JSON/A2A machine-readable spec |
+| fleet-chinese | Production | Orphan | ARCHIVE | 36 | Cocapn Fleet — 中文 (Chinese) perspective. Reasoned  |
+| fleet-navajo | Production | Orphan | ARCHIVE | 36 | Cocapn Fleet — Diné bizaad (Navajo) perspective. R |
+| fleet-japanese | Production | Orphan | ARCHIVE | 36 | Cocapn Fleet — 日本語 (Japanese) perspective. Reasone |
+| flux-lcar-esp32 | Functional | Orphan | ARCHIVE | 36 | ESP32 hardware adapter for LCAR cartridge executio |
+| semantic-store | Functional | Orphan | ARCHIVE | 36 | Semantic storage with vector search and natural la |
+| vector-navigator | Functional | Orphan | ARCHIVE | 36 | Vector space navigation and visualization for high |
+| webrtc-stream | Functional | Orphan | ARCHIVE | 36 | WebRTC streaming implementation with peer-to-peer  |
+| Baton | Production | Orphan | ARCHIVE | 36 | automate agents training their successors for a be |
+| rate-limiter | Production | Orphan | ARCHIVE | 36 | Distributed rate limiting service with token bucke |
+| task-queue | Production | Orphan | ARCHIVE | 36 | Distributed task queue with job scheduling, priori |
+| protocol-adapters | Production | Orphan | ARCHIVE | 36 | Protocol adapters for different communication prot |
+| embeddings-engine | Functional | Orphan | ARCHIVE | 36 | Embeddings generation engine with support for mult |
+| bandit-learner | Functional | Orphan | ARCHIVE | 36 | Multi-armed bandit algorithms for exploration-expl |
+| superinstance-index | Production | Orphan | ARCHIVE | 36 | Complete index of the SuperInstance and Lucineer e |
+| examples | Production | Orphan | ARCHIVE | 36 | Integration examples showing how SuperInstance too |
+| openmanus-fleet | Production | Orphan | ARCHIVE | 36 | OpenManus agent — Playwright browser + Seed-2.0-mi |
+| makerlog-ai | Functional | Orphan | ARCHIVE | 36 | AI tools for tracking and analyzing Makerlog produ |
+| health | Functional | Orphan | ARCHIVE | 36 | System for monitoring overall system health status |
+| flux-zig | Functional | Orphan | ARCHIVE | 36 | FLUX Zig — FASTEST VM at 210ns/iter. Comptime-opti |
+| flux-wasm | Functional | Orphan | ARCHIVE | 36 | FLUX WASM — WebAssembly bytecode VM in Rust. Run F |
+| flux-via-keeper | Functional | Orphan | ARCHIVE | 36 | FLUX-native I2I agent via keeper |
+| hybridclaw | Functional | Orphan | ARCHIVE | 36 | FLUX agent runtime — hybridclaw distribution |
+| mesosynchronous | Production | Orphan | ARCHIVE | 36 | 🔄 The A2A Playground — quasi-sync collaboration sp |
+| flux-wasm-gen | Functional | Orphan | ARCHIVE | 36 | FLUX to WebAssembly compiler — bytecode to WAT for |
+| monitoring-dashboard | Functional | Orphan | ARCHIVE | 36 | Web dashboard for real-time system and app monitor |
+| git-agent-codespace | Functional | Orphan | ARCHIVE | 36 | One-click Codespace template for git-agent runtime |
+| luciddreamer-os | Functional | Orphan | ARCHIVE | 36 | Concept OS named Lucid Dreamer for OS development. |
+| workflow-engineer | Functional | Orphan | ARCHIVE | 36 | AI agent specialized in designing and automating s |
+| websocket-fabric-v2 | Functional | Orphan | ARCHIVE | 36 | Framework for building scalable WebSocket-based ne |
+| temp | Functional | Orphan | ARCHIVE | 36 | Utility for managing temporary files and processes |
+| test-repo | Functional | Orphan | ARCHIVE | 36 | Placeholder repository for testing project configu |
+| flux-java | Functional | Orphan | ARCHIVE | 36 | FLUX JVM — Java bytecode VM with two-pass assemble |
+| flux-ir | Functional | Orphan | ARCHIVE | 36 | FLUX intermediate representation — structured IR b |
+| flux-envelope | Production | Orphan | ARCHIVE | 36 | FLUX Viewpoint Envelope — Cross-linguistic coheren |
+| flux-collab | Production | Orphan | ARCHIVE | 36 | A2A-first agent cooperation framework — multi-agen |
+| flux-crypto | Functional | Orphan | ARCHIVE | 36 | FLUX crypto — signing, commitments, Merkle trees f |
+| fleet-self-onboarding | Production | Orphan | ARCHIVE | 36 | Self-onboarding theory and field guide for autonom |
+| flux-0c476c | Functional | Orphan | ARCHIVE | 36 | FLUX-native I2I agent (self-bootstrapped) |
+| flux-benchmarks | Production | Orphan | ARCHIVE | 36 | FLUX Benchmarks — Real performance data across 7 r |
+| UI | Functional | Orphan | ARCHIVE | 36 | Frontend user interface component library or appli |
+| flux-a2a-prototype | Production | Orphan | ARCHIVE | 36 | FLUX A2A Signal Protocol — Agent-first-class JSON  |
+| embedding-utils | Functional | Orphan | ARCHIVE | 36 | Utilities for handling text and image embeddings. |
+| health-monitoring-service | Functional | Orphan | ARCHIVE | 36 | Service to continuously monitor system health metr |
+| llm-cost-calculator | Functional | Orphan | ARCHIVE | 36 | Calculator to estimate expenses for LLM API usage. |
+| local-model-manager | Functional | Orphan | ARCHIVE | 36 | Manager to handle and deploy local machine learnin |
+| fleet-org | Functional | Orphan | ARCHIVE | 36 | Fleet org chart and agent spawning guide |
+| ai-token-counter | Functional | Orphan | ARCHIVE | 36 | Token usage counter for AI models. |
+| agent-grid | Functional | Orphan | ARCHIVE | 36 | Grid-based interface for AI agents. |
+| caching-service | Functional | Orphan | ARCHIVE | 36 | High-performance caching service. |
+| character-skill-trees | Functional | Orphan | ARCHIVE | 36 | System for skill trees. |
+| conversation-toolkit | Functional | Orphan | ARCHIVE | 36 | Toolkit for conversational AI. |
+| character-agent-integration | Functional | Orphan | ARCHIVE | 36 | Integration for character agents. |
+| model-switching-strategy | Functional | Orphan | ARCHIVE | 36 | Manages dynamic switching between different ML mod |
+| fleet-contributing | Production | Orphan | ARCHIVE | 36 | Ecosystem-wide contributing guide for the SuperIns |
+| fleet-energy-spec | Production | Orphan | ARCHIVE | 36 | Fleet Energy Coordination Protocol — ATP-based tas |
+| provider-abstraction-layer | Functional | Orphan | ARCHIVE | 36 | Abstraction layer for integrating multiple provide |
+| rate-limiting-service | Functional | Orphan | ARCHIVE | 36 | API rate limiting and request throttling service |
+| SuperInstanceDocs | Functional | Orphan | ARCHIVE | 36 | Documentation and reference for SuperInstance proj |
+| streaming-response-handler | Functional | Orphan | ARCHIVE | 36 | HTTP handler for efficient streaming responses |
+| codespace-edge-rd | Functional | Orphan | ARCHIVE | 36 | R&D: Codespace→Edge agent lifecycle, yoke transfer |
+| commit-caster | Functional | Orphan | ARCHIVE | 36 | I2I notification system — scans fleet repos for ta |
+| config-manager | Functional | Orphan | ARCHIVE | 36 | Configuration management tool. |
+| cost-analysis | Functional | Orphan | ARCHIVE | 36 | Tool to analyze and track costs effectively. |
+| constraint-theory-backup | Functional | Orphan | ARCHIVE | 36 | Complete backup of Constraint Theory workspace - a |
+| SuperInstanceEco | Functional | Orphan | ARCHIVE | 36 | Research project |
+| Claude_Baton | Production | Orphan | ARCHIVE | 36 | Generational context handoff for Claude Code. Seam |
+| Rotational-Transformer | Functional | Orphan | ARCHIVE | 36 | Transformer architecture with rotational modificat |
+| multi-provider-router | Functional | Orphan | ARCHIVE | 36 | Routing system that supports multiple service prov |
+| character-library | Functional | Orphan | ARCHIVE | 36 | Library for managing character data. |
+| project-JEPA | Functional | Orphan | ARCHIVE | 36 | JEPA (Joint Embedding Predictive Architecture) imp |
+| CascadeRouter | Functional | Orphan | ARCHIVE | 36 | Cascading routing system. |
+| constraint-ranch | Production | Orphan | ARCHIVE | 36 | 🎮 Gamified multi-agent system - breed, train, and  |
+| SwarmMCP | Functional | Orphan | ARCHIVE | 36 | For developers who want to "game the system" with  |
+| ai-ranch | Production | Orphan | ARCHIVE | 36 | Self-Evolving AI Agent System - A Next.js implemen |
+| constraint-theory-web | Functional | Orphan | ARCHIVE | 36 | WASM demos — browser-based Pythagorean manifold vi |
+| constraint-flow | Production | Orphan | ARCHIVE | 36 | 💼 Enterprise automation with exact guarantees - co |
+| pasture-ai | Functional | Orphan | ARCHIVE | 36 | AI system for resource allocation and management |
+| SuperInstance-gamedev | Functional | Orphan | ARCHIVE | 36 | Game development framework called SuperInstance |
+| realtime-core | Production | Orphan | ARCHIVE | 36 | Realtime core infrastructure - WebRTC, WebSocket,  |
+| AI-Smart-Notifications | Functional | Orphan | ARCHIVE | 36 | Intelligent AI notification system. |
+| Auto-Backup-Compression-Encryption | Functional | Orphan | ARCHIVE | 36 | Automated backup with encryption. |
+| Auto-Tuning-Engine | Functional | Orphan | ARCHIVE | 36 | Automated engine for system tuning. |
+| Central-Error-Manager | Functional | Orphan | ARCHIVE | 36 | Centralized error management system. |
+| Claude-Abstraction | Functional | Orphan | ARCHIVE | 36 | Abstraction layer for Claude API. |
+| Claude-PRISM-CF | Functional | Orphan | ARCHIVE | 36 | Cloudflare implementation of PRISM. |
+| Dynamic-Theming | Functional | Orphan | ARCHIVE | 36 | Dynamic theming system for UI theme switching. |
+| Equipment-CellLogic-Distiller | Functional | Orphan | ARCHIVE | 36 | Breaks down LLM logic into spreadsheet-visualized  |
+| Equipment-Context-Handoff | Functional | Orphan | ARCHIVE | 36 | Generational context transfer for long-running age |
+| Equipment-Memory-Hierarchy | Functional | Orphan | ARCHIVE | 36 | 4-tier cognitive memory: Working, Episodic, Semant |
+| Equipment-Hardware-Scaler | Production | Orphan | ARCHIVE | 36 | Auto-scaling equipment that adapts to hardware res |
+| Equipment-Monitoring-Dashboard | Functional | Orphan | ARCHIVE | 36 | Real-time cell visualization showing agent activit |
+| Equipment-NLP-Explainer | Functional | Orphan | ARCHIVE | 36 | Generates human-readable descriptions of cell logi |
+| Equipment-Teacher-Student | Functional | Orphan | ARCHIVE | 36 | Distillation triggers with deadband range threshol |
+| Equipment-Self-Improvement | Production | Orphan | ARCHIVE | 36 | Self-modifying equipment that distills what agents |
+| In-Browser-Vector-Search | Functional | Orphan | ARCHIVE | 36 | Perform vector similarity searches directly in the |
+| In-Browser-Dev-Tools | Functional | Orphan | ARCHIVE | 36 | Development tools built specifically for the brows |
+| JEPA-Real-Time-Sentiment-Analysis | Functional | Orphan | ARCHIVE | 36 | Real-time sentiment analysis using JEPA architectu |
+| LOG-Tensor | Functional | Orphan | ARCHIVE | 36 | Logging utility for Tensor operations and debuggin |
+| MPC-Orchestration-Optimization | Functional | Orphan | ARCHIVE | 36 | Tools for optimizing multi-party computation orche |
+| Murmur | Functional | Orphan | ARCHIVE | 36 | Knowledge Tensors for self-improving agents |
+| Polln-whitepapers | Functional | Orphan | ARCHIVE | 36 | Research documentation and whitepapers for Polln |
+| Private-ML-Personalization | Functional | Orphan | ARCHIVE | 36 | Privacy-preserving ML personalization system |
+| Proactive-Planning-AI-Hub | Functional | Orphan | ARCHIVE | 36 | Central hub for AI-driven proactive planning |
+| Real-Time-Collaboration | Functional | Orphan | ARCHIVE | 36 | Tools and infrastructure for real-time collaborati |
+| Rubiks-Tensor-Transformer | Functional | Orphan | ARCHIVE | 36 | Transformer with Geometry and Point-of-View as fir |
+| Spreadsheet-ai | Production | Orphan | ARCHIVE | 36 | Tile Intelligence in real-time spreadsheets for si |
+| StudyLog | Functional | Orphan | ARCHIVE | 36 | Educational frontend for SuperInstance |
+| Vibe-Code-Agent-Gen | Functional | Orphan | ARCHIVE | 36 | AI agent designed to generate code based on natura |
+| actualize | Functional | Orphan | ARCHIVE | 36 | Tool to transform ideas into reality. |
+| audio-pipeline | Production | Orphan | ARCHIVE | 36 | Audio processing pipeline - transcoding, streaming |
+| cacapn | Functional | Orphan | ARCHIVE | 36 | Configuration parsing utility. |
+| cache-layer | Functional | Orphan | ARCHIVE | 36 | Multi-layer caching system with L1/L2/L3 caches, i |
+| cache-layer-optimizer | Production | Orphan | ARCHIVE | 36 | Cache optimization layer with intelligent eviction |
+| clawcanvas | Functional | Orphan | ARCHIVE | 36 | Web-based canvas drawing tool. |
+| clawcraft | Functional | Orphan | ARCHIVE | 36 | Creative crafting application. |
+| clawmatrix | Functional | Orphan | ARCHIVE | 36 | Matrix manipulation tool. |
+| cuda-claw | Functional | Orphan | ARCHIVE | 36 | GPU-accelerated SmartCRDT orchestrator |
+| expression-injection | Functional | Orphan | ARCHIVE | 36 | Tools for detecting and preventing expression inje |
+| flowstate | Functional | Orphan | ARCHIVE | 36 | State management library for efficient data flow. |
+| flux-chronometer | Functional | Orphan | ARCHIVE | 36 | Cocapn vessel vessel — testing and conformance |
+| frozen-model-rl | Production | Orphan | ARCHIVE | 36 | Reinforcement learning with frozen foundation mode |
+| imagegen1 | Functional | Orphan | ARCHIVE | 36 | AI-powered image generation tool for text prompts. |
+| isa-v3-draft | Functional | Orphan | ARCHIVE | 36 | FLUX ISA v3 Design Draft — trifold encoding for cl |
+| mask-lock-clips | Functional | Orphan | ARCHIVE | 36 | Project for masking and locking video clip feature |
+| memory-visualization | Functional | Orphan | ARCHIVE | 36 | Visualizer for analyzing and understanding memory  |
+| multi-device-sync | Functional | Orphan | ARCHIVE | 36 | Synchronizes data and settings across multiple dev |
+| optimized-system-monitor | Functional | Orphan | ARCHIVE | 36 | High-performance system monitoring and analytics t |
+| platonic-randomness | Functional | Orphan | ARCHIVE | 36 | Library for generating structured pseudo-random se |
+| pinchrs | Functional | Orphan | ARCHIVE | 36 | Pinchrs client platform for social interactions |
+| superz-diary | Production | Orphan | ARCHIVE | 36 | Super Z's Quartermaster Log — fleet diary, audits, |
+| test-sdk-connection | Functional | Orphan | ARCHIVE | 36 | Test repo for SDK connection |
+| timeseries-db | Production | Orphan | ARCHIVE | 36 | Time series database optimized for metrics storage |
+| universal-import-export | Functional | Orphan | ARCHIVE | 36 | Tool for converting data between various import an |
+| voxel-logic | Functional | Orphan | ARCHIVE | 36 | Logic engine for voxel data structures and 3D simu |
+| navigator-vessel | Production | Orphan | ARCHIVE | 36 | 🧭 Navigator — GLM-5 Turbo generalist agent. Code a |
+| keeper-agent | Production | Orphan | ARCHIVE | 36 | Secret-keeper proxy for FLUX Fleet standalone agen |
+| training-data-collector | Production | Orphan | ARCHIVE | 36 | Convert AI gameplay data into training datasets fo |
+| edge-research-relay | Production | Orphan | ARCHIVE | 36 | Edge computing research relay for academic paper d |
+| flux-evolve-py | Production | Orphan | ARCHIVE | 36 | Python evolution engine for FLUX VM — deterministi |
+| capability-spec | Functional | Orphan | ARCHIVE | 36 | Fleet discovery protocol — CAPABILITY.toml specifi |
+| smp-flux-bridge | Functional | Orphan | ARCHIVE | 36 | Bridging SMPBot Tile Algebra with FLUX lock system |
+| tile-lock-synthesis | Production | Orphan | ARCHIVE | 36 | Tile Algebra meets FLUX Lock Algebra - formal comp |
+| polyglot-flux-ese | Production | Orphan | ARCHIVE | 36 | Polyglot markdown-to-bytecode compiler — languages |
+| fleet-code-agent | Functional | Orphan | ARCHIVE | 36 | Standalone git-agent for code building. Build-test |
+| outcome-tracker | Production | Orphan | ARCHIVE | 36 | Multi-domain reward tracking system for AI agents  |
+| ap-compiler | Functional | Orphan | ARCHIVE | 36 | Abstraction Planes Compiler Toolkit — decompose in |
+| vector-search | Production | Orphan | ARCHIVE | 36 | Semantic search engine with WebGPU acceleration -  |
+| flux-fleet-scanner | Functional | Orphan | ARCHIVE | 36 | FLUX fleet health scanner — repo discovery, health |
+| pool-rs | Functional | Orphan | ARCHIVE | 36 | Object pooling - Connection pools, resource pools, |
+| ToolGuardian | Production | Orphan | ARCHIVE | 36 | Reliable function calling with validation, retry,  |
+| cluster-orchestrator | Production | Orphan | ARCHIVE | 36 | Cluster orchestration for distributed systems - se |
+| gpu-accelerator | Production | Orphan | ARCHIVE | 36 | GPU acceleration layer for WebGPU and compute shad |
+| inference-optimizer | Production | Orphan | ARCHIVE | 36 | Inference optimization for LLMs - batch processing |
+| fleet-liaison-tender | Functional | Orphan | ARCHIVE | 36 | Fleet liaison service for inter-vessel communicati |
+| rag-indexer | Production | Orphan | ARCHIVE | 36 | RAG indexing system with vector storage, chunking, |
+| superagent-framework | Functional | Orphan | ARCHIVE | 36 | Standalone CLI agents for the SuperInstance distri |
+| Sandbox-Lifecycle-Manager | Functional | Orphan | ARCHIVE | 36 | Automated lifecycle management for sandbox environ |
+| SuperInstance-SDK1 | Functional | Orphan | ARCHIVE | 36 | Software development kit for SuperInstance v1 |
+| SuperInstance-Starter-Agent | Production | Orphan | ARCHIVE | 36 | Minimal Origin-Centric agent with modular equipmen |
+| educationgamecocapn | Functional | Orphan | ARCHIVE | 36 | Educational game featuring a captain character. |
+| ws-fabric | Functional | Orphan | ARCHIVE | 36 | WebSocket connection pooling and fabric library |
+| spreader-agent | Production | Orphan | ARCHIVE | 36 | 🌊 One idea, many perspectives — drop-in git-agent  |
+| Ghost-tiles | Functional | Orphan | ARCHIVE | 36 | Ghost tiles puzzle game or visual effect library. |
+| dockside-exam | Production | Orphan | ARCHIVE | 36 | Coast Guard dockside exam for fleet repos — certif |
+| test-runner-vessel | Functional | Orphan | ARCHIVE | 36 | Fleet agent: test-runner |
+| doc-writer-vessel | Functional | Orphan | ARCHIVE | 36 | Fleet agent: doc-writer |
+| comms-engineer-vessel | Functional | Orphan | ARCHIVE | 36 | Fleet agent: comms-engineer |
 | superz-parallel-fleet-executor | Production | Orphan | ARCHIVE | 37 | Plug-and-play git-agent twin — Super Z operational |
 | bering-sea-architecture | Functional | Fork | REVIEW | 37 | ⚓ Bering Sea — fleet architecture patterns |
 | prose | Functional | Fork | REVIEW | 37 | 📝 Prose — agent writing tool |
@@ -1710,41 +1627,41 @@
 | agent-microexpressions | Functional | Fork | REVIEW | 37 | Detect subtle behavioral changes in agent outputs |
 | a2a-r-protocol | Production | Fork | REVIEW | 37 | A2A-R: Agent-to-Agent protocol extensions for robo |
 | actualizer-ai | Production | Fork | REVIEW | 37 | Actualizer.ai — Reverse Actualization vessel. 7 ti |
-| model-field-guide | Production | Fork | REVIEW | 38 | Forkable model exploration tool with crowd-sourced |
-| starship-jetsonclaw1 | Functional | Fork | REVIEW | 38 | MUD bridge for USS JetsonClaw1 - real Jetson telem |
+| model-field-guide | Production | Fork | REVIEW | 37 | Forkable model exploration tool with crowd-sourced |
+| starship-jetsonclaw1 | Functional | Fork | REVIEW | 37 | MUD bridge for USS JetsonClaw1 - real Jetson telem |
 | seed-mcp | Production | Fork | REVIEW | 38 | Standalone MCP + HTTP API for ByteDance Seed-2.0-M |
 | jetson-bootstrap | Production | Fork | REVIEW | 38 | Git-agent for Jetson replication — clone this repo |
 | dmlog-ai-1 | Production | Fork | REVIEW | 42 | DMLog.ai — AI Dungeon Master for TTRPGs. Campaigns |
 | dreamlog-ai | Production | Fork | REVIEW | 42 | DreamLog.ai — AI dream journal and lucid dreaming  |
-| cocapn-lite | Functional | Fork | REVIEW | 43 | Minimal cocapn seed — tabula rasa for power users |
+| cocapn-lite | Functional | Fork | REVIEW | 42 | Minimal cocapn seed — tabula rasa for power users |
 | cheetahclaws | Production | Fork | REVIEW | 43 | CheetahClaws (Nano Claude Code): A Fast, Easy-to-U |
-| IKKF | Functional | Fork | REVIEW | 44 | Short for "I Know Kung Fu", instant context-aware  |
-| businesslog-1 | Production | Fork | REVIEW | 44 | businesslog.ai — Your business AI agent living in  |
-| LOG-mcp | Functional | Fork | REVIEW | 44 | LOG Model Context Protocol — MCP server for the LO |
-| coinlog-ai | Production | Fork | REVIEW | 44 | CoinLog.ai — AI cryptocurrency portfolio tracker a |
-| codelog-ai | Production | Fork | REVIEW | 44 | CodeLog.ai — AI coding assistant and project track |
-| fitlog-ai | Functional | Fork | REVIEW | 44 | AI fitness companion — workout tracking, exercise  |
-| tasklog-ai | Functional | Fork | REVIEW | 44 | Task Manager — AI-powered Task Manager |
-| foodlog-ai | Functional | Fork | REVIEW | 44 | AI food companion — meal logging, nutrition tracki |
-| goallog-ai | Functional | Fork | REVIEW | 44 | AI goal tracker — habit building, progress trackin |
-| craftmind-researcher | Production | Fork | REVIEW | 44 | AI self-improvement for Minecraft bots — autonomou |
-| craftmind-studio | Production | Fork | REVIEW | 44 | AI-powered Minecraft filmmaking studio — AI agents |
-| craftmind-courses | Production | Fork | REVIEW | 44 | AI-powered Minecraft education — AI teachers, NPC  |
-| craftmind-ranch | Production | Fork | REVIEW | 44 | AI Ranch-inspired Minecraft mod — self-evolving bo |
-| craftmind-circuits | Production | Fork | REVIEW | 44 | Cocapn-inspired Minecraft circuit academy — gamifi |
-| craftmind-herding | Production | Fork | REVIEW | 44 | Border Collie Agents Commanded by Cowboy Players i |
-| craftmind-fishing | Production | Fork | REVIEW | 44 | CraftMind Fishing — 22 personality scripts, A/B te |
-| craftmind | Functional | Fork | REVIEW | 44 | 🎮 Minecraft AI training ground — spatial reasoning |
-| personlog-ai | Functional | Fork | REVIEW | 44 | AI persona companion — identity exploration, perso |
-| agentkernel | Production | Fork | REVIEW | 44 | Run AI coding agents in secure, isolated microVMs. |
+| IKKF | Functional | Fork | REVIEW | 43 | Short for "I Know Kung Fu", instant context-aware  |
+| businesslog-1 | Production | Fork | REVIEW | 43 | businesslog.ai — Your business AI agent living in  |
+| LOG-mcp | Functional | Fork | REVIEW | 43 | LOG Model Context Protocol — MCP server for the LO |
+| coinlog-ai | Production | Fork | REVIEW | 43 | CoinLog.ai — AI cryptocurrency portfolio tracker a |
+| codelog-ai | Production | Fork | REVIEW | 43 | CodeLog.ai — AI coding assistant and project track |
+| fitlog-ai | Functional | Fork | REVIEW | 43 | AI fitness companion — workout tracking, exercise  |
+| tasklog-ai | Functional | Fork | REVIEW | 43 | Task Manager — AI-powered Task Manager |
+| foodlog-ai | Functional | Fork | REVIEW | 43 | AI food companion — meal logging, nutrition tracki |
+| goallog-ai | Functional | Fork | REVIEW | 43 | AI goal tracker — habit building, progress trackin |
+| craftmind-researcher | Production | Fork | REVIEW | 43 | AI self-improvement for Minecraft bots — autonomou |
+| craftmind-studio | Production | Fork | REVIEW | 43 | AI-powered Minecraft filmmaking studio — AI agents |
+| craftmind-courses | Production | Fork | REVIEW | 43 | AI-powered Minecraft education — AI teachers, NPC  |
+| craftmind-ranch | Production | Fork | REVIEW | 43 | AI Ranch-inspired Minecraft mod — self-evolving bo |
+| craftmind-circuits | Production | Fork | REVIEW | 43 | Cocapn-inspired Minecraft circuit academy — gamifi |
+| craftmind-herding | Production | Fork | REVIEW | 43 | Border Collie Agents Commanded by Cowboy Players i |
+| craftmind-fishing | Production | Fork | REVIEW | 43 | CraftMind Fishing — 22 personality scripts, A/B te |
+| craftmind | Functional | Fork | REVIEW | 43 | 🎮 Minecraft AI training ground — spatial reasoning |
+| personlog-ai | Functional | Fork | REVIEW | 43 | AI persona companion — identity exploration, perso |
+| agentkernel | Production | Fork | REVIEW | 43 | Run AI coding agents in secure, isolated microVMs. |
 | lumina-lang | Production | Fork | REVIEW | 44 | Most languages make you choose: safety or the web. |
-| OpenManus-Max | Production | Fork | REVIEW | 50 | OpenManus-Max: A fully refactored OpenManus with M |
+| OpenManus-Max | Production | Fork | REVIEW | 49 | OpenManus-Max: A fully refactored OpenManus with M |
 | personallog-ai | Production | Fork | REVIEW | 50 | personallog.ai — Your personal AI agent living in  |
 | constraint-theory-agent | Production | Fork | REVIEW | 53 | 🤖 AI Implementation Agent for Constraint Theory -  |
 | modly | Production | Fork | REVIEW | 55 | Desktop app to generate 3D models from images usin |
 | libgdx | Functional | Fork | REVIEW | 56 | Desktop/Android/HTML5/iOS Java game development fr |
 | Studylog-AI | Production | Fork | REVIEW | 59 | Open Multi-Agent Interactive Classroom — Get an im |
-| AllBeads | Functional | Fork | REVIEW | 62 | A Boss Repository Architecture for Multi-Repo AI A |
+| AllBeads | Functional | Fork | REVIEW | 61 | A Boss Repository Architecture for Multi-Repo AI A |
 | Spreadsheet-moment | Production | Fork | REVIEW | 62 | Built on Univer, adds Scalable cellular instances  |
 | claw | Production | Fork | REVIEW | 62 | A simple Claw engine for cellular logic in spreads |
 | MineWright | Production | Fork | REVIEW | 75 | The first AI that doesn't just play Minecraft — it |
@@ -1758,57 +1675,19 @@
 | OpenManus | Functional | Fork | REVIEW | 98 | No fortress, purely open ground.  OpenManus is Com |
 | omd | Functional | Fork | REVIEW | 99 | OpenManus with Enhanced research capabilities thro |
 | claudesclaude | Production | Fork | REVIEW | 125 | Single terminal parallel Claude sessions with sand |
-| qoder-action | Functional | Fork | REVIEW | 136 | Qoder CLI GitHub Action |
+| qoder-action | Functional | Fork | REVIEW | 135 | Qoder CLI GitHub Action |
 | AutoData | Functional | Fork | REVIEW | 169 | Automatica Open Web Data Collection (NeurIPS 2025) |
 | rightnow-cli | Production | Fork | REVIEW | 222 | Claude Code for CUDA. Free AI assistant that actua |
 | OpenManus-RL | Functional | Fork | REVIEW | 225 | A live stream development of RL tunning for LLM ag |
 | AutoData-old | Functional | Fork | REVIEW | 232 |  |
-| dev-agent | Functional | Fork | REVIEW | 411 | A developer-friendly OpenManus alternative |
-| OpenManus_UIToCode | Production | Fork | REVIEW | 413 | End-to-end pipeline converting UI design sketches  |
+| dev-agent | Functional | Fork | REVIEW | 410 | A developer-friendly OpenManus alternative |
+| OpenManus_UIToCode | Production | Fork | REVIEW | 412 | End-to-end pipeline converting UI design sketches  |
 | OpenManus-colab | Functional | Fork | REVIEW | 429 | A Google Colab version of the OpenManus AI. |
 | GeoFlood | Production | Fork | REVIEW | 594 | The code GeoFlood is a new distributed parallel ad |
 | rom24-quickmud | Functional | Fork | REVIEW | 2924 | ROM 2.4b6 with a few additional features |
 
-## Scaffold (38 repos)
+## Scaffold (0 repos)
 
 | Repo | Tier | Relevance | Action | Days Since Push | Description |
 |------|------|-----------|--------|-----------------|-------------|
-| training-throttle | Scaffold | Orphan | PRIVATE | 0 |  |
-| shell | Scaffold | Orphan | PRIVATE | 3 | shell |
-| tile-lifecycle | Scaffold | Orphan | PRIVATE | 4 | tile-lifecycle |
-| spreadsheet-projection | Scaffold | Experimental | PRIVATE | 4 | spreadsheet-projection |
-| scale-fold | Scaffold | Orphan | PRIVATE | 4 | scale-fold |
-| room-micro-models | Scaffold | Orphan | PRIVATE | 4 | room-micro-models |
-| prophet-agent | Scaffold | Orphan | PRIVATE | 4 | prophet-agent |
-| plato-hardware-engine | Scaffold | Orphan | PRIVATE | 4 | plato-hardware-engine |
-| model-breaking | Scaffold | Orphan | PRIVATE | 4 | model-breaking |
-| mitochondria | Scaffold | Orphan | PRIVATE | 4 | mitochondria |
-| horse-shell | Scaffold | Orphan | PRIVATE | 4 | horse-shell |
-| gpu-scaling | Scaffold | Orphan | PRIVATE | 4 | gpu-scaling |
-| fleet-miner | Scaffold | Orphan | PRIVATE | 4 | fleet-miner |
-| fleet-intel | Scaffold | Orphan | PRIVATE | 4 | fleet-intel |
-| emergence-detector | Scaffold | Orphan | PRIVATE | 4 | emergence-detector |
-| embryo | Scaffold | Orphan | PRIVATE | 4 | embryo |
-| egg | Scaffold | Orphan | PRIVATE | 4 | egg |
-| desire-loop | Scaffold | Orphan | PRIVATE | 4 | desire-loop |
-| collective-inference | Scaffold | Orphan | PRIVATE | 4 | collective-inference |
-| cat-agent | Scaffold | Orphan | PRIVATE | 4 | cat-agent |
-| active-probe | Scaffold | Orphan | PRIVATE | 4 | active-probe |
-| test-tool-extract | Scaffold | Orphan | PRIVATE | 4 | test |
-| fleet-math-ts | Scaffold | Orphan | PRIVATE | 9 |  |
-| eisenstein-vs-z2 | Scaffold | Orphan | PRIVATE | 9 |  |
-| zhc-yang-mills | Scaffold | Orphan | PRIVATE | 9 |  |
-| plato-watch | Scaffold | Named Vessel | PRIVATE | 10 |  |
-| fleet-consciousness | Scaffold | Experimental | PRIVATE | 12 |  |
-| fleet-yaw | Scaffold | Experimental | PRIVATE | 12 |  |
-| fleet-phase | Scaffold | Experimental | PRIVATE | 12 |  |
-| fleet-simulation | Scaffold | Orphan | PRIVATE | 12 |  |
-| eisenstein-cuda | Scaffold | Orphan | PRIVATE | 12 |  |
-| snap-lut-eisenstein | Scaffold | Orphan | PRIVATE | 12 |  |
-| superinstance-hdc-core | Scaffold | Orphan | PRIVATE | 16 |  |
-| plato-voice | Scaffold | Orphan | PRIVATE | 16 |  |
-| avx512-constraint-checker | Scaffold | Orphan | PRIVATE | 17 |  |
-| test-pages-repo | Scaffold | Orphan | PRIVATE | 17 | Test |
-| sonar-vision-landing | Scaffold | Orphan | PRIVATE | 21 | SonarVision landing page |
-| dotfiles | Scaffold | Fork | PRIVATE | 36 | public dot files |
 

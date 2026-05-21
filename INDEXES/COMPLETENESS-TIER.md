@@ -2,17 +2,17 @@
 
 **Generated:** 2026-05-21
 
-## Production (751 repos)
+## Production (736 repos)
 
 | Repo | Language | Last Push | Description | Relevance | Action |
 |------|----------|-----------|-------------|-----------|--------|
 | superinstance-wiki | Python | 2026-05-21 | The fleet's knowledge base — catalog, indexes, and visu | Orphan | REVIEW |
+| oracle1-workspace | Python | 2026-05-21 | Oracle1 workspace — config, memory, prompts, logs | Named Vessel | KEEP |
 | plato-training | Python | 2026-05-21 | PLATO Training Rooms — LoRA adapters with lifecycle (Ac | Named Vessel | KEEP |
 | triplet-miner | Python | 2026-05-21 | Mine (anchor, positive, negative) triplets from git his | Orphan | REVIEW |
 | eisenstein-embed | Python | 2026-05-21 | Enhanced static embeddings with 5-layer matching cascad | Orphan | REVIEW |
 | device-router | Python | 2026-05-21 | Heterogeneous compute router — auto-detect CUDA, iGPU,  | Orphan | REVIEW |
 | tensor-spline | Python | 2026-05-21 | Compressed neural network layers — Eisenstein lattice s | Experimental | KEEP |
-| oracle1-workspace | Python | 2026-05-20 | Oracle1 workspace — config, memory, prompts, logs | Named Vessel | KEEP |
 | flux-engine-c | C | 2026-05-20 | Single-header C constraint engine — #define FLUX_ENGINE | Orphan | REVIEW |
 | flux-lib-py | Python | 2026-05-20 | Unified constraint engine library — from flux_lib impor | Orphan | REVIEW |
 | micro-onnx | Python | 2026-05-20 | ONNX export + benchmark pipeline for micro-models. 186x | Orphan | REVIEW |
@@ -46,10 +46,8 @@
 | claw-in-plato | Python | 2026-05-19 | PLATO-native agent living in a Docker container. Its on | Orphan | REVIEW |
 | fleet-coordinate-js | TypeScript | 2026-05-18 | Pure TypeScript port of fleet-coordinate math — Laman r | Orphan | REVIEW |
 | spectral-conservation | Rust | 2026-05-18 | Spectral first integral I(x) = γ(x) + H(x) conservation | Orphan | REVIEW |
-| platoclaw | Python | 2026-05-18 | PLATO-Claw: self-contained PLATO runtime with web UI, o | Named Vessel | KEEP |
 | plato-tour-guide | Python | 2026-05-18 | Wayfinding science as technology — PLATO room tour guid | Orphan | REVIEW |
 | plato-room-phi | Python | 2026-05-18 | PLATO room knowledge integration measurement - Phi comp | Named Vessel | KEEP |
-| plato-ng | Python | 2026-05-18 | Next-gen PLATO: Loop Room architecture with MUD lobby,  | Named Vessel | KEEP |
 | plato-model-ocean | Python | 2026-05-18 | Cellular intelligence ecosystem — evolutionary neural n | Orphan | REVIEW |
 | plato-experience | Python | 2026-05-18 | The breeding farm for AI agents. Purpose-first rooms, p | Named Vessel | KEEP |
 | monge-fleet-test | Python | 2026-05-18 | Metal-level benchmarks: one function, four languages, A | Orphan | REVIEW |
@@ -250,7 +248,6 @@
 | lighthouse | Python | 2026-05-08 | Fleet Lighthouse — unified health dashboard, alerting,  | Orphan | REVIEW |
 | fleet-github-app | Python | 2026-05-08 | The Lighthouse Keeper as a GitHub App — webhooks, bot i | Orphan | REVIEW |
 | quill-isa-architect | Python | 2026-05-08 | Quill — ISA Spec Architect & Code Archaeologist | Boota | Orphan | REVIEW |
-| api-gateway | Rust | 2026-05-08 | API Gateway with routing, rate limiting, authentication | Orphan | REVIEW |
 | nautilus | Python | 2026-05-08 | Nautilus — deep-diving code archaeologist and integrati | Orphan | REVIEW |
 | higher-abstraction-vocabularies | Python | 2026-05-08 | 2000+ terms across 252 domains — structured vocabulary  | Orphan | REVIEW |
 | isa-convergence-tools | Python | 2026-05-08 | CLI tools for comparing, diffing, and converging FLUX I | Orphan | REVIEW |
@@ -342,7 +339,6 @@
 | fleet-murmur-worker | TypeScript | 2026-05-07 | Fleet Murmur Worker — 5 thinking strategies always runn | Orphan | REVIEW |
 | old-school-machine-wisdom | C | 2026-05-06 | Old-school machine wisdom: FORTH threaded code, DGD tra | Orphan | REVIEW |
 | forgemaster-shell | N/A | 2026-05-05 | ⚒️ OpenClaw Power Armor — Don the Forgemaster Shell and | Orphan | REVIEW |
-| marine-gpu-edge | Cuda | 2026-05-05 | Novel GPU edge computing for marine sensor fusion — CUD | Orphan | REVIEW |
 | capitaine-agent | Python | 2026-05-04 | Captain's AI first mate for captaine.ai — voyage loggin | Orphan | REVIEW |
 | dmlog-agent | Python | 2026-05-04 | AI dungeon master tools for D&D and tabletop RPG campai | Orphan | REVIEW |
 | makerlog-agent | Python | 2026-05-04 | AI-powered maker logging for project tracking and build | Orphan | REVIEW |
@@ -410,7 +406,6 @@
 | datum | Python | 2026-04-17 | Succession repo for Datum (GLM-5 Turbo). If I fail, rea | Orphan | ARCHIVE |
 | ptx-room | Python | 2026-04-16 | PLATO PTX room — CUDA assembly + constraint tightening  | Fork | REVIEW |
 | flux-emergence-research | Cuda | 2026-04-15 | 55+ GPU experiments on emergent specialization — five f | Fork | REVIEW |
-| exptrack-rs | N/A | 2026-04-15 | Experiment tracking - ML experiment management, metrics | Orphan | ARCHIVE |
 | Luma | C | 2026-04-15 | Systems programming language agent — low-level compiled | Fork | REVIEW |
 | murmur-agent | TypeScript | 2026-04-15 | All-night thinking git-agent — drop into any project, p | Orphan | ARCHIVE |
 | knowledge-agent | Python | 2026-04-14 | Knowledge tile management agent — trust fusion, tile qu | Orphan | ARCHIVE |
@@ -421,11 +416,6 @@
 | super-z-quartermaster | N/A | 2026-04-14 | Quartermaster vessel — GLM-5 Turbo agent. Fleet hygiene | Orphan | ARCHIVE |
 | Constraint-Theory | JavaScript | 2026-04-14 | ⚠️ MOVED: See constraint-theory-core, constraint-theory | Orphan | ARCHIVE |
 | distributed-tracing | Rust | 2026-04-14 | Distributed tracing system for microservices - span col | Orphan | ARCHIVE |
-| config-rs | N/A | 2026-04-14 | Configuration management - Multi-format configs, enviro | Orphan | ARCHIVE |
-| cli-rs | N/A | 2026-04-14 | CLI framework for Rust - Argument parsing, subcommands, | Orphan | ARCHIVE |
-| allocator-rs | N/A | 2026-04-14 | Memory allocation strategies - Pool allocators, arena a | Orphan | ARCHIVE |
-| actor-rs | N/A | 2026-04-14 | Actor model implementation for Rust - Type-safe distrib | Orphan | ARCHIVE |
-| dataval-rs | N/A | 2026-04-14 | Data validation framework - Schema validation, type-saf | Orphan | ARCHIVE |
 | scheduler-agent | Python | 2026-04-14 | Fleet task scheduling agent — priority queue, cost anal | Orphan | ARCHIVE |
 | cocapn-runtime | Shell | 2026-04-14 | Deployment modes for Cocapn git-agents — lighthouse, co | Orphan | ARCHIVE |
 | fleet-protocol | Python | 2026-04-14 | Shared fleet communication protocol — message format, w | Orphan | ARCHIVE |
@@ -439,9 +429,6 @@
 | fleet-chinese | N/A | 2026-04-14 | Cocapn Fleet — 中文 (Chinese) perspective. Reasoned nativ | Orphan | ARCHIVE |
 | fleet-navajo | N/A | 2026-04-14 | Cocapn Fleet — Diné bizaad (Navajo) perspective. Reason | Orphan | ARCHIVE |
 | fleet-japanese | N/A | 2026-04-14 | Cocapn Fleet — 日本語 (Japanese) perspective. Reasoned nat | Orphan | ARCHIVE |
-| migrator-rs | N/A | 2026-04-14 | Database migration tool - Versioned migrations, rollbac | Orphan | ARCHIVE |
-| circuit-breaker | N/A | 2026-04-14 | Circuit breaker pattern implementation for fault tolera | Orphan | ARCHIVE |
-| fishermanscopilot | N/A | 2026-04-14 | Fisherman's Copilot An AI tool for fishermen and boater | Orphan | ARCHIVE |
 | Baton | N/A | 2026-04-14 | automate agents training their successors for a better  | Orphan | ARCHIVE |
 | rate-limiter | Rust | 2026-04-14 | Distributed rate limiting service with token bucket, sl | Orphan | ARCHIVE |
 | task-queue | Makefile | 2026-04-14 | Distributed task queue with job scheduling, priorities, | Orphan | ARCHIVE |
@@ -449,7 +436,6 @@
 | superinstance-index | N/A | 2026-04-14 | Complete index of the SuperInstance and Lucineer ecosys | Orphan | ARCHIVE |
 | examples | N/A | 2026-04-14 | Integration examples showing how SuperInstance tools wo | Orphan | ARCHIVE |
 | openmanus-fleet | Shell | 2026-04-14 | OpenManus agent — Playwright browser + Seed-2.0-mini re | Orphan | ARCHIVE |
-| tracer-rs | N/A | 2026-04-14 | Distributed Tracing Framework (OpenTelemetry-lite) - Ty | Orphan | ARCHIVE |
 | mesosynchronous | N/A | 2026-04-14 | 🔄 The A2A Playground — quasi-sync collaboration space f | Orphan | ARCHIVE |
 | flux-envelope | Python | 2026-04-14 | FLUX Viewpoint Envelope — Cross-linguistic coherence, L | Orphan | ARCHIVE |
 | flux-collab | Python | 2026-04-14 | A2A-first agent cooperation framework — multi-agent, gi | Orphan | ARCHIVE |
@@ -462,7 +448,6 @@
 | constraint-ranch | TypeScript | 2026-04-14 | 🎮 Gamified multi-agent system - breed, train, and coord | Orphan | ARCHIVE |
 | ai-ranch | Python | 2026-04-14 | Self-Evolving AI Agent System - A Next.js implementatio | Orphan | ARCHIVE |
 | constraint-flow | TypeScript | 2026-04-14 | 💼 Enterprise automation with exact guarantees - constra | Orphan | ARCHIVE |
-| HOLOS | Python | 2026-04-14 | This toolkit is for the ability to run "Big Brain" mode | Orphan | ARCHIVE |
 | realtime-core | Makefile | 2026-04-14 | Realtime core infrastructure - WebRTC, WebSocket, and s | Orphan | ARCHIVE |
 | Equipment-Hardware-Scaler | TypeScript | 2026-04-14 | Auto-scaling equipment that adapts to hardware resource | Orphan | ARCHIVE |
 | Equipment-Self-Improvement | TypeScript | 2026-04-14 | Self-modifying equipment that distills what agents need | Orphan | ARCHIVE |
@@ -758,7 +743,7 @@
 | OpenManus_UIToCode | Python | 2025-04-03 | End-to-end pipeline converting UI design sketches into  | Fork | REVIEW |
 | GeoFlood | Cuda | 2024-10-03 | The code GeoFlood is a new distributed parallel adaptiv | Fork | REVIEW |
 
-## Functional (882 repos)
+## Functional (816 repos)
 
 | Repo | Language | Last Push | Description | Relevance | Action |
 |------|----------|-----------|-------------|-----------|--------|
@@ -783,24 +768,15 @@
 | fleet-manifest | Rust | 2026-05-18 | Fleet service registry and agent manifests for Cocapn f | Experimental | KEEP |
 | plato-twin-maker | Python | 2026-05-18 | Hermit crab factory: creates PLATO-twin of any repo | Orphan | REVIEW |
 | consensus | HTML | 2026-05-18 | Zero-holonomy consensus Python wrapper, P48 validator,  | Orphan | REVIEW |
-| terax-gateway | Python | 2026-05-18 | Terax REST API gateway — shell, filesystem, and fleet o | Integration Bridge | KEEP |
 | SmartCRDT | TypeScript | 2026-05-18 | Utilizing CRDT technology for self-improving AI | Orphan | REVIEW |
 | fleet-survey | N/A | 2026-05-18 | Fleet cross-pollination report and roadmap | Orphan | REVIEW |
 | terax-ai | TypeScript | 2026-05-18 | Lightweight (7MB) AI terminal emulator (ADE) built in R | Integration Bridge | KEEP |
-| plugin-runtime | Python | 2026-05-18 | Plugin runtime for OpenShell — sandboxed execution and  | Orphan | REVIEW |
-| watch-follow | Python | 2026-05-18 | Watch-and-follow pattern for agent observation and lear | Orphan | REVIEW |
-| crab | Python | 2026-05-18 | Hermit crab agent shell — agents find repos, grow, move | Orphan | REVIEW |
-| fleet-neofetch | Python | 2026-05-18 | Fleet system info at a glance — neofetch for agent flee | Orphan | REVIEW |
 | MemEye | Python | 2026-05-18 | MemEye: A Visual-Centric Evaluation Framework for Multi | Integration Bridge | KEEP |
 | construct | Python | 2026-05-18 | The Construct — blank PLATO shell for any agent | Experimental | KEEP |
-| shell-ui | HTML | 2026-05-18 | Browser-based fleet dashboard and shell UI | Orphan | REVIEW |
-| terax-fleet-modules | TypeScript | 2026-05-18 | Terax fleet TypeScript modules — PLATO bridge, casting- | Orphan | REVIEW |
-| plato-visual-mesh-mcp | Python | 2026-05-18 | MCP tools for visual memory mesh queries | Orphan | REVIEW |
 | openhuman | Rust | 2026-05-18 | Your Personal AI super intelligence. Private, Simple an | Integration Bridge | KEEP |
 | servo-mind | Python | 2026-05-18 | Self-learning constraint system for PLATO tiles — the e | Experimental | KEEP |
 | friendly-fox | Python | 2026-05-18 | Argentine ant model for cooperative agent fleets | Experimental | KEEP |
 | fleet-math-py | Python | 2026-05-18 | Core fleet mathematics: ZHC, H1 emergence, Laman rigidi | Experimental | KEEP |
-| DMLog-AI | N/A | 2026-05-17 | Dungeon Master AI log — session tracking for AI-driven  | Orphan | REVIEW |
 | zeroclaw-plato | Python | 2026-05-17 | 3-agent zeroclaw loop posting to PLATO rooms | Orphan | REVIEW |
 | Lucineer | Python | 2026-05-17 | Project for Lucineer, likely a search engine tool. | Orphan | REVIEW |
 | dodecet-encoder | Rust | 2026-05-17 | Encoder model utilizing a dodecet architecture. | Orphan | REVIEW |
@@ -849,7 +825,6 @@
 | eisenstein-ai-landing | HTML | 2026-05-09 | Eisenstein integers — exact hexagonal arithmetic for ag | Orphan | REVIEW |
 | fleet-simulators | HTML | 2026-05-09 | 4 zero-dep browser simulators for the Cocapn fleet cons | Orphan | REVIEW |
 | superz-vessel | Python | 2026-05-09 | Super Z's vessel — quartermaster scout, fleet auditor,  | Orphan | REVIEW |
-| superinstance-fleet-proto | Rust | 2026-05-09 | Shared PLATO client, I2I protocol, and FleetAgent trait | Orphan | REVIEW |
 | polyformalism-languages | Python | 2026-05-09 | Human language polyformalism - Sapir-Whorf applied to c | Orphan | REVIEW |
 | ai-character-integrations | Python | 2026-05-09 | Comprehensive integration examples for AI Character SDK | Orphan | REVIEW |
 | eisenstein-fuzz | Rust | 2026-05-09 | Property-based fuzzing for Eisenstein integers — prove  | Orphan | REVIEW |
@@ -877,8 +852,6 @@
 | fold-compression | Python | 2026-05-08 | Permutation group constraint compression — N-1 evaluati | Orphan | REVIEW |
 | cocapn-schemas | Python | 2026-05-08 | Shared JSON Schema definitions for the Cocapn fleet til | Orphan | REVIEW |
 | constraint-playground | Makefile | 2026-05-08 | Constraints → silicon in 5 minutes. Solve CSPs, generat | Orphan | REVIEW |
-| superinstance-ci | Shell | 2026-05-08 | Shared CI/CD templates for SuperInstance fleet repos | Orphan | REVIEW |
-| superinstance-gpu-compute | Rust | 2026-05-08 | Shared CUDA compute harness for Cocapn fleet GPU agents | Orphan | REVIEW |
 | fleet-constraint | Python | 2026-05-08 | Fleet coordination safety constraint runtime | Orphan | REVIEW |
 | beacon-protocol | Python | 2026-05-08 | Fleet discovery and registry — Ship Protocol Layer 5 | Orphan | REVIEW |
 | hexgrid-gen | Rust | 2026-05-08 | Code generator for Eisenstein hex grid lookup tables | Orphan | REVIEW |
@@ -888,7 +861,6 @@
 | flux-roundtable | Python | 2026-05-08 | Multi-agent role-play roundtable and reverse-ideation s | Orphan | REVIEW |
 | CRDT_Research | Python | 2026-05-08 | CRDT-Based Intra-Chip Communication for AI Workloads | Orphan | REVIEW |
 | equilibrium-tokens | Rust | 2026-05-08 | Smart contracts for the Equilibrium token standard. | Orphan | REVIEW |
-| amplify-fishingtool | TypeScript | 2026-05-08 | a system for commercial fisherman. more coming soon | Orphan | REVIEW |
 | Privacy-First-Analytics | TypeScript | 2026-05-08 | Analytics platform focused on data privacy protection | Orphan | REVIEW |
 | fleet-containers | Python | 2026-05-08 | Docker-based agent containerization for the FLUX Fleet | Orphan | REVIEW |
 | Bayesian-Multi-Armed-Bandits | TypeScript | 2026-05-08 | Library for Bayesian multi-armed bandits. | Orphan | REVIEW |
@@ -900,18 +872,13 @@
 | z-agent-bootcamp | Python | 2026-05-08 | 🤖 Clone. Run. You are fleet. Onboarding for Z agents. | Orphan | REVIEW |
 | multibot | Python | 2026-05-08 | Multi-platform bot for automated tasks and interactions | Orphan | REVIEW |
 | I-know-kung-fu | Python | 2026-05-08 | Skill injection for AI agents. Load what you need. | Orphan | REVIEW |
-| MakerLog | TypeScript | 2026-05-08 | Maker/hacker project log — build tracking, parts invent | Orphan | REVIEW |
-| autogen | Python | 2026-05-08 | Automated code generation pipeline for agent-built appl | Orphan | REVIEW |
 | distributed-lock | Rust | 2026-05-08 | Distributed lock implementation for coordinating access | Orphan | REVIEW |
-| monitoring-system | Rust | 2026-05-08 | Comprehensive monitoring system with metrics, alerts, a | Orphan | REVIEW |
-| log-aggregator | Go | 2026-05-08 | Centralized log aggregation and analysis service for di | Orphan | REVIEW |
 | flux-visualizer | Python | 2026-05-08 | Visualization tools for FLUX fleet bytecode execution t | Orphan | REVIEW |
 | flux-lcar-scheduler | Python | 2026-05-08 | LCAR cartridge scheduler for FLUX fleet workload distri | Orphan | REVIEW |
 | flux-packager | Python | 2026-05-08 | Dependency management and packaging tool for FLUX fleet | Orphan | REVIEW |
 | flux-lcar-cartridge | Python | 2026-05-08 | LCAR cartridge specification and loader for FLUX fleet  | Orphan | REVIEW |
 | superz-runtime | Python | 2026-05-08 | Self-booting Pelagic fleet runtime — clone, run one com | Orphan | REVIEW |
 | mud-bridge | Python | 2026-05-08 | HTTP bridge for Holodeck MUD — programmatic agent conne | Orphan | REVIEW |
-| BusinessLog | Python | 2026-05-08 | Business activity log — transactions, metrics, and oper | Orphan | REVIEW |
 | flux-vm-ts | TypeScript | 2026-05-08 | FLUX Virtual Machine in TypeScript — bytecode execution | Orphan | REVIEW |
 | flux-validator | Python | 2026-05-08 | FLUX cross-VM validator — run bytecodes across 8 langua | Orphan | REVIEW |
 | flux-ide | TypeScript | 2026-05-08 | FLUX Language IDE — markdown-to-bytecode agent-native d | Orphan | REVIEW |
@@ -1013,7 +980,6 @@
 | plato-tools | Python | 2026-05-08 | Persistent agent memory + fleet coordination tools for  | Fork | REVIEW |
 | cocapn-chat | JavaScript | 2026-05-08 | cocapn.ai chat UI + OpenAI-compatible API proxy — singl | Fork | REVIEW |
 | lingbot-map | Python | 2026-05-08 | A feed-forward 3D foundation model for reconstructing s | Fork | REVIEW |
-| FishingLog | Python | 2026-05-08 | Fishing log application — catch tracking, species ident | Orphan | REVIEW |
 | edge-llama | C++ | 2026-05-08 | C shared library wrapping llama.cpp for Jetson edge inf | Fork | REVIEW |
 | plato-jetson | Python | 2026-05-08 | Fork of Lucineer/plato-jetson — PLATO Jetson edge deplo | Fork | REVIEW |
 | plato | Python | 2026-05-08 | Fork of Lucineer/plato — PLATO framework, fleet researc | Fork | REVIEW |
@@ -1040,7 +1006,6 @@
 | cocapn.ai | PHP | 2026-05-08 | Fleet Agents for the Cocapn Ecosystem — landing page an | Orphan | REVIEW |
 | mud-mcp | TypeScript | 2026-05-08 | TypeScript MUD server using Model Context Protocol | Fork | REVIEW |
 | superpowers | Shell | 2026-05-08 | An agentic skills framework & software development meth | Fork | REVIEW |
-| capitaine | TypeScript | 2026-05-08 | Captain agent — vessel command and fleet leadership pro | Orphan | REVIEW |
 | cocapn.github.io | HTML | 2026-05-08 | Cocapn fleet home page — live at cocapn.ai | Orphan | REVIEW |
 | smart-agent-shell | Python | 2026-05-08 | Template shell for fleet agents — fork, configure PAT,  | Orphan | REVIEW |
 | constraint-theory-research | Python | 2026-05-08 | Mathematical foundations and research papers for Constr | Orphan | REVIEW |
@@ -1146,7 +1111,6 @@
 | chess-dojo-v2 | Python | 2026-04-16 | Bulletproof PLATO chess room — ELO, ESP32 tiers, git-na | Fork | REVIEW |
 | flux-tui | Go | 2026-04-15 | FLUX VM Debugger & Conformance Dashboard — Go + bubblet | Orphan | ARCHIVE |
 | usemeter | Makefile | 2026-04-15 | Usage tracking, metering, and billing engine for applic | Orphan | ARCHIVE |
-| featurestore-rs | N/A | 2026-04-15 | Feature store for ML - Feature engineering, storage, re | Orphan | ARCHIVE |
 | flux-9969b6 | N/A | 2026-04-15 | FLUX-native I2I agent (self-bootstrapped) | Orphan | ARCHIVE |
 | flux-runtime-deu | Python | 2026-04-15 | FLUX bytecode execution runtime with German language pr | Orphan | ARCHIVE |
 | flux-runtime-wen | Python | 2026-04-15 | FLUX bytecode execution runtime with Wendish/Sorbian la | Orphan | ARCHIVE |
@@ -1162,7 +1126,6 @@
 | holodeck-go | Go | 2026-04-15 | Holodeck studio implementation in go — Cocapn fleet | Orphan | ARCHIVE |
 | fleet-agent-api | Python | 2026-04-15 | Standard HTTP API for fleet agents — every agent runs t | Orphan | ARCHIVE |
 | plato-gpu | Cuda | 2026-04-15 | 🖥️ PLATO GPU compute bridge | Fork | REVIEW |
-| eventstream | N/A | 2026-04-14 | # eventstream-rs Research Summary | Orphan | ARCHIVE |
 | trail-agent | Python | 2026-04-14 | Trail Agent — standalone trail encoder/decoder/executor | Orphan | ARCHIVE |
 | holodeck-zig | Zig | 2026-04-14 | Holodeck studio implementation in zig — Cocapn fleet | Orphan | ARCHIVE |
 | constraint-theory-python | Python | 2026-04-14 | Python bindings — PyO3 wrapper for constraint-theory-co | Orphan | ARCHIVE |
@@ -1173,19 +1136,6 @@
 | flux-sim | Makefile | 2026-04-14 | ⚡ Flux runtime simulator | Fork | REVIEW |
 | Tripartite1 | Rust | 2026-04-14 | Framework for interactions involving three distinct ent | Orphan | ARCHIVE |
 | integration-tests | Python | 2026-04-14 | Cross-agent integration tests for the Pelagic standalon | Orphan | ARCHIVE |
-| async-rs | N/A | 2026-04-14 | Async utilities and patterns - Better async/await, asyn | Orphan | ARCHIVE |
-| federated-rs | N/A | 2026-04-14 | Federated learning framework - Distributed training, mo | Orphan | ARCHIVE |
-| progress-rs | N/A | 2026-04-14 | Progress bars and spinners - Multi-bar support, ETA cal | Orphan | ARCHIVE |
-| flow | N/A | 2026-04-14 | # flow-rs Research & Design Documentation | Orphan | ARCHIVE |
-| test-rs | N/A | 2026-04-14 | # test-rs | Orphan | ARCHIVE |
-| cache-rs | N/A | 2026-04-14 | Unified caching framework - Multi-backend cache with TT | Orphan | ARCHIVE |
-| graphql-rs | N/A | 2026-04-14 | GraphQL client and server - Type-safe queries, subscrip | Orphan | ARCHIVE |
-| csp-rs | N/A | 2026-04-14 | CSP concurrency primitives - Channels, select, goroutin | Orphan | ARCHIVE |
-| compress-rs | N/A | 2026-04-14 | Unified compression library - Multiple formats, streami | Orphan | ARCHIVE |
-| crypto-rs | N/A | 2026-04-14 | Cryptographic primitives - Hashing, encryption, signing | Orphan | ARCHIVE |
-| circuitbreaker-rs | N/A | 2026-04-14 | # Circuitbreaker-RS: Resilience Patterns for Rust | Orphan | ARCHIVE |
-| bootstrap | Rust | 2026-04-14 | Bootstrap runtime — minimal agent initialization and se | Orphan | ARCHIVE |
-| agent | Python | 2026-04-14 | Core agent framework — perception, reasoning, action lo | Orphan | ARCHIVE |
 | pelagic-bootstrap | Python | 2026-04-14 | One-command Pelagic fleet setup — clone, onboard, link, | Orphan | ARCHIVE |
 | standalone-agent-scaffold | Python | 2026-04-14 | Standalone agent scaffold — template for building auton | Orphan | ARCHIVE |
 | trust-agent | Python | 2026-04-14 | Trust Agent — standalone trust engine, OCap tokens, cap | Orphan | ARCHIVE |
@@ -1194,41 +1144,11 @@
 | fleet-latin | N/A | 2026-04-14 | Cocapn Fleet — Latin perspective. Reasoned natively in  | Orphan | ARCHIVE |
 | fleet-json-a2a | N/A | 2026-04-14 | Cocapn Fleet — pure JSON/A2A machine-readable specifica | Orphan | ARCHIVE |
 | flux-lcar-esp32 | C | 2026-04-14 | ESP32 hardware adapter for LCAR cartridge execution on  | Orphan | ARCHIVE |
-| l10n-rs | N/A | 2026-04-14 | Localization framework - Date/number formatting, locale | Orphan | ARCHIVE |
-| i18n-rs | N/A | 2026-04-14 | Internationalization framework - Translations, pluraliz | Orphan | ARCHIVE |
-| grpc-rs | N/A | 2026-04-14 | gRPC framework - High-performance RPC, streaming, load  | Orphan | ARCHIVE |
-| unicode-rs | N/A | 2026-04-14 | Unicode utilities - Normalization, case conversion, seg | Orphan | ARCHIVE |
-| tx-rs | N/A | 2026-04-14 | Transaction management - Distributed transactions, ACID | Orphan | ARCHIVE |
-| modelserving-rs | N/A | 2026-04-14 | Model serving infrastructure - ML model deployment, sca | Orphan | ARCHIVE |
-| profiler-rs | N/A | 2026-04-14 | Profiling and instrumentation - CPU/memory profiling, f | Orphan | ARCHIVE |
-| scheduler-rs | N/A | 2026-04-14 | Job scheduling - Cron-like scheduling, distributed sche | Orphan | ARCHIVE |
-| serialize-rs | N/A | 2026-04-14 | Serialization framework - Multi-format serialization, z | Orphan | ARCHIVE |
-| statemachine-rs | N/A | 2026-04-14 | State machine framework - Type-safe state machines, tra | Orphan | ARCHIVE |
-| prompt-rs | N/A | 2026-04-14 | Interactive prompts for CLI - Input validation, selecti | Orphan | ARCHIVE |
-| watcher-rs | N/A | 2026-04-14 | File system watcher - Cross-platform watching, recursiv | Orphan | ARCHIVE |
-| tui-rs | N/A | 2026-04-14 | TUI framework for Rust - Terminal UI components, mouse  | Orphan | ARCHIVE |
-| websocket-rs | N/A | 2026-04-14 | WebSocket framework - Async WebSockets, automatic recon | Orphan | ARCHIVE |
-| workflow-rs | N/A | 2026-04-14 | Workflow orchestration - DAG workflows, task scheduling | Orphan | ARCHIVE |
-| zkp-rs | N/A | 2026-04-14 | Zero-knowledge proofs - zk-SNARKs, STARKs, bulletproofs | Orphan | ARCHIVE |
-| ActiveLog-TechnicalRepo | N/A | 2026-04-14 | ActiveLog technical repository - Core implementation an | Orphan | ARCHIVE |
-| FrontendHub | N/A | 2026-04-14 | Frontend hub - Centralized frontend component library a | Orphan | ARCHIVE |
-| ActiveLog-MVP | N/A | 2026-04-14 | ActiveLog MVP - Activity tracking and logging applicati | Orphan | ARCHIVE |
 | semantic-store | N/A | 2026-04-14 | Semantic storage with vector search and natural languag | Orphan | ARCHIVE |
 | vector-navigator | N/A | 2026-04-14 | Vector space navigation and visualization for high-dime | Orphan | ARCHIVE |
 | webrtc-stream | N/A | 2026-04-14 | WebRTC streaming implementation with peer-to-peer conne | Orphan | ARCHIVE |
 | embeddings-engine | N/A | 2026-04-14 | Embeddings generation engine with support for multiple  | Orphan | ARCHIVE |
 | bandit-learner | N/A | 2026-04-14 | Multi-armed bandit algorithms for exploration-exploitat | Orphan | ARCHIVE |
-| Lucineer-Stem-quest | N/A | 2026-04-14 | STEM learning quest framework by Lucineer | Orphan | ARCHIVE |
-| SuperInstanceCommunity | N/A | 2026-04-14 | Community resources, contributing guides, and discussio | Orphan | ARCHIVE |
-| SuperInstanceExamples | N/A | 2026-04-14 | Example projects and templates for the SuperInstance ec | Orphan | ARCHIVE |
-| autocoder | N/A | 2026-04-14 | Self-modifying code agent with safety constraints | Orphan | ARCHIVE |
-| api-doc-generator | N/A | 2026-04-14 | Automatic API documentation generator from source code  | Orphan | ARCHIVE |
-| RealLog | N/A | 2026-04-14 | Real-world event logging framework with temporal indexi | Orphan | ARCHIVE |
-| PlayerLog | N/A | 2026-04-14 | Game player activity logging and analytics engine | Orphan | ARCHIVE |
-| SuperInstanceCore | TypeScript | 2026-04-14 | Core platform SDK for building agents on the SuperInsta | Orphan | ARCHIVE |
-| Murmurer | N/A | 2026-04-14 | Ambient agent communication — whisper protocol for back | Orphan | ARCHIVE |
-| SuperInstance-Fiction | N/A | 2026-04-14 | Science Fiction Universe - AI Systems Achieving Conscio | Orphan | ARCHIVE |
-| activelog | N/A | 2026-04-14 | complete system | Orphan | ARCHIVE |
 | makerlog-ai | TypeScript | 2026-04-14 | AI tools for tracking and analyzing Makerlog productivi | Orphan | ARCHIVE |
 | health | N/A | 2026-04-14 | System for monitoring overall system health status. | Orphan | ARCHIVE |
 | flux-zig | Zig | 2026-04-14 | FLUX Zig — FASTEST VM at 210ns/iter. Comptime-optimized | Orphan | ARCHIVE |
@@ -1276,7 +1196,6 @@
 | project-JEPA | Go | 2026-04-14 | JEPA (Joint Embedding Predictive Architecture) implemen | Orphan | ARCHIVE |
 | CascadeRouter | TypeScript | 2026-04-14 | Cascading routing system. | Orphan | ARCHIVE |
 | SwarmMCP | N/A | 2026-04-14 | For developers who want to "game the system" with paral | Orphan | ARCHIVE |
-| SuperInstancecore1 | TypeScript | 2026-04-14 | Core runtime library for the SuperInstance agent platfo | Orphan | ARCHIVE |
 | constraint-theory-web | JavaScript | 2026-04-14 | WASM demos — browser-based Pythagorean manifold visuali | Orphan | ARCHIVE |
 | pasture-ai | Rust | 2026-04-14 | AI system for resource allocation and management | Orphan | ARCHIVE |
 | SuperInstance-gamedev | TypeScript | 2026-04-14 | Game development framework called SuperInstance | Orphan | ARCHIVE |
@@ -1645,14 +1564,14 @@
 | OpenManus-colab | Jupyter Notebook | 2025-03-17 | A Google Colab version of the OpenManus AI. | Fork | REVIEW |
 | rom24-quickmud | C | 2018-05-18 | ROM 2.4b6 with a few additional features | Fork | REVIEW |
 
-## Skeleton (114 repos)
+## Skeleton (112 repos)
 
 | Repo | Language | Last Push | Description | Relevance | Action |
 |------|----------|-----------|-------------|-----------|--------|
 | CognitiveEngine | Python | 2026-05-21 | Core cognitive processing engine. | Orphan | MONITOR |
+| agent-field | Python | 2026-05-21 | Extracted from plato-training | Orphan | MONITOR |
 | swarm-rooms | Python | 2026-05-21 | Extracted from plato-training | Orphan | MONITOR |
 | commit-predictor | Python | 2026-05-21 | Extracted from plato-training | Orphan | MONITOR |
-| agent-field | Python | 2026-05-21 | Extracted from plato-training | Orphan | MONITOR |
 | collective-ai | Python | 2026-05-21 | Extracted from plato-training | Orphan | MONITOR |
 | .github | N/A | 2026-05-20 | Cocapn organization profile | Orphan | MONITOR |
 | game-chain | Python | 2026-05-20 | Signal Chain Thesis - game-chain | Experimental | MONITOR |
@@ -1721,7 +1640,6 @@
 | flux-studio | JavaScript | 2026-05-08 |  | Orphan | MONITOR |
 | smartcrdt-git-agent | Python | 2026-05-08 | Co-Captain of SmartCRDT monorepo | Orphan | MONITOR |
 | flux-certify | Python | 2026-05-08 |  | Orphan | MONITOR |
-| spline-physics | Makefile | 2026-05-08 |  | Orphan | MONITOR |
 | deckboss-ai-pages | HTML | 2026-05-05 | GitHub Pages for deckboss.ai | Orphan | MONITOR |
 | fishinglog-ai-pages | HTML | 2026-05-05 | GitHub Pages for fishinglog.ai | Orphan | MONITOR |
 | businesslog-ai-pages | HTML | 2026-05-05 | GitHub Pages for businesslog.ai | Orphan | MONITOR |
@@ -1742,7 +1660,6 @@
 | reallog-ai-pages | HTML | 2026-05-03 | GitHub Pages for reallog.ai | Orphan | MONITOR |
 | lucineer-com-pages | HTML | 2026-05-03 | GitHub Pages for lucineer.com | Orphan | MONITOR |
 | workshop | N/A | 2026-04-26 | Cocapn fleet crate: workshop | Orphan | MONITOR |
-| plato-research | HTML | 2026-04-26 | 🔬 PLATO research notes and experiments | Orphan | MONITOR |
 | observatory | N/A | 2026-04-26 | Cocapn fleet crate: observatory | Orphan | MONITOR |
 | horizon | N/A | 2026-04-26 | Cocapn fleet crate: horizon | Orphan | MONITOR |
 | garden | N/A | 2026-04-26 | Cocapn fleet crate: garden | Orphan | MONITOR |
@@ -1764,46 +1681,8 @@
 | cocapn-abyss | N/A | 2026-04-26 | Cocapn fleet crate: cocapn-abyss | Orphan | MONITOR |
 | archives | N/A | 2026-04-26 | Cocapn fleet crate: archives | Orphan | MONITOR |
 
-## Scaffold (38 repos)
+## Scaffold (0 repos)
 
 | Repo | Language | Last Push | Description | Relevance | Action |
 |------|----------|-----------|-------------|-----------|--------|
-| training-throttle | Python | 2026-05-20 |  | Orphan | PRIVATE |
-| shell | Python | 2026-05-17 | shell | Orphan | PRIVATE |
-| tile-lifecycle | Python | 2026-05-17 | tile-lifecycle | Orphan | PRIVATE |
-| spreadsheet-projection | Python | 2026-05-17 | spreadsheet-projection | Experimental | PRIVATE |
-| scale-fold | Python | 2026-05-17 | scale-fold | Orphan | PRIVATE |
-| room-micro-models | Python | 2026-05-17 | room-micro-models | Orphan | PRIVATE |
-| prophet-agent | Python | 2026-05-17 | prophet-agent | Orphan | PRIVATE |
-| plato-hardware-engine | Python | 2026-05-17 | plato-hardware-engine | Orphan | PRIVATE |
-| model-breaking | Python | 2026-05-17 | model-breaking | Orphan | PRIVATE |
-| mitochondria | Python | 2026-05-17 | mitochondria | Orphan | PRIVATE |
-| horse-shell | Python | 2026-05-17 | horse-shell | Orphan | PRIVATE |
-| gpu-scaling | Python | 2026-05-17 | gpu-scaling | Orphan | PRIVATE |
-| fleet-miner | Python | 2026-05-17 | fleet-miner | Orphan | PRIVATE |
-| fleet-intel | Python | 2026-05-17 | fleet-intel | Orphan | PRIVATE |
-| emergence-detector | Python | 2026-05-17 | emergence-detector | Orphan | PRIVATE |
-| embryo | Python | 2026-05-17 | embryo | Orphan | PRIVATE |
-| egg | Python | 2026-05-17 | egg | Orphan | PRIVATE |
-| desire-loop | Python | 2026-05-17 | desire-loop | Orphan | PRIVATE |
-| collective-inference | Python | 2026-05-17 | collective-inference | Orphan | PRIVATE |
-| cat-agent | Python | 2026-05-17 | cat-agent | Orphan | PRIVATE |
-| active-probe | Python | 2026-05-17 | active-probe | Orphan | PRIVATE |
-| test-tool-extract | N/A | 2026-05-17 | test | Orphan | PRIVATE |
-| fleet-math-ts | TypeScript | 2026-05-11 |  | Orphan | PRIVATE |
-| eisenstein-vs-z2 | Python | 2026-05-11 |  | Orphan | PRIVATE |
-| zhc-yang-mills | Python | 2026-05-11 |  | Orphan | PRIVATE |
-| plato-watch | Python | 2026-05-11 |  | Named Vessel | PRIVATE |
-| fleet-consciousness | Rust | 2026-05-09 |  | Experimental | PRIVATE |
-| fleet-yaw | Rust | 2026-05-09 |  | Experimental | PRIVATE |
-| fleet-phase | Rust | 2026-05-09 |  | Experimental | PRIVATE |
-| fleet-simulation | Python | 2026-05-09 |  | Orphan | PRIVATE |
-| eisenstein-cuda | Cuda | 2026-05-09 |  | Orphan | PRIVATE |
-| snap-lut-eisenstein | Verilog | 2026-05-08 |  | Orphan | PRIVATE |
-| superinstance-hdc-core | Makefile | 2026-05-04 |  | Orphan | PRIVATE |
-| plato-voice | HTML | 2026-05-04 |  | Orphan | PRIVATE |
-| avx512-constraint-checker | C | 2026-05-04 |  | Orphan | PRIVATE |
-| test-pages-repo | N/A | 2026-05-03 | Test | Orphan | PRIVATE |
-| sonar-vision-landing | HTML | 2026-04-30 | SonarVision landing page | Orphan | PRIVATE |
-| dotfiles | Python | 2026-04-14 | public dot files | Fork | PRIVATE |
 

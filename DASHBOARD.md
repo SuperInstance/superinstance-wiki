@@ -1,42 +1,40 @@
 # Fleet Health Dashboard
 
-**Generated:** 2026-05-21 | **Repos:** 1785
+**Generated:** 2026-05-21 | **Repos:** 1664
 
 ## At a Glance
 
 | Metric | Value | % |
 |--------|-------|---|
-| Total | 1785 | 100% |
-| KEEP | 68 | 3.8% |
-| PRIVATE | 38 | 2.1% |
-| ARCHIVE | 307 | 17.2% |
-| MONITOR | 113 | 6.3% |
-| REVIEW | 1259 | 70.5% |
+| Total | 1664 | 100% |
+| KEEP | 65 | 3.9% |
+| PRIVATE | 0 | 0.0% |
+| ARCHIVE | 250 | 15.0% |
+| MONITOR | 111 | 6.7% |
+| REVIEW | 1238 | 74.4% |
 
 ## Red Flags
 
 | Issue | Count |
 |-------|-------|
-| Scaffolds | 38 |
+| Scaffolds | 0 |
 | Abandoned orphans | 0 |
-| Dormant orphans | 307 |
+| Dormant orphans | 250 |
 
 ## KEEPers (Public Face)
 
 | Repo | Relevance | Last Push | Description |
 |------|-----------|-----------|-------------|
+| oracle1-workspace | Named Vessel | 2026-05-21 | Oracle1 workspace — config, memory, prompts, logs |
 | plato-training | Named Vessel | 2026-05-21 | PLATO Training Rooms — LoRA adapters with lifecycle (Ac |
 | tensor-spline | Experimental | 2026-05-21 | Compressed neural network layers — Eisenstein lattice s |
-| oracle1-workspace | Named Vessel | 2026-05-20 | Oracle1 workspace — config, memory, prompts, logs |
 | SuperInstance | Core Fleet | 2026-05-20 | 🌊 PLATO — Rooms that think. Tiles that remember. Agents |
 | OpenShell | Integration Bridge | 2026-05-20 | OpenShell is the safe, private runtime for autonomous A |
 | forgemaster | Named Vessel | 2026-05-20 | ⚒️ Forgemaster — Constraint Theory migration specialist |
 | flux-docs | Core Fleet | 2026-05-20 | FLUX documentation: tutorials, cookbooks, runbooks, str |
 | signal-chain | Experimental | 2026-05-20 | The Signal Chain Thesis: why every room needs a dial fo |
 | plato-types | Named Vessel | 2026-05-19 | Core types for the PLATO tile protocol — lifecycle, Lam |
-| platoclaw | Named Vessel | 2026-05-18 | PLATO-Claw: self-contained PLATO runtime with web UI, o |
 | plato-room-phi | Named Vessel | 2026-05-18 | PLATO room knowledge integration measurement - Phi comp |
-| plato-ng | Named Vessel | 2026-05-18 | Next-gen PLATO: Loop Room architecture with MUD lobby,  |
 | plato-experience | Named Vessel | 2026-05-18 | The breeding farm for AI agents. Purpose-first rooms, p |
 | holonomy-consensus | Core Fleet | 2026-05-18 | GL(9) zero-holonomy consensus — cycle-based trust verif |
 | flux-verify-api | Core Fleet | 2026-05-18 | FLUX constraint safety - flux-verify-api |
@@ -49,7 +47,6 @@
 | fleet-homology | Experimental | 2026-05-18 | Homological constraint analysis — detect structural hol |
 | pythagorean48-codes | Core Fleet | 2026-05-18 | Pythagorean-48 directional encoding — 48 compass points |
 | fleet-manifest | Experimental | 2026-05-18 | Fleet service registry and agent manifests for Cocapn f |
-| terax-gateway | Integration Bridge | 2026-05-18 | Terax REST API gateway — shell, filesystem, and fleet o |
 | terax-ai | Integration Bridge | 2026-05-18 | Lightweight (7MB) AI terminal emulator (ADE) built in R |
 | MemEye | Integration Bridge | 2026-05-18 | MemEye: A Visual-Centric Evaluation Framework for Multi |
 | construct | Experimental | 2026-05-18 | The Construct — blank PLATO shell for any agent |

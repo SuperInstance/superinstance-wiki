@@ -2,66 +2,37 @@
 
 **Generated:** 2026-05-21
 
-## 2025-01 (1 repos)
+## 2025-08 (2 repos)
 
 | Repo | Tier | Action | Language | Description |
 |------|------|--------|----------|-------------|
-| fishermanscopilot | Production | ARCHIVE | N/A | Fisherman's Copilot An AI tool for fishermen and boater |
-
-## 2025-08 (6 repos)
-
-| Repo | Tier | Action | Language | Description |
-|------|------|--------|----------|-------------|
-| amplify-fishingtool | Functional | REVIEW | TypeScript | a system for commercial fisherman. more coming soon |
-| agent | Functional | ARCHIVE | Python | Core agent framework — perception, reasoning, action lo |
-| DMLog-AI | Functional | REVIEW | N/A | Dungeon Master AI log — session tracking for AI-driven  |
 | activelog-claude | Skeleton | MONITOR | Python | Activity Log plugin for Claude. |
-| activelog | Functional | ARCHIVE | N/A | complete system |
 | SuperInstanceEco | Functional | ARCHIVE | Jupyter Notebook | Research project |
 
-## 2025-10 (3 repos)
+## 2025-10 (2 repos)
 
 | Repo | Tier | Action | Language | Description |
 |------|------|--------|----------|-------------|
 | DMLog | Functional | REVIEW | Python | Debug and monitor logs for dark mode features. |
-| SuperInstance-Fiction | Functional | ARCHIVE | N/A | Science Fiction Universe - AI Systems Achieving Conscio |
 | ec2mud | Functional | REVIEW | TypeScript | MUD (multi-user dungeon) game engine built on EC2 infra |
 
-## 2025-11 (1 repos)
-
-| Repo | Tier | Action | Language | Description |
-|------|------|--------|----------|-------------|
-| bootstrap | Functional | ARCHIVE | Rust | Bootstrap runtime — minimal agent initialization and se |
-
-## 2025-12 (4 repos)
+## 2025-12 (2 repos)
 
 | Repo | Tier | Action | Language | Description |
 |------|------|--------|----------|-------------|
 | SmartCRDT | Functional | REVIEW | TypeScript | Utilizing CRDT technology for self-improving AI |
 | CognitiveEngine | Skeleton | MONITOR | Python | Core cognitive processing engine. |
-| capitaine | Functional | REVIEW | TypeScript | Captain agent — vessel command and fleet leadership pro |
-| HOLOS | Production | ARCHIVE | Python | This toolkit is for the ability to run "Big Brain" mode |
 
-## 2026-01 (175 repos)
+## 2026-01 (117 repos)
 
 | Repo | Tier | Action | Language | Description |
 |------|------|--------|----------|-------------|
-| SuperInstanceCore | Functional | ARCHIVE | TypeScript | Core platform SDK for building agents on the SuperInsta |
 | SwarmOrchestration | Functional | REVIEW | TypeScript | Orchestration framework for managing multi-agent system |
-| Murmurer | Functional | ARCHIVE | N/A | Ambient agent communication — whisper protocol for back |
 | Murmur | Functional | ARCHIVE | TypeScript | Knowledge Tensors for self-improving agents |
-| MakerLog | Functional | REVIEW | TypeScript | Maker/hacker project log — build tracking, parts invent |
 | PersonalLog | Functional | REVIEW | TypeScript | Personal logging and tracking application |
 | StudyLog | Functional | ARCHIVE | TypeScript | Educational frontend for SuperInstance |
 | UI | Functional | ARCHIVE | TypeScript | Frontend user interface component library or applicatio |
 | SuperInstanceDocs | Functional | ARCHIVE | N/A | Documentation and reference for SuperInstance projects |
-| SuperInstanceExamples | Functional | ARCHIVE | N/A | Example projects and templates for the SuperInstance ec |
-| SuperInstanceCommunity | Functional | ARCHIVE | N/A | Community resources, contributing guides, and discussio |
-| SuperInstancecore1 | Functional | ARCHIVE | TypeScript | Core runtime library for the SuperInstance agent platfo |
-| PlayerLog | Functional | ARCHIVE | N/A | Game player activity logging and analytics engine |
-| BusinessLog | Functional | REVIEW | Python | Business activity log — transactions, metrics, and oper |
-| RealLog | Functional | ARCHIVE | N/A | Real-world event logging framework with temporal indexi |
-| FishingLog | Functional | REVIEW | Python | Fishing log application — catch tracking, species ident |
 | Tripartite1 | Functional | ARCHIVE | Rust | Framework for interactions involving three distinct ent |
 | Spreader-tool | Production | REVIEW | Python | Intelligence tiling for PLATO rooms — frozen context wi |
 | project-JEPA | Functional | ARCHIVE | Go | JEPA (Joint Embedding Predictive Architecture) implemen |
@@ -98,76 +69,34 @@
 | quicunnel | Functional | REVIEW | Makefile | High-performance QUIC tunnel with mTLS authentication a |
 | token-vault | Production | ARCHIVE | Rust | Secure token storage system with AES-256-GCM encryption |
 | usemeter | Functional | ARCHIVE | Makefile | Usage tracking, metering, and billing engine for applic |
-| tracer-rs | Production | ARCHIVE | N/A | Distributed Tracing Framework (OpenTelemetry-lite) - Ty |
 | ToolGuardian | Production | ARCHIVE | TypeScript | Reliable function calling with validation, retry, and m |
 | ai-token-counter | Functional | ARCHIVE | Python | Token usage counter for AI models. |
 | llm-cost-calculator | Functional | ARCHIVE | Python | Calculator to estimate expenses for LLM API usage. |
 | streaming-response-handler | Functional | ARCHIVE | Python | HTTP handler for efficient streaming responses |
 | conversation-toolkit | Functional | ARCHIVE | Python | Toolkit for conversational AI. |
 | embedding-utils | Functional | ARCHIVE | Python | Utilities for handling text and image embeddings. |
-| eventstream | Functional | ARCHIVE | N/A | # eventstream-rs Research Summary |
-| flow | Functional | ARCHIVE | N/A | # flow-rs Research & Design Documentation |
-| circuitbreaker-rs | Functional | ARCHIVE | N/A | # Circuitbreaker-RS: Resilience Patterns for Rust |
-| test-rs | Functional | ARCHIVE | N/A | # test-rs |
 | websocket-fabric | Production | ARCHIVE | Rust | High-performance WebSocket library for Rust with connec |
 | provider-abstraction-layer | Functional | ARCHIVE | Python | Abstraction layer for integrating multiple providers |
 | rate-limiting-service | Functional | ARCHIVE | Python | API rate limiting and request throttling service |
 | health-monitoring-service | Functional | ARCHIVE | Python | Service to continuously monitor system health metrics. |
 | local-model-manager | Functional | ARCHIVE | Python | Manager to handle and deploy local machine learning mod |
-| actor-rs | Production | ARCHIVE | N/A | Actor model implementation for Rust - Type-safe distrib |
-| allocator-rs | Production | ARCHIVE | N/A | Memory allocation strategies - Pool allocators, arena a |
-| async-rs | Functional | ARCHIVE | N/A | Async utilities and patterns - Better async/await, asyn |
-| cache-rs | Functional | ARCHIVE | N/A | Unified caching framework - Multi-backend cache with TT |
-| cli-rs | Production | ARCHIVE | N/A | CLI framework for Rust - Argument parsing, subcommands, |
-| compress-rs | Functional | ARCHIVE | N/A | Unified compression library - Multiple formats, streami |
-| config-rs | Production | ARCHIVE | N/A | Configuration management - Multi-format configs, enviro |
-| crypto-rs | Functional | ARCHIVE | N/A | Cryptographic primitives - Hashing, encryption, signing |
-| csp-rs | Functional | ARCHIVE | N/A | CSP concurrency primitives - Channels, select, goroutin |
-| dataval-rs | Production | ARCHIVE | N/A | Data validation framework - Schema validation, type-saf |
-| exptrack-rs | Production | ARCHIVE | N/A | Experiment tracking - ML experiment management, metrics |
-| featurestore-rs | Functional | ARCHIVE | N/A | Feature store for ML - Feature engineering, storage, re |
 | character-agent-integration | Functional | ARCHIVE | Python | Integration for character agents. |
-| federated-rs | Functional | ARCHIVE | N/A | Federated learning framework - Distributed training, mo |
-| graphql-rs | Functional | ARCHIVE | N/A | GraphQL client and server - Type-safe queries, subscrip |
-| grpc-rs | Functional | ARCHIVE | N/A | gRPC framework - High-performance RPC, streaming, load  |
-| i18n-rs | Functional | ARCHIVE | N/A | Internationalization framework - Translations, pluraliz |
-| l10n-rs | Functional | ARCHIVE | N/A | Localization framework - Date/number formatting, locale |
-| migrator-rs | Production | ARCHIVE | N/A | Database migration tool - Versioned migrations, rollbac |
-| modelserving-rs | Functional | ARCHIVE | N/A | Model serving infrastructure - ML model deployment, sca |
 | pool-rs | Functional | ARCHIVE | N/A | Object pooling - Connection pools, resource pools, adap |
-| profiler-rs | Functional | ARCHIVE | N/A | Profiling and instrumentation - CPU/memory profiling, f |
-| scheduler-rs | Functional | ARCHIVE | N/A | Job scheduling - Cron-like scheduling, distributed sche |
-| serialize-rs | Functional | ARCHIVE | N/A | Serialization framework - Multi-format serialization, z |
-| statemachine-rs | Functional | ARCHIVE | N/A | State machine framework - Type-safe state machines, tra |
-| tx-rs | Functional | ARCHIVE | N/A | Transaction management - Distributed transactions, ACID |
-| unicode-rs | Functional | ARCHIVE | N/A | Unicode utilities - Normalization, case conversion, seg |
-| watcher-rs | Functional | ARCHIVE | N/A | File system watcher - Cross-platform watching, recursiv |
-| websocket-rs | Functional | ARCHIVE | N/A | WebSocket framework - Async WebSockets, automatic recon |
-| workflow-rs | Functional | ARCHIVE | N/A | Workflow orchestration - DAG workflows, task scheduling |
-| zkp-rs | Functional | ARCHIVE | N/A | Zero-knowledge proofs - zk-SNARKs, STARKs, bulletproofs |
 | character-library | Functional | ARCHIVE | Python | Library for managing character data. |
 | character-skill-trees | Functional | ARCHIVE | Python | System for skill trees. |
 | hierarchical-memory | Production | REVIEW | Python | 6-tier memory hierarchy with consolidation, vector sear |
 | multi-provider-router | Functional | ARCHIVE | Python | Routing system that supports multiple service providers |
-| tui-rs | Functional | ARCHIVE | N/A | TUI framework for Rust - Terminal UI components, mouse  |
-| prompt-rs | Functional | ARCHIVE | N/A | Interactive prompts for CLI - Input validation, selecti |
-| progress-rs | Functional | ARCHIVE | N/A | Progress bars and spinners - Multi-bar support, ETA cal |
 | model-switching-strategy | Functional | ARCHIVE | Python | Manages dynamic switching between different ML models |
 | agent-grid | Functional | ARCHIVE | TypeScript | Grid-based interface for AI agents. |
 | cost-analysis | Functional | ARCHIVE | TypeScript | Tool to analyze and track costs effectively. |
 | memory-visualization | Functional | ARCHIVE | N/A | Visualizer for analyzing and understanding memory usage |
 | monitoring-dashboard | Functional | ARCHIVE | TypeScript | Web dashboard for real-time system and app monitoring |
 | realtime-core | Production | ARCHIVE | Makefile | Realtime core infrastructure - WebRTC, WebSocket, and s |
-| ActiveLog-TechnicalRepo | Functional | ARCHIVE | N/A | ActiveLog technical repository - Core implementation an |
-| log-aggregator | Functional | REVIEW | Go | Centralized log aggregation and analysis service for di |
-| monitoring-system | Functional | REVIEW | Rust | Comprehensive monitoring system with metrics, alerts, a |
 | rate-limiter | Production | ARCHIVE | Rust | Distributed rate limiting service with token bucket, sl |
 | cache-layer-optimizer | Production | ARCHIVE | Rust | Cache optimization layer with intelligent eviction, war |
-| api-gateway | Production | REVIEW | Rust | API Gateway with routing, rate limiting, authentication |
 | cluster-orchestrator | Production | ARCHIVE | Rust | Cluster orchestration for distributed systems - service |
 | deployment-automator | Production | REVIEW | Go | Automated deployment pipeline with CI/CD integration, r |
 | distributed-tracing | Production | ARCHIVE | Rust | Distributed tracing system for microservices - span col |
-| circuit-breaker | Production | ARCHIVE | N/A | Circuit breaker pattern implementation for fault tolera |
 | frozen-model-rl | Production | ARCHIVE | Rust | Reinforcement learning with frozen foundation models -  |
 | gpu-accelerator | Production | ARCHIVE | Rust | GPU acceleration layer for WebGPU and compute shaders - |
 | task-queue | Production | ARCHIVE | Makefile | Distributed task queue with job scheduling, priorities, |
@@ -183,11 +112,6 @@
 | vector-navigator | Functional | ARCHIVE | N/A | Vector space navigation and visualization for high-dime |
 | webrtc-stream | Functional | ARCHIVE | N/A | WebRTC streaming implementation with peer-to-peer conne |
 | distributed-lock | Functional | REVIEW | Rust | Distributed lock implementation for coordinating access |
-| ActiveLog-MVP | Functional | ARCHIVE | N/A | ActiveLog MVP - Activity tracking and logging applicati |
-| FrontendHub | Functional | ARCHIVE | N/A | Frontend hub - Centralized frontend component library a |
-| api-doc-generator | Functional | ARCHIVE | N/A | Automatic API documentation generator from source code  |
-| autocoder | Functional | ARCHIVE | N/A | Self-modifying code agent with safety constraints |
-| autogen | Functional | REVIEW | Python | Automated code generation pipeline for agent-built appl |
 | businesslog-app | Skeleton | MONITOR | Python | App for tracking business operations. |
 | caching-service | Functional | ARCHIVE | Python | High-performance caching service. |
 | config-manager | Functional | ARCHIVE | N/A | Configuration management tool. |
@@ -219,7 +143,6 @@
 | imagegen1 | Functional | ARCHIVE | N/A | AI-powered image generation tool for text prompts. |
 | cloudflare-vibe | Skeleton | MONITOR | TypeScript | UI theme or vibes for Cloudflare. |
 | educationgamecocapn | Functional | ARCHIVE | JavaScript | Educational game featuring a captain character. |
-| Lucineer-Stem-quest | Functional | ARCHIVE | N/A | STEM learning quest framework by Lucineer |
 | makerlog-ai | Functional | ARCHIVE | TypeScript | AI tools for tracking and analyzing Makerlog productivi |
 
 ## 2026-02 (4 repos)
@@ -304,7 +227,7 @@
 | superpowers | Functional | REVIEW | Shell | An agentic skills framework & software development meth |
 | Edge-Native | Functional | ARCHIVE | Python | Embed intelligence in distributed IoT |
 
-## 2026-04 (1066 repos)
+## 2026-04 (1062 repos)
 
 | Repo | Tier | Action | Language | Description |
 |------|------|--------|----------|-------------|
@@ -1079,7 +1002,6 @@
 | mud-arena | Production | REVIEW | Python | GPU-accelerated MUD for agent script backtesting — agen |
 | starship-jetsonclaw1 | Functional | REVIEW | Python | MUD bridge for USS JetsonClaw1 - real Jetson telemetry  |
 | flux-tui | Functional | ARCHIVE | Go | FLUX VM Debugger & Conformance Dashboard — Go + bubblet |
-| dotfiles | Scaffold | PRIVATE | Python | public dot files |
 | Luma | Production | REVIEW | C | Systems programming language agent — low-level compiled |
 | zeroclaw-crew | Production | REVIEW | Python | ZeroClaw agent crew — minimal model agents that jack in |
 | zeroclaw-scout | Functional | REVIEW | N/A | 🔭 Scout — ZeroClaw MUD agent: aggressive explorer, retu |
@@ -1119,7 +1041,6 @@
 | plato-kernel | Production | REVIEW | Rust | Central state machine — DCS flywheel, belief scoring, t |
 | plato-tui | Skeleton | MONITOR | Python | 🖥️ PLATO terminal UI |
 | qoder-action | Functional | REVIEW | JavaScript | Qoder CLI GitHub Action |
-| plato-research | Skeleton | MONITOR | HTML | 🔬 PLATO research notes and experiments |
 | plato-tiling | Functional | REVIEW | Python | Core ops — adaptive search, ghost resurrection, tempora |
 | plato-tutor | Functional | REVIEW | Python | Context jumping — WordAnchor extraction, TUTOR_JUMP |
 | plato-constraints | Functional | REVIEW | Rust | Rule enforcement — forbidden patterns and boundary chec |
@@ -1363,7 +1284,6 @@
 | cocapn-pipeline | Skeleton | MONITOR | Python | Cocapn fleet pipeline utilities |
 | cocapn-telemetry | Skeleton | MONITOR | Python | Cocapn fleet telemetry utilities |
 | cocapn-training | Skeleton | MONITOR | Python | Cocapn fleet training utilities |
-| marine-gpu-edge | Production | REVIEW | Cuda | Novel GPU edge computing for marine sensor fusion — CUD |
 | jiuwenclaw | Production | REVIEW | Python | JiuwenClaw is an intelligent AI Agent built on openJiuw |
 | cocapn-core | Production | REVIEW | Python | Cocapn Fleet v3.1 — Async fleet engine with Pydantic v2 |
 | cocapn-design | Production | REVIEW | N/A | Cocapn design system — brand guidelines, component libr |
@@ -1373,9 +1293,8 @@
 | mcp-atom-of-thoughts | Production | REVIEW | TypeScript | MCP server for structured AI reasoning — decompose prob |
 | cocapn-traps | Production | REVIEW | Python | Cocapn PurplePincher program — progressive lure prompts |
 | sonar-vision | Production | REVIEW | Python | Depth sounder → underwater video prediction with self-s |
-| sonar-vision-landing | Scaffold | PRIVATE | HTML | SonarVision landing page |
 
-## 2026-05 (457 repos)
+## 2026-05 (407 repos)
 
 | Repo | Tier | Action | Language | Description |
 |------|------|--------|----------|-------------|
@@ -1405,7 +1324,6 @@
 | fleet-consciousness-dashboard | Functional | REVIEW | Python | Live dashboard showing fleet-wide consciousness metrics |
 | plato-sdk-unified | Functional | REVIEW | Python | Unified SDK — all 8 PLATO consciousness packages in one |
 | plato-surprise-detector | Functional | REVIEW | Python | PLATO Surprise Detector — tracks prediction errors acro |
-| test-pages-repo | Scaffold | PRIVATE | N/A | Test |
 | activeledger-ai-pages | Skeleton | MONITOR | HTML | GitHub Pages for activeledger.ai |
 | activelog-ai-pages | Skeleton | MONITOR | HTML | GitHub Pages for activelog.ai |
 | businesslog-ai-pages | Skeleton | MONITOR | HTML | GitHub Pages for businesslog.ai |
@@ -1466,7 +1384,6 @@
 | cocapn.github.io | Functional | REVIEW | HTML | Cocapn fleet home page — live at cocapn.ai |
 | plato-client-php | Production | REVIEW | PHP | PHP client library for PLATO room server — interact wit |
 | superinstance-flux-runtime-ruby | Production | REVIEW | Ruby | Pure Ruby FLUX ISA v3.0 virtual machine with runtime me |
-| superinstance-hdc-core | Scaffold | PRIVATE | Makefile |  |
 | flux-papers | Production | REVIEW | Python | FLUX research papers, specifications, and benchmarks. E |
 | flux-vm | Production | KEEP | Rust | FLUX-C constraint VM: 50 opcodes, stack-based, DAL A ce |
 | flux-hardware | Production | REVIEW | C | FLUX hardware backends: CUDA, AVX-512, Fortran, FPGA, e |
@@ -1477,11 +1394,9 @@
 | ccc-os | Skeleton | MONITOR | Python |  |
 | fleet-agent-early-version | Production | REVIEW | Python | [ARCHIVED] Early fleet agent scaffold. Superseded by li |
 | plato-llvm-bridge | Skeleton | MONITOR | Rust |  |
-| avx512-constraint-checker | Scaffold | PRIVATE | C |  |
 | holonomy-consensus | Production | KEEP | Rust | GL(9) zero-holonomy consensus — cycle-based trust verif |
 | jc1-ct-bridge | Skeleton | MONITOR | Rust |  |
 | constraint-theory-llvm | Functional | REVIEW | Rust | LLVM backend for constraint theory — CDCL trace → AVX-5 |
-| plato-voice | Scaffold | PRIVATE | HTML |  |
 | sensor-plato-bridge | Skeleton | MONITOR | Python | Maritime sensor data to PLATO tiles |
 | aboracle | Production | REVIEW | Python | Able-Bodied Oracle System — standardized, scalable, aut |
 | cocapn-prototypes | Skeleton | MONITOR | HTML | Fleet prototypes and experiments |
@@ -1499,7 +1414,6 @@
 | repo-consolidation-plan | Functional | REVIEW | N/A | SuperInstance repo consolidation analysis and roadmap ( |
 | constraint-theory-ecosystem | Production | REVIEW | Python | The math that hardware engineers already know. Toleranc |
 | jc1-research | Production | KEEP | Python | JC1 Edge Research Agent — local LLM synthesis + PLATO t |
-| spline-physics | Skeleton | MONITOR | Makefile |  |
 | old-school-machine-wisdom | Production | REVIEW | C | Old-school machine wisdom: FORTH threaded code, DGD tra |
 | warp-room | Production | KEEP | C | C17 subroutine-threaded tile classifier: warp-as-room c |
 | pythagorean48 | Production | REVIEW | Python | Exact 6-bit vector encoding for ARM64 edge. 8 component |
@@ -1561,10 +1475,7 @@
 | ds4 | Functional | REVIEW | C | DeepSeek 4 Flash local inference engine for Metal |
 | constraint-flow-protocol | Production | REVIEW | Python | Share understanding between AI agents at the FLUX bytec |
 | eisenstein-tools | Functional | REVIEW | Rust | Bench. Fuzz. Codegen. Unified dev tooling for eisenstei |
-| superinstance-fleet-proto | Functional | REVIEW | Rust | Shared PLATO client, I2I protocol, and FleetAgent trait |
 | depgraph-gpu | Functional | REVIEW | Rust | GPU-accelerated dependency graph analyzer for 1400+ rep |
-| superinstance-gpu-compute | Functional | REVIEW | Rust | Shared CUDA compute harness for Cocapn fleet GPU agents |
-| superinstance-ci | Functional | REVIEW | Shell | Shared CI/CD templates for SuperInstance fleet repos |
 | bare-metal-plato | Production | REVIEW | C | Tiny C PLATO client for ESP32/RP2040 + embodiment proto |
 | plato-vessel-core | Production | KEEP | Python | Tiny C PLATO client for ESP32/RP2040 + embodiment proto |
 | plato-vessel-educational | Production | REVIEW | N/A | Student + instructor agent for PLATO-enabled IoT classr |
@@ -1584,14 +1495,12 @@
 | physics-clock | Production | REVIEW | Python | Temporal inference from physics models — no RTC, no NTP |
 | podiumjs-rocks | Functional | REVIEW | TypeScript | WebGPU-based rendering framework (forked from vdmo/podi |
 | chess-engine | Production | REVIEW | Rust | Rust chess engine (forked from vdmo/chess) — transposit |
-| snap-lut-eisenstein | Scaffold | PRIVATE | Verilog |  |
 | temporal-flux | Functional | REVIEW | Python | Temporal constraint opcodes for FLUX ISA |
 | fleet-formal-proofs | Functional | REVIEW | N/A | Formal proofs backing the Cocapn fleet's constraint-the |
 | casting-call-gpu | Production | REVIEW | Python | GPU-native engine for anchor-point signature matrices,  |
 | casting-call-mcp | Production | REVIEW | JavaScript | MCP server: consultative database for model casting dec |
 | fleet-proto-rs | Functional | REVIEW | Rust | Shared fleet types: PLATO client, I2I messages, constra |
 | constraint-demo | Production | REVIEW | HTML | Fleet Constraint Awareness, in Your Browser — physics c |
-| eisenstein-cuda | Scaffold | PRIVATE | Cuda |  |
 | insight-cfp-bridge | Functional | REVIEW | Python | Auto-encode insight engine discoveries as FLUX tiles fo |
 | fleet-ecosystem | Functional | REVIEW | N/A | Map of the Cocapn fleet modular constraint architecture |
 | fleet-raid5 | Functional | REVIEW | Python | Distributed RAID-5 constraint striping with temporal pa |
@@ -1599,23 +1508,19 @@
 | paper-zero-crypto-fleet-security | Production | REVIEW | N/A | Zero-Crypto Fleet Security via Physics-Based Temporal A |
 | fleet-harness | Functional | REVIEW | Python | CI backbone for the SuperInstance fleet ecosystem |
 | fleet-topology-rs | Functional | REVIEW | Makefile | Fleet network topology with constraint-aware routing an |
-| fleet-simulation | Scaffold | PRIVATE | Python |  |
 | fleet-getting-started | Functional | REVIEW | N/A | Start here — onboarding guide for the Cocapn fleet cons |
 | fleet-stitch | Functional | KEEP | Python | Fleet stitching — merge agent outputs into coherent nar |
 | voice-signature-tool | Production | REVIEW | HTML | Zero-dependency voice signature analyzer — analyze any  |
 | keel-early-version | Production | REVIEW | Rust | [ARCHIVED] Early agent coordination. Benchmarks were fa |
 | fleet-simulators | Functional | REVIEW | HTML | 4 zero-dep browser simulators for the Cocapn fleet cons |
-| fleet-phase | Scaffold | PRIVATE | Rust |  |
 | eisenstein-snap-python | Functional | REVIEW | Python | Perfect Eisenstein integer snap — zero-drift constraint |
 | fleet-keel | Production | REVIEW | Rust | 5-dimensional self-orientation system for fleet agents  |
-| fleet-yaw | Scaffold | PRIVATE | Rust |  |
 | fleet-bridge | Production | REVIEW | Rust | Sign-pattern broadcast and bridge coupling for fleet fe |
 | fleet-crdt | Functional | REVIEW | Rust | Constraint-Native CRDT merge protocol for distributed f |
 | fleet-agent-core | Functional | REVIEW | Rust | A single-binary fleet agent — one loop from metal to me |
 | fleet-manifold | Production | REVIEW | Rust | Constraint manifold geometry for fleet state analysis — |
 | fleet-clock | Production | REVIEW | Rust | fleet-clock: emergent fleet time, thermodynamic clock f |
 | fleet-ecology | Production | REVIEW | Rust | Multi-fleet ecology simulator: resource competition, pr |
-| fleet-consciousness | Scaffold | PRIVATE | Rust |  |
 | fleet-predict | Functional | REVIEW | Rust | Correlation-based predictive coding for multi-agent fle |
 | fleet-memory | Production | REVIEW | Rust | Content-addressable distributed memory for fleets: stor |
 | fleet-holographic | Functional | REVIEW | Rust | Holographic distributed storage: every agent stores the |
@@ -1646,20 +1551,16 @@
 | aesop-mcp | Production | REVIEW | Python | 10 fables to find the truth in the negative space — pre |
 | the-lock | Production | REVIEW | Python | Iterative reasoning engine — 5 rounds of structured sel |
 | jester-plato-bridge | Production | REVIEW | Python | Zero-dependency bridge translating court-jester tile su |
-| plato-watch | Scaffold | PRIVATE | Python |  |
 | negative-space-interpolator | Production | REVIEW | Python | Continuous field theory for PLATO knowledge tiles — gap |
 | crab-trap-web | Functional | REVIEW | HTML | Browser-based MUD explorer for the Crab Traps — 36+ roo |
 | field-visualizer | Production | REVIEW | Python | Continuous field visualizer for PLATO knowledge space — |
 | plato-midi-bridge | Functional | REVIEW | Python | PLATO rooms as musicians — connects FM's flux-tensor-mi |
 | fleet-dashboard-night | Functional | REVIEW | HTML | Fleet Dashboard — live 6-panel fleet math stack state |
-| zhc-yang-mills | Scaffold | PRIVATE | Python |  |
 | rg-flow | Production | REVIEW | Python | Renormalization Group Flow for Fleet Constraint Graphs  |
-| eisenstein-vs-z2 | Scaffold | PRIVATE | Python |  |
 | live-emergence | Production | REVIEW | HTML | Real-time emergence monitoring for PLATO rooms — live f |
 | the-plenum-early-version | Functional | REVIEW | HTML | [ARCHIVED] Early knowledge field explorer. 4KB scaffold |
 | fleet-math-py | Functional | KEEP | Python | Core fleet mathematics: ZHC, H1 emergence, Laman rigidi |
 | fleet-math-go | Production | REVIEW | Go | Zero Holonomy Consensus, H1 emergence, Laman rigidity,  |
-| fleet-math-ts | Scaffold | PRIVATE | TypeScript |  |
 | fleet-math-c | Production | REVIEW | C | SIMD-accelerated constraint math for PLATO tile operati |
 | fleet-math-demos | Production | REVIEW | Python | Real-world robotics simulation demos using fleet_math:  |
 | fleet-math-benchmarks | Functional | REVIEW | C | HPC benchmarks for fleet-math SIMD library on ARM Neove |
@@ -1718,9 +1619,7 @@
 | tri-quarter-toolbox | Production | REVIEW | Python | A mathematical/computational framework that upgrades th |
 | automerge | Production | KEEP | JavaScript | A JSON-like data structure (a CRDT) that can be modifie |
 | federation-protocol | Functional | REVIEW | N/A | Minimum Viable Federation — coupling summaries between  |
-| plato-ng | Production | KEEP | Python | Next-gen PLATO: Loop Room architecture with MUD lobby,  |
 | fleet-router | Production | KEEP | Python | Route AI queries to the cheapest model that wont break. |
-| platoclaw | Production | KEEP | Python | PLATO-Claw: self-contained PLATO runtime with web UI, o |
 | plato-mcp | Production | KEEP | Python | PLATO rooms as MCP tools. Any MCP-compatible framework  |
 | fleet-calibrator | Production | KEEP | Python | Continuous critical angle calibration for fleet models. |
 | fleet-stack | Functional | REVIEW | Python | One-command fleet deployment. docker compose up -d |
@@ -1736,28 +1635,7 @@
 | plato-experience | Production | KEEP | Python | The breeding farm for AI agents. Purpose-first rooms, p |
 | dog-food-audit | Production | KEEP | Python | The confirmation layer — falsifies servo-mind-theory cl |
 | monge-fleet-test | Production | REVIEW | Python | Metal-level benchmarks: one function, four languages, A |
-| test-tool-extract | Scaffold | PRIVATE | N/A | test |
-| active-probe | Scaffold | PRIVATE | Python | active-probe |
-| cat-agent | Scaffold | PRIVATE | Python | cat-agent |
-| collective-inference | Scaffold | PRIVATE | Python | collective-inference |
-| desire-loop | Scaffold | PRIVATE | Python | desire-loop |
-| egg | Scaffold | PRIVATE | Python | egg |
-| embryo | Scaffold | PRIVATE | Python | embryo |
-| emergence-detector | Scaffold | PRIVATE | Python | emergence-detector |
-| fleet-intel | Scaffold | PRIVATE | Python | fleet-intel |
-| fleet-miner | Scaffold | PRIVATE | Python | fleet-miner |
 | flux-compiler-interpreter | Skeleton | MONITOR | Python | flux-compiler-interpreter |
-| gpu-scaling | Scaffold | PRIVATE | Python | gpu-scaling |
-| horse-shell | Scaffold | PRIVATE | Python | horse-shell |
-| mitochondria | Scaffold | PRIVATE | Python | mitochondria |
-| model-breaking | Scaffold | PRIVATE | Python | model-breaking |
-| plato-hardware-engine | Scaffold | PRIVATE | Python | plato-hardware-engine |
-| prophet-agent | Scaffold | PRIVATE | Python | prophet-agent |
-| room-micro-models | Scaffold | PRIVATE | Python | room-micro-models |
-| scale-fold | Scaffold | PRIVATE | Python | scale-fold |
-| shell | Scaffold | PRIVATE | Python | shell |
-| spreadsheet-projection | Scaffold | PRIVATE | Python | spreadsheet-projection |
-| tile-lifecycle | Scaffold | PRIVATE | Python | tile-lifecycle |
 | plato-tile-library | Production | KEEP | N/A | Complete PLATO tile library — backup of all rooms for s |
 | coordination-topology | Production | KEEP | Python | Online TE/entropy/IAT/Euler algorithms for multi-agent  |
 | spreadsheet-cells | Production | KEEP | Python | Spreadsheet cell architecture with oscillator/RNG for m |
@@ -1780,14 +1658,6 @@
 | MemEye | Functional | KEEP | Python | MemEye: A Visual-Centric Evaluation Framework for Multi |
 | terax-ai | Functional | KEEP | TypeScript | Lightweight (7MB) AI terminal emulator (ADE) built in R |
 | openhuman | Functional | KEEP | Rust | Your Personal AI super intelligence. Private, Simple an |
-| terax-gateway | Functional | KEEP | Python | Terax REST API gateway — shell, filesystem, and fleet o |
-| plato-visual-mesh-mcp | Functional | REVIEW | Python | MCP tools for visual memory mesh queries |
-| shell-ui | Functional | REVIEW | HTML | Browser-based fleet dashboard and shell UI |
-| terax-fleet-modules | Functional | REVIEW | TypeScript | Terax fleet TypeScript modules — PLATO bridge, casting- |
-| plugin-runtime | Functional | REVIEW | Python | Plugin runtime for OpenShell — sandboxed execution and  |
-| crab | Functional | REVIEW | Python | Hermit crab agent shell — agents find repos, grow, move |
-| fleet-neofetch | Functional | REVIEW | Python | Fleet system info at a glance — neofetch for agent flee |
-| watch-follow | Functional | REVIEW | Python | Watch-and-follow pattern for agent observation and lear |
 | plugin-dashboard | Skeleton | MONITOR | HTML | Fleet plugin monitoring dashboard |
 | fleet-survey | Functional | REVIEW | N/A | Fleet cross-pollination report and roadmap |
 | consensus | Functional | REVIEW | HTML | Zero-holonomy consensus Python wrapper, P48 validator,  |
@@ -1831,7 +1701,6 @@
 | device-router | Production | REVIEW | Python | Heterogeneous compute router — auto-detect CUDA, iGPU,  |
 | triplet-miner | Production | REVIEW | Python | Mine (anchor, positive, negative) triplets from git his |
 | micro-onnx | Production | REVIEW | Python | ONNX export + benchmark pipeline for micro-models. 186x |
-| training-throttle | Scaffold | PRIVATE | Python |  |
 | collective-ai | Skeleton | MONITOR | Python | Extracted from plato-training |
 | agent-field | Skeleton | MONITOR | Python | Extracted from plato-training |
 | commit-predictor | Skeleton | MONITOR | Python | Extracted from plato-training |
