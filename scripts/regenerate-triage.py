@@ -224,6 +224,18 @@ def write_csv(repos, path):
     print(f"  Wrote {len(repos)} repos to {path}")
 
 
+def write_json(repos, path):
+    """Write repos as JSON for programmatic access."""
+    with open(path, 'w') as f:
+        json.dump({
+            'generated': datetime.now().isoformat(),
+            'org': ORG,
+            'total': len(repos),
+            'repos': repos
+        }, f, indent=2)
+    print(f"  Wrote {path}")
+
+
 def write_completeness_tier(repos, path):
     with open(path, 'w') as f:
         f.write("# Completeness Tier Index\n\n")
@@ -441,6 +453,7 @@ def main():
     
     # Write raw data
     write_csv(repos, "data/all-repos.csv")
+    write_json(repos, "data/repos.json")
     
     # Write indexes
     write_completeness_tier(repos, "INDEXES/COMPLETENESS-TIER.md")

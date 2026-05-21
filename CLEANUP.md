@@ -2,16 +2,9 @@
 
 **Generated:** 2026-05-21
 
-Exact commands to execute the triage recommendations.
-
-⚠️ **Review before running.** These are one-way actions.
-
----
-
-## Step 1: Make 38 repos private (Scaffolds + Abandoned Orphans)
+## PRIVATE (38 repos)
 
 ```bash
-# Scaffolds (single commit, no description)
 gh repo edit SuperInstance/active-probe --visibility private
 gh repo edit SuperInstance/avx512-constraint-checker --visibility private
 gh repo edit SuperInstance/cat-agent --visibility private
@@ -52,7 +45,7 @@ gh repo edit SuperInstance/training-throttle --visibility private
 gh repo edit SuperInstance/zhc-yang-mills --visibility private
 ```
 
-## Step 2: Archive 301 repos (Dormant orphans, 30-90d no push)
+## ARCHIVE (307 repos)
 
 ```bash
 gh repo archive SuperInstance/AI-Smart-Notifications
@@ -113,10 +106,12 @@ gh repo archive SuperInstance/SuperInstancecore1
 gh repo archive SuperInstance/SwarmMCP
 gh repo archive SuperInstance/ToolGuardian
 gh repo archive SuperInstance/Tripartite1
+gh repo archive SuperInstance/UI
 gh repo archive SuperInstance/Vibe-Code-Agent-Gen
 gh repo archive SuperInstance/activelog
 gh repo archive SuperInstance/actor-rs
 gh repo archive SuperInstance/actualize
+gh repo archive SuperInstance/agent
 gh repo archive SuperInstance/agent-grid
 gh repo archive SuperInstance/ai-ranch
 gh repo archive SuperInstance/ai-token-counter
@@ -178,6 +173,7 @@ gh repo archive SuperInstance/embedding-utils
 gh repo archive SuperInstance/embeddings-engine
 gh repo archive SuperInstance/escalation-engine
 gh repo archive SuperInstance/eventstream
+gh repo archive SuperInstance/examples
 gh repo archive SuperInstance/expression-injection
 gh repo archive SuperInstance/exptrack-rs
 gh repo archive SuperInstance/featurestore-rs
@@ -202,6 +198,7 @@ gh repo archive SuperInstance/fleet-org
 gh repo archive SuperInstance/fleet-protocol
 gh repo archive SuperInstance/fleet-sanskrit
 gh repo archive SuperInstance/fleet-self-onboarding
+gh repo archive SuperInstance/flow
 gh repo archive SuperInstance/flowstate
 gh repo archive SuperInstance/flux-0c476c
 gh repo archive SuperInstance/flux-9969b6
@@ -257,6 +254,7 @@ gh repo archive SuperInstance/git-agent-standard
 gh repo archive SuperInstance/gpu-accelerator
 gh repo archive SuperInstance/graphql-rs
 gh repo archive SuperInstance/grpc-rs
+gh repo archive SuperInstance/health
 gh repo archive SuperInstance/health-monitoring-service
 gh repo archive SuperInstance/holodeck-c
 gh repo archive SuperInstance/holodeck-cuda
@@ -326,6 +324,7 @@ gh repo archive SuperInstance/superinstance-index
 gh repo archive SuperInstance/superz-diary
 gh repo archive SuperInstance/superz-parallel-fleet-executor
 gh repo archive SuperInstance/task-queue
+gh repo archive SuperInstance/temp
 gh repo archive SuperInstance/test-repo
 gh repo archive SuperInstance/test-rs
 gh repo archive SuperInstance/test-runner-vessel
@@ -358,12 +357,10 @@ gh repo archive SuperInstance/ws-status-indicator
 gh repo archive SuperInstance/zkp-rs
 ```
 
-## Step 3: Monitor 113 repos (Skeletons — check in 2 weeks)
+## MONITOR (113 repos) — check 2026-06-04
 
 ```bash
-# No immediate action. Re-run triage on 2026-06-04.
-# If still skeleton → make private.
-# Repos to watch:
+# Re-run triage. If still skeleton → private.
 #   .github
 #   Automatic-Type-Safe-IndexedDB
 #   Claude-prism-local-json
@@ -479,15 +476,3 @@ gh repo archive SuperInstance/zkp-rs
 #   workshop
 ```
 
-## Dry Run (verify before executing)
-
-```bash
-# Check what would change
-for repo in active-probe avx512-constraint-checker cat-agent collective-inference desire-loop ActiveLog-MVP ActiveLog-TechnicalRepo activelog actor-rs actualize; do
-  echo "Would action: $repo"
-done
-```
-
----
-
-*Generated from STRATEGIC-ACTION.md. Review each repo before executing.*

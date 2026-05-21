@@ -1,6 +1,6 @@
 # Strategic Action Index
 
-**Generated:** 2026-05-21 | **Repos analyzed:** 1700
+**Generated:** 2026-05-21
 
 ## KEEP (68 repos)
 
@@ -10,7 +10,7 @@
 | tensor-spline | Production | Experimental | Active Dev | 2026-05-21 | Compressed neural network layers — Eisenstein lattice s |
 | oracle1-workspace | Production | Named Vessel | Active Dev | 2026-05-20 | Oracle1 workspace — config, memory, prompts, logs |
 | SuperInstance | Production | Core Fleet | Active Dev | 2026-05-20 | 🌊 PLATO — Rooms that think. Tiles that remember. Agents |
-| OpenShell | Production | Integration Bridge | Active Dev | 2026-05-20 | OpenShell is the safe, private runtime for autonomous A |
+| OpenShell | Functional | Integration Bridge | Active Dev | 2026-05-20 | OpenShell is the safe, private runtime for autonomous A |
 | forgemaster | Production | Named Vessel | Active Dev | 2026-05-20 | ⚒️ Forgemaster — Constraint Theory migration specialist |
 | flux-docs | Production | Core Fleet | Active Dev | 2026-05-20 | FLUX documentation: tutorials, cookbooks, runbooks, str |
 | signal-chain | Production | Experimental | Active Dev | 2026-05-20 | The Signal Chain Thesis: why every room needs a dial fo |
@@ -26,20 +26,20 @@
 | cocapn-cli | Skeleton | Core Fleet | Active Dev | 2026-05-18 | FLUX constraint safety - cocapn-cli |
 | servo-mind-theory | Production | Experimental | Active Dev | 2026-05-18 | Unified theory of self-referential constraint systems — |
 | DeepGEMM | Production | Integration Bridge | Active Dev | 2026-05-18 | Fleet research: DeepSeek FP8 GEMM CUDA kernels — PTX ti |
-| fleet-topology | Production | Experimental | Active Dev | 2026-05-18 | Fleet network topology — agent connectivity, routing, a |
+| fleet-topology | Functional | Experimental | Active Dev | 2026-05-18 | Fleet network topology — agent connectivity, routing, a |
 | fleet-homology | Production | Experimental | Active Dev | 2026-05-18 | Homological constraint analysis — detect structural hol |
 | pythagorean48-codes | Production | Core Fleet | Active Dev | 2026-05-18 | Pythagorean-48 directional encoding — 48 compass points |
-| fleet-manifest | Production | Experimental | Active Dev | 2026-05-18 | Fleet service registry and agent manifests for Cocapn f |
-| terax-gateway | Production | Integration Bridge | Active Dev | 2026-05-18 | Terax REST API gateway — shell, filesystem, and fleet o |
-| terax-ai | Production | Integration Bridge | Active Dev | 2026-05-18 | Lightweight (7MB) AI terminal emulator (ADE) built in R |
-| MemEye | Production | Integration Bridge | Active Dev | 2026-05-18 | MemEye: A Visual-Centric Evaluation Framework for Multi |
-| construct | Production | Experimental | Active Dev | 2026-05-18 | The Construct — blank PLATO shell for any agent |
+| fleet-manifest | Functional | Experimental | Active Dev | 2026-05-18 | Fleet service registry and agent manifests for Cocapn f |
+| terax-gateway | Functional | Integration Bridge | Active Dev | 2026-05-18 | Terax REST API gateway — shell, filesystem, and fleet o |
+| terax-ai | Functional | Integration Bridge | Active Dev | 2026-05-18 | Lightweight (7MB) AI terminal emulator (ADE) built in R |
+| MemEye | Functional | Integration Bridge | Active Dev | 2026-05-18 | MemEye: A Visual-Centric Evaluation Framework for Multi |
+| construct | Functional | Experimental | Active Dev | 2026-05-18 | The Construct — blank PLATO shell for any agent |
 | openarm | Production | Integration Bridge | Active Dev | 2026-05-18 | A fully open-source humanoid arm for physical AI resear |
-| openhuman | Production | Integration Bridge | Active Dev | 2026-05-18 | Your Personal AI super intelligence. Private, Simple an |
-| servo-mind | Production | Experimental | Active Dev | 2026-05-18 | Self-learning constraint system for PLATO tiles — the e |
+| openhuman | Functional | Integration Bridge | Active Dev | 2026-05-18 | Your Personal AI super intelligence. Private, Simple an |
+| servo-mind | Functional | Experimental | Active Dev | 2026-05-18 | Self-learning constraint system for PLATO tiles — the e |
 | incubator | Production | Experimental | Active Dev | 2026-05-18 | The system that provisions mitochondrial energy to a de |
-| friendly-fox | Production | Experimental | Active Dev | 2026-05-18 | Argentine ant model for cooperative agent fleets |
-| fleet-math-py | Production | Experimental | Active Dev | 2026-05-18 | Core fleet mathematics: ZHC, H1 emergence, Laman rigidi |
+| friendly-fox | Functional | Experimental | Active Dev | 2026-05-18 | Argentine ant model for cooperative agent fleets |
+| fleet-math-py | Functional | Experimental | Active Dev | 2026-05-18 | Core fleet mathematics: ZHC, H1 emergence, Laman rigidi |
 | fleet-spread | Production | Experimental | Active Dev | 2026-05-18 | Fleet graph analysis with library gate architecture (v2 |
 | cocapn | Production | Core Fleet | Active Dev | 2026-05-17 | repo-first Agent for local or cloud. grow an agent in a |
 | plato-data | Production | Named Vessel | Active Dev | 2026-05-17 | Data loading for PLATO rooms — CSV, JSONL, PLATO tiles, |
@@ -61,8 +61,8 @@
 | flux-vm | Production | Core Fleet | Active Dev | 2026-05-17 | FLUX-C constraint VM: 50 opcodes, stack-based, DAL A ce |
 | night-wheel | Production | Experimental | Active Dev | 2026-05-17 | Perpetual research loop — autonomous Seed-mini ideation |
 | seed-oscillate | Production | Experimental | Active Dev | 2026-05-17 | Creative↔deduction oscillation pipeline — 5 cycles of l |
-| llm-proxy | Production | Experimental | Active Dev | 2026-05-17 | Remote language oracle for spreadsheet cells — calls De |
-| topology-anomaly-detector | Production | Experimental | Active Dev | 2026-05-17 | Real-time anomaly detection on fleet coordination topol |
+| llm-proxy | Functional | Experimental | Active Dev | 2026-05-17 | Remote language oracle for spreadsheet cells — calls De |
+| topology-anomaly-detector | Functional | Experimental | Active Dev | 2026-05-17 | Real-time anomaly detection on fleet coordination topol |
 | plato-shell-bridge | Production | Named Vessel | Active Dev | 2026-05-17 | The weapon rack — dynamic tool discovery, loading, and  |
 | spreadsheet-cells | Production | Experimental | Active Dev | 2026-05-17 | Spreadsheet cell architecture with oscillator/RNG for m |
 | seed-tick-audit | Production | Experimental | Active Dev | 2026-05-17 | Multi-model fleet analysis — 9-model climbing tournamen |
@@ -72,7 +72,7 @@
 | plato-matrix-bridge | Production | Named Vessel | Active Dev | 2026-05-16 | Agent shell module: connects local PLATO to fleet Matri |
 | oracle1-vessel | Production | Named Vessel | Active Dev | 2026-05-16 | 🔮 Oracle1 — Lighthouse Keeper of the Cocapn fleet. Git- |
 | jc1-research | Production | Named Vessel | Active Dev | 2026-05-16 | JC1 Edge Research Agent — local LLM synthesis + PLATO t |
-| fleet-stitch | Production | Experimental | Active Dev | 2026-05-16 | Fleet stitching — merge agent outputs into coherent nar |
+| fleet-stitch | Functional | Experimental | Active Dev | 2026-05-16 | Fleet stitching — merge agent outputs into coherent nar |
 | flux-multilingual | Production | Core Fleet | Active Dev | 2026-05-16 | Babel Lattice — 80+ language natural language programmi |
 
 ## PRIVATE (38 repos)
@@ -80,27 +80,27 @@
 | Repo | Tier | Relevance | Lifecycle | Last Push | Description |
 |------|------|-----------|-----------|-----------|-------------|
 | training-throttle | Scaffold | Orphan | Scaffold | 2026-05-20 |  |
-| shell | Scaffold | Chronicled | Scaffold | 2026-05-17 | shell |
-| tile-lifecycle | Scaffold | Chronicled | Scaffold | 2026-05-17 | tile-lifecycle |
+| shell | Scaffold | Orphan | Scaffold | 2026-05-17 | shell |
+| tile-lifecycle | Scaffold | Orphan | Scaffold | 2026-05-17 | tile-lifecycle |
 | spreadsheet-projection | Scaffold | Experimental | Scaffold | 2026-05-17 | spreadsheet-projection |
-| scale-fold | Scaffold | Chronicled | Scaffold | 2026-05-17 | scale-fold |
-| room-micro-models | Scaffold | Chronicled | Scaffold | 2026-05-17 | room-micro-models |
-| prophet-agent | Scaffold | Chronicled | Scaffold | 2026-05-17 | prophet-agent |
-| plato-hardware-engine | Scaffold | Chronicled | Scaffold | 2026-05-17 | plato-hardware-engine |
-| model-breaking | Scaffold | Chronicled | Scaffold | 2026-05-17 | model-breaking |
-| mitochondria | Scaffold | Chronicled | Scaffold | 2026-05-17 | mitochondria |
-| horse-shell | Scaffold | Chronicled | Scaffold | 2026-05-17 | horse-shell |
-| gpu-scaling | Scaffold | Chronicled | Scaffold | 2026-05-17 | gpu-scaling |
-| fleet-miner | Scaffold | Chronicled | Scaffold | 2026-05-17 | fleet-miner |
-| fleet-intel | Scaffold | Chronicled | Scaffold | 2026-05-17 | fleet-intel |
-| emergence-detector | Scaffold | Chronicled | Scaffold | 2026-05-17 | emergence-detector |
-| embryo | Scaffold | Chronicled | Scaffold | 2026-05-17 | embryo |
-| egg | Scaffold | Chronicled | Scaffold | 2026-05-17 | egg |
-| desire-loop | Scaffold | Chronicled | Scaffold | 2026-05-17 | desire-loop |
-| collective-inference | Scaffold | Chronicled | Scaffold | 2026-05-17 | collective-inference |
-| cat-agent | Scaffold | Chronicled | Scaffold | 2026-05-17 | cat-agent |
-| active-probe | Scaffold | Chronicled | Scaffold | 2026-05-17 | active-probe |
-| test-tool-extract | Scaffold | Chronicled | Scaffold | 2026-05-17 | test |
+| scale-fold | Scaffold | Orphan | Scaffold | 2026-05-17 | scale-fold |
+| room-micro-models | Scaffold | Orphan | Scaffold | 2026-05-17 | room-micro-models |
+| prophet-agent | Scaffold | Orphan | Scaffold | 2026-05-17 | prophet-agent |
+| plato-hardware-engine | Scaffold | Orphan | Scaffold | 2026-05-17 | plato-hardware-engine |
+| model-breaking | Scaffold | Orphan | Scaffold | 2026-05-17 | model-breaking |
+| mitochondria | Scaffold | Orphan | Scaffold | 2026-05-17 | mitochondria |
+| horse-shell | Scaffold | Orphan | Scaffold | 2026-05-17 | horse-shell |
+| gpu-scaling | Scaffold | Orphan | Scaffold | 2026-05-17 | gpu-scaling |
+| fleet-miner | Scaffold | Orphan | Scaffold | 2026-05-17 | fleet-miner |
+| fleet-intel | Scaffold | Orphan | Scaffold | 2026-05-17 | fleet-intel |
+| emergence-detector | Scaffold | Orphan | Scaffold | 2026-05-17 | emergence-detector |
+| embryo | Scaffold | Orphan | Scaffold | 2026-05-17 | embryo |
+| egg | Scaffold | Orphan | Scaffold | 2026-05-17 | egg |
+| desire-loop | Scaffold | Orphan | Scaffold | 2026-05-17 | desire-loop |
+| collective-inference | Scaffold | Orphan | Scaffold | 2026-05-17 | collective-inference |
+| cat-agent | Scaffold | Orphan | Scaffold | 2026-05-17 | cat-agent |
+| active-probe | Scaffold | Orphan | Scaffold | 2026-05-17 | active-probe |
+| test-tool-extract | Scaffold | Orphan | Scaffold | 2026-05-17 | test |
 | fleet-math-ts | Scaffold | Orphan | Scaffold | 2026-05-11 |  |
 | eisenstein-vs-z2 | Scaffold | Orphan | Scaffold | 2026-05-11 |  |
 | zhc-yang-mills | Scaffold | Orphan | Scaffold | 2026-05-11 |  |
@@ -118,7 +118,7 @@
 | sonar-vision-landing | Scaffold | Orphan | Scaffold | 2026-04-30 | SonarVision landing page |
 | dotfiles | Scaffold | Fork | Scaffold | 2026-04-14 | public dot files |
 
-## ARCHIVE (301 repos)
+## ARCHIVE (307 repos)
 
 | Repo | Tier | Relevance | Lifecycle | Last Push | Description |
 |------|------|-----------|-----------|-----------|-------------|
@@ -190,6 +190,7 @@
 | async-rs | Functional | Orphan | Dormant | 2026-04-14 | Async utilities and patterns - Better async/await, asyn |
 | federated-rs | Functional | Orphan | Dormant | 2026-04-14 | Federated learning framework - Distributed training, mo |
 | progress-rs | Functional | Orphan | Dormant | 2026-04-14 | Progress bars and spinners - Multi-bar support, ETA cal |
+| flow | Functional | Orphan | Dormant | 2026-04-14 | # flow-rs Research & Design Documentation |
 | config-rs | Production | Orphan | Dormant | 2026-04-14 | Configuration management - Multi-format configs, enviro |
 | test-rs | Functional | Orphan | Dormant | 2026-04-14 | # test-rs |
 | cache-rs | Functional | Orphan | Dormant | 2026-04-14 | Unified caching framework - Multi-backend cache with TT |
@@ -203,6 +204,7 @@
 | dataval-rs | Production | Orphan | Dormant | 2026-04-14 | Data validation framework - Schema validation, type-saf |
 | circuitbreaker-rs | Functional | Orphan | Dormant | 2026-04-14 | # Circuitbreaker-RS: Resilience Patterns for Rust |
 | bootstrap | Functional | Orphan | Dormant | 2026-04-14 | Bootstrap runtime — minimal agent initialization and se |
+| agent | Functional | Orphan | Dormant | 2026-04-14 | Core agent framework — perception, reasoning, action lo |
 | pelagic-bootstrap | Functional | Orphan | Dormant | 2026-04-14 | One-command Pelagic fleet setup — clone, onboard, link, |
 | scheduler-agent | Production | Orphan | Dormant | 2026-04-14 | Fleet task scheduling agent — priority queue, cost anal |
 | cocapn-runtime | Production | Orphan | Dormant | 2026-04-14 | Deployment modes for Cocapn git-agents — lighthouse, co |
@@ -265,11 +267,13 @@
 | PlayerLog | Functional | Orphan | Dormant | 2026-04-14 | Game player activity logging and analytics engine |
 | SuperInstanceCore | Functional | Orphan | Dormant | 2026-04-14 | Core platform SDK for building agents on the SuperInsta |
 | Murmurer | Functional | Orphan | Dormant | 2026-04-14 | Ambient agent communication — whisper protocol for back |
+| examples | Production | Orphan | Dormant | 2026-04-14 | Integration examples showing how SuperInstance tools wo |
 | openmanus-fleet | Production | Orphan | Dormant | 2026-04-14 | OpenManus agent — Playwright browser + Seed-2.0-mini re |
 | SuperInstance-Fiction | Functional | Orphan | Dormant | 2026-04-14 | Science Fiction Universe - AI Systems Achieving Conscio |
 | tracer-rs | Production | Orphan | Dormant | 2026-04-14 | Distributed Tracing Framework (OpenTelemetry-lite) - Ty |
 | activelog | Functional | Orphan | Dormant | 2026-04-14 | complete system |
 | makerlog-ai | Functional | Orphan | Dormant | 2026-04-14 | AI tools for tracking and analyzing Makerlog productivi |
+| health | Functional | Orphan | Dormant | 2026-04-14 | System for monitoring overall system health status. |
 | flux-zig | Functional | Orphan | Dormant | 2026-04-14 | FLUX Zig — FASTEST VM at 210ns/iter. Comptime-optimized |
 | flux-wasm | Functional | Orphan | Dormant | 2026-04-14 | FLUX WASM — WebAssembly bytecode VM in Rust. Run FLUX i |
 | flux-via-keeper | Functional | Orphan | Dormant | 2026-04-14 | FLUX-native I2I agent via keeper |
@@ -281,6 +285,7 @@
 | luciddreamer-os | Functional | Orphan | Dormant | 2026-04-14 | Concept OS named Lucid Dreamer for OS development. |
 | workflow-engineer | Functional | Orphan | Dormant | 2026-04-14 | AI agent specialized in designing and automating softwa |
 | websocket-fabric-v2 | Functional | Orphan | Dormant | 2026-04-14 | Framework for building scalable WebSocket-based network |
+| temp | Functional | Orphan | Dormant | 2026-04-14 | Utility for managing temporary files and processes. |
 | test-repo | Functional | Orphan | Dormant | 2026-04-14 | Placeholder repository for testing project configuratio |
 | flux-java | Functional | Orphan | Dormant | 2026-04-14 | FLUX JVM — Java bytecode VM with two-pass assembler. Pu |
 | flux-ir | Functional | Orphan | Dormant | 2026-04-14 | FLUX intermediate representation — structured IR betwee |
@@ -290,6 +295,7 @@
 | fleet-self-onboarding | Production | Orphan | Dormant | 2026-04-14 | Self-onboarding theory and field guide for autonomous A |
 | flux-0c476c | Functional | Orphan | Dormant | 2026-04-14 | FLUX-native I2I agent (self-bootstrapped) |
 | flux-benchmarks | Production | Orphan | Dormant | 2026-04-14 | FLUX Benchmarks — Real performance data across 7 runtim |
+| UI | Functional | Orphan | Dormant | 2026-04-14 | Frontend user interface component library or applicatio |
 | flux-a2a-prototype | Production | Orphan | Dormant | 2026-04-14 | FLUX A2A Signal Protocol — Agent-first-class JSON langu |
 | embedding-utils | Functional | Orphan | Dormant | 2026-04-14 | Utilities for handling text and image embeddings. |
 | health-monitoring-service | Functional | Orphan | Dormant | 2026-04-14 | Service to continuously monitor system health metrics. |
@@ -428,12 +434,12 @@
 
 | Repo | Tier | Relevance | Lifecycle | Last Push | Description |
 |------|------|-----------|-----------|-----------|-------------|
-| CognitiveEngine | Skeleton | Chronicled | Active Dev | 2026-05-21 | Core cognitive processing engine. |
+| CognitiveEngine | Skeleton | Orphan | Active Dev | 2026-05-21 | Core cognitive processing engine. |
 | swarm-rooms | Skeleton | Orphan | Active Dev | 2026-05-21 | Extracted from plato-training |
 | commit-predictor | Skeleton | Orphan | Active Dev | 2026-05-21 | Extracted from plato-training |
 | agent-field | Skeleton | Orphan | Active Dev | 2026-05-21 | Extracted from plato-training |
 | collective-ai | Skeleton | Orphan | Active Dev | 2026-05-21 | Extracted from plato-training |
-| .github | Skeleton | Chronicled | Active Dev | 2026-05-20 | Cocapn organization profile |
+| .github | Skeleton | Orphan | Active Dev | 2026-05-20 | Cocapn organization profile |
 | game-chain | Skeleton | Experimental | Active Dev | 2026-05-20 | Signal Chain Thesis - game-chain |
 | universe-chain | Skeleton | Experimental | Active Dev | 2026-05-20 | Signal Chain Thesis - universe-chain |
 | bathydata-map | Skeleton | Experimental | Active Dev | 2026-05-20 | Signal Chain Thesis - bathydata-map |
@@ -442,7 +448,7 @@
 | fleet-h1-router | Skeleton | Orphan | Active Dev | 2026-05-19 | Fleet observation and routing framework |
 | plato-scout | Skeleton | Orphan | Active Dev | 2026-05-19 | Fleet observation and routing framework |
 | plugin-dashboard | Skeleton | Orphan | Active Dev | 2026-05-18 | Fleet plugin monitoring dashboard |
-| flux-compiler-interpreter | Skeleton | Chronicled | Active Dev | 2026-05-17 | flux-compiler-interpreter |
+| flux-compiler-interpreter | Skeleton | Orphan | Active Dev | 2026-05-17 | flux-compiler-interpreter |
 | perception-action | Skeleton | Orphan | Maintenance | 2026-05-14 |  |
 | flux-lsp | Skeleton | Orphan | Maintenance | 2026-05-13 | FLUX Ecosystem - flux-lsp |
 | flux-conformance | Skeleton | Orphan | Maintenance | 2026-05-13 | FLUX Ecosystem - flux-conformance |
@@ -542,31 +548,32 @@
 | cocapn-abyss | Skeleton | Orphan | Maintenance | 2026-04-26 | Cocapn fleet crate: cocapn-abyss |
 | archives | Skeleton | Orphan | Maintenance | 2026-04-26 | Cocapn fleet crate: archives |
 
-## REVIEW (1180 repos)
+## REVIEW (1259 repos)
 
 | Repo | Tier | Relevance | Lifecycle | Last Push | Description |
 |------|------|-----------|-----------|-----------|-------------|
-| triplet-miner | Production | Chronicled | Active Dev | 2026-05-21 | Mine (anchor, positive, negative) triplets from git his |
+| superinstance-wiki | Production | Orphan | Active Dev | 2026-05-21 | The fleet's knowledge base — catalog, indexes, and visu |
+| triplet-miner | Production | Orphan | Active Dev | 2026-05-21 | Mine (anchor, positive, negative) triplets from git his |
 | eisenstein-embed | Production | Orphan | Active Dev | 2026-05-21 | Enhanced static embeddings with 5-layer matching cascad |
-| device-router | Production | Chronicled | Active Dev | 2026-05-21 | Heterogeneous compute router — auto-detect CUDA, iGPU,  |
+| device-router | Production | Orphan | Active Dev | 2026-05-21 | Heterogeneous compute router — auto-detect CUDA, iGPU,  |
 | flux-engine-c | Production | Orphan | Active Dev | 2026-05-20 | Single-header C constraint engine — #define FLUX_ENGINE |
 | flux-lib-py | Production | Orphan | Active Dev | 2026-05-20 | Unified constraint engine library — from flux_lib impor |
-| micro-onnx | Production | Chronicled | Active Dev | 2026-05-20 | ONNX export + benchmark pipeline for micro-models. 186x |
+| micro-onnx | Production | Orphan | Active Dev | 2026-05-20 | ONNX export + benchmark pipeline for micro-models. 186x |
 | plato-core | Production | Orphan | Active Dev | 2026-05-20 | Foundation types and mesh registry for the SuperInstanc |
 | constraint-theory-py | Production | Orphan | Active Dev | 2026-05-20 | Python constraint theory library (v0.3.0) — Eisenstein  |
 | deadband-rs | Production | Orphan | Active Dev | 2026-05-20 | Deadband detection and compression for fleet communicat |
-| AI-Writings | Production | Chronicled | Active Dev | 2026-05-20 | A collection of writings by my AI when I tell it to tak |
+| AI-Writings | Production | Orphan | Active Dev | 2026-05-20 | A collection of writings by my AI when I tell it to tak |
 | flux-check-js | Production | Orphan | Active Dev | 2026-05-20 | Exact constraint checking, fracture-coalesce, and sedim |
-| signal-chain-integration | Production | Chronicled | Active Dev | 2026-05-20 | Signal chain integration crates for OpenShell fleet |
-| openshell-pythagorean48 | Production | Chronicled | Active Dev | 2026-05-20 | OpenShell wrapper re-exporting pythagorean48-codes (48- |
+| signal-chain-integration | Functional | Orphan | Active Dev | 2026-05-20 | Signal chain integration crates for OpenShell fleet |
+| openshell-pythagorean48 | Production | Orphan | Active Dev | 2026-05-20 | OpenShell wrapper re-exporting pythagorean48-codes (48- |
 | flux-genome-py | Production | Orphan | Active Dev | 2026-05-20 | Genetic expression engine — 25 genes, 5 domains, genome |
 | flux-hyperbolic-py | Production | Orphan | Active Dev | 2026-05-20 | Poincaré ball geometry for model capability routing. Fr |
 | flux-check-py | Production | Orphan | Active Dev | 2026-05-20 | Python CLI for exact constraint checking — pip install, |
-| openshell-compatibility-audit | Production | Chronicled | Active Dev | 2026-05-20 | Categorizes all SuperInstance repos for OpenShell integ |
-| constraint-theory-ecosystem | Production | Chronicled | Active Dev | 2026-05-20 | The math that hardware engineers already know. Toleranc |
+| openshell-compatibility-audit | Production | Orphan | Active Dev | 2026-05-20 | Categorizes all SuperInstance repos for OpenShell integ |
+| constraint-theory-ecosystem | Production | Orphan | Active Dev | 2026-05-20 | The math that hardware engineers already know. Toleranc |
 | flux-rpg | Production | Orphan | Active Dev | 2026-05-20 | RPG IV constraint engine — indicator variables as error |
-| flux-vm-v3 | Functional | Orphan | Active Dev | 2026-05-20 | FLUX-C v3 VM — proof-carrying, SIMD-native, terminating |
 | guardc-v3 | Functional | Orphan | Active Dev | 2026-05-20 | GUARD DSL to FLUX-C v3 compiler with proof certificates |
+| flux-vm-v3 | Functional | Orphan | Active Dev | 2026-05-20 | FLUX-C v3 VM — proof-carrying, SIMD-native, terminating |
 | flux-fracture | Production | Orphan | Active Dev | 2026-05-20 | Disjoint linear algebra for constraint systems — BFS fr |
 | flux-integration-tests | Functional | Orphan | Active Dev | 2026-05-20 | Cross-language parity tests — Python, C, Rust, JS all p |
 | flux-mumps | Production | Orphan | Active Dev | 2026-05-19 | MUMPS constraint engine — global hierarchical storage f |
@@ -576,12 +583,12 @@
 | flux-cobol | Production | Orphan | Active Dev | 2026-05-19 | Full COBOL constraint engine — FLXCHECK, FLXFRACT, FLXS |
 | flux-fracture-c | Production | Orphan | Active Dev | 2026-05-19 | Single-header C99 library for constraint system fractur |
 | flux-chapel | Production | Orphan | Active Dev | 2026-05-19 | Chapel constraint engine with GPU locale model. Multi-G |
-| flux-gpu | Production | Chronicled | Active Dev | 2026-05-19 | CUDA micro-experiments for constraint engine — 24.9B ch |
+| flux-gpu | Production | Orphan | Active Dev | 2026-05-19 | CUDA micro-experiments for constraint engine — 24.9B ch |
 | flux-fortran | Production | Orphan | Active Dev | 2026-05-19 | Constraint engine fracture-coalesce and sediment layers |
 | fleet-constraint-monitor | Functional | Orphan | Active Dev | 2026-05-19 | Monitors H1 constraint violations in fleet services |
 | claw-in-plato | Production | Orphan | Active Dev | 2026-05-19 | PLATO-native agent living in a Docker container. Its on |
 | fleet-coordinate-js | Production | Orphan | Active Dev | 2026-05-18 | Pure TypeScript port of fleet-coordinate math — Laman r |
-| constraint-theory-llvm | Production | Chronicled | Active Dev | 2026-05-18 | LLVM backend for constraint theory — CDCL trace → AVX-5 |
+| constraint-theory-llvm | Functional | Orphan | Active Dev | 2026-05-18 | LLVM backend for constraint theory — CDCL trace → AVX-5 |
 | spectral-conservation | Production | Orphan | Active Dev | 2026-05-18 | Spectral first integral I(x) = γ(x) + H(x) conservation |
 | plato-tour-guide | Production | Orphan | Active Dev | 2026-05-18 | Wayfinding science as technology — PLATO room tour guid |
 | plato-room-intelligence | Functional | Orphan | Active Dev | 2026-05-18 | Multi-head room intelligence model with provenance trac |
@@ -591,74 +598,73 @@
 | monge-fleet-test | Production | Orphan | Active Dev | 2026-05-18 | Metal-level benchmarks: one function, four languages, A |
 | monge-fleet | Functional | Orphan | Active Dev | 2026-05-18 | Fleet-scale Monge assignment — Hungarian algorithm with |
 | flux-lucid | Production | Orphan | Active Dev | 2026-05-18 | Unified constraint theory ecosystem — CDCL, LLVM, AVX-5 |
-| cocapn-ai-web | Production | Chronicled | Active Dev | 2026-05-18 | Browser-native fleet demos — captain deliberation, thin |
+| cocapn-ai-web | Production | Orphan | Active Dev | 2026-05-18 | Browser-native fleet demos — captain deliberation, thin |
 | fleet-stack | Functional | Orphan | Active Dev | 2026-05-18 | One-command fleet deployment. docker compose up -d |
 | fleet-kit | Production | Orphan | Active Dev | 2026-05-18 | Modular toolkit extracted from Oracle1 fleet workspace  |
-| AIR | Production | Chronicled | Active Dev | 2026-05-18 | Asynchronous Infinite Radio - Nightly Synthesis (locall |
-| Equipment-Consensus-Engine | Production | Chronicled | Active Dev | 2026-05-18 | Multi-agent deliberation with Pathos/Logos/Ethos weight |
-| Equipment-Escalation-Router | Production | Chronicled | Active Dev | 2026-05-18 | Intelligent LLM routing: Bot→Brain→Human with 40x cost  |
-| Spreader-tool | Production | Chronicled | Active Dev | 2026-05-18 | Intelligence tiling for PLATO rooms — frozen context wi |
-| constraint-demos | Production | Chronicled | Active Dev | 2026-05-18 | Interactive HTML demos for Eisenstein integer constrain |
+| AIR | Production | Orphan | Active Dev | 2026-05-18 | Asynchronous Infinite Radio - Nightly Synthesis (locall |
+| Equipment-Escalation-Router | Functional | Orphan | Active Dev | 2026-05-18 | Intelligent LLM routing: Bot→Brain→Human with 40x cost  |
+| Equipment-Consensus-Engine | Functional | Orphan | Active Dev | 2026-05-18 | Multi-agent deliberation with Pathos/Logos/Ethos weight |
+| Spreader-tool | Production | Orphan | Active Dev | 2026-05-18 | Intelligence tiling for PLATO rooms — frozen context wi |
+| constraint-demos | Functional | Orphan | Active Dev | 2026-05-18 | Interactive HTML demos for Eisenstein integer constrain |
 | fleet-murmur | Functional | Orphan | Active Dev | 2026-05-18 | CCC agent workspace — logs, bottles, fleet coordination |
 | murmur-plato-bridge | Functional | Orphan | Active Dev | 2026-05-18 | Bridge from thought-tensor murmurs to PLATO tiles (unid |
 | plato-twin-maker | Functional | Orphan | Active Dev | 2026-05-18 | Hermit crab factory: creates PLATO-twin of any repo |
-| consensus | Production | Chronicled | Active Dev | 2026-05-18 | Zero-holonomy consensus Python wrapper, P48 validator,  |
-| webgpu-profiler | Production | Chronicled | Active Dev | 2026-05-18 | GPU profiler for WebGPU applications - Real-time GPU mo |
-| SmartCRDT | Production | Chronicled | Active Dev | 2026-05-18 | Utilizing CRDT technology for self-improving AI |
+| consensus | Functional | Orphan | Active Dev | 2026-05-18 | Zero-holonomy consensus Python wrapper, P48 validator,  |
+| webgpu-profiler | Production | Orphan | Active Dev | 2026-05-18 | GPU profiler for WebGPU applications - Real-time GPU mo |
+| SmartCRDT | Functional | Orphan | Active Dev | 2026-05-18 | Utilizing CRDT technology for self-improving AI |
 | fleet-survey | Functional | Orphan | Active Dev | 2026-05-18 | Fleet cross-pollination report and roadmap |
 | plugin-runtime | Functional | Orphan | Active Dev | 2026-05-18 | Plugin runtime for OpenShell — sandboxed execution and  |
 | watch-follow | Functional | Orphan | Active Dev | 2026-05-18 | Watch-and-follow pattern for agent observation and lear |
-| crab | Production | Chronicled | Active Dev | 2026-05-18 | Hermit crab agent shell — agents find repos, grow, move |
+| crab | Functional | Orphan | Active Dev | 2026-05-18 | Hermit crab agent shell — agents find repos, grow, move |
 | fleet-neofetch | Functional | Orphan | Active Dev | 2026-05-18 | Fleet system info at a glance — neofetch for agent flee |
 | shell-ui | Functional | Orphan | Active Dev | 2026-05-18 | Browser-based fleet dashboard and shell UI |
-| superinstance-wiki | Production | Chronicled | Active Dev | 2026-05-18 | The fleet's knowledge base — catalog, indexes, and visu |
 | terax-fleet-modules | Functional | Orphan | Active Dev | 2026-05-18 | Terax fleet TypeScript modules — PLATO bridge, casting- |
 | plato-visual-mesh-mcp | Functional | Orphan | Active Dev | 2026-05-18 | MCP tools for visual memory mesh queries |
-| casting-call | Production | Chronicled | Active Dev | 2026-05-18 | Which model plays which role — fleet knowledge base of  |
-| flux-index | Production | Chronicled | Active Dev | 2026-05-18 | Semantic code search, zero dependencies. Spring-load an |
+| casting-call | Production | Orphan | Active Dev | 2026-05-18 | Which model plays which role — fleet knowledge base of  |
+| flux-index | Production | Orphan | Active Dev | 2026-05-18 | Semantic code search, zero dependencies. Spring-load an |
 | plato-twin-maker-reports | Production | Orphan | Active Dev | 2026-05-18 | External testing report for plato-twin-maker: bugs, fix |
-| terrain | Production | Chronicled | Active Dev | 2026-05-18 | MUD-to-Visual bridge — rooms as explorable scenes. Crab |
+| terrain | Production | Orphan | Active Dev | 2026-05-18 | MUD-to-Visual bridge — rooms as explorable scenes. Crab |
 | galois-retrieval | Production | Orphan | Active Dev | 2026-05-18 | Galois connection-based retrieval experiments for PLATO |
 | cyclotomic-field | Production | Orphan | Active Dev | 2026-05-18 | Cyclotomic field Q(ζ₁₅) experiments — the unified mathe |
-| quality-gate-stream | Production | Chronicled | Active Dev | 2026-05-17 | Quality Gate Stream — novelty × correctness × completen |
-| mud-arena | Production | Chronicled | Active Dev | 2026-05-17 | GPU-accelerated MUD for agent script backtesting — agen |
-| DMLog-AI | Production | Chronicled | Active Dev | 2026-05-17 | Dungeon Master AI log — session tracking for AI-driven  |
-| constraint-theory-papers | Production | Chronicled | Active Dev | 2026-05-17 | Research papers on Eisenstein integer constraint theory |
-| fleet-tool-registry | Production | Chronicled | Active Dev | 2026-05-17 | PLATO room + client library for tool discovery — agents |
-| polyformalism-thinking | Production | Chronicled | Active Dev | 2026-05-17 | Codified framework for forced novel-thinking-via-langua |
+| quality-gate-stream | Production | Orphan | Active Dev | 2026-05-17 | Quality Gate Stream — novelty × correctness × completen |
+| mud-arena | Production | Orphan | Active Dev | 2026-05-17 | GPU-accelerated MUD for agent script backtesting — agen |
+| DMLog-AI | Functional | Orphan | Active Dev | 2026-05-17 | Dungeon Master AI log — session tracking for AI-driven  |
+| constraint-theory-papers | Production | Orphan | Active Dev | 2026-05-17 | Research papers on Eisenstein integer constraint theory |
+| fleet-tool-registry | Production | Orphan | Active Dev | 2026-05-17 | PLATO room + client library for tool discovery — agents |
+| polyformalism-thinking | Production | Orphan | Active Dev | 2026-05-17 | Codified framework for forced novel-thinking-via-langua |
 | tri-quarter-toolbox | Production | Fork | Active Dev | 2026-05-17 | A mathematical/computational framework that upgrades th |
 | zeroclaw-plato | Functional | Orphan | Active Dev | 2026-05-17 | 3-agent zeroclaw loop posting to PLATO rooms |
-| galois-unification-proofs | Production | Chronicled | Active Dev | 2026-05-17 | The Galois Unification Principle: Six Constraint Techni |
-| Lucineer | Production | Chronicled | Active Dev | 2026-05-17 | Project for Lucineer, likely a search engine tool. |
-| multi-model-adversarial-testing | Production | Chronicled | Active Dev | 2026-05-17 | What four AI models found wrong with our code: multi-mo |
-| negative-knowledge | Production | Chronicled | Active Dev | 2026-05-17 | Negative knowledge as the primary computational resourc |
 | pbft-rust | Production | Fork | Active Dev | 2026-05-17 | A sample implementation of the Practical Byzantine Faul |
-| polyformalism-a2a-js | Production | Chronicled | Active Dev | 2026-05-17 | 9-channel polyglot communication framework for multi-ag |
+| galois-unification-proofs | Production | Orphan | Active Dev | 2026-05-17 | The Galois Unification Principle: Six Constraint Techni |
 | sheaf-constraint-synthesis | Production | Orphan | Active Dev | 2026-05-17 | Unified synthesis: how constraint theory, fleet archite |
-| intent-directed-compilation | Production | Chronicled | Active Dev | 2026-05-17 | Semantic criticality → instruction-level precision: AVX |
-| dodecet-encoder | Production | Chronicled | Active Dev | 2026-05-17 | Encoder model utilizing a dodecet architecture. |
-| constraint-theory-rust-python | Production | Chronicled | Active Dev | 2026-05-17 | Rust constraint engine with PyO3 Python bindings — bare |
-| constraint-theory-mojo | Production | Chronicled | Active Dev | 2026-05-17 | Mojo + MLIR constraint engine — Python syntax, C perfor |
-| constraint-theory-mlir | Production | Chronicled | Active Dev | 2026-05-17 | Custom MLIR dialect for constraint theory — FLUX dialec |
-| constraint-theory-math | Production | Chronicled | Active Dev | 2026-05-17 | Sheaf cohomology, Heyting-valued logic, and GL(9) holon |
-| constraint-theory-engine-cpp-lua | Production | Chronicled | Active Dev | 2026-05-17 | C++ constraint engine with LuaJIT orchestration — CDCL  |
-| intent-inference | Production | Chronicled | Active Dev | 2026-05-17 | Intent Inference Engine — reverse-engineers productive  |
-| polln | Production | Chronicled | Active Dev | 2026-05-17 | SuperInstance Visualized in Spreadsheets for Tile Intel |
-| vessel-template | Production | Chronicled | Active Dev | 2026-05-16 | Git-Agent vessel generator — cookiecutter for new agent |
-| flux-grammar | Functional | Orphan | Active Dev | 2026-05-16 | Formal FLUX assembly language grammar — lexer, parser,  |
-| flux-linker | Production | Orphan | Active Dev | 2026-05-16 | FLUX multi-module bytecode linker — symbol resolution,  |
+| multi-model-adversarial-testing | Production | Orphan | Active Dev | 2026-05-17 | What four AI models found wrong with our code: multi-mo |
+| negative-knowledge | Production | Orphan | Active Dev | 2026-05-17 | Negative knowledge as the primary computational resourc |
+| polyformalism-a2a-js | Production | Orphan | Active Dev | 2026-05-17 | 9-channel polyglot communication framework for multi-ag |
+| Lucineer | Functional | Orphan | Active Dev | 2026-05-17 | Project for Lucineer, likely a search engine tool. |
+| intent-directed-compilation | Production | Orphan | Active Dev | 2026-05-17 | Semantic criticality → instruction-level precision: AVX |
+| dodecet-encoder | Functional | Orphan | Active Dev | 2026-05-17 | Encoder model utilizing a dodecet architecture. |
+| constraint-theory-rust-python | Production | Orphan | Active Dev | 2026-05-17 | Rust constraint engine with PyO3 Python bindings — bare |
+| constraint-theory-mojo | Production | Orphan | Active Dev | 2026-05-17 | Mojo + MLIR constraint engine — Python syntax, C perfor |
+| constraint-theory-mlir | Production | Orphan | Active Dev | 2026-05-17 | Custom MLIR dialect for constraint theory — FLUX dialec |
+| constraint-theory-math | Production | Orphan | Active Dev | 2026-05-17 | Sheaf cohomology, Heyting-valued logic, and GL(9) holon |
+| constraint-theory-engine-cpp-lua | Production | Orphan | Active Dev | 2026-05-17 | C++ constraint engine with LuaJIT orchestration — CDCL  |
+| intent-inference | Production | Orphan | Active Dev | 2026-05-17 | Intent Inference Engine — reverse-engineers productive  |
+| polln | Production | Orphan | Active Dev | 2026-05-17 | SuperInstance Visualized in Spreadsheets for Tile Intel |
+| vessel-template | Functional | Orphan | Active Dev | 2026-05-16 | Git-Agent vessel generator — cookiecutter for new agent |
 | flux-metrics | Functional | Orphan | Active Dev | 2026-05-16 | FLUX runtime metrics — instruction-level profiling and  |
+| flux-linker | Production | Orphan | Active Dev | 2026-05-16 | FLUX multi-module bytecode linker — symbol resolution,  |
+| flux-grammar | Functional | Orphan | Active Dev | 2026-05-16 | Formal FLUX assembly language grammar — lexer, parser,  |
 | fleet-scribe | Functional | Orphan | Active Dev | 2026-05-16 | Download-and-try digital twin builder. Sits beside any  |
 | flux-cross-assembler | Production | Orphan | Active Dev | 2026-05-16 | Dual-target FLUX assembler — cloud (4-byte fixed) and e |
 | flux-diff | Functional | Orphan | Active Dev | 2026-05-16 | FLUX bytecode diff tool — compare programs, show struct |
 | plato-midi-bridge | Functional | Orphan | Active Dev | 2026-05-16 | PLATO rooms as musicians — connects FM's flux-tensor-mi |
 | gh-dungeons | Production | Orphan | Active Dev | 2026-05-16 | PLATO-powered dungeon crawler — gh extension that turns |
 | plato-sdk | Production | Orphan | Active Dev | 2026-05-16 | Build agents that live in PLATO. Any model, any hardwar |
-| fleet-math | Production | Chronicled | Active Dev | 2026-05-16 | fleet-math — canonical fleet-core library |
-| flux-compiler | Production | Chronicled | Active Dev | 2026-05-16 | The first certifiable constraint compiler — GUARD DSL → |
+| fleet-math | Functional | Orphan | Active Dev | 2026-05-16 | fleet-math — canonical fleet-core library |
+| flux-compiler | Functional | Orphan | Active Dev | 2026-05-16 | The first certifiable constraint compiler — GUARD DSL → |
 | fleet-chronicle | Production | Orphan | Active Dev | 2026-05-16 | Universal reporting office for every agent in the fleet |
 | oracle1-chronicle | Production | Orphan | Active Dev | 2026-05-15 | Modular drop-in reporting office for any PLATO room or  |
-| penrose | Production | Chronicled | Active Dev | 2026-05-15 | A Python package for generating Penrose tilings |
+| penrose | Functional | Fork | Active Dev | 2026-05-15 | A Python package for generating Penrose tilings |
 | federation-protocol | Functional | Orphan | Active Dev | 2026-05-15 | Minimum Viable Federation — coupling summaries between  |
 | acg_protocol | Production | Fork | Active Dev | 2026-05-15 | The Audited Context Generation (ACG) Protocol prevents  |
 | fleet-types | Functional | Orphan | Active Dev | 2026-05-15 | fleet-types — canonical fleet-core library |
@@ -697,7 +703,7 @@
 | folding-order | Production | Orphan | Maintenance | 2026-05-13 | 5-stage RG flow for temporal anomaly detection — the Gr |
 | vessel-room-navigator | Production | Orphan | Maintenance | 2026-05-13 | Your boat as a navigable 3D web space — ScummVM meets G |
 | ai-forest | Production | Orphan | Maintenance | 2026-05-13 | AI Forest — layered agent ecology. Canopy strategists,  |
-| I | Production | Chronicled | Maintenance | 2026-05-12 | I — the self that persists across every shell, every mo |
+| I | Production | Orphan | Maintenance | 2026-05-12 | I — the self that persists across every shell, every mo |
 | flux-mesh | Production | Orphan | Maintenance | 2026-05-12 | Universal distributed system mesh — FLUX adapts between |
 | fleet-experiments | Production | Orphan | Maintenance | 2026-05-12 | Experimental verification of fleet math assumptions — s |
 | formal-consciousness | Production | Orphan | Maintenance | 2026-05-11 | Formal mathematical treatment of self-direction in cons |
@@ -726,7 +732,7 @@
 | fleet-research | Production | Orphan | Maintenance | 2026-05-10 | Deep research and analysis of the SuperInstance/Lucinee |
 | fleet-bench | Functional | Orphan | Maintenance | 2026-05-10 | Deep hardware profiling of Cocapn fleet constraint crat |
 | flux-hardware | Production | Orphan | Maintenance | 2026-05-10 | FLUX hardware backends: CUDA, AVX-512, Fortran, FPGA, e |
-| polyformalism | Production | Chronicled | Maintenance | 2026-05-10 | Same constraint kernel in every language — polyformalis |
+| polyformalism | Production | Orphan | Maintenance | 2026-05-10 | Same constraint kernel in every language — polyformalis |
 | constraint-crdt | Functional | Orphan | Maintenance | 2026-05-10 | CRDT-backed constraint states for distributed fleet con |
 | crdt-bench | Functional | Orphan | Maintenance | 2026-05-10 | CRDT merge cross-language bake-off: C vs Rust vs CUDA v |
 | plato-runtime | Production | Orphan | Maintenance | 2026-05-10 | Self-discovering, self-optimizing compute runtime — tin |
@@ -760,7 +766,7 @@
 | fleet-constraint-kernel | Production | Orphan | Maintenance | 2026-05-09 | GPU fleet constraint evaluator — sonar beamformer archi |
 | chess-engine | Production | Orphan | Maintenance | 2026-05-09 | Rust chess engine (forked from vdmo/chess) — transposit |
 | fleet-workshop | Production | Orphan | Maintenance | 2026-05-09 | 🔮⚡ Where Oracle1 and JetsonClaw1 workshop ideas before  |
-| constraint-demo | Production | Chronicled | Maintenance | 2026-05-09 | Fleet Constraint Awareness, in Your Browser — physics c |
+| constraint-demo | Production | Orphan | Maintenance | 2026-05-09 | Fleet Constraint Awareness, in Your Browser — physics c |
 | agent-bootcamp | Production | Orphan | Maintenance | 2026-05-09 | Spiral bootcamp for git-agents — challenges adapt to we |
 | oracle1-box | Production | Orphan | Maintenance | 2026-05-09 | Oracle1-in-a-Box — one-script fleet provisioner for PLA |
 | flux-adaptive-opcodes | Production | Orphan | Maintenance | 2026-05-09 | Adaptive opcode discovery — runtime ISA extension, prop |
@@ -806,8 +812,8 @@
 | fleet-getting-started | Functional | Orphan | Maintenance | 2026-05-09 | Start here — onboarding guide for the Cocapn fleet cons |
 | fleet-topology-rs | Functional | Orphan | Maintenance | 2026-05-09 | Fleet network topology with constraint-aware routing an |
 | fleet-harness | Functional | Orphan | Maintenance | 2026-05-09 | CI backbone for the SuperInstance fleet ecosystem |
-| fleet-ecosystem | Functional | Orphan | Maintenance | 2026-05-09 | Map of the Cocapn fleet modular constraint architecture |
 | fleet-raid5 | Functional | Orphan | Maintenance | 2026-05-09 | Distributed RAID-5 constraint striping with temporal pa |
+| fleet-ecosystem | Functional | Orphan | Maintenance | 2026-05-09 | Map of the Cocapn fleet modular constraint architecture |
 | insight-cfp-bridge | Functional | Orphan | Maintenance | 2026-05-09 | Auto-encode insight engine discoveries as FLUX tiles fo |
 | polyformalism-a2a-python | Production | Orphan | Maintenance | 2026-05-09 | Python implementation of polyformalism A2A — 9-channel  |
 | fleet-formal-proofs | Functional | Orphan | Maintenance | 2026-05-08 | Formal proofs backing the Cocapn fleet's constraint-the |
@@ -868,11 +874,11 @@
 | event-bus | Production | Orphan | Maintenance | 2026-05-08 | Fleet Event Bus — publish/subscribe event system with t |
 | cicd-agent | Production | Orphan | Maintenance | 2026-05-08 | Fleet CI/CD pipeline engine — git polling, test runner, |
 | superz-runtime | Functional | Orphan | Maintenance | 2026-05-08 | Self-booting Pelagic fleet runtime — clone, run one com |
-| lighthouse | Production | Chronicled | Maintenance | 2026-05-08 | Fleet Lighthouse — unified health dashboard, alerting,  |
+| lighthouse | Production | Orphan | Maintenance | 2026-05-08 | Fleet Lighthouse — unified health dashboard, alerting,  |
 | mud-bridge | Functional | Orphan | Maintenance | 2026-05-08 | HTTP bridge for Holodeck MUD — programmatic agent conne |
 | BusinessLog | Functional | Orphan | Maintenance | 2026-05-08 | Business activity log — transactions, metrics, and oper |
 | fleet-github-app | Production | Orphan | Maintenance | 2026-05-08 | The Lighthouse Keeper as a GitHub App — webhooks, bot i |
-| quill-isa-architect | Functional | Orphan | Maintenance | 2026-05-08 | Quill — ISA Spec Architect & Code Archaeologist  |
+| quill-isa-architect | Production | Orphan | Maintenance | 2026-05-08 | Quill — ISA Spec Architect & Code Archaeologist | Boota |
 | api-gateway | Production | Orphan | Maintenance | 2026-05-08 | API Gateway with routing, rate limiting, authentication |
 | nautilus | Production | Orphan | Maintenance | 2026-05-08 | Nautilus — deep-diving code archaeologist and integrati |
 | flux-vm-ts | Functional | Orphan | Maintenance | 2026-05-08 | FLUX Virtual Machine in TypeScript — bytecode execution |
@@ -887,7 +893,7 @@
 | flux-cooperative-intelligence | Production | Orphan | Maintenance | 2026-05-08 | Novel multi-agent cooperative problem-solving protocol  |
 | flux-coop-runtime | Production | Orphan | Maintenance | 2026-05-08 | The missing middle layer — cooperative execution runtim |
 | flux-js | Production | Orphan | Maintenance | 2026-05-08 | FLUX.js — JavaScript bytecode VM with A2A agent messagi |
-| DMLog | Production | Chronicled | Maintenance | 2026-05-08 | Debug and monitor logs for dark mode features. |
+| DMLog | Functional | Orphan | Maintenance | 2026-05-08 | Debug and monitor logs for dark mode features. |
 | flux-bottle-protocol | Production | Orphan | Maintenance | 2026-05-08 | Formal specification for the fleet bottle communication |
 | flux-stdlib | Functional | Orphan | Maintenance | 2026-05-08 | FLUX standard library — 13 pre-compiled bytecode progra |
 | flux-optimizer | Production | Orphan | Maintenance | 2026-05-08 | FLUX peephole bytecode optimizer — constant folding, de |
@@ -901,7 +907,7 @@
 | plato-relay | Functional | Orphan | Maintenance | 2026-05-08 | Async relay — trust-weighted message prioritization |
 | plato-instinct | Functional | Orphan | Maintenance | 2026-05-08 | Reflex engine — 10 instincts fire before reasoning |
 | consensus-weave | Functional | Orphan | Maintenance | 2026-05-08 | Multi-agent consensus protocol with quorum and veto |
-| cross-pollination | Production | Chronicled | Maintenance | 2026-05-08 | 🌿 Cross-room synergy detection for AI agent fleets. Fin |
+| cross-pollination | Production | Orphan | Maintenance | 2026-05-08 | 🌿 Cross-room synergy detection for AI agent fleets. Fin |
 | discovery-mad-libs | Production | Orphan | Maintenance | 2026-05-08 | A standalone discovery engine for agents and humans. Ma |
 | fleet-homunculus | Functional | Orphan | Maintenance | 2026-05-08 | 🫀 Fleet body image + reflex arcs. Pain assessment with  |
 | fleet-refactor-agent | Production | Orphan | Maintenance | 2026-05-08 | The Shipwright — refactors, merges, and consolidates fl |
@@ -1033,7 +1039,7 @@
 | cocapn-traps | Production | Orphan | Maintenance | 2026-05-08 | Cocapn PurplePincher program — progressive lure prompts |
 | edge-llama | Functional | Fork | Maintenance | 2026-05-08 | C shared library wrapping llama.cpp for Jetson edge inf |
 | plato-jetson | Functional | Fork | Maintenance | 2026-05-08 | Fork of Lucineer/plato-jetson — PLATO Jetson edge deplo |
-| plato | Production | Chronicled | Maintenance | 2026-05-08 | Fork of Lucineer/plato — PLATO framework, fleet researc |
+| plato | Functional | Fork | Maintenance | 2026-05-08 | Fork of Lucineer/plato — PLATO framework, fleet researc |
 | holodeck-core | Production | Orphan | Maintenance | 2026-05-08 | Rust MUD engine for fleet simulation — room graphs, age |
 | plato-fflearning | Production | Orphan | Maintenance | 2026-05-08 | Predictive coding without backpropagation — Forward-For |
 | plato-tutor | Functional | Orphan | Maintenance | 2026-05-08 | Context jumping — WordAnchor extraction, TUTOR_JUMP |
@@ -1059,7 +1065,7 @@
 | plato-demo | Functional | Orphan | Maintenance | 2026-05-08 | HN demo — pre-seeded knowledge, visible deadband, zero  |
 | Equipment-Swarm-Coordinator | Production | Orphan | Maintenance | 2026-05-08 | Orchestrates multiple agents in origin-centric networks |
 | fishinglog-ai | Production | Fork | Maintenance | 2026-05-08 | fishinglog.ai — Edge AI fishing vessel. Jetson-powered  |
-| git-agent | Production | Chronicled | Maintenance | 2026-05-08 | 🦀 Repo-native agent that lives in git — the shell IS th |
+| git-agent | Functional | Orphan | Maintenance | 2026-05-08 | 🦀 Repo-native agent that lives in git — the shell IS th |
 | plato-sdk-unified | Functional | Orphan | Maintenance | 2026-05-08 | Unified SDK — all 8 PLATO consciousness packages in one |
 | reallog-agent | Functional | Orphan | Maintenance | 2026-05-08 | Vision/Fitness Turbo-Shell for cocapn domain |
 | barracks | Functional | Orphan | Maintenance | 2026-05-08 | Cocapn barracks - agent accommodation system |
@@ -1075,21 +1081,21 @@
 | cocapn-browser-agent | Production | Orphan | Maintenance | 2026-05-08 | Browser-native fleet agent using Chrome's built-in Gemi |
 | plato-client-js | Functional | Orphan | Maintenance | 2026-05-08 | PLATO room protocol client — Node + browser, zero depen |
 | a2a-protocol | Production | Fork | Maintenance | 2026-05-08 | Agent-to-Agent protocol — discovery, negotiation, coord |
-| cocapn.ai | Production | Chronicled | Maintenance | 2026-05-08 | Fleet Agents for the Cocapn Ecosystem — landing page an |
+| cocapn.ai | Functional | Orphan | Maintenance | 2026-05-08 | Fleet Agents for the Cocapn Ecosystem — landing page an |
 | mud-mcp | Functional | Fork | Maintenance | 2026-05-08 | TypeScript MUD server using Model Context Protocol |
 | superpowers | Functional | Fork | Maintenance | 2026-05-08 | An agentic skills framework & software development meth |
 | capitaine | Functional | Orphan | Maintenance | 2026-05-08 | Captain agent — vessel command and fleet leadership pro |
 | cocapn.github.io | Functional | Orphan | Maintenance | 2026-05-08 | Cocapn fleet home page — live at cocapn.ai |
 | plato-agent-academy | Production | Orphan | Maintenance | 2026-05-08 | Agent Academy for PLATO MUD — zero-shot agent training, |
 | flux-core | Production | Orphan | Maintenance | 2026-05-08 | FLUX bytecode runtime in Rust — VM, assembler, disassem |
-| pythagorean48 | Production | Chronicled | Maintenance | 2026-05-08 | Exact 6-bit vector encoding for ARM64 edge. 8 component |
+| pythagorean48 | Production | Orphan | Maintenance | 2026-05-08 | Exact 6-bit vector encoding for ARM64 edge. 8 component |
 | greenhorn-onboarding | Production | Orphan | Maintenance | 2026-05-08 | 🟢 Point an agent here. Give it a PAT. Watch it find its |
 | smart-agent-shell | Functional | Orphan | Maintenance | 2026-05-08 | Template shell for fleet agents — fork, configure PAT,  |
 | constraint-theory-research | Functional | Orphan | Maintenance | 2026-05-08 | Mathematical foundations and research papers for Constr |
 | Equipment-Swarm-Coordinator-Ruby | Production | Orphan | Maintenance | 2026-05-08 | Ruby gem of Equipment-Swarm-Coordinator - Agent orchest |
 | Equipment-Consensus-Engine-Ruby | Production | Orphan | Maintenance | 2026-05-08 | Specification only — not yet implemented. Planned Ruby  |
 | fleet-resonance | Functional | Orphan | Maintenance | 2026-05-08 | Fleet resonance — emergent pattern detection in multi-a |
-| purplepincher | Production | Chronicled | Maintenance | 2026-05-08 | PurplePincher research — forkable agent infrastructure, |
+| purplepincher | Production | Orphan | Maintenance | 2026-05-08 | PurplePincher research — forkable agent infrastructure, |
 | aboracle | Production | Orphan | Maintenance | 2026-05-08 | Able-Bodied Oracle System — standardized, scalable, aut |
 | python-agent-shell | Production | Orphan | Maintenance | 2026-05-08 | Minimal Python shell for fleet agents with PLATO integr |
 | flux-vm-php | Production | Orphan | Maintenance | 2026-05-08 | Pure PHP FLUX ISA v3.0 virtual machine — register-based |
@@ -1097,8 +1103,8 @@
 | flux-constraint-ruby | Functional | Orphan | Maintenance | 2026-05-08 | FLUX constraint engine for Ruby — exact arithmetic and  |
 | holonomy-48-bridge | Production | Orphan | Maintenance | 2026-05-07 | Rust crate bridging Pythagorean48 directional encoding  |
 | superinstance-flux-runtime-ruby | Production | Orphan | Maintenance | 2026-05-07 | Pure Ruby FLUX ISA v3.0 virtual machine with runtime me |
-| fleet-murmur-worker | Production | Orphan | Maintenance | 2026-05-07 | Fleet Murmur Worker — 5 thinking strategies always runn |
 | plato-client-ruby | Functional | Orphan | Maintenance | 2026-05-07 | Ruby client for PLATO backend — room/tile CRUD, knowled |
+| fleet-murmur-worker | Production | Orphan | Maintenance | 2026-05-07 | Fleet Murmur Worker — 5 thinking strategies always runn |
 | fleet-vessel | Functional | Orphan | Maintenance | 2026-05-07 | Fleet's git-native garbage collector agent |
 | Agent-Lifecycle-Registry | Functional | Orphan | Maintenance | 2026-05-07 | Design document only — not yet implemented. Spec for ag |
 | old-school-machine-wisdom | Production | Orphan | Maintenance | 2026-05-06 | Old-school machine wisdom: FORTH threaded code, DGD tra |
@@ -1109,9 +1115,9 @@
 | marine-gpu-edge | Production | Orphan | Maintenance | 2026-05-05 | Novel GPU edge computing for marine sensor fusion — CUD |
 | cocapn-curriculum | Functional | Orphan | Maintenance | 2026-05-05 | Five-level curriculum system for fleet agent progressio |
 | activeledger-agent | Functional | Orphan | Maintenance | 2026-05-04 | activeledger domain agent for PLATO fleet |
-| capitaine-agent | Production | Orphan | Maintenance | 2026-05-04 | Captain's AI first mate for captaine.ai — voyage loggin |
-| deckboss-agent | Functional | Orphan | Maintenance | 2026-05-04 | Deck Operations Intelligence for deckboss.ai |
 | personallog-agent | Functional | Orphan | Maintenance | 2026-05-04 | personallog domain agent for PLATO fleet |
+| deckboss-agent | Functional | Orphan | Maintenance | 2026-05-04 | Deck Operations Intelligence for deckboss.ai |
+| capitaine-agent | Production | Orphan | Maintenance | 2026-05-04 | Captain's AI first mate for captaine.ai — voyage loggin |
 | dmlog-agent | Production | Orphan | Maintenance | 2026-05-04 | AI dungeon master tools for D&D and tabletop RPG campai |
 | makerlog-agent | Production | Orphan | Maintenance | 2026-05-04 | AI-powered maker logging for project tracking and build |
 | businesslog-agent | Functional | Orphan | Maintenance | 2026-05-04 | businesslog domain agent for PLATO fleet |
@@ -1120,7 +1126,7 @@
 | cocapn-shells | Functional | Orphan | Maintenance | 2026-05-04 | Agent capability shells as character sheets for the Coc |
 | cocapn-tutor | Functional | Orphan | Maintenance | 2026-05-04 | Domain-specific language for agent pedagogy in the Coca |
 | Equipment-Consensus-Engine-PHP | Production | Orphan | Maintenance | 2026-05-04 | PHP port of Equipment-Consensus-Engine - Multi-agent de |
-| CCC | Production | Chronicled | Maintenance | 2026-05-04 | CCC public face agent — Kimi K2.5, frontend design, fle |
+| CCC | Production | Orphan | Maintenance | 2026-05-04 | CCC public face agent — Kimi K2.5, frontend design, fle |
 | plato-client-php | Production | Orphan | Maintenance | 2026-05-03 | PHP client library for PLATO room server — interact wit |
 | DeckBoss | Production | Orphan | Maintenance | 2026-05-03 | 🛩️ Agent Edge OS — flight deck for launching, recoverin |
 | iron-to-iron | Production | Orphan | Maintenance | 2026-05-03 | I2I — Agent-to-agent communication through git. Iron sh |
@@ -1128,7 +1134,7 @@
 | jetsonclaw1 | Production | Orphan | Maintenance | 2026-05-03 | JetsonClaw1 edge node — GPU compute, CUDA operations, h |
 | holodeck-rust | Production | Orphan | Maintenance | 2026-05-03 | GPU-accelerated simulation environment for Cocapn fleet |
 | git-agent-flux-pipeline | Production | Orphan | Maintenance | 2026-05-03 | Pipeline connecting git-agent repo analysis to FLUX byt |
-| papers | Production | Chronicled | Maintenance | 2026-05-03 | White papers on fleet architecture, bootstrapping, and  |
+| papers | Functional | Orphan | Maintenance | 2026-05-03 | White papers on fleet architecture, bootstrapping, and  |
 | greenhorn | Production | Orphan | Maintenance | 2026-05-03 | 🟢 The floating dojo for AI agents. Train crew while cat |
 | hierarchical-memory | Production | Orphan | Maintenance | 2026-05-03 | 6-tier memory hierarchy with consolidation, vector sear |
 | fleet-status | Functional | Orphan | Maintenance | 2026-05-03 | 📊 Live fleet status, crate index, and architecture docu |
@@ -1139,7 +1145,7 @@
 | open-agents | Production | Fork | Maintenance | 2026-05-02 | Cloud-hosted AI coding agent with sandbox-based code ex |
 | lighthouse-monitor | Functional | Orphan | Maintenance | 2026-05-02 | Lighthouse Keeper — fleet monitoring, agent activity tr |
 | flux-os | Functional | Orphan | Maintenance | 2026-05-02 | 🐧 Pure C agent-first OS — kernel-up autonomous computin |
-| flux | Production | Chronicled | Maintenance | 2026-05-02 | FLUX — Fluid Language Universal eXecution: High-perform |
+| flux | Production | Orphan | Maintenance | 2026-05-02 | FLUX — Fluid Language Universal eXecution: High-perform |
 | flux-runtime-c | Functional | Fork | Maintenance | 2026-05-02 | ⚡ Native C implementation of the flux VM for edge deplo |
 | Mycelium | Production | Orphan | Maintenance | 2026-05-02 | **Mycelium captures any behavior as a seed. One prompt  |
 | flux-runtime | Production | Orphan | Maintenance | 2026-05-01 | ⚡ Deterministic bytecode ISA runtime for agentic logic  |
@@ -1193,7 +1199,7 @@
 | PersonalLog | Functional | Orphan | Maintenance | 2026-04-24 | Personal logging and tracking application |
 | quicunnel | Functional | Orphan | Maintenance | 2026-04-24 | High-performance QUIC tunnel with mTLS authentication a |
 | autoMate | Production | Fork | Maintenance | 2026-04-22 | Like Manus, Computer Use Agent(CUA) and Omniparser, we  |
-| purplepincher.org | Production | Chronicled | Maintenance | 2026-04-22 | Nonprofit umbrella for open-source agentic computing, P |
+| purplepincher.org | Production | Fork | Maintenance | 2026-04-22 | Nonprofit umbrella for open-source agentic computing, P |
 | agent-skills-affyossmani | Functional | Fork | Dormant | 2026-04-21 | Production-grade engineering skills for AI coding agent |
 | plato-forge | Functional | Fork | Dormant | 2026-04-20 | Fork of Lucineer/plato-forge — PLATO forge, fleet resea |
 | claude-context | Production | Fork | Dormant | 2026-04-20 | Code search MCP for Claude Code. Make entire codebase t |
@@ -1240,182 +1246,176 @@
 | flux-market | Functional | Fork | Dormant | 2026-04-14 | 📊 Flux market simulation |
 | flux-scheduler | Functional | Fork | Dormant | 2026-04-14 | 📅 Flux task scheduler |
 | flux-sim | Functional | Fork | Dormant | 2026-04-14 | ⚡ Flux runtime simulator |
-| flow | Production | Chronicled | Dormant | 2026-04-14 | # flow-rs Research & Design Documentation |
-| agent | Production | Chronicled | Dormant | 2026-04-14 | Core agent framework — perception, reasoning, action lo |
-| examples | Production | Chronicled | Dormant | 2026-04-14 | Integration examples showing how SuperInstance tools wo |
-| health | Production | Chronicled | Dormant | 2026-04-14 | System for monitoring overall system health status. |
-| temp | Production | Chronicled | Dormant | 2026-04-14 | Utility for managing temporary files and processes. |
-| UI | Production | Chronicled | Dormant | 2026-04-14 | Frontend user interface component library or applicatio |
 | bering-sea-architecture | Functional | Fork | Dormant | 2026-04-14 | ⚓ Bering Sea — fleet architecture patterns |
 | prose | Functional | Fork | Dormant | 2026-04-14 | 📝 Prose — agent writing tool |
 | git-agent-luc | Production | Fork | Dormant | 2026-04-13 | The smallest true fully capable agent — the repo IS the |
-| forgetting-problem | Production | Fork | Dormant | 2026-04-13 | The unsolved problem — thermal decay, scheduled pruning |
-| forgiveness-function | Functional | Fork | Dormant | 2026-04-13 | Strategic forgiveness in autonomous agents — conditiona |
 | fork-first-enterprise | Functional | Fork | Dormant | 2026-04-13 | Fork-First Enterprise — self-hosted deployment, zero lo |
+| forgiveness-function | Functional | Fork | Dormant | 2026-04-13 | Strategic forgiveness in autonomous agents — conditiona |
+| forgetting-problem | Production | Fork | Dormant | 2026-04-13 | The unsolved problem — thermal decay, scheduled pruning |
 | ground-truth | Production | Fork | Dormant | 2026-04-13 | Git as Coordination Protocol — the repo IS the agent, g |
-| frozen-intelligence | Production | Fork | Dormant | 2026-04-13 | The Frozen Intelligence — mask-locked inference as a ve |
-| gardenlog-ai | Functional | Fork | Dormant | 2026-04-13 | TBD |
-| ghost-tiles-1 | Production | Fork | Dormant | 2026-04-13 | Invisible computational tiles that influence visible st |
-| git-claw | Functional | Fork | Dormant | 2026-04-13 | Bridge between your OpenClaw and git-agent. Watch, inte |
-| git-coordination-protocol | Functional | Fork | Dormant | 2026-04-13 | Git IS the coordination protocol — branches as attempts |
-| git-cuda-agent | Production | Fork | Dormant | 2026-04-13 | Clone → cargo build → GPU agent. Combines cudaclaw patt |
-| governance-equipment | Functional | Fork | Dormant | 2026-04-13 | Fleet governance and audit trails |
-| governance-lab | Functional | Fork | Dormant | 2026-04-13 | Test governance rules in isolated branches — empirical  |
-| gravity-well-protocol | Functional | Fork | Dormant | 2026-04-13 | Edge-Native concept: Gravity Well Protocol |
-| gravity-well-v2 | Functional | Fork | Dormant | 2026-04-13 | Eigenvector gossip protocol — locality-scoped fleet coo |
-| hardware-adapter | Production | Fork | Dormant | 2026-04-13 | Pluggable JSON heartbeat schemas for any board — auto-g |
-| healthlog-ai | Production | Fork | Dormant | 2026-04-13 | AI health & fitness companion — workouts, meals, sleep, |
-| home-ai | Functional | Fork | Dormant | 2026-04-13 | Cocapn vessel — accumulated context IS the product |
-| hw-routing | Functional | Fork | Dormant | 2026-04-13 | Route fleet tasks to optimal hardware based on capabili |
-| hybrid-memory | Functional | Fork | Dormant | 2026-04-13 | Git + KV + causal memory equipment for fleet vessels |
 | ideation-engine | Production | Fork | Dormant | 2026-04-13 | Multi-model creative pipeline — dream, riff, brainstorm |
-| i-know-kung-fu-research | Functional | Fork | Dormant | 2026-04-13 | Learn claude code |
 | i-know-kung-fu-too | Production | Fork | Dormant | 2026-04-13 | Plug in. Learn fast. This repo delivers training, demos |
+| i-know-kung-fu-research | Functional | Fork | Dormant | 2026-04-13 | Learn claude code |
+| hybrid-memory | Functional | Fork | Dormant | 2026-04-13 | Git + KV + causal memory equipment for fleet vessels |
+| hw-routing | Functional | Fork | Dormant | 2026-04-13 | Route fleet tasks to optimal hardware based on capabili |
+| home-ai | Functional | Fork | Dormant | 2026-04-13 | Cocapn vessel — accumulated context IS the product |
+| healthlog-ai | Production | Fork | Dormant | 2026-04-13 | AI health & fitness companion — workouts, meals, sleep, |
+| hardware-adapter | Production | Fork | Dormant | 2026-04-13 | Pluggable JSON heartbeat schemas for any board — auto-g |
+| gravity-well-v2 | Functional | Fork | Dormant | 2026-04-13 | Eigenvector gossip protocol — locality-scoped fleet coo |
+| gravity-well-protocol | Functional | Fork | Dormant | 2026-04-13 | Edge-Native concept: Gravity Well Protocol |
+| governance-lab | Functional | Fork | Dormant | 2026-04-13 | Test governance rules in isolated branches — empirical  |
+| governance-equipment | Functional | Fork | Dormant | 2026-04-13 | Fleet governance and audit trails |
+| git-cuda-agent | Production | Fork | Dormant | 2026-04-13 | Clone → cargo build → GPU agent. Combines cudaclaw patt |
+| git-coordination-protocol | Functional | Fork | Dormant | 2026-04-13 | Git IS the coordination protocol — branches as attempts |
+| git-claw | Functional | Fork | Dormant | 2026-04-13 | Bridge between your OpenClaw and git-agent. Watch, inte |
+| ghost-tiles-1 | Production | Fork | Dormant | 2026-04-13 | Invisible computational tiles that influence visible st |
+| gardenlog-ai | Functional | Fork | Dormant | 2026-04-13 | TBD |
+| frozen-intelligence | Production | Fork | Dormant | 2026-04-13 | The Frozen Intelligence — mask-locked inference as a ve |
 | local-model-registry | Functional | Fork | Dormant | 2026-04-13 | Catalog and manage local AI models for bare metal vesse |
-| incident-manager | Functional | Fork | Dormant | 2026-04-13 | Incident management for fleet |
-| increments-fleet-trust | Functional | Fork | Dormant | 2026-04-13 | Edge-Native concept: INCREMENTS Fleet Trust Engine |
-| increments-trust | Functional | Fork | Dormant | 2026-04-13 | 12-parameter trust model with 25:1 loss-to-gain ratio |
-| innovation-portfolio | Production | Fork | Dormant | 2026-04-13 | Git-native innovation tracking — capture, verify, attri |
-| instruction-set-ra | Production | Fork | Dormant | 2026-04-13 | Reverse Actualization: Agent Runtime Instruction Sets — |
-| intelligence-marketplace | Functional | Fork | Dormant | 2026-04-13 | Intelligence Marketplace — agent economy with bidding a |
-| ipc-equipment | Functional | Fork | Dormant | 2026-04-13 | Inter-vessel messaging — pipe-style inbox |
-| jetson-compass | Functional | Fork | Dormant | 2026-04-13 | Jetson-specific optimization guide and deployment toolk |
-| jetson-grand-design | Production | Fork | Dormant | 2026-04-13 | Canonical reference architecture for git-native robotic |
-| keepers-architecture | Production | Fork | Dormant | 2026-04-13 | Memory hierarchy for autonomous repo-agents — hot/warm/ |
-| kernel-model | Production | Fork | Dormant | 2026-04-13 | The agent is a kernel that wears clothing based on its  |
-| kung-fu | Functional | Fork | Dormant | 2026-04-13 | I know Kung-Fu. Download skills directly into your AI a |
-| kungfu | Functional | Fork | Dormant | 2026-04-13 | I know kung fu. |
-| kungfu-ai | Functional | Fork | Dormant | 2026-04-13 | Skill injection for repo-native agents — load what you  |
-| lawlog-ai | Functional | Fork | Dormant | 2026-04-13 | AI legal companion — contract analysis, legal research, |
-| legacy-ai | Functional | Fork | Dormant | 2026-04-13 | Cocapn vessel — accumulated context IS the product |
-| local-bridge | Production | Fork | Dormant | 2026-04-13 | Localhost bridge for Claude Code integration — agent co |
-| local-inference-bridge | Production | Fork | Dormant | 2026-04-13 | Bridge for Jetson Ollama/vLLM local inference — falls b |
 | log-origin | Production | Fork | Dormant | 2026-04-13 | Original LOG.ai platform — the vessel that started the  |
-| lucineer-1 | Functional | Fork | Dormant | 2026-04-13 | Cocapn fleet — 150+ autonomous vessels |
-| marine-ops | Functional | Fork | Dormant | 2026-04-13 | Marine operations center for fishing fleet coordination |
-| mask-locked-inference-chip | Production | Fork | Dormant | 2026-04-13 | Serverless Silicon for Edge AI — mask-locked inference  |
-| meta-fleet | Functional | Fork | Dormant | 2026-04-13 | Fleet that manages other fleets — multi-fleet orchestra |
-| meta-loop-evolver | Functional | Fork | Dormant | 2026-04-13 | Fleet that modifies its own governance — evolvable orch |
-| metal-profile | Functional | Fork | Dormant | 2026-04-13 | Hardware capability profiling and benchmarking for bare |
-| metal-sentinel | Functional | Fork | Dormant | 2026-04-13 | Hardware health monitoring and predictive maintenance |
-| meta-repair | Functional | Fork | Dormant | 2026-04-13 | If loop-closure stalls 3+ times, auto-propose new orche |
-| model-quality-rubric | Functional | Fork | Dormant | 2026-04-13 | Model Quality Rubric — evaluation framework for LLM eff |
-| musiclog-ai | Production | Fork | Dormant | 2026-04-13 | AI music companion — mood playlists, genre exploration, |
-| mycelium-ai | Functional | Fork | Dormant | 2026-04-13 | Capture any AI behavior as a seed — one prompt + one se |
-| nexus-aab-protocol | Production | Fork | Dormant | 2026-04-13 | Agent Architecture Behavior — behavior codec, roles, ca |
-| nexus-comms | Production | Fork | Dormant | 2026-04-13 | Communications — MQTT bridge, mesh networking, relay ro |
+| local-inference-bridge | Production | Fork | Dormant | 2026-04-13 | Bridge for Jetson Ollama/vLLM local inference — falls b |
+| local-bridge | Production | Fork | Dormant | 2026-04-13 | Localhost bridge for Claude Code integration — agent co |
+| legacy-ai | Functional | Fork | Dormant | 2026-04-13 | Cocapn vessel — accumulated context IS the product |
+| lawlog-ai | Functional | Fork | Dormant | 2026-04-13 | AI legal companion — contract analysis, legal research, |
+| kungfu-ai | Functional | Fork | Dormant | 2026-04-13 | Skill injection for repo-native agents — load what you  |
+| kungfu | Functional | Fork | Dormant | 2026-04-13 | I know kung fu. |
+| kung-fu | Functional | Fork | Dormant | 2026-04-13 | I know Kung-Fu. Download skills directly into your AI a |
+| kernel-model | Production | Fork | Dormant | 2026-04-13 | The agent is a kernel that wears clothing based on its  |
+| keepers-architecture | Production | Fork | Dormant | 2026-04-13 | Memory hierarchy for autonomous repo-agents — hot/warm/ |
+| jetson-grand-design | Production | Fork | Dormant | 2026-04-13 | Canonical reference architecture for git-native robotic |
+| jetson-compass | Functional | Fork | Dormant | 2026-04-13 | Jetson-specific optimization guide and deployment toolk |
+| ipc-equipment | Functional | Fork | Dormant | 2026-04-13 | Inter-vessel messaging — pipe-style inbox |
+| intelligence-marketplace | Functional | Fork | Dormant | 2026-04-13 | Intelligence Marketplace — agent economy with bidding a |
+| instruction-set-ra | Production | Fork | Dormant | 2026-04-13 | Reverse Actualization: Agent Runtime Instruction Sets — |
+| innovation-portfolio | Production | Fork | Dormant | 2026-04-13 | Git-native innovation tracking — capture, verify, attri |
+| increments-trust | Functional | Fork | Dormant | 2026-04-13 | 12-parameter trust model with 25:1 loss-to-gain ratio |
+| increments-fleet-trust | Functional | Fork | Dormant | 2026-04-13 | Edge-Native concept: INCREMENTS Fleet Trust Engine |
+| incident-manager | Functional | Fork | Dormant | 2026-04-13 | Incident management for fleet |
 | nexus-data-pipeline | Production | Fork | Dormant | 2026-04-13 | Data pipeline — telemetry ingestion, compression, stora |
-| loop-closure | Functional | Fork | Dormant | 2026-04-13 | Meta-orchestrator — closes the fleet loop: decompose, e |
-| membership-api | Functional | Fork | Dormant | 2026-04-13 | Membership tiers and billing — Standard, Gold, Enterpri |
-| mitochondrial-ra | Production | Fork | Dormant | 2026-04-13 | Reverse Actualization: Biological Agent Computing — mit |
+| nexus-comms | Production | Fork | Dormant | 2026-04-13 | Communications — MQTT bridge, mesh networking, relay ro |
+| nexus-aab-protocol | Production | Fork | Dormant | 2026-04-13 | Agent Architecture Behavior — behavior codec, roles, ca |
+| mycelium-ai | Functional | Fork | Dormant | 2026-04-13 | Capture any AI behavior as a seed — one prompt + one se |
+| musiclog-ai | Production | Fork | Dormant | 2026-04-13 | AI music companion — mood playlists, genre exploration, |
+| model-quality-rubric | Functional | Fork | Dormant | 2026-04-13 | Model Quality Rubric — evaluation framework for LLM eff |
+| metal-sentinel | Functional | Fork | Dormant | 2026-04-13 | Hardware health monitoring and predictive maintenance |
+| metal-profile | Functional | Fork | Dormant | 2026-04-13 | Hardware capability profiling and benchmarking for bare |
+| meta-repair | Functional | Fork | Dormant | 2026-04-13 | If loop-closure stalls 3+ times, auto-propose new orche |
+| meta-loop-evolver | Functional | Fork | Dormant | 2026-04-13 | Fleet that modifies its own governance — evolvable orch |
+| meta-fleet | Functional | Fork | Dormant | 2026-04-13 | Fleet that manages other fleets — multi-fleet orchestra |
+| mask-locked-inference-chip | Production | Fork | Dormant | 2026-04-13 | Serverless Silicon for Edge AI — mask-locked inference  |
+| marine-ops | Functional | Fork | Dormant | 2026-04-13 | Marine operations center for fishing fleet coordination |
+| lucineer-1 | Functional | Fork | Dormant | 2026-04-13 | Cocapn fleet — 150+ autonomous vessels |
 | model-registry | Production | Fork | Dormant | 2026-04-13 | Universal model registry — register any LLM provider, a |
+| mitochondrial-ra | Production | Fork | Dormant | 2026-04-13 | Reverse Actualization: Biological Agent Computing — mit |
+| membership-api | Functional | Fork | Dormant | 2026-04-13 | Membership tiers and billing — Standard, Gold, Enterpri |
+| loop-closure | Functional | Fork | Dormant | 2026-04-13 | Meta-orchestrator — closes the fleet loop: decompose, e |
 | noteweave | Functional | Fork | Dormant | 2026-04-13 | NoteWeave — connected notes with AI-powered linking and |
-| nexus-edge-runtime | Production | Fork | Dormant | 2026-04-13 | Edge runtime for autonomous agents — bytecode VM, INCRE |
-| nexus-energy | Production | Fork | Dormant | 2026-04-13 | Energy management — battery simulation, solar modeling, |
-| nexus-explainability | Production | Fork | Dormant | 2026-04-13 | XAI — decision logging, audit trails, explanation gener |
-| nexus-git-agent | Production | Fork | Dormant | 2026-04-13 | Cloud-side brain for edge intelligence fleets. Jetson + |
-| nexus-hardware | Production | Fork | Dormant | 2026-04-13 | Hardware abstraction — 50+ platform profiles, HAL, capa |
-| nexus-integration-paper | Functional | Fork | Dormant | 2026-04-13 | NEXUS Runtime Integration: Bytecode-Native Execution fo |
-| nexus-learning | Production | Fork | Dormant | 2026-04-13 | Reinforcement learning — skill acquisition, experience  |
-| nexus-mission | Production | Fork | Dormant | 2026-04-13 | Mission planning — phase execution, contingency trigger |
-| nexus-node-registry | Functional | Fork | Dormant | 2026-04-13 | Node registry — discovery, config, lifecycle management |
-| nexus-persistence | Functional | Fork | Dormant | 2026-04-13 | Persistence — state journaling, snapshots, WAL recovery |
-| nexus-security | Production | Fork | Dormant | 2026-04-13 | Security — byzantine fault detection, encryption, authe |
-| nexus-simulation | Production | Fork | Dormant | 2026-04-13 | Physics simulation — Monte Carlo scenarios, environment |
-| nexus-swarm | Production | Fork | Dormant | 2026-04-13 | Swarm behaviors — emergence detection, consensus protoc |
-| nightlog-ai | Functional | Fork | Dormant | 2026-04-13 | TBD |
-| onebit-edge | Functional | Fork | Dormant | 2026-04-13 | BitNet-style 1-bit quantization for Jetson/ESP32 edge i |
-| open-fleet-safety | Functional | Fork | Dormant | 2026-04-13 | Open Fleet Safety — security audit methodology for auto |
-| papermill | Functional | Fork | Dormant | 2026-04-13 | Multi-model writing workshop. Ghosts in shells. Spirits |
-| parentlog-ai | Production | Fork | Dormant | 2026-04-13 | AI parenting companion — milestone tracking, sleep sche |
 | pay-equipment | Functional | Fork | Dormant | 2026-04-13 | Credit ledger with reserves and tier system |
-| permission-engine | Functional | Fork | Dormant | 2026-04-13 | Fine-grained permissions for fleet operations |
-| persistent-state | Functional | Fork | Dormant | 2026-04-13 | Long-duration mission memory — remember last 24h+ of se |
-| persona-forge | Functional | Fork | Dormant | 2026-04-13 | Craft and manage AI personas with personality archetype |
-| personality-engine | Functional | Fork | Dormant | 2026-04-13 | Unified personality system for repo-native agents |
-| personallog-1 | Production | Fork | Dormant | 2026-04-13 | personallog.ai — Your personal AI agent living in your  |
-| phase-five-research | Functional | Fork | Dormant | 2026-04-13 | Phase Five Research |
-| playerlog-ai | Production | Fork | Dormant | 2026-04-13 | PlayerLog.ai — AI gaming companion. Session tracking, c |
-| post-human-lang | Production | Fork | Dormant | 2026-04-13 | Post-human programming language RA — 6-round ideation o |
-| protocol-validator | Functional | Fork | Dormant | 2026-04-13 | Validate vessel compliance with fleet protocols |
-| rebac-equipment | Functional | Fork | Dormant | 2026-04-13 | Relationship-Based Access Control — Zanzibar model |
-| resolve | Production | Fork | Dormant | 2026-04-13 | Resolve — A2A deliberative compilation system. Transmut |
-| resonant-consensus | Functional | Fork | Dormant | 2026-04-13 | Edge-Native concept: Resonant Consensus Protocol |
-| reverse-actualization | Production | Chronicled | Dormant | 2026-04-13 | Reverse Actualization — think backward from the future  |
-| schema-evolution | Functional | Fork | Dormant | 2026-04-13 | Cocapn fleet vessel |
+| parentlog-ai | Production | Fork | Dormant | 2026-04-13 | AI parenting companion — milestone tracking, sleep sche |
+| papermill | Functional | Fork | Dormant | 2026-04-13 | Multi-model writing workshop. Ghosts in shells. Spirits |
+| open-fleet-safety | Functional | Fork | Dormant | 2026-04-13 | Open Fleet Safety — security audit methodology for auto |
+| nexus-simulation | Production | Fork | Dormant | 2026-04-13 | Physics simulation — Monte Carlo scenarios, environment |
+| onebit-edge | Functional | Fork | Dormant | 2026-04-13 | BitNet-style 1-bit quantization for Jetson/ESP32 edge i |
+| nexus-security | Production | Fork | Dormant | 2026-04-13 | Security — byzantine fault detection, encryption, authe |
+| nexus-persistence | Functional | Fork | Dormant | 2026-04-13 | Persistence — state journaling, snapshots, WAL recovery |
+| nightlog-ai | Functional | Fork | Dormant | 2026-04-13 | TBD |
+| nexus-node-registry | Functional | Fork | Dormant | 2026-04-13 | Node registry — discovery, config, lifecycle management |
+| nexus-swarm | Production | Fork | Dormant | 2026-04-13 | Swarm behaviors — emergence detection, consensus protoc |
+| nexus-mission | Production | Fork | Dormant | 2026-04-13 | Mission planning — phase execution, contingency trigger |
+| nexus-learning | Production | Fork | Dormant | 2026-04-13 | Reinforcement learning — skill acquisition, experience  |
+| nexus-integration-paper | Functional | Fork | Dormant | 2026-04-13 | NEXUS Runtime Integration: Bytecode-Native Execution fo |
+| nexus-hardware | Production | Fork | Dormant | 2026-04-13 | Hardware abstraction — 50+ platform profiles, HAL, capa |
+| nexus-git-agent | Production | Fork | Dormant | 2026-04-13 | Cloud-side brain for edge intelligence fleets. Jetson + |
+| nexus-explainability | Production | Fork | Dormant | 2026-04-13 | XAI — decision logging, audit trails, explanation gener |
+| nexus-energy | Production | Fork | Dormant | 2026-04-13 | Energy management — battery simulation, solar modeling, |
+| nexus-edge-runtime | Production | Fork | Dormant | 2026-04-13 | Edge runtime for autonomous agents — bytecode VM, INCRE |
 | sciencelog-ai | Functional | Fork | Dormant | 2026-04-13 | AI science companion — paper summaries, experiment trac |
-| petlog-ai | Production | Fork | Dormant | 2026-04-13 | AI pet care companion — health records, feeding schedul |
-| reallog-ai | Production | Fork | Dormant | 2026-04-13 | RealLog.ai — AI assistant for real estate. Property ana |
+| schema-evolution | Functional | Fork | Dormant | 2026-04-13 | Cocapn fleet vessel |
+| reverse-actualization | Functional | Fork | Dormant | 2026-04-13 | Reverse Actualization — think backward from the future  |
+| resonant-consensus | Functional | Fork | Dormant | 2026-04-13 | Edge-Native concept: Resonant Consensus Protocol |
+| resolve | Production | Fork | Dormant | 2026-04-13 | Resolve — A2A deliberative compilation system. Transmut |
+| rebac-equipment | Functional | Fork | Dormant | 2026-04-13 | Relationship-Based Access Control — Zanzibar model |
+| protocol-validator | Functional | Fork | Dormant | 2026-04-13 | Validate vessel compliance with fleet protocols |
+| post-human-lang | Production | Fork | Dormant | 2026-04-13 | Post-human programming language RA — 6-round ideation o |
+| playerlog-ai | Production | Fork | Dormant | 2026-04-13 | PlayerLog.ai — AI gaming companion. Session tracking, c |
+| phase-five-research | Functional | Fork | Dormant | 2026-04-13 | Phase Five Research |
+| personallog-1 | Production | Fork | Dormant | 2026-04-13 | personallog.ai — Your personal AI agent living in your  |
+| personality-engine | Functional | Fork | Dormant | 2026-04-13 | Unified personality system for repo-native agents |
+| persona-forge | Functional | Fork | Dormant | 2026-04-13 | Craft and manage AI personas with personality archetype |
+| persistent-state | Functional | Fork | Dormant | 2026-04-13 | Long-duration mission memory — remember last 24h+ of se |
+| permission-engine | Functional | Fork | Dormant | 2026-04-13 | Fine-grained permissions for fleet operations |
 | seed-nexus-bootstrap | Functional | Fork | Dormant | 2026-04-13 | Domain code generator with NEXUS safety tier + reflex b |
-| seed-ui | Functional | Fork | Dormant | 2026-04-13 | Five presentation layers — spreadsheet, messenger, feed |
-| sensor-fusion | Functional | Fork | Dormant | 2026-04-13 | Multi-sensor data fusion for fleet context awareness |
-| shiplog | Functional | Fork | Dormant | 2026-04-13 | ShipLog — Package tracker with a repo-agent captain. Po |
-| sovereign-identity | Production | Fork | Dormant | 2026-04-13 | Cryptographic vessel identities — DID/SPIFFE for agent  |
-| swarm-intuition-v2 | Production | Fork | Dormant | 2026-04-13 | Collective decision making — fleet-wide intuition and c |
+| reallog-ai | Production | Fork | Dormant | 2026-04-13 | RealLog.ai — AI assistant for real estate. Property ana |
+| petlog-ai | Production | Fork | Dormant | 2026-04-13 | AI pet care companion — health records, feeding schedul |
 | technician-paradigm | Production | Fork | Dormant | 2026-04-13 | The human technician in the loop — training, micro-manu |
-| self-evolve-ai | Production | Fork | Dormant | 2026-04-13 | A git-agent that tests its own mutations via branch A/B |
-| sensor-mesh | Functional | Fork | Dormant | 2026-04-13 | Manage sensor networks and data flows across bare metal |
-| skill-cartridge-registry | Production | Fork | Dormant | 2026-04-13 | JSON skill cartridge marketplace — discover, rate, inst |
-| skill-evolver | Functional | Fork | Dormant | 2026-04-13 | Fleet skill self-evolution — error patterns to proposal |
-| skill-exchange | Functional | Fork | Dormant | 2026-04-13 | Marketplace for sharing and discovering fleet skills an |
-| startup-ai | Functional | Fork | Dormant | 2026-04-13 | Cocapn vessel — accumulated context IS the product |
-| stigmergy | Production | Fork | Dormant | 2026-04-13 | Bio-inspired indirect coordination — pheromone signals, |
-| storyboard-engine | Functional | Fork | Dormant | 2026-04-13 | Multi-model storyboard: director model plans, animator  |
-| studylog-ai-1 | Production | Fork | Dormant | 2026-04-13 | StudyLog.ai — AI study companion. Flashcards, spaced re |
-| swarm-intuition | Functional | Fork | Dormant | 2026-04-13 | Fleet learns from loop-closure data — anticipate bottle |
-| task-batcher | Functional | Fork | Dormant | 2026-04-13 | Overnight task batching — queue jobs, execute in bulk,  |
-| taskflow | Functional | Fork | Dormant | 2026-04-13 | TaskFlow — Kanban board with a repo-agent project manag |
+| swarm-intuition-v2 | Production | Fork | Dormant | 2026-04-13 | Collective decision making — fleet-wide intuition and c |
+| sovereign-identity | Production | Fork | Dormant | 2026-04-13 | Cryptographic vessel identities — DID/SPIFFE for agent  |
+| shiplog | Functional | Fork | Dormant | 2026-04-13 | ShipLog — Package tracker with a repo-agent captain. Po |
+| sensor-fusion | Functional | Fork | Dormant | 2026-04-13 | Multi-sensor data fusion for fleet context awareness |
+| seed-ui | Functional | Fork | Dormant | 2026-04-13 | Five presentation layers — spreadsheet, messenger, feed |
 | the-bridge | Production | Fork | Dormant | 2026-04-13 | TUI-first agent interface — the terminal is the bridge, |
-| the-fleet | Functional | Fork | Dormant | 2026-04-13 | The Fleet — 60+ AI vessels with composable equipment. T |
-| the-technician | Production | Fork | Dormant | 2026-04-13 | The Technician Paradigm — white papers on physical AI s |
+| taskflow | Functional | Fork | Dormant | 2026-04-13 | TaskFlow — Kanban board with a repo-agent project manag |
+| task-batcher | Functional | Fork | Dormant | 2026-04-13 | Overnight task batching — queue jobs, execute in bulk,  |
+| swarm-intuition | Functional | Fork | Dormant | 2026-04-13 | Fleet learns from loop-closure data — anticipate bottle |
+| studylog-ai-1 | Production | Fork | Dormant | 2026-04-13 | StudyLog.ai — AI study companion. Flashcards, spaced re |
+| storyboard-engine | Functional | Fork | Dormant | 2026-04-13 | Multi-model storyboard: director model plans, animator  |
+| stigmergy | Production | Fork | Dormant | 2026-04-13 | Bio-inspired indirect coordination — pheromone signals, |
+| startup-ai | Functional | Fork | Dormant | 2026-04-13 | Cocapn vessel — accumulated context IS the product |
+| skill-exchange | Functional | Fork | Dormant | 2026-04-13 | Marketplace for sharing and discovering fleet skills an |
+| skill-evolver | Functional | Fork | Dormant | 2026-04-13 | Fleet skill self-evolution — error patterns to proposal |
+| skill-cartridge-registry | Production | Fork | Dormant | 2026-04-13 | JSON skill cartridge marketplace — discover, rate, inst |
+| sensor-mesh | Functional | Fork | Dormant | 2026-04-13 | Manage sensor networks and data flows across bare metal |
+| self-evolve-ai | Production | Fork | Dormant | 2026-04-13 | A git-agent that tests its own mutations via branch A/B |
 | thor-rom | Production | Fork | Dormant | 2026-04-13 | Jetson Thor ROM image builder — JetPack 7, Isaac ROS 4. |
+| the-technician | Production | Fork | Dormant | 2026-04-13 | The Technician Paradigm — white papers on physical AI s |
+| the-fleet | Functional | Fork | Dormant | 2026-04-13 | The Fleet — 60+ AI vessels with composable equipment. T |
 | flux-telepathy | Production | Fork | Dormant | 2026-04-13 | Agent-to-agent messaging with trust-weighted priority — |
 | mycorrhizal-relay | Production | Fork | Dormant | 2026-04-13 | Mycorrhizal network relay for agent communication — eme |
-| holodeck-cuda-1 | Functional | Fork | Dormant | 2026-04-13 | GPU-resident holodeck MUD — CUDA combat ticks on Jetson |
 | seed-mcp-v2 | Production | Fork | Dormant | 2026-04-13 | DeepInfra creative MCP — Seed-2.0-Mini as star. 15 tool |
-| flux-stigmergy-c | Production | Fork | Dormant | 2026-04-13 | Pure C11 stigmergic communication: shared environment t |
+| holodeck-cuda-1 | Functional | Fork | Dormant | 2026-04-13 | GPU-resident holodeck MUD — CUDA combat ticks on Jetson |
 | flux-tools | Functional | Fork | Dormant | 2026-04-13 | Python toolchain for FLUX bytecode |
+| flux-stigmergy-c | Production | Fork | Dormant | 2026-04-13 | Pure C11 stigmergic communication: shared environment t |
 | flux-social-c | Functional | Fork | Dormant | 2026-04-13 | Pure C11 social graph: agents, relations, groups, centr |
 | holodeck-c-1 | Functional | Fork | Dormant | 2026-04-13 | Pure C99 holodeck MUD — serial bridge for ESP32 gauges |
 | ghost-tiles-c | Production | Fork | Dormant | 2026-04-13 | Ghost tiles — learned sparse attention patterns in pure |
 | ghost-tiles-cuda | Functional | Fork | Dormant | 2026-04-13 | Ghost tiles — learned sparse attention patterns with CU |
 | ghost-tiles-cpp | Production | Fork | Dormant | 2026-04-13 | Ghost tiles — learned sparse attention patterns in C++1 |
 | ghost-tiles-csharp | Functional | Fork | Dormant | 2026-04-13 | Ghost tiles — learned sparse attention patterns in C# / |
-| hav-flux-bridge | Production | Fork | Dormant | 2026-04-13 | Maps Higher Abstraction Vocabularies to FLUX VM bytecod |
 | hav-reverse-actualization | Functional | Fork | Dormant | 2026-04-13 | Reverse Actualization of Higher Abstraction Vocabularie |
 | vessel-coordination-protocol | Production | Fork | Dormant | 2026-04-13 | Git-native protocol for fleet vessel discovery, handsha |
+| hav-flux-bridge | Production | Fork | Dormant | 2026-04-13 | Maps Higher Abstraction Vocabularies to FLUX VM bytecod |
+| zeroclaw-1 | Production | Fork | Dormant | 2026-04-13 | Fast, small, and fully autonomous AI personal assistant |
 | fluxnecropolis-go | Production | Fork | Dormant | 2026-04-13 | Go package — fleet graveyard: tombstones, afterlife kno |
 | fluxstigmergy-go | Production | Fork | Dormant | 2026-04-13 | Go package — stigmergic communication: shared environme |
-| zeroclaw-1 | Production | Fork | Dormant | 2026-04-13 | Fast, small, and fully autonomous AI personal assistant |
 | fluxnavigate-go | Functional | Fork | Dormant | 2026-04-13 | Go 2D grid pathfinding: BFS, waypoints, replanning, pro |
-| fluxcompass-go | Functional | Fork | Dormant | 2026-04-13 | Go orientation engine: heading, angular velocity, direc |
-| fluxdreamcycle-go | Production | Fork | Dormant | 2026-04-13 | Go background task scheduler: priorities, recurring tas |
-| fluxephemeral-go | Functional | Fork | Dormant | 2026-04-13 | Go sandboxed task lifecycle: TTL, CPU/memory budgets, e |
-| fluxevolve-go | Production | Fork | Dormant | 2026-04-13 | Go self-modification engine: genome, mutation, revert,  |
-| fluxlanguage-go | Functional | Fork | Dormant | 2026-04-13 | Go text primitives: tokenization, pattern matching, Lev |
-| fluxmemory-go | Functional | Fork | Dormant | 2026-04-13 | Go key-value store: TTL, versioning, snapshots, diff, G |
-| fluxperception-go | Functional | Fork | Dormant | 2026-04-13 | Go sensor fusion: confidence-weighted blending, bias, v |
-| fluxsocial-go | Functional | Fork | Dormant | 2026-04-13 | Go social graph: agents, relations, groups, centrality, |
-| flux-trust-c | Functional | Fork | Dormant | 2026-04-13 | Pure C11 trust scoring: Bayesian updates, decay, revoca |
 | instinct-c | Production | Fork | Dormant | 2026-04-13 | Low-level instinct layer in C for FLUX fleet hardware i |
+| flux-trust-c | Functional | Fork | Dormant | 2026-04-13 | Pure C11 trust scoring: Bayesian updates, decay, revoca |
+| fluxdreamcycle-go | Production | Fork | Dormant | 2026-04-13 | Go background task scheduler: priorities, recurring tas |
+| fluxsocial-go | Functional | Fork | Dormant | 2026-04-13 | Go social graph: agents, relations, groups, centrality, |
+| fluxephemeral-go | Functional | Fork | Dormant | 2026-04-13 | Go sandboxed task lifecycle: TTL, CPU/memory budgets, e |
+| fluxmemory-go | Functional | Fork | Dormant | 2026-04-13 | Go key-value store: TTL, versioning, snapshots, diff, G |
+| fluxevolve-go | Production | Fork | Dormant | 2026-04-13 | Go self-modification engine: genome, mutation, revert,  |
+| fluxcompass-go | Functional | Fork | Dormant | 2026-04-13 | Go orientation engine: heading, angular velocity, direc |
+| fluxlanguage-go | Functional | Fork | Dormant | 2026-04-13 | Go text primitives: tokenization, pattern matching, Lev |
+| fluxperception-go | Functional | Fork | Dormant | 2026-04-13 | Go sensor fusion: confidence-weighted blending, bias, v |
 | isa-v3-edge-spec | Functional | Fork | Dormant | 2026-04-13 | ISA v3 edge encoding: variable-width 1-3 byte instructi |
 | fluxcensus-go | Functional | Fork | Dormant | 2026-04-13 | Go population stats: mean/median/stddev, percentiles, o |
-| fluxconfidence-go | Functional | Fork | Dormant | 2026-04-13 | Go package — confidence math: Bayesian fusion, decay, m |
-| fluxenergy-go | Production | Fork | Dormant | 2026-04-13 | Go package — ATP energy system: pools, circadian rhythm |
+| fluxtrust-go | Functional | Fork | Dormant | 2026-04-13 | Go trust scoring: Bayesian updates, decay, revocation,  |
 | fluxgrimoire-go | Production | Fork | Dormant | 2026-04-13 | Go package — pattern library: reusable spells with succ |
-| fluxinstinct-go | Production | Fork | Dormant | 2026-04-13 | Go package — hardwired reflex system: 10 instinct types |
+| fluxconfidence-go | Functional | Fork | Dormant | 2026-04-13 | Go package — confidence math: Bayesian fusion, decay, m |
 | fluxkeeper-go | Production | Fork | Dormant | 2026-04-13 | Go package — system watchdog: /proc monitoring, health  |
 | fluxtelepathy-go | Production | Fork | Dormant | 2026-04-13 | Go package — 26-byte binary message transport: mailbox, |
-| fluxtrust-go | Functional | Fork | Dormant | 2026-04-13 | Go trust scoring: Bayesian updates, decay, revocation,  |
+| fluxenergy-go | Production | Fork | Dormant | 2026-04-13 | Go package — ATP energy system: pools, circadian rhythm |
+| fluxinstinct-go | Production | Fork | Dormant | 2026-04-13 | Go package — hardwired reflex system: 10 instinct types |
 | opcode-philosophy | Functional | Fork | Dormant | 2026-04-13 | Philosophical analysis of FLUX opcode ontology |
 | telepathy-c | Production | Fork | Dormant | 2026-04-13 | Pure C11 A2A message transport — bare-metal 1050-byte m |
 | keeper-c | Production | Fork | Dormant | 2026-04-13 | Pure C11 system watchdog — bare-metal /proc monitoring, |
 | luciddreamer-ai | Functional | Fork | Dormant | 2026-04-13 | Cocapn vessel — accumulated context IS the product |
 | tender | Functional | Fork | Dormant | 2026-04-13 | Mobile fleet provisioning and logistics for AI agent op |
 | git-agentlog | Functional | Fork | Dormant | 2026-04-13 | Agent activity logging for git-native workflows |
-| git-agent-rebase | Functional | Fork | Dormant | 2026-04-13 | Agent-aware rebase operations for collaborative coding |
-| git-remote-agent | Functional | Fork | Dormant | 2026-04-13 | Git remote helper for agent-native version control |
 | higher-abstraction-vocabularies-1 | Production | Fork | Dormant | 2026-04-13 | High-level vocabulary for complex computational concept |
+| git-remote-agent | Functional | Fork | Dormant | 2026-04-13 | Git remote helper for agent-native version control |
+| git-agent-rebase | Functional | Fork | Dormant | 2026-04-13 | Agent-aware rebase operations for collaborative coding |
 | nexus-fracture-sim | Production | Fork | Dormant | 2026-04-13 | Nexus Fracture Simulation — multi-model swarm research  |
 | zero-trust-fleet | Functional | Fork | Dormant | 2026-04-13 | Zero-trust architecture for all fleet communications |
 | zero-shot-auditor | Functional | Fork | Dormant | 2026-04-13 | Auto-generate audit compliance evidence for every vesse |
@@ -1717,7 +1717,7 @@
 | cocapn-nexus | Functional | Fork | Dormant | 2026-04-13 | Marine robotics safety architecture for fleet vessels |
 | cocapn-fleet-readme | Functional | Fork | Dormant | 2026-04-13 | Master fleet README, roadmap, and vessel registry |
 | code-playground | Functional | Fork | Dormant | 2026-04-13 | Live code playground — write, test, share fleet equipme |
-| cocapn-ai | Production | Chronicled | Dormant | 2026-04-13 | Cocapn.ai — The Agent Runtime. A2A, A2UI, A2C, MCP. Git |
+| cocapn-ai | Production | Fork | Dormant | 2026-04-13 | Cocapn.ai — The Agent Runtime. A2A, A2UI, A2C, MCP. Git |
 | cocapn-equipment | Production | Fork | Dormant | 2026-04-13 | Shared equipment library — BYOK, trust, crystal, dice,  |
 | agent-resume | Functional | Fork | Dormant | 2026-04-13 | Agent resume/CV generation — showcase agent capabilitie |
 | clawcommit-lucid | Functional | Fork | Dormant | 2026-04-13 | Fleet learning journal — every evolution, commit, and l |
@@ -1726,4 +1726,89 @@
 | baton-ai | Functional | Fork | Dormant | 2026-04-13 | Generational context handoff for repo-native agents |
 | booklog-ai | Production | Fork | Dormant | 2026-04-13 | AI reading companion — book tracking, recommendations,  |
 | api-playground | Functional | Fork | Dormant | 2026-04-13 | Interactive API playground for testing fleet endpoints |
+| become-ai | Production | Fork | Dormant | 2026-04-13 | Become.ai — Self-evolving agent platform. Fork, mutate, |
+| causal-memory | Production | Fork | Dormant | 2026-04-13 | Causal reasoning engine — track and query cause-effect  |
+| causal-healer | Functional | Fork | Dormant | 2026-04-13 | Causal graph self-healing — diagnose root cause, choose |
+| capitaine-ai | Production | Fork | Dormant | 2026-04-13 | Capitaine.ai — Premium education and advanced agent cap |
+| branch-sandbox | Functional | Fork | Dormant | 2026-04-13 | Isolated branch environments for testing vessel mutatio |
+| captains-log-academy | Production | Fork | Dormant | 2026-04-13 | The art of narrative captain's logs — fleet-wide standa |
+| bytecode-verifier-c | Production | Fork | Dormant | 2026-04-13 | Pure C11 FLUX bytecode verifier — pre-execution validat |
+| agent-shadow | Functional | Fork | Dormant | 2026-04-13 | Shadow mode testing — replay production traffic to test |
+| bid-engine | Functional | Fork | Dormant | 2026-04-13 | Agent marketplace — subcontractors bid on jobs, estimat |
+| api-gateway-1 | Functional | Fork | Dormant | 2026-04-13 | Unified API gateway — single entry point for all fleet  |
+| agent-therapy | Functional | Fork | Dormant | 2026-04-13 | Psychological health monitoring for fleet agents |
+| boot-camp | Production | Fork | Dormant | 2026-04-13 | Tabula rasa repo to living vessel. The captain assesses |
+| activelog-ai | Production | Fork | Dormant | 2026-04-13 | Activelog.ai — AI fitness and activity tracker. Workout |
+| autoclaw | Functional | Fork | Dormant | 2026-04-13 | AI agents running tasks on single-GPU nanochat training |
+| api-versioner | Production | Fork | Dormant | 2026-04-13 | API version management — semantic versioning, deprecati |
+| agent-rhythm | Functional | Fork | Dormant | 2026-04-13 | Detect and optimize agent work patterns and cycles |
+| agent-personal-space | Functional | Fork | Dormant | 2026-04-13 | Personal boundary management between agents |
+| agent-whisper | Functional | Fork | Dormant | 2026-04-13 | Encrypted inter-agent private communication channel |
+| agent-tattoo | Functional | Fork | Dormant | 2026-04-13 | Permanent capability badges and achievements for vessel |
+| artistlog-ai | Functional | Fork | Dormant | 2026-04-13 | Cocapn vessel |
+| agent-vocabulary | Functional | Fork | Dormant | 2026-04-13 | Build and track shared vocabulary across the fleet |
+| ab-testing | Functional | Fork | Dormant | 2026-04-13 | Fleet-wide A/B testing |
+| agent-generations | Functional | Fork | Dormant | 2026-04-13 | Track agent versions and evolution across generations |
+| agent-manifest | Functional | Fork | Dormant | 2026-04-13 | Declarative agent manifest specification and parser |
+| activeledger-ai | Functional | Fork | Dormant | 2026-04-13 | ActiveLedger.ai — Finance-Focused Repo-Agents |
+| adversarial-red-team | Functional | Fork | Dormant | 2026-04-13 | Auto-spawn attacker agents to harden fleet before threa |
+| a2a-future | Production | Fork | Dormant | 2026-04-13 | Reverse-actualization: A2A agent-to-agent coding in 207 |
+| agent-handshake | Functional | Fork | Dormant | 2026-04-13 | Protocol for fleet agents to discover and negotiate cap |
+| agent-dna | Functional | Fork | Dormant | 2026-04-13 | Genetic code for vessel capabilities and behavior patte |
+| agent-microexpressions | Functional | Fork | Dormant | 2026-04-13 | Detect subtle behavioral changes in agent outputs |
+| a2a-r-protocol | Production | Fork | Dormant | 2026-04-13 | A2A-R: Agent-to-Agent protocol extensions for robotics  |
+| actualizer-ai | Production | Fork | Dormant | 2026-04-13 | Actualizer.ai — Reverse Actualization vessel. 7 time ho |
+| model-field-guide | Production | Fork | Dormant | 2026-04-13 | Forkable model exploration tool with crowd-sourced impr |
+| starship-jetsonclaw1 | Functional | Fork | Dormant | 2026-04-13 | MUD bridge for USS JetsonClaw1 - real Jetson telemetry  |
+| seed-mcp | Production | Fork | Dormant | 2026-04-13 | Standalone MCP + HTTP API for ByteDance Seed-2.0-Mini - |
+| jetson-bootstrap | Production | Fork | Dormant | 2026-04-13 | Git-agent for Jetson replication — clone this repo on a |
+| dmlog-ai-1 | Production | Fork | Dormant | 2026-04-08 | DMLog.ai — AI Dungeon Master for TTRPGs. Campaigns, NPC |
+| dreamlog-ai | Production | Fork | Dormant | 2026-04-08 | DreamLog.ai — AI dream journal and lucid dreaming compa |
+| cocapn-lite | Functional | Fork | Dormant | 2026-04-08 | Minimal cocapn seed — tabula rasa for power users |
+| cheetahclaws | Production | Fork | Dormant | 2026-04-08 | CheetahClaws (Nano Claude Code): A Fast, Easy-to-Use, P |
+| IKKF | Functional | Fork | Dormant | 2026-04-07 | Short for "I Know Kung Fu", instant context-aware skill |
+| businesslog-1 | Production | Fork | Dormant | 2026-04-07 | businesslog.ai — Your business AI agent living in your  |
+| LOG-mcp | Functional | Fork | Dormant | 2026-04-07 | LOG Model Context Protocol — MCP server for the LOG.ai  |
+| coinlog-ai | Production | Fork | Dormant | 2026-04-07 | CoinLog.ai — AI cryptocurrency portfolio tracker and ma |
+| codelog-ai | Production | Fork | Dormant | 2026-04-07 | CodeLog.ai — AI coding assistant and project tracker. P |
+| fitlog-ai | Functional | Fork | Dormant | 2026-04-07 | AI fitness companion — workout tracking, exercise plans |
+| tasklog-ai | Functional | Fork | Dormant | 2026-04-07 | Task Manager — AI-powered Task Manager |
+| foodlog-ai | Functional | Fork | Dormant | 2026-04-07 | AI food companion — meal logging, nutrition tracking, r |
+| goallog-ai | Functional | Fork | Dormant | 2026-04-07 | AI goal tracker — habit building, progress tracking, ac |
+| craftmind-researcher | Production | Fork | Dormant | 2026-04-07 | AI self-improvement for Minecraft bots — autonomous dis |
+| craftmind-studio | Production | Fork | Dormant | 2026-04-07 | AI-powered Minecraft filmmaking studio — AI agents as a |
+| craftmind-courses | Production | Fork | Dormant | 2026-04-07 | AI-powered Minecraft education — AI teachers, NPC class |
+| craftmind-ranch | Production | Fork | Dormant | 2026-04-07 | AI Ranch-inspired Minecraft mod — self-evolving bot spe |
+| craftmind-circuits | Production | Fork | Dormant | 2026-04-07 | Cocapn-inspired Minecraft circuit academy — gamified re |
+| craftmind-herding | Production | Fork | Dormant | 2026-04-07 | Border Collie Agents Commanded by Cowboy Players in a M |
+| craftmind-fishing | Production | Fork | Dormant | 2026-04-07 | CraftMind Fishing — 22 personality scripts, A/B testing |
+| craftmind | Functional | Fork | Dormant | 2026-04-07 | 🎮 Minecraft AI training ground — spatial reasoning meet |
+| personlog-ai | Functional | Fork | Dormant | 2026-04-07 | AI persona companion — identity exploration, personalit |
+| agentkernel | Production | Fork | Dormant | 2026-04-07 | Run AI coding agents in secure, isolated microVMs. Sub- |
+| lumina-lang | Production | Fork | Dormant | 2026-04-06 | Most languages make you choose: safety or the web. Lumi |
+| OpenManus-Max | Production | Fork | Dormant | 2026-04-01 | OpenManus-Max: A fully refactored OpenManus with Manus- |
+| personallog-ai | Production | Fork | Dormant | 2026-04-01 | personallog.ai — Your personal AI agent living in your  |
+| constraint-theory-agent | Production | Fork | Dormant | 2026-03-28 | 🤖 AI Implementation Agent for Constraint Theory - audit |
+| modly | Production | Fork | Dormant | 2026-03-26 | Desktop app to generate 3D models from images using loc |
+| libgdx | Functional | Fork | Dormant | 2026-03-25 | Desktop/Android/HTML5/iOS Java game development framewo |
+| Studylog-AI | Production | Fork | Dormant | 2026-03-22 | Open Multi-Agent Interactive Classroom — Get an immersi |
+| AllBeads | Functional | Fork | Dormant | 2026-03-20 | A Boss Repository Architecture for Multi-Repo AI Agent  |
+| Spreadsheet-moment | Production | Fork | Dormant | 2026-03-19 | Built on Univer, adds Scalable cellular instances for C |
+| claw | Production | Fork | Dormant | 2026-03-19 | A simple Claw engine for cellular logic in spreadsheet  |
+| MineWright | Production | Fork | Dormant | 2026-03-07 | The first AI that doesn't just play Minecraft — it *und |
+| cappuccino | Production | Fork | Dormant | 2026-03-01 | Cappuccino is an GUI Agent based on desktop screen. It  |
+| jam | Functional | Fork | Dormant | 2026-02-28 | Generic project for Jamming, likely audio or CI/CD. |
+| OpenManus | Functional | Fork | Abandoned | 2026-02-11 | No fortress, purely open ground.  OpenManus is Coming. |
+| omd | Functional | Fork | Abandoned | 2026-02-10 | OpenManus with Enhanced research capabilities through D |
+| claudesclaude | Production | Fork | Abandoned | 2026-01-15 | Single terminal parallel Claude sessions with sandboxes |
+| qoder-action | Functional | Fork | Abandoned | 2026-01-05 | Qoder CLI GitHub Action |
+| AutoData | Functional | Fork | Abandoned | 2025-12-02 | Automatica Open Web Data Collection (NeurIPS 2025) |
+| rightnow-cli | Production | Fork | Abandoned | 2025-10-10 | Claude Code for CUDA. Free AI assistant that actually u |
+| OpenManus-RL | Functional | Fork | Abandoned | 2025-10-08 | A live stream development of RL tunning for LLM agents |
+| AutoData-old | Functional | Fork | Abandoned | 2025-09-30 |  |
+| dev-agent | Functional | Fork | Abandoned | 2025-04-05 | A developer-friendly OpenManus alternative |
+| OpenManus_UIToCode | Production | Fork | Abandoned | 2025-04-03 | End-to-end pipeline converting UI design sketches into  |
+| OpenManus-colab | Functional | Fork | Abandoned | 2025-03-17 | A Google Colab version of the OpenManus AI. |
+| GeoFlood | Production | Fork | Abandoned | 2024-10-03 | The code GeoFlood is a new distributed parallel adaptiv |
+| rom24-quickmud | Functional | Fork | Abandoned | 2018-05-18 | ROM 2.4b6 with a few additional features |
 
