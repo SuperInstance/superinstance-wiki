@@ -1,0 +1,36 @@
+name: Repo Metrics
+
+on:
+  schedule:
+    # Weekly on Sundays at 05:17 UTC (off-peak)
+    - cron: '17 5 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run metrics script
+        run: python scripts/repo_metrics.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/repo-metrics.json METRICS-DASHBOARD.md
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: update repo metrics [$(date -u +%Y-%m-%d)]"
+          git push
