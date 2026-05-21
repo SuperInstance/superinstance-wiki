@@ -52,6 +52,10 @@ experimental = {
 def normalize_api_repo(raw):
     """Convert GitHub API response to gh CLI format."""
     lang = raw.get('language')
+    vis = raw.get('visibility')
+    if not vis:
+        # API uses 'private' boolean
+        vis = 'private' if raw.get('private', False) else 'public'
     return {
         'name': raw['name'],
         'createdAt': raw['created_at'],
@@ -60,6 +64,7 @@ def normalize_api_repo(raw):
         'primaryLanguage': {'name': lang} if lang else None,
         'isFork': raw.get('fork', False),
         'isArchived': raw.get('archived', False),
+        'visibility': vis,
     }
 
 
@@ -67,7 +72,7 @@ def fetch_repos():
     """Fetch all repos from GitHub via API or gh CLI."""
     print("Fetching repos from GitHub...")
     
-    # Try GitHub API first (works in Actions with GITHUB_TOKEN)
+    # Try GitHub API first (works in Actions with GITHUB_TOKEN if scoped correctly)
     token = os.environ.get('GITHUB_TOKEN') or os.environ.get('GH_TOKEN')
     if token:
         print("  Using GitHub API (GITHUB_TOKEN detected)")
@@ -81,26 +86,38 @@ def fetch_repos():
         per_page = 100
         while True:
             url = f'https://api.github.com/orgs/{ORG}/repos?per_page={per_page}&page={page}'
-            resp = requests.get(url, headers=headers)
-            if resp.status_code != 200:
-                print(f"  API error {resp.status_code}: {resp.text}", file=sys.stderr)
+            try:
+                if requests is None:
+                    break
+                resp = requests.get(url, headers=headers)
+                if resp.status_code == 404:
+                    print(f"  API 404 — token may lack org repo list permissions. Falling back to gh CLI.")
+                    break
+                if resp.status_code != 200:
+                    print(f"  API error {resp.status_code}: {resp.text[:100]}", file=sys.stderr)
+                    break
+                batch = resp.json()
+                if not batch:
+                    break
+                repos.extend([normalize_api_repo(r) for r in batch])
+                if len(batch) < per_page:
+                    break
+                page += 1
+            except Exception as e:
+                print(f"  API exception: {e}", file=sys.stderr)
                 break
-            batch = resp.json()
-            if not batch:
-                break
-            repos.extend([normalize_api_repo(r) for r in batch])
-            if len(batch) < per_page:
-                break
-            page += 1
-        print(f"  Fetched {len(repos)} repos via API")
-        return repos
+        
+        if repos:
+            print(f"  Fetched {len(repos)} repos via API")
+            return repos
+        print("  API returned 0 repos, falling back to gh CLI")
     
     # Fallback to gh CLI
     print("  Using gh CLI")
     cmd = [
         "gh", "repo", "list", ORG,
         "--limit", str(REPO_LIMIT),
-        "--json", "name,createdAt,pushedAt,description,primaryLanguage,isFork,isArchived"
+        "--json", "name,createdAt,pushedAt,description,primaryLanguage,isFork,isArchived,visibility"
     ]
     result = subprocess.run(cmd, capture_output=True, text=True)
     if result.returncode != 0:
@@ -324,6 +341,11 @@ def write_master_index(repos, path):
         f.write("# Master Repo Index\n\n")
         f.write(f"**Generated:** {datetime.now().strftime('%Y-%m-%d')} | **Repos:** {total}\n\n")
         
+        if total == 0:
+            f.write("*No repos fetched. Check API token permissions.*\n")
+            print(f"  Wrote {path} (empty — 0 repos)")
+            return
+        
         # Summary tables
         tiers = {}
         for r in repos:
@@ -334,7 +356,8 @@ def write_master_index(repos, path):
         f.write("|------|-------|---|\n")
         for tier in ['Production', 'Functional', 'Skeleton', 'Scaffold']:
             c = tiers.get(tier, 0)
-            f.write(f"| {tier} | {c} | {c/total*100:.1f}% |\n")
+            pct = c/total*100 if total > 0 else 0
+            f.write(f"| {tier} | {c} | {pct:.1f}% |\n")
         f.write("\n")
         
         actions = {}
@@ -346,7 +369,8 @@ def write_master_index(repos, path):
         f.write("|--------|-------|---|\n")
         for action in ['KEEP', 'PRIVATE', 'ARCHIVE', 'MONITOR', 'REVIEW']:
             c = actions.get(action, 0)
-            f.write(f"| {action} | {c} | {c/total*100:.1f}% |\n")
+            pct = c/total*100 if total > 0 else 0
+            f.write(f"| {action} | {c} | {pct:.1f}% |\n")
         f.write("\n")
         
         f.write("## Monthly Velocity\n\n")
