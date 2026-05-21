@@ -15,8 +15,12 @@ import subprocess
 import sys
 from datetime import datetime, timedelta
 
+try:
+    import requests
+except ImportError:
+    requests = None
+
 ORG = "SuperInstance"
-BATCH_SIZE = 1000
 REPO_LIMIT = 2000
 
 # Known fleet categorization
@@ -45,9 +49,54 @@ experimental = {
 }
 
 
+def normalize_api_repo(raw):
+    """Convert GitHub API response to gh CLI format."""
+    lang = raw.get('language')
+    return {
+        'name': raw['name'],
+        'createdAt': raw['created_at'],
+        'pushedAt': raw['pushed_at'],
+        'description': raw.get('description') or '',
+        'primaryLanguage': {'name': lang} if lang else None,
+        'isFork': raw.get('fork', False),
+        'isArchived': raw.get('archived', False),
+    }
+
+
 def fetch_repos():
-    """Fetch all repos from GitHub via gh CLI."""
+    """Fetch all repos from GitHub via API or gh CLI."""
     print("Fetching repos from GitHub...")
+    
+    # Try GitHub API first (works in Actions with GITHUB_TOKEN)
+    token = os.environ.get('GITHUB_TOKEN') or os.environ.get('GH_TOKEN')
+    if token:
+        print("  Using GitHub API (GITHUB_TOKEN detected)")
+        headers = {
+            'Authorization': f'Bearer {token}',
+            'Accept': 'application/vnd.github+json',
+            'X-GitHub-Api-Version': '2022-11-28'
+        }
+        repos = []
+        page = 1
+        per_page = 100
+        while True:
+            url = f'https://api.github.com/orgs/{ORG}/repos?per_page={per_page}&page={page}'
+            resp = requests.get(url, headers=headers)
+            if resp.status_code != 200:
+                print(f"  API error {resp.status_code}: {resp.text}", file=sys.stderr)
+                break
+            batch = resp.json()
+            if not batch:
+                break
+            repos.extend([normalize_api_repo(r) for r in batch])
+            if len(batch) < per_page:
+                break
+            page += 1
+        print(f"  Fetched {len(repos)} repos via API")
+        return repos
+    
+    # Fallback to gh CLI
+    print("  Using gh CLI")
     cmd = [
         "gh", "repo", "list", ORG,
         "--limit", str(REPO_LIMIT),
