@@ -1,7 +1,9 @@
 # Fleet Catalog
-**Generated:** 2026-05-10 03:32 UTC
-**Total repositories:** 1577
+**Generated:** 2026-05-21 02:41 UTC
+**Total repositories:** ~1,700
 A detailed catalog of every repo in the SuperInstance organization — what it does, who built it, what it evolved from, and its current status.
+
+> 🔄 This catalog is supplemented by automated triage indexes. See [INDEXES/MASTER-INDEX.md](INDEXES/MASTER-INDEX.md) for the latest completeness, relevance, and lifecycle classifications.
 ---
 
 ## Core Infrastructure
