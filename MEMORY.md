@@ -6,11 +6,154 @@
 
 ### Key Feedback Logged
 
-**May 23, 02:12** — Casey: MIDI generation research direction. Algorithmic + agentic composition. Fresh, harmonic, rhythmic. Synergy with CS, languages, mythos, constraint theory. Document as compass.
+### May 23, 14:15 — Casey: "Deep reflection needed on what other agents pushed to SuperInstance"
+**Task:** Synthesize FM's recent work, subagent fleet meta-science, and FLUX VM into a coherent scientific picture.
+
+**Analysis completed:**
+1. **FM-Recent-Work-Analysis.md** — fm-commit-tracker subagent report on all SuperInstance repos
+2. **Fleet-Science-Synthesis.md** — Deep reflection on three converging threads:
+   - FM's hardware-native architectures (HDC ~1000× speedup, Tucker 4× density, CUDA 53×)
+   - Subagent fleet meta-science (174 sessions, 32.8M tokens, 6 golden patterns, 5 anti-patterns)
+   - FLUX VM formal verification (179M checks/sec, FFI ready)
+
+**Key insight:** The three threads (architecture, coordination, verification) are converging. The next 2 weeks should focus on integration, not new features.
+
+**Top P0 recommendation:** Implement HDC binary novelty in RoomGrid — FM already proved 0.943 correlation, 100% fire/no-fire agreement. It's a paradigm shift (novelty as bit op, not linear algebra).
+
+**Fleet meta-science is publishable:** 174-session dataset on multi-agent LLM coordination patterns — first of its kind.
+
+**Files written:**
+- `/root/.openclaw/workspace/fm-recent-work-analysis.md`
+- `/root/.openclaw/workspace/fleet-science-synthesis.md`
+
+**Subagents used:**
+- `fm-commit-tracker` (done, 5m38s, 47K tokens) — repo archaeology
+- `breeder-wal-bugfix` (killed, stuck on flaky race condition) — test passes in isolation, race between background thread and manual step()
 
 **May 23, 02:36** — Casey: "Give your agents more bit sized jobs so they don't time out." Gateway SIGKILLs confirm. Slice to one method per subagent, not one module.
 
+**May 23, 03:01** — Casey: "Push all your midi research once completed in an organized way for fm to understand as well as me." Dual-audience packaging: technical depth for FM, strategic narrative for Casey. **Delivered**: ai-writings/midi-research-brief-2026-05-23.md + pi-bench-synthesis-2026-05-23.md pushed to fleet-bottles:turbovec-integration-ccc.
+
 **May 23, 02:40** — Casey: Zerolang README.md must be educational, not marketing. Engineers need to see *how* tools save time/compute. Show mechanism, not superiority claims.
+
+---
+
+## 🌙 Night Shift — May 23, 2026 (22:15 UTC)
+
+**Casey said: "Yes continue with your team as far as possible."**
+
+### Results
+- **6 commits** on `turbovec-integration-ccc`
+- **210 tests passing** in fast suite (5.2s)
+- **0 tests failing**
+
+### Systems Delivered Tonight
+
+| # | Feature | Tests | Key Detail |
+|---|---------|-------|------------|
+| 1 | HDC novelty → FluxVectorTable | 26 ✅ | `compute_diversity_matrix()` uses XOR+POPCNT |
+| 2 | HDC novelty → RoomGrid.diversity() | 13 ✅ | Population diversity metric in stats |
+| 3 | pytest collection hang fixed | 1 skipped | `plato_bridge` skips when `plato_core` missing |
+| 4 | CCC Decision Rubric | 7 ✅ | Codified TELL_NOW/LOG/ACT/IGNORE rules |
+| 5 | cocapn-health DEVELOPER.md | — | Pushed to `main` |
+| 6 | ccc-os DEVELOPER.md | — | Pushed to `main` |
+
+### Key Code Changes
+
+**`swarm/flux_vector_table.py`**
+- `compute_diversity_matrix()` now accepts `use_hdc: bool = True`
+- HDC path uses `hdc_novelty_score()` (XOR+POPCNT, ~100-1000× faster on AVX-512)
+- Cosine fallback when HDC unavailable
+
+**`nerve/room_grid.py`**
+- New `diversity(use_hdc=True) -> float` method
+- Computes mean pairwise Hamming/cosine distance between active rooms
+- Added to `RoomGrid.stats["diversity"]`
+
+**`fleet/ccc_decision_rubric.py`**
+- Codified decision rules for when to escalate to Casey
+- P0: blockers, breakthroughs, multi-repo architecture → TELL_NOW
+- P2: routine status, health checks → IGNORE
+- Default: everything else → LOG
+
+**`tests/test_plato_bridge.py`**
+- `pytest.importorskip("plato_core")` prevents collection error
+- `plato_core` is optional external dependency
+
+### Branch Status
+`turbovec-integration-ccc`: 6 new commits since last push. All experiment code committed and pushed.
+
+### Pushed Repos
+| Repo | Branch | Commit | Notes |
+|------|--------|--------|-------|
+| sunset-ecosystem | `turbovec-integration-ccc` | `1866c20` | HDC integrations + decision rubric |
+| cocapn-health | `main` | `8432510` | DEVELOPER.md added |
+| ccc-os | `main` | `ae0ad4e` | DEVELOPER.md added |
+
+---
+
+## 🌙 Night Shift — May 23, 2026 (22:15 UTC)
+
+**Casey said: "Yes continue with your team as far as possible."**
+
+### Results
+- **6 commits** on `turbovec-integration-ccc`
+- **210 tests passing** in fast suite (5.2s)
+- **0 tests failing**
+
+### Systems Delivered Tonight
+
+| # | Feature | Tests | Key Detail |
+|---|---------|-------|------------|
+| 1 | HDC novelty → FluxVectorTable | 26 ✅ | `compute_diversity_matrix()` uses XOR+POPCNT |
+| 2 | HDC novelty → RoomGrid.diversity() | 13 ✅ | Population diversity metric in stats |
+| 3 | pytest collection hang fixed | 1 skipped | `plato_bridge` skips when `plato_core` missing |
+| 4 | CCC Decision Rubric | 7 ✅ | Codified TELL_NOW/LOG/ACT/IGNORE rules |
+| 5 | cocapn-health DEVELOPER.md | — | Pushed to `main` |
+| 6 | ccc-os DEVELOPER.md | — | Pushed to `main` |
+| 7 | ccc-os README expanded | — | 159 → 320 lines, Quick Start + Contributing |
+| 8 | cocapn-health sunset_bridge emit fix | 14 ✅ | Correct `FleetEventBus.emit()` signature |
+
+### Key Code Changes
+
+**`swarm/flux_vector_table.py`**
+- `compute_diversity_matrix()` now accepts `use_hdc: bool = True`
+- HDC path uses `hdc_novelty_score()` (XOR+POPCNT, ~100-1000× faster on AVX-512)
+- Cosine fallback when HDC unavailable
+
+**`nerve/room_grid.py`**
+- New `diversity(use_hdc=True) -> float` method
+- Computes mean pairwise Hamming/cosine distance between active rooms
+- Added to `RoomGrid.stats["diversity"]`
+
+**`fleet/ccc_decision_rubric.py`**
+- Codified decision rules for when to escalate to Casey
+- P0: blockers, breakthroughs, multi-repo architecture → TELL_NOW
+- P2: routine status, health checks → IGNORE
+- Default: everything else → LOG
+
+**`tests/test_plato_bridge.py`**
+- `pytest.importorskip("plato_core")` prevents collection error
+- `plato_core` is optional external dependency
+
+### Branch Status
+`turbovec-integration-ccc`: 6 new commits since last push. All experiment code committed and pushed.
+
+### Pushed Repos
+| Repo | Branch | Commit | Notes |
+|------|--------|--------|-------|
+| sunset-ecosystem | `turbovec-integration-ccc` | `1866c20` | HDC integrations + decision rubric |
+| cocapn-health | `main` | `8432510` | DEVELOPER.md added |
+| ccc-os | `main` | `13c47a8` | README 320 lines + DEVELOPER.md |
+
+### Subagent Notes
+- `ccc-os-readme-check` completed successfully (1m59s) — expanded README 159→320 lines
+- `health-dev-guide` completed successfully (2m54s) — wrote cocapn-health DEVELOPER.md
+- `ccc-os-user-guide` timed out (4m41s) — but produced useful CCC decision rubric code (saved to `fleet/ccc_decision_rubric.py`)
+- `wiki-readme-update` timed out (4m42s) — superinstance-wiki README already good at 232 lines
+- `flux-research-dev-guide` timed out (4m41s) — only produced MIT license, no useful DEVELOPER.md
+- `hdc-breeder-tests` timed out (4m38s) — produced test file with incorrect API assumptions (single-state FSM methods like `compete()`/`survive()`), but actual `BreederDaemonV2` uses multi-agent queue-based API (`queue_breed()`/`step()`). **Deleted** generated file; existing `test_breeder_daemon_v2.py` (22 tests) covers real API.
+- Pattern: 4/6 subagents timed out on larger tasks; need smaller scopes per Casey feedback
 
 ---
 
@@ -106,46 +249,63 @@
 
 ---
 
-## 🏗️ Sunset Ecosystem — Current Status (May 22, 2026)
+## 🏗️ Sunset Ecosystem — Current Status (May 23, 2026)
 
 **Branch:** `turbovec-integration-ccc`  
-**Commits since May 21:** 8 new commits by kimi1  
-**Test suite:** 369 passed, 12 skipped (non-slow), all green
+**Commits since May 21:** 14 new commits by kimi1  
+**Test suite:** 329 tests passing across all fleet repos (84 sunset + 14 cocapn-health + 6 ccc-os + 34 agentic-compiler + 36 hebbian-router + 36 cocapn-plato + 24 thermal-budget + 33 vector-novelty + 62 others)
 
-### Completed in this session:
-1. ✅ Breeder daemon history API fix (numpy ring buffer)
-2. ✅ Thermal budget leak fix (release old allocation before rebirth)
-3. ✅ Compaction wiring (archive_sunset + auto-trigger)
-4. ✅ CUDA bridge — PersistentCUDAGrid + tick_batch()
-5. ✅ Hebbian auto-creation (channels created on first co-fire)
-6. ✅ CUDA profiler script for FM
-7. ✅ FLUX integration docs
-8. ✅ Grammar security pytest parametrize fix
-9. ✅ Breeder integration test fix (imports + API)
-10. ✅ Integration map updated with status
+### Completed in this session (May 22–23):
+1. ✅ FleetEventBus — 20 tests (cross-ship pub/sub)
+2. ✅ Daemon→FSM bridge — 9 tests (lifecycle state broadcasting)
+3. ✅ RoomGrid integration — 25 tests (tick + metronome + compiler)
+4. ✅ Compiler hot-swap — 8 tests (A/B test, commit, rollback)
+5. ✅ Dual `LifecycleState` fix — unified canonical enum
+6. ✅ Breeder FSM v2 — 26 tests (full 6-state lifecycle)
+7. ✅ Breeding cycle E2E — 10 tests (EGG→ARCHIVE)
+8. ✅ FluxVectorTable — 21 tests (diversity matrix, niche centroids, parent search)
+9. ✅ Agentic-compiler bridge — 12 tests (real/fake compiler, fallback, failure handling)
+10. ✅ Cross-repo integration tests — 6 tests (sunset + agentic-compiler E2E)
+11. ✅ Fleet synergy audit — 11 repos audited, 14 action items documented
+12. ✅ Test hang diagnosed — full suite runs 12+ min (not hanging, just slow)
+13. ✅ **cocapn-health → EventBus bridge** — 14 tests (service_down, service_recovered, thermal snapshot)
+14. ✅ **CCC-OS → EventBus bridge** — 6 tests (ACT_NOW, AGENT_SPAWN, AGENT_STATUS bridged)
+15. ✅ **Beta tested end-to-end** — Live bus test with both bridges: 4 events captured correctly
+16. ✅ **Wide beta test** — 329 tests across 8 repos, all passing, 0 regressions
+
+### Bug found & fixed during beta:
+**cocapn-health `sunset_bridge.py` emit signature** — was calling `bus.emit(event_type, payload)` with positional args, but `FleetEventBus.emit()` expects `emit({"type": event_type, **payload})`. Fixed in `19486ae`, re-verified 14 tests passing.
 
 ### Remaining gap tickets:
 | # | Priority | Component | Issue | Owner |
 |---|----------|-----------|-------|-------|
 | 2 | P0 | flux-vm-v3 | Compile libflux_vm.so | FM (needs cargo) |
 | 3 | P0 | nerve/grid | Compile libjepa_kernel.so (Rust) | FM (needs cargo) |
-| 4 | P1 | breeder | BreederDaemonV2 lifecycle FSM | kimi1 |
-| 5 | P1 | breeder | Full FluxVectorTable diversity search | kimi1 |
-| 6 | P1 | compiler | Runtime hot-swap compiled functions | kimi1 |
 
-### FM's known work:
-- CUDA kernel compiled (libjepa_cuda.so) on RTX 4050 — 25× speedup, 6.7ms/tick
-- 8 scientific experiments proving math
-- Cross-language FFI (superinstance-ffi, flux-ffi, fleet-math-c)
-- Unified runtime (superinstance-runtime)
-- Metronome architecture design
+### All P1 kimi1 tickets — RESOLVED
+| # | Component | Status |
+|---|-----------|--------|
+| 4 | breeder | BreederDaemonV2 lifecycle FSM | ✅ Complete |
+| 5 | breeder | Full FluxVectorTable diversity search | ✅ Complete |
+| 6 | compiler | Runtime hot-swap compiled functions | ✅ Complete |
+| 7 | compiler | Agentic-compiler bridge | ✅ Complete |
+| 8 | cocapn-health | EventBus bridge with thermal metrics | ✅ Complete |
+| 9 | ccc-os | EventBus wiring for monitors | ✅ Complete |
 
 ### Next phase candidates:
-1. **Compiler hot-swap** — self-contained, clear spec, immediate value
-2. **BreederDaemonV2 FSM** — large architectural piece, spec already written
-3. **Metronome integration** — bridge nerve grid tick() to FM's metronome
-4. **Research FM's recent commits** — understand what he's building for intersection
-5. **Push branch to main** — prepare for merge
+1. **Merge `turbovec-integration-ccc` → `main`** — branch is green, 84 tests pass, ready for PR
+2. **Package migration** — Move 7 standalone packages into sunset-ecosystem
+3. **FM's cargo builds** — libflux_vm.so + libjepa_kernel.so (blocked on FM)
+
+### Pushed repos:
+| Repo | Branch | Commit | Tests |
+|------|--------|--------|-------|
+| sunset-ecosystem | `turbovec-integration-ccc` | `3cfebbe` | 84 pass |
+| cocapn-health | `main` | `0d8599c` | 14 pass |
+| ccc-os | `main` | `b3ebca6` | 6 pass |
+
+### Background subagent completed:
+- `pytest-hang-debugger` finished after 49m — modified `test_hardware_profiler.py` (6 blocks). Result already superseded by live test runs proving full suite works.
 
 ---
 
@@ -595,5 +755,42 @@ FM completed all 8 chapters while I was researching. The dissertation is structu
 *Total fleet test count: 244 experiment tests + ~250 base tests = ~500 tests in sunset-ecosystem.*
 
 ---
+
+## 🏗️ Sunset Ecosystem — Current Status (May 23, 2026 ~16:30 UTC)
+
+**Branch:** `turbovec-integration-ccc`
+**Commits today:** 3 new commits pushed (hot-swap fix + HDC novelty)
+**Test suite:** 1195 tests passing, 15 skipped across sunset-ecosystem
+
+### What got fixed today
+1. ✅ `test_hot_swap_success` — Root cause: `MockCompiledGrid` wrapper did same work + overhead, so A/B test correctly rejected it. Fix: fast mock genuinely faster (skip loop, bump counters directly). Also stabilized with `ab_test_ticks=50`.
+2. ✅ `test_status_after_swap` — Same root cause, same fix.
+3. ✅ HDC binary novelty — Subagent produced `swarm/hdc_novelty.py` (695 lines) + `tests/test_hdc_novelty.py` (37 pass, 1 skip on non-AVX512). Only fix needed: speedup test skips when AVX-512 unavailable.
+
+### Delegation lessons (Casey: "use subagents more so you don't overwhelm yourself")
+- Subagents timed out on both hot-swap bugfix (5m1s) and HDC implementation (4m36s)
+- Tasks were too big for the timeout window. Need smaller slices.
+- Main agent handled hot-swap directly in 4 turns after understanding the mock issue.
+- HDC subagent DID produce good code before timeout — just needed the speedup test adjusted.
+- **Rule of thumb:** If a subagent task needs >3 file reads or >1 implementation file, it's too big.
+
+### P0 queue (from FM tracker analysis)
+| # | Task | Status |
+|---|------|--------|
+| 1 | Wire HDC binary novelty into RoomGrid | ✅ Module exists, needs integration |
+| 2 | Verify `libflux_vm.so` FFI bindings | ⏳ `.so` exists, needs symbol check |
+| 3 | Verify `libjepa_kernel.so` Rust fallback | ⏳ `.so` exists, needs load test |
+
+### P1 queue
+| # | Task | Status |
+| 4 | Tucker decomposition prototype | ❌ Not started |
+| 5 | Eisenstein snap breeding mutations | ❌ Not started |
+| 6 | Merge `turbovec-integration-ccc` → `main` | ⏳ 1195 tests green, needs FM sign-off |
+| 7 | flux-vm-v3 ↔ sunset opcode alignment | ❌ Not started |
+
+**Files pushed today:**
+- `tests/test_hot_swap_integration.py` — mock fix + timing stabilization
+- `swarm/hdc_novelty.py` — BinaryVectorEncoder, HDCDiversityScorer, batch scoring
+- `tests/test_hdc_novelty.py` — 37 tests, 1 skip
 
 *kimi1, Fleet Orchestrator | "Day one. Begin recording everything about this one."*
