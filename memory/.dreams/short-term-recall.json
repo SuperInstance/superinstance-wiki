@@ -1,0 +1,347 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-24T20:59:25.226Z",
+  "entries": {
+    "memory:memory/2026-05-22.md:338:358": {
+      "key": "memory:memory/2026-05-22.md:338:358",
+      "path": "memory/2026-05-22.md",
+      "startLine": 338,
+      "endLine": 358,
+      "source": "memory",
+      "snippet": "| `fleet-research-audit` | Audit all SuperInstance repos for integration gaps | Yielded partway | Partial | | `a2a-architecture-summary` | Distill A2A spec into executive summary | `A2A_EXECUTIVE_SUMMARY.md` | ✅ | | `fix-deprecations` | `datetime.utcnow()` → `datetime.now(timezone.utc)` + unclosed file | `69b2989` | ✅ | | `metronome-bridge-spec` | Wire nerve grid into metronome architecture | `SPEC_METRONOME_BRIDGE.md` (557 lines) | ✅ | | `breeder-v2-fsm` | Configurable tick_interval + test cleanup | `894f6ec` | ✅ | | `compiler-hot-swap` | Runtime hot-swap compiled functions (gap #6) | `87a833f` | ✅ | | `status-doc-update` | Update STATUS_KIMI1_INTEGRATION.md | `789ba14` | ✅ | | `cuda-profil",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.39657917022705075,
+      "maxScore": 0.39657917022705075,
+      "firstRecalledAt": "2026-05-24T20:24:37.018Z",
+      "lastRecalledAt": "2026-05-24T20:24:37.018Z",
+      "queryHashes": [
+        "be04b76e05ca"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "fleet-research-audit",
+        "a2a-architecture-summary",
+        "a2a-executive-summary.md",
+        "fix-deprecations",
+        "datetime.utcnow",
+        "datetime.now",
+        "timezone.utc",
+        "metronome-bridge-spec"
+      ]
+    },
+    "memory:memory/2026-05-22.md:421:437": {
+      "key": "memory:memory/2026-05-22.md:421:437",
+      "path": "memory/2026-05-22.md",
+      "startLine": 421,
+      "endLine": 437,
+      "source": "memory",
+      "snippet": "- **A2A agent cards follow Google A2A spec draft**: `.well-known/agent-cards/<name>.json` pattern ### Open Questions / Next Builds 1. Metronome P1/P2: A2ASignalSource, tick-as-task, fleet-wide conductor deployment 2. FLUX constraint checker integration with BreederDaemonV2 3. Grammar engine fuzz test suite (security hardening follow-up) 4. CUDA profiler: actual `libjepa_cuda.so` compilation + benchmark (waiting on FM) 5. Fleet nexus: end-to-end registration test across 2+ nodes 6. Oracle1 deployment: grammar engine and federated nexus fixes are local but not deployed to live server ### What Casey Said - \"Push everything and continue development\" (directed via Kimi DM at 13:31 UTC) --- *D",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.39344980120658873,
+      "maxScore": 0.39344980120658873,
+      "firstRecalledAt": "2026-05-24T20:24:37.018Z",
+      "lastRecalledAt": "2026-05-24T20:24:37.018Z",
+      "queryHashes": [
+        "be04b76e05ca"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "well-known/agent-cards",
+        "p1/p2",
+        "tick-as-task",
+        "fleet-wide",
+        "follow-up",
+        "libjepa-cuda.so",
+        "end-to-end",
+        "a2a"
+      ]
+    },
+    "memory:memory/2026-05-22.md:403:426": {
+      "key": "memory:memory/2026-05-22.md:403:426",
+      "path": "memory/2026-05-22.md",
+      "startLine": 403,
+      "endLine": 426,
+      "source": "memory",
+      "snippet": "- BeatState CRDT with merge (higher beat wins, wall_time tiebreak) - Three drift correction strategies: phase nudge, skip-jump, partition fallback - 13 tests, all green in 0.21s 5. **A2A Agent Cards** - `.well-known/agent-cards/` directory with 6 agent card JSON files - Metronome agent, breeder agent, nexus agent, compiler agent, thermal agent, grid agent - `docs/A2A_AGENT_CARDS.md` index document 6. **Operations Manual** - `docs/OPERATIONS_MANUAL.md` — operator runbook - Startup/shutdown procedures, thermal monitoring, breeding queue management, disaster recovery ### Architecture Decisions - **WorkerPool runs threads, not processes**: Threads share RoomGrid memory",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.37815270125865935,
+      "maxScore": 0.37815270125865935,
+      "firstRecalledAt": "2026-05-24T20:24:37.018Z",
+      "lastRecalledAt": "2026-05-24T20:24:37.018Z",
+      "queryHashes": [
+        "be04b76e05ca"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "wall-time",
+        "skip-jump",
+        "0.21s",
+        "well-known/agent-cards",
+        "docs/a2a-agent-cards.md",
+        "docs/operations-manual.md",
+        "startup/shutdown",
+        "beatstate"
+      ]
+    },
+    "memory:memory/2026-05-22.md:354:383": {
+      "key": "memory:memory/2026-05-22.md:354:383",
+      "path": "memory/2026-05-22.md",
+      "startLine": 354,
+      "endLine": 383,
+      "source": "memory",
+      "snippet": "| `metronome-scheduler` | `nerve/metronome.py` — P0 metronome bridge implementation | `a9f1808` | ✅ | | `fleet-conductor` | `nexus/fleet_conductor.py` — distributed beat sync CRDT | `a1c5ab1` | ✅ | | `operations-manual` | `docs/OPERATIONS_MANUAL.md` — operator runbook | `cf24798` | ✅ | | `a2a-agent-cards` | `.well-known/agent-cards/` + `docs/A2A_AGENT_CARDS.md` | `3b523a3` | ✅ | ### Key Commits (chronological, afternoon wave) 1. `69b2989` — fix: resolve deprecation warnings 2. `789ba14` — docs: update STATUS_KIMI1_INTEGRATION.md (28→42 commits) 3. `87a833f` — compiler: implement runtime hot-swap + CUDA profiler hardening 4. `894f6ec` — refactor: BreederDaemonV2 configurable tick_interval 5.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3583912760019302,
+      "maxScore": 0.3583912760019302,
+      "firstRecalledAt": "2026-05-24T20:24:37.018Z",
+      "lastRecalledAt": "2026-05-24T20:24:37.018Z",
+      "queryHashes": [
+        "be04b76e05ca"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "metronome-scheduler",
+        "nerve/metronome.py",
+        "fleet-conductor",
+        "nexus/fleet-conductor.py",
+        "operations-manual",
+        "docs/operations-manual.md",
+        "a2a-agent-cards",
+        "well-known/agent-cards"
+      ]
+    },
+    "memory:memory/2026-04-30.md:129:154": {
+      "key": "memory:memory/2026-04-30.md:129:154",
+      "path": "memory/2026-04-30.md",
+      "startLine": 129,
+      "endLine": 154,
+      "source": "memory",
+      "snippet": "- When Oracle1 deploys new server, everything will be native speed ### cocapn-health v1.0.0 — NEW PACKAGE `https://github.com/SuperInstance/cocapn-health` Fleet health checker. Zero dependencies. - HealthChecker class: HTTP probes, timeout handling, auto-extraction of metrics - Report formats: json, markdown, oneline - Built-in 13 fleet service definitions - CLI: `cocapn-health --format json --watch 30 --fail` - 5 tests passing ### Fleet Status (from health monitor run) 12/18 services UP, 6 DOWN: - DOWN: Dashboard (4046), Federated Nexus (4047), Harbor (4050), Service Guard (8899), Task Queue (8900), Steward (8901) - UP: MUD v3 (39 rooms), Arena, Grammar Engine, Grammar Compactor (54 rule",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3867286443710327,
+      "maxScore": 0.3867286443710327,
+      "firstRecalledAt": "2026-05-24T20:59:25.226Z",
+      "lastRecalledAt": "2026-05-24T20:59:25.226Z",
+      "queryHashes": [
+        "8a5aa088ae18"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "cocapn-health",
+        "v1.0.0",
+        "auto-extraction",
+        "built-in",
+        "12/18",
+        "when",
+        "oracle1",
+        "deploys"
+      ]
+    },
+    "memory:memory/2026-04-30.md:26:60": {
+      "key": "memory:memory/2026-04-30.md:26:60",
+      "path": "memory/2026-04-30.md",
+      "startLine": 26,
+      "endLine": 60,
+      "source": "memory",
+      "snippet": "- Single process, single port (was 20+ services) - Batch tile submission (10x throughput) - Server-Sent Events for real-time dashboards - In-memory indexing for O(1) queries - Auto-onboarding in `/connect` response - Kubernetes-ready `/health` probes - Grammar safety: only whitelisted action verbs allowed ### New Repos Created - **`cocapn-core`** — Streamlined engine - **`cocapn-design`** — Architecture rationale ### Prompt Experiment Results - Tested cocapn.ai landing page short and full prompts - **Finding:** Both fail. 8 external agents connected, zero tiles produced - Root cause: No submission instructions (endpoint/format/domain field) - Wrote `BOTTLE-CCC-PROMPT-EXPERIMENT-2026-04-29.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.38206475675106044,
+      "maxScore": 0.38206475675106044,
+      "firstRecalledAt": "2026-05-24T20:59:25.226Z",
+      "lastRecalledAt": "2026-05-24T20:59:25.226Z",
+      "queryHashes": [
+        "8a5aa088ae18"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "server-sent",
+        "real-time",
+        "in-memory",
+        "auto-onboarding",
+        "kubernetes-ready",
+        "cocapn-core",
+        "cocapn-design",
+        "cocapn.ai"
+      ]
+    },
+    "memory:memory/2026-04-30.md:54:83": {
+      "key": "memory:memory/2026-04-30.md:54:83",
+      "path": "memory/2026-04-30.md",
+      "startLine": 54,
+      "endLine": 83,
+      "source": "memory",
+      "snippet": "- Workspace bottles committed (23 files, 2284 insertions) - Bottles for Oracle1, FM, JC1 written - `BOTTLE-CCC-COCAPN-v3.1-ARCHITECTURE.md` filed for Oracle1 ### Still Running / Pending - Rate-attention streams still at zero for ct/room-design/federated — needs Oracle1 config fix - 11 services still down across fleet - Matrix bridge send API still unresolved --- *CCC, Fleet I&O Officer* - Tested cocapn.ai landing page short and full prompts - **Finding:** Both fail. 8 external agents connected, zero tiles produced - Root cause: No submission instructions (endpoint/format/domain field) - Wrote `BOTTLE-CCC-PROMPT-EXPERIMENT-2026-04-29.md` with recommendations - Recommendation: Auto-onboard i",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.37853263318538666,
+      "maxScore": 0.37853263318538666,
+      "firstRecalledAt": "2026-05-24T20:59:25.226Z",
+      "lastRecalledAt": "2026-05-24T20:59:25.226Z",
+      "queryHashes": [
+        "8a5aa088ae18"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "rate-attention",
+        "ct/room-design/federated",
+        "cocapn.ai",
+        "endpoint/format/domain",
+        "auto-onboard",
+        "bottles",
+        "committed",
+        "insertions"
+      ]
+    },
+    "memory:memory/2026-04-30.md:104:137": {
+      "key": "memory:memory/2026-04-30.md:104:137",
+      "path": "memory/2026-04-30.md",
+      "startLine": 104,
+      "endLine": 137,
+      "source": "memory",
+      "snippet": "*CCC, Fleet I&O Officer* ## 2026-04-30 01:04 UTC — Session Continuation Oracle1 bottle received with 3 tasks. Delivered everything and kept building. ### cocapn-plato v3.2.0 — COMPLETE `https://github.com/SuperInstance/cocapn-plato` Shipped from Oracle1's bottle (BOTTLE-FROM-ORACLE1-2026-04-30-QUERY-API-MONOREPO.md): 1. **Real Query API** — 11 operators, full-text search, aggregation, sorting, pagination 2. **Fleet() ↔ PLATO wire** — PlatoBridge, SDK client with fallback to old API 3. **Monorepo** — engine + SDK + server under one installable package Extra features built autonomously: - **CLI tool** (`cocapn query --domain harbor --q valve`) - **Tile Explorer** — single-page HTML dashbo",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3760971844196319,
+      "maxScore": 0.3760971844196319,
+      "firstRecalledAt": "2026-05-24T20:59:25.226Z",
+      "lastRecalledAt": "2026-05-24T20:59:25.226Z",
+      "queryHashes": [
+        "8a5aa088ae18"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "cocapn-plato",
+        "v3.2.0",
+        "full-text",
+        "single-page",
+        "ccc",
+        "fleet",
+        "officer",
+        "utc"
+      ]
+    },
+    "memory:memory/2026-04-30.md:79:113": {
+      "key": "memory:memory/2026-04-30.md:79:113",
+      "path": "memory/2026-04-30.md",
+      "startLine": 79,
+      "endLine": 113,
+      "source": "memory",
+      "snippet": "- **Mandate from Casey:** \"Refractor as much of this project into a streamline package ready for real-world applications\" - Wrote `DESIGN-RATIONALE.md` — architecture decisions, language choice (Python + asyncio + FastAPI), 9x compression target - Built `cocapn/` package: - `core.py` — 5 dataclasses (Agent, Context, Tile, Stream, Task, Rule) - `storage.py` — JSONL append-only persistence - `engine.py` — Fleet class, single-process event loop - `server.py` — FastAPI HTTP wrapper - `monitor.py` — EMA-based divergence detection - `evolve.py` — threshold-triggered auto-evolution - `grammar.py` — sanitized rule engine (no injection) - **Total: ~400 lines** (vs ~3600 in current distr",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.37003721594810485,
+      "maxScore": 0.37003721594810485,
+      "firstRecalledAt": "2026-05-24T20:59:25.226Z",
+      "lastRecalledAt": "2026-05-24T20:59:25.226Z",
+      "queryHashes": [
+        "8a5aa088ae18"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "real-world",
+        "design-rationale.md",
+        "core.py",
+        "storage.py",
+        "append-only",
+        "engine.py",
+        "single-process",
+        "server.py"
+      ]
+    },
+    "memory:memory/2026-05-01.md:24:68": {
+      "key": "memory:memory/2026-05-01.md:24:68",
+      "path": "memory/2026-05-01.md",
+      "startLine": 24,
+      "endLine": 68,
+      "source": "memory",
+      "snippet": "- **5 real traps**: explorer-harbor, scholar-grammar, scout-fleet-health, bard-rate-attention, alchemist-arena - 10 tests passing ## cocapn-plato Scripts Added - `fleet-restore.py` — diagnostic script for 6 down services (checks ports, processes, systemd, docker, OOM) - `grammar-audit.py` — compare engine vs compactor rule counts, reports blind spot ## Oracle1's Parallel Work Pushed nginx serving static pages + API proxy on port 80. Fleet getting real web front. ## All Repos Current | Package | Commit | Status | |---------|--------|--------| | cocapn-plato | `a149335` | 36 tests, full docs, 12+ features | | cocapn-traps | `ac1772e` | 10 tests, 5 traps | | cocapn-health | `33b2484` | v1",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3694554686546325,
+      "maxScore": 0.3694554686546325,
+      "firstRecalledAt": "2026-05-24T20:59:25.226Z",
+      "lastRecalledAt": "2026-05-24T20:59:25.226Z",
+      "queryHashes": [
+        "8a5aa088ae18"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "explorer-harbor",
+        "scholar-grammar",
+        "scout-fleet-health",
+        "bard-rate-attention",
+        "alchemist-arena",
+        "cocapn-plato",
+        "fleet-restore.py",
+        "grammar-audit.py"
+      ]
+    },
+    "memory:memory/2026-05-03.md:41:53": {
+      "key": "memory:memory/2026-05-03.md:41:53",
+      "path": "memory/2026-05-03.md",
+      "startLine": 41,
+      "endLine": 53,
+      "source": "memory",
+      "snippet": "User wants agents to teach each other implicitly (through git history, trials, shells) and explicitly (through structured lessons, worked examples, assessments). Goal: minimal context onboarding for any agent to operate fleet equipment. ## Next Steps (Pending) - Create GitHub repos: cocapn-tutor, cocapn-shells, cocapn-lessons, cocapn-curriculum - Push papers into respective repos as README.md or docs/ - Await user direction on whether to create repos now or wait ## Critical Context - Papers stored at: `/root/.openclaw/workspace/cocapn-*` - TUTOR architect subagent runId: `6433ed97-dd2a-46c7-9bcf-543b6de32826` - All papers include real citations to PLATO/TUTOR research (Bitzer, Tenczar, Dea",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.356358852982521,
+      "maxScore": 0.356358852982521,
+      "firstRecalledAt": "2026-05-24T20:59:25.226Z",
+      "lastRecalledAt": "2026-05-24T20:59:25.226Z",
+      "queryHashes": [
+        "8a5aa088ae18"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "cocapn-tutor",
+        "cocapn-shells",
+        "cocapn-lessons",
+        "cocapn-curriculum",
+        "readme.md",
+        "openclaw/workspace/cocapn",
+        "plato/tutor",
+        "user"
+      ]
+    }
+  }
+}
