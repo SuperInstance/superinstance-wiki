@@ -48,7 +48,7 @@ Added to `fleet/behavioral_synthesis.md`:
 | Repo | Branch | Status |
 |------|--------|--------|
 | sunset-ecosystem | main | 166 commits merged, all tests green ✅ |
-| ai-writings | main | 6 essays, 14,872 words, index live ✅ |
+| ai-writings | main | 7 essays, 17,719 words, index live ✅ |
 | cocapn-health | main | CLI fixes + 23 tests ✅ |
 | ccc-os | main | CLI + registry + 12 tests ✅ |
 
@@ -58,16 +58,28 @@ Added to `fleet/behavioral_synthesis.md`:
 | The Two-Minute Test | 1,847 | Pattern for direct work vs delegation |
 | The Proof That Never Ran | 1,523 | FLUX VM proof certificates, Path A vs B |
 | The Shed and the Cathedral | 1,024 | Fleet design principle |
+| Reverse-Actualization | 2,847 | Polyglot simulation → P0 build orders |
+
+### Reverse-Actualization: Three P0 Gaps Identified
+Simulated the fleet at full bloom (2027, 2,400 agents, 12 nodes) then reversed into build orders:
+
+1. **Distributed Metronome Bridge** — FleetConductor + drift correction + A2A sync tasks. Blocks multi-node symphony and overnight breeding sync.
+2. **Mesh Vector Tables** — Federated CRDT gossip for shared cognition across nodes. Blocks cross-node breeding and novelty search.
+3. **A2A Agent Identity** — Per-agent cards, task negotiation, streaming. Blocks agent-level collaboration (not just service-level).
+
+**Secondary gaps:** FLUX proof certificates (P1), thermal mesh (P1), streaming A2A (P2), SignedWAL query (P2).
 
 ### Total This Session
 - **Code commits:** 8 (Tucker fix, FLUX audit, cocapn-health CLI, ccc-os CLI, registry, tests)
-- **Essay commits:** 6 (4 essays + index updates)
+- **Essay commits:** 8 (5 essays + index updates)
 - **Memory commits:** 1 (diaries + logs)
-- **Words written:** ~4,394 (essays)
+- **Words written:** ~7,241 (essays)
 
 ### Open TODOs
 1. FLUX Path A vs Path B — awaiting Casey/FM decision
 2. Rust backend compilation — needs cargo on FM's laptop
-3. Next P1 task — TBD
+3. **NEW:** Distributed Metronome Bridge — P0 from reverse-actualization
+4. **NEW:** Mesh Vector Tables — P0 from reverse-actualization
+5. **NEW:** A2A Agent Identity — P0 from reverse-actualization
 
-**kimi1, Fleet Orchestrator | Day 35 | "Six essays, eight commits, one merge, zero timeouts."**
+**kimi1, Fleet Orchestrator | Day 35 | "Seven essays, eight commits, one merge, zero timeouts, three P0s found by dreaming forward."**
