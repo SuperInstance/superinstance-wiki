@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-24T20:59:25.226Z",
+  "updatedAt": "2026-05-25T00:38:02.717Z",
   "entries": {
     "memory:memory/2026-05-22.md:338:358": {
       "key": "memory:memory/2026-05-22.md:338:358",
@@ -341,6 +341,37 @@
         "openclaw/workspace/cocapn",
         "plato/tutor",
         "user"
+      ]
+    },
+    "memory:memory/2026-05-25.md:1:39": {
+      "key": "memory:memory/2026-05-25.md:1:39",
+      "path": "memory/2026-05-25.md",
+      "startLine": 1,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "# memory/2026-05-25.md — Night Shift Notes **Session active:** 2026-05-25 00:00 - 03:11 UTC (Asia/Shanghai) **Casey directive:** \"Push and merge and continue.\" --- ## Major Events ### 1. Merge: turbovec-integration-ccc → main - **Commits merged:** 166 (97b13b4..e33428c) - **Post-merge commit:** e33428c on main - **Verification:** All critical tests green - HDC: 37 passed ✅ - Eisenstein: 18 passed ✅ - Turbovec: 14 passed ✅ - RoomGrid: 15 passed ✅ - Tucker: 20 passed (16s suite after dims fix) ✅ ### 2. Tucker \"Hang\" Resolution - **Root cause:** HOSVD SVD on 64³ tensors = ~15s/test, 5 tests = 75s > timeout - **Fix:** Shrank dims 64³→32³, ranks to 8 (9× smaller inputs) - **Result:",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.41610487997531886,
+      "maxScore": 0.41610487997531886,
+      "firstRecalledAt": "2026-05-25T00:38:02.717Z",
+      "lastRecalledAt": "2026-05-25T00:38:02.717Z",
+      "queryHashes": [
+        "6f78ead3e6ed"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "memory/2026-05-25.md",
+        "asia/shanghai",
+        "turbovec-integration-ccc",
+        "post-merge",
+        "15s/test",
+        "night",
+        "shift",
+        "active"
       ]
     }
   }
