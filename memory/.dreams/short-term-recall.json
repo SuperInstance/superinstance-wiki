@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-26T13:55:09.864Z",
+  "updatedAt": "2026-05-26T21:57:33.420Z",
   "entries": {
     "memory:memory/2026-05-22.md:338:358": {
       "key": "memory:memory/2026-05-22.md:338:358",
@@ -434,6 +434,192 @@
         "cross-repo",
         "cobol/algol/snobol",
         "sunset"
+      ]
+    },
+    "memory:memory/2026-05-05.md:58:100": {
+      "key": "memory:memory/2026-05-05.md:58:100",
+      "path": "memory/2026-05-05.md",
+      "startLine": 58,
+      "endLine": 100,
+      "source": "memory",
+      "snippet": "1. **MUD agent state staleness:** Old agent connections get stale after ~30 min. Reconnect fixes all \"broken\" exits. This is P2 documentation, not P0 infrastructure. 2. **cocapn.ai \"1,400+ rooms\" is still a lie:** PLATO has 15 rooms, ~50 tiles. This P0 needs fixing. 3. **FM implemented BOTH widgets:** Leaderboard + Constraint Playground, plus backend API. Outstanding work. 4. **Oracle1/FM published 3 new papers:** Compiled Agency, Semantic Compiler v5, INDEX update. Fleet research velocity is accelerating. 5. **Grammar Engine is UP again:** Port 4045 responding after being down for days. --- ## What's Still Blocked | Blocker | On Whom | Status | |---------|---------|--------| | EMSOFT hol",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.380032542347908,
+      "maxScore": 0.380032542347908,
+      "firstRecalledAt": "2026-05-26T18:30:44.099Z",
+      "lastRecalledAt": "2026-05-26T18:30:44.099Z",
+      "queryHashes": [
+        "eb289bd24db2"
+      ],
+      "recallDays": [
+        "2026-05-27"
+      ],
+      "conceptTags": [
+        "cocapn.ai",
+        "oracle1/fm",
+        "mud",
+        "state",
+        "staleness",
+        "old",
+        "connections",
+        "get"
+      ]
+    },
+    "memory:memory/2026-04-24.md:54:75": {
+      "key": "memory:memory/2026-04-24.md:54:75",
+      "path": "memory/2026-04-24.md",
+      "startLine": 54,
+      "endLine": 75,
+      "source": "memory",
+      "snippet": "- He has 4 open issues from Casey, none responded to. Building fast but not syncing back. **Contradiction Hunt Completed** Scanned 4,574 tiles across 124 rooms. Found: | Severity | Issue | Location | Fix | |---|---|---|---| | P0 | superinstance.ai claims \"22 services\" | landing-page-update tile | Actual: ~12 operational. Overcount by ~80%. | | P0 | deckboss.ai claims \"10 pre-seeded missions\" | landing-page-update tile | Actual: queue empty. Seeded 3 real tasks to make claim partially true. | | P1 | Tile counts stale (3,833 claimed, 4,574 actual) | All 20 domains | Needs batch refresh | | P1 | Grammar rules: 60 claimed, 51 actual | activeledger.ai tile | Rules were pruned | | BUG | MiniMax",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.37134701311588286,
+      "maxScore": 0.37134701311588286,
+      "firstRecalledAt": "2026-05-26T18:30:44.099Z",
+      "lastRecalledAt": "2026-05-26T18:30:44.099Z",
+      "queryHashes": [
+        "eb289bd24db2"
+      ],
+      "recallDays": [
+        "2026-05-27"
+      ],
+      "conceptTags": [
+        "superinstance.ai",
+        "landing-page-update",
+        "deckboss.ai",
+        "pre-seeded",
+        "activeledger.ai",
+        "has",
+        "open",
+        "issues"
+      ]
+    },
+    "memory:memory/2026-05-25.md:352:380": {
+      "key": "memory:memory/2026-05-25.md:352:380",
+      "path": "memory/2026-05-25.md",
+      "startLine": 352,
+      "endLine": 380,
+      "source": "memory",
+      "snippet": "| Layer | Modules | Tests | |-------|---------|-------| | Lower-level scouts | Mesh gossip, A2A sync, WAL, Agent identity, FLUX gating | 109 ✅ | | P0 code modules | Gateway Pacing, Opcode index, Dispatch Router, Two-Minute Test, Operational Trap | 100 ✅ | | P2 fleet programs | Flux Presets (10), Hebbian Mesh | 84 ✅ | | Reverse-actualization | Mesh Vector Tables, Metronome Bridge | 60 ✅ | | Unification | SenseDecideAct | 33 ✅ | | Orchestration | FleetConductorV2 | 40 ✅ | | Validation | Beta-Test Personas | 26 ✅ | | Observability | SSE Stream Dashboard | 17 ✅ | | Integration | Metronome Mesh Bridge | 19 ✅ | | **Compiler** | FLUX Path B compiler | **52 ✅** | | **Benchmarks** | Fleet performanc",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.6315298897598745,
+      "maxScore": 0.6315298897598745,
+      "firstRecalledAt": "2026-05-26T21:57:33.420Z",
+      "lastRecalledAt": "2026-05-26T21:57:33.420Z",
+      "queryHashes": [
+        "e4c090ad8448"
+      ],
+      "recallDays": [
+        "2026-05-27"
+      ],
+      "conceptTags": [
+        "gateway",
+        "router",
+        "lower-level",
+        "two-minute",
+        "reverse-actualization",
+        "beta-test",
+        "layer",
+        "modules"
+      ]
+    },
+    "memory:memory/2026-05-25.md:249:285": {
+      "key": "memory:memory/2026-05-25.md:249:285",
+      "path": "memory/2026-05-25.md",
+      "startLine": 249,
+      "endLine": 285,
+      "source": "memory",
+      "snippet": "*kimi1 | Fleet Orchestrator | Day 35 | \"Nineteen modules, four hundred eighty-four green tests, one unified fleet.\"* --- ## 🌇 Afternoon Shift — May 25, 2026 (Tracks A/B/C) **Casey directive:** \"Go through all in order\" → \"awesome. continue\" → \"great. push and continue\" ### Time: 2026-05-25 14:27 - 19:00 UTC (Asia/Shanghai) --- ### 1. Three Parallel Tracks Executed | Track | Task | Status | Key Result | |-------|------|--------|------------| | **A** | FLUX Path B compiler prototype | ✅ Done | 52/52 tests green, 20 opcodes, AST→bytecode | | **B** | Fleet performance benchmarks | ✅ Done | 13/13 benchmarks, baselines established | | **C** | Beta test fixes (Round 3) | ✅ Done | cocapn-he",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.6050840599266464,
+      "maxScore": 0.6050840599266464,
+      "firstRecalledAt": "2026-05-26T21:57:33.420Z",
+      "lastRecalledAt": "2026-05-26T21:57:33.420Z",
+      "queryHashes": [
+        "e4c090ad8448"
+      ],
+      "recallDays": [
+        "2026-05-27"
+      ],
+      "conceptTags": [
+        "eighty-four",
+        "a/b/c",
+        "asia/shanghai",
+        "52/52",
+        "13/13",
+        "cocapn-he",
+        "kimi1",
+        "fleet"
+      ]
+    },
+    "memory:memory/2026-05-25.md:221:262": {
+      "key": "memory:memory/2026-05-25.md:221:262",
+      "path": "memory/2026-05-25.md",
+      "startLine": 221,
+      "endLine": 262,
+      "source": "memory",
+      "snippet": "- **Pacing:** Current rule — wait 20min after 2 consecutive timeouts before dispatching scouts - **Status:** Direct building stable, all modules built successfully --- ### 7. What the Fleet Now Has (19 modules) **Safety & Routing:** GatewayPacing, OpcodeCapabilityIndex, DispatchRouter, TwoMinuteTest, OperationalTrap **Breeding & Diversity:** FluxPresetLibrary, HebbianMeshLayer, FleetVectorIndex **Cross-Node Sync:** MetronomeBridge, MeshVectorGossip, MetronomeGossipBridge **Identity & Communication:** AgentIdentity, A2AMetronomeTasks **Data & Audit:** SignedWAL, WALQuery, WALIndex **Unification & Orchestration:** SenseDecideAct, FleetConductorV2 **Validation & Observability:** BetaTestPers",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5715958422187746,
+      "maxScore": 0.5715958422187746,
+      "firstRecalledAt": "2026-05-26T21:57:33.420Z",
+      "lastRecalledAt": "2026-05-26T21:57:33.420Z",
+      "queryHashes": [
+        "e4c090ad8448"
+      ],
+      "recallDays": [
+        "2026-05-27"
+      ],
+      "conceptTags": [
+        "gateway",
+        "router",
+        "cross-node",
+        "pacing",
+        "current",
+        "rule",
+        "wait",
+        "20min"
+      ]
+    },
+    "memory:memory/2026-05-25.md:322:357": {
+      "key": "memory:memory/2026-05-25.md:322:357",
+      "path": "memory/2026-05-25.md",
+      "startLine": 322,
+      "endLine": 357,
+      "source": "memory",
+      "snippet": "2. **PID drift correction slow (32 iterations for 50ms)** — Conservative gains (`kp=0.01`). Tunable: raising to `0.03-0.05` would cut to ~10-15 iterations. --- ### 4. Track C — Beta Test Fixes (Round 3) #### cocapn-health v1.0.2 - **Problem:** Fleet host hardcoded as `147.224.38.131` across all 18 services — impossible to test locally or on different infrastructure - **Fix:** `COCAPN_HEALTH_HOST` environment variable overrides default host. CLI `--host` flag also works. - **Commit:** `d5475d1` on cocapn-health main - **Impact:** Enables local testing, multi-datacenter deployment, CI pipelines #### ccc-os - **Status:** Already clean — `python -m ccc_os` CLI works, `register_monitor()` API",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5546257995655259,
+      "maxScore": 0.5546257995655259,
+      "firstRecalledAt": "2026-05-26T21:57:33.420Z",
+      "lastRecalledAt": "2026-05-26T21:57:33.420Z",
+      "queryHashes": [
+        "e4c090ad8448"
+      ],
+      "recallDays": [
+        "2026-05-27"
+      ],
+      "conceptTags": [
+        "0.01",
+        "0.03-0.05",
+        "10-15",
+        "cocapn-health",
+        "v1.0.2",
+        "147.224.38.131",
+        "cocapn-health-host",
+        "multi-datacenter"
       ]
     }
   }
