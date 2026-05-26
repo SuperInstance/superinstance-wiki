@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-25T00:38:02.717Z",
+  "updatedAt": "2026-05-26T13:55:09.864Z",
   "entries": {
     "memory:memory/2026-05-22.md:338:358": {
       "key": "memory:memory/2026-05-22.md:338:358",
@@ -372,6 +372,68 @@
         "night",
         "shift",
         "active"
+      ]
+    },
+    "memory:memory/2026-05-23.md:1:43": {
+      "key": "memory:memory/2026-05-23.md:1:43",
+      "path": "memory/2026-05-23.md",
+      "startLine": 1,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "Working. Here's the status: ## sunset-ecosystem — `turbovec-integration-ccc` branch **Pushed commits:** - `745750f` — FFI bindings + backend detection fix for oneshot-only `.so` - `eb4db26` — Dimension guard: Rust/CUDA backends fall back to numpy when `d/h/l` don't match compiled defaults (64→32→16). **This fixed the hardware NAS segfault.** - `720780e` — OpenBLAS `LD_PRELOAD` wrapper for turbovec benchmarks **Test suite:** - 168 non-slow tests: ✅ all pass - 26 hardware NAS tests: ✅ all pass (previously segfaulting) - 7 metronome tests: ✅ all pass **Still blocked:** - Turbovec benchmark: OOM at 1000+ agents in this environment - `test_plato_bridge.py`: needs `plato_core` module (not in w",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3928441256284714,
+      "maxScore": 0.3928441256284714,
+      "firstRecalledAt": "2026-05-26T13:55:09.864Z",
+      "lastRecalledAt": "2026-05-26T13:55:09.864Z",
+      "queryHashes": [
+        "0158f7c45d85"
+      ],
+      "recallDays": [
+        "2026-05-26"
+      ],
+      "conceptTags": [
+        "sunset-ecosystem",
+        "turbovec-integration-ccc",
+        "oneshot-only",
+        "rust/cuda",
+        "d/h/l",
+        "ld-preload",
+        "non-slow",
+        "test-plato-bridge.py"
+      ]
+    },
+    "memory:memory/2026-05-21.md:127:156": {
+      "key": "memory:memory/2026-05-21.md:127:156",
+      "path": "memory/2026-05-21.md",
+      "startLine": 127,
+      "endLine": 156,
+      "source": "memory",
+      "snippet": "| #2 | sunset-ecosystem | JEPA Rust wire | Subprocess wrapper, API parity, pytest suite | | #3 | sunset-ecosystem | Distillation experiment | ResNet-50→18, 3 loss variants, smoke passed | | #2 | superinstance-wiki | Repo metrics automation | 1,664 repos scored, tier distribution mapped | ### Wave 2: Novel Insights (4/4) | PR | Repo | Task | Insight | |----|------|------|---------| | #4 | sunset-ecosystem | Tournament sim | **Lighthouse Effect** — perfect agent at gen 16, catch-up swarm converges | | #1 | superinstance-wiki | Cross-repo patterns | **Graveyard of Dead Languages** — 8 flux-* repos in COBOL/ALGOL/SNOBOL, all abandoned same day | | #5 | sunset-ecosystem | Hardware swarm | **Fast",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3756398975849151,
+      "maxScore": 0.3756398975849151,
+      "firstRecalledAt": "2026-05-26T13:55:09.864Z",
+      "lastRecalledAt": "2026-05-26T13:55:09.864Z",
+      "queryHashes": [
+        "0158f7c45d85"
+      ],
+      "recallDays": [
+        "2026-05-26"
+      ],
+      "conceptTags": [
+        "sunset-ecosystem",
+        "resnet-50",
+        "superinstance-wiki",
+        "4/4",
+        "catch-up",
+        "cross-repo",
+        "cobol/algol/snobol",
+        "sunset"
       ]
     }
   }

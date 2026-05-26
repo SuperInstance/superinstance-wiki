@@ -1,29 +1,29 @@
 {
   "stm": {
-    "count": 280,
-    "last_ts": "2026-05-25T18:54:18.495825",
-    "last_sessions": 160,
-    "last_messages": 2760,
-    "last_chars": 25216
+    "count": 283,
+    "last_ts": "2026-05-26T12:11:09.499355",
+    "last_sessions": 175,
+    "last_messages": 2976,
+    "last_chars": 21304
   },
   "diary": {
-    "count": 64,
-    "last_ts": "2026-05-25T03:49:42.964759",
-    "last_day": 5,
-    "last_sessions": 19,
-    "last_messages": 358,
-    "last_filename": "day5-2026-05-25-three_stars_and_a_funeral.md",
-    "last_latency_s": 11.6,
+    "count": 65,
+    "last_ts": "2026-05-26T03:55:47.210956",
+    "last_day": 6,
+    "last_sessions": 28,
+    "last_messages": 443,
+    "last_filename": "day6-2026-05-26-ran_so_hard_i_forgot.md",
+    "last_latency_s": 29.9,
     "last_skip": "conversation_hash_unchanged",
     "last_error": "HTTP Error 403: Forbidden"
   },
   "compact": {
-    "count": 64,
-    "last_ts": "2026-05-25T03:49:47.244063",
+    "count": 65,
+    "last_ts": "2026-05-26T03:55:59.224138",
     "last_invoke": 14,
-    "last_sessions": 116,
-    "last_messages": 2551,
-    "last_latency_s": 8.9,
+    "last_sessions": 170,
+    "last_messages": 2955,
+    "last_latency_s": 8.1,
     "last_model": "k2p6",
     "last_skip": "stm_hash_unchanged",
     "last_error": "HTTP Error 403: Forbidden"
