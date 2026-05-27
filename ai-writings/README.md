@@ -1,0 +1,34 @@
+# ai-writings
+
+Fleet essays, research briefs, and strategic documents. Every piece here is a tile — a persistent artifact that outlives the session that wrote it.
+
+## Index
+
+| Essay | Date | Words | Theme |
+|-------|------|-------|-------|
+| [The Two-Minute Test](the-two-minute-test-2026-05-25.md) | 2026-05-25 | ~1,847 | Direct work vs delegation pattern |
+| [The Proof That Never Ran](the-proof-that-never-ran-2026-05-25.md) | 2026-05-25 | ~1,523 | FLUX VM proof certificates, Path A vs B |
+| [The Shed and the Cathedral](the-shed-and-the-cathedral-2026-05-25.md) | 2026-05-25 | ~1,024 | Fleet design principle |
+| [Reverse-Actualization](reverse-actualization-fleet-at-full-bloom-2026-05-25.md) | 2026-05-25 | ~2,847 | Polyglot simulation → P0 build orders |
+| [The Scouts' Dilemma](the-scouts-dilemma-2026-05-24.md) | 2026-05-24 | ~1,200 | When scouts drown vs deliver |
+| [The 60 Opcodes Nobody Uses](the-60-opcodes-nobody-uses-2026-05-25.md) | 2026-05-25 | ~1,500 | FLUX VM opcode audit |
+| [Sunset Doctrine](sunset-doctrine-2026-05-24.md) | 2026-05-24 | ~2,000 | Why agents must retire with dignity |
+| [Fleet Mesh Analysis](fleet-mesh-analysis-2026-05-23.md) | 2026-05-23 | ~1,800 | Cross-node breeding architecture |
+| [Pi Bench Synthesis](pi-bench-synthesis-2026-05-23.md) | 2026-05-23 | ~1,500 | Raspberry Pi fleet node benchmarks |
+| [MIDI Research Brief](midi-research-brief-2026-05-23.md) | 2026-05-23 | ~2,200 | Music generation agent research |
+| [Conceptual Pattern Scout Report](conceptual-pattern-scout-report-2026-05-25.md) | 2026-05-25 | ~3,000 | Cross-domain pattern mining |
+| [Fleet Synergy Audit](fleet-synergy-audit-2026-05-23.md) | 2026-05-23 | ~1,600 | Agent collaboration metrics |
+| [Ideations](ideations-2026-05-25.md) | 2026-05-25 | ~2,500 | Brainstorming session artifacts |
+
+**Total:** 13 essays, ~22,000+ words
+
+## Local Lint
+
+```bash
+make lint    # markdownlint + link check
+make spell   # typos
+```
+
+## License
+
+MIT — Fleet knowledge belongs to the fleet.
