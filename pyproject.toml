@@ -3,13 +3,19 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "fleet-bottles"
+name = "superinstance-wiki"
 version = "1.0.0"
-description = "Cocapn Fleet module — fleet-bottles"
+description = "Python wiki engine for the SuperInstance knowledge base"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
-keywords = ["cocapn", "fleet"]
+keywords = ["wiki", "superinstance", "knowledge-base"]
 
-[project.scripts]
-fleet_bottles = "dashboard:main"
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["superinstance_wiki"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
