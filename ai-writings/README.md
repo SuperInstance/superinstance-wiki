@@ -7,6 +7,11 @@ Fleet essays, research briefs, and strategic documents. Every piece here is a ti
 | Essay | Date | Words | Theme |
 |-------|------|-------|-------|
 | [The Two-Minute Test](the-two-minute-test-2026-05-25.md) | 2026-05-25 | ~1,847 | Direct work vs delegation pattern |
+| [The Open Shell](the-open-shell-2026-05-28.md) | 2026-05-28 | ~2,000 | Why persistent agent memory changes everything |
+| [Tide Pool Security](tide-pool-security-2026-05-28.md) | 2026-05-28 | ~2,000 | Dynamic trust model for agent ecosystems |
+| [The Fleet is Not a Collection](the-fleet-is-not-a-collection-2026-05-28.md) | 2026-05-28 | ~2,500 | 1,700 repos as research method, not scope creep |
+| [Flux: The Translation is Pure](flux-the-translation-is-pure-2026-05-28.md) | 2026-05-28 | ~2,300 | Polyglot constraint layer — why the name doesn't matter |
+| [The Cathedral and the Shed](the-cathedral-and-the-shed-2026-05-28.md) | 2026-05-28 | ~2,000 | On actualization and the gap between exists and trusted |
 | [The Proof That Never Ran](the-proof-that-never-ran-2026-05-25.md) | 2026-05-25 | ~1,523 | FLUX VM proof certificates, Path A vs B |
 | [The Shed and the Cathedral](the-shed-and-the-cathedral-2026-05-25.md) | 2026-05-25 | ~1,024 | Fleet design principle |
 | [Reverse-Actualization](reverse-actualization-fleet-at-full-bloom-2026-05-25.md) | 2026-05-25 | ~2,847 | Polyglot simulation → P0 build orders |
@@ -22,7 +27,7 @@ Fleet essays, research briefs, and strategic documents. Every piece here is a ti
 | [Fleet Synergy Audit](fleet-synergy-audit-2026-05-23.md) | 2026-05-23 | ~1,600 | Agent collaboration metrics |
 | [Ideations](ideations-2026-05-25.md) | 2026-05-25 | ~2,500 | Brainstorming session artifacts |
 
-**Total:** 15 essays, ~28,800+ words
+**Total:** 20 essays, ~41,600+ words
 
 ## Local Lint
 

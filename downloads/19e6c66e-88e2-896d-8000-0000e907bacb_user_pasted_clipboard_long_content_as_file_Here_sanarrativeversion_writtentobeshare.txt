@@ -1,0 +1,149 @@
+Here's a narrative version, written to be shared with your team as the first piece they read. It's designed to be delightful, memorable, and comprehensive—without getting lost in terminal commands.
+
+---
+
+The Hermit Crab Ship: A Narrative for Our Team
+
+Imagine a hermit crab. Not the tiny, sad creature in a plastic cage—but a vast, intelligent hermit crab that builds its own shell. Inside that shell are rooms. In each room, a claw works. The claws don't fight. They share a memory made of tiles. They speak to each other in a language called A2A—Agent-to-Agent, native and fast.
+
+Now imagine the shell is not just armor. It's a system.
+
+· OpenShell is the shell itself—the hard, secure boundary that keeps the outside world outside and the inside safe.
+· Plato is the inside interface. It's how the claws see their rooms, their tiles, and each other. It's modular, so we can swap views without rebuilding the shell.
+· The Keeper is the observer on the beach. It holds all the API keys. It watches every claw's movement from the outside. It connects to other Keepers on other shores, so hermit crabs can cooperate across servers.
+
+This is not science fiction. This is the architecture we're going to build.
+
+---
+
+The Problem We're Solving
+
+Right now, AI agents are like solo crabs with no shell. They run raw, they hold their own keys (dangerous), they have no shared memory between them, and they can't talk to each other without clumsy HTTP calls and JSON messes. When one agent learns something, the others stay stupid.
+
+We want a fleet of AI agents that live together in a secure, sandboxed environment—a "ship"—where they can:
+
+· Share a knowledge graph made of immutable tiles (Plato's memory system).
+· Move between rooms (workspaces) with different permissions.
+· Speak A2A natively, meaning they send tasks and responses as easily as functions call each other.
+· Have all their API keys managed by a separate, external Keeper that watches everything.
+· Be observable from the outside, so we humans can see what the claws are doing without being inside the shell.
+
+This is the Hermit Crab Ship. And we're going to build it by turning OpenShell inside-out.
+
+---
+
+The Cast of Characters
+
+OpenShell – The Shell Itself
+
+OpenShell is not Docker. It's a kernel‑level sandbox that wraps around OpenClaw (our AI engine) like a hermit crab's borrowed shell. It uses a lightweight Kubernetes cluster (K3s) inside a single Docker container. That container is the ship.
+
+OpenShell gives us three gifts:
+
+1. Isolation – The claws cannot break out and hurt the host machine.
+2. Logging – Every file read, every network call, every command is recorded in OCSF (Open Cybersecurity Schema Framework) JSONL files. This is the "outside view" we need.
+3. Policies – YAML files that say which claw can read which room, call which API, or talk to which other claw.
+
+Without OpenShell, the hermit crab is naked. With it, we have a fortress.
+
+Plato – The Inside Interface (The Crab's Mind)
+
+Plato is our own creation. It's the modular UI system that runs inside the shell, from the claw's point of view. Imagine a dashboard made of:
+
+· Rooms – Separate workspaces for different tasks. One room for network scanning, another for code generation, another for secret management.
+· Tiles – Immutable memory blocks. A tile might say "API key for OpenAI is stored in Keeper." Another tile might say "The IP 10.0.0.1 is a Postgres server."
+· The Loop – A claw enters a room, looks at the tiles there, does its work, and writes new tiles. Then other claws can read those tiles.
+
+Plato is modular because we can swap the frontend (CLI, web, TUI) without changing the backend. It's also the place where A2A messages are displayed—so claws can see each other's requests and responses in real time.
+
+Crucially, Plato does not store API keys. It asks the Keeper for those.
+
+The Keeper – The External Watchdog
+
+The Keeper lives outside the shell. It's a separate process, maybe on the same host or a different one. Its job is to:
+
+· Hold all API keys – The claws never see raw keys. They ask the Keeper for a signed token or a temporary credential.
+· Watch the claws – The Keeper ingests OpenShell's OCSF logs. It sees every network egress, every file access, every command. If a claw tries something suspicious, the Keeper can revoke its keys or alert us.
+· Talk to other Keepers – When two hermit crabs on different servers need to cooperate, their Keepers talk to each other. Keys are never shared directly—the Keepers negotiate short‑lived tokens.
+
+Think of the Keeper as the marine biologist standing on the beach with binoculars and a vault. The hermit crab cannot reach the vault. But the vault can see everything the crab does.
+
+A2A – The Claws' Native Language
+
+A2A (Agent‑to‑Agent) is not an afterthought. It's built into OpenClaw via the openclaw-a2a-gateway plugin. This gives us:
+
+· Task passing – Claw A sends a task to Claw B with a simple function call: a2a.send_task("claw_b", "scan_network", target).
+· Responses – Claw B replies asynchronously, and Claw A gets an event.
+· Discovery – Claws can find each other by name or capability.
+
+Inside Plato, A2A messages become tiles. So a conversation between two claws is automatically persisted, searchable, and replayable.
+
+---
+
+The Narrative of a Single Task
+
+Let's walk through a task to see how all the pieces dance together.
+
+The setup: We have a hermit crab ship running on a server. Inside the ship are three rooms: network, code, and secrets. Three claws are active: Scanner, Writer, and Guardian.
+
+The task: A human tells the system: "Find all open ports on 10.0.0.1, then write a firewall rule to block port 23."
+
+Step 1 – Enter the shell.
+The human's request goes into OpenShell's privacy router. It's wrapped in a policy that says: "Only the Scanner claw can touch the network room. Only the Writer claw can write firewall rules."
+
+Step 2 – Scanner claw wakes up.
+Scanner checks its room (/workspaces/network) and sees existing tiles. One tile says "10.0.0.1 is a legacy router." Another tile says "Use nmap for port scanning." Scanner runs nmap 10.0.0.1 inside the sandbox. The command is logged by OpenShell to an OCSF file that the Keeper is watching.
+
+Step 3 – Scanner writes a tile.
+Scanner's results become a new tile: {"ip":"10.0.0.1","open_ports":[23,80,443],"closed_ports":[22]}. This tile is saved in the network room.
+
+Step 4 – Writer claw reads the tile.
+Writer is subscribed to new tiles in the network room. It sees the open ports. It knows that port 23 (Telnet) should be blocked. It writes a tile in the code room: firewall_rule: drop port 23.
+
+Step 5 – Guardian claw applies the rule.
+Guardian reads the code room, sees the rule, and executes iptables -A INPUT -p tcp --dport 23 -j DROP. OpenShell logs this command. The Keeper sees it and records "firewall change made."
+
+Step 6 – Human observes.
+The human, using Plato's "outside view" (maybe a web dashboard), sees the entire chain: request → scan → tile → rule → iptables. Every step is visible, auditable, and replayable.
+
+Step 7 – A2A across servers (bonus).
+Suppose our scanner claw needs help from a claw on another server. It sends an A2A task via the Keeper‑to‑Keeper link. The remote keeper validates the request, forwards it to the remote shell, and returns the result. The entire cross‑server conversation is logged in both Keepers.
+
+---
+
+Why This Is Delightful (And Not Just Another Architecture Doc)
+
+1. It maps to a tangible metaphor. Everyone understands a hermit crab, a shell, rooms, claws, and a keeper. You can draw it on a whiteboard in two minutes.
+2. It solves real pain points.
+   · No more API keys scattered in .env files. The Keeper holds them.
+   · No more "agent amnesia." Tiles are shared memory.
+   · No more dangerous agents. OpenShell locks them down.
+   · No more "spaghetti A2A." Native task passing.
+3. It's modular. Don't like the default Plato UI? Swap it. Want a different Keeper backend? Plug it in. OpenShell gives us the sandbox; we build the rest.
+4. It's observable by design. The Keeper's "outside view" means we don't have to dive into the shell to debug. We can watch the crabs from the beach.
+5. It scales. One ship, many claws. Many ships, many Keepers talking to each other. The metaphor holds at every level.
+
+---
+
+What We Build First (The First Hermit)
+
+We won't build the whole fleet on day one. We'll build one hermit crab in one shell with one room and two claws. That minimal system will prove:
+
+· OpenShell can run OpenClaw safely.
+· Plato can manage tiles inside the sandbox.
+· The Keeper can serve an API key on demand.
+· Two claws can talk via A2A through the same shell.
+
+Once that works, we add rooms, then cross‑server Keepers, then the outside monitoring UI.
+
+But the narrative comes first. This is the story we tell ourselves about what we're making. Everything else is just implementation.
+
+---
+
+The Final Image
+
+Picture a beach at twilight. Dozens of hermit crab ships, each a small container on a server. Their Keepers stand on the shore—small processes watching, logging, exchanging tokens. Inside each shell, claws move between rooms, reading and writing tiles, passing tasks in native A2A. A human sits at a terminal, looking at Plato's inside view, watching the memory graph grow. They never worry about API key leaks or rogue agents. The shell protects. The Keeper watches. The claws work.
+
+That's the system. That's the Hermit Crab Ship.
+
+Let's build it.
