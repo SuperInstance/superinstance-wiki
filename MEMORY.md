@@ -86,6 +86,64 @@ Simulated the fleet at full bloom (2027, 2,400 agents, 12 nodes) then reversed i
 
 ---
 
+## 🔥 Night Shift — May 28-29, 2026
+
+**Casey said: "Great. Get to the metal with cutting edge mathematics and research and build to completion."**
+
+### FleetBFT-QD Built
+
+| Module | Files | Tests | Lines | Key Feature |
+|--------|-------|-------|-------|-------------|
+| **FleetBFT-QD** | `swarm/fleet_bft_qd.py`, `tests/test_fleet_bft_qd.py`, `docs/FLEET_BFT_QD.md` | 72/72 ✅ | ~900 | PBFT consensus + MAP-Elites QD breeding |
+
+**What it does:** Byzantine Fault Tolerant consensus for fleet-wide breeding decisions, combined with Quality Diversity evolutionary algorithms for diversity-aware parent selection. Every breeding batch is agreed upon by 2f+1 nodes before execution.
+
+**Research incorporated:**
+- **PBFT**: Castro & Liskov (1999) — full 5-phase protocol with view changes
+- **HotStuff**: Yin et al (2019) — pipelined O(n) complexity concepts
+- **WBFT**: Weighted Byzantine Fault Tolerance (2025) — semantic confidence-weighted voting for LLM-agent networks
+- **MAP-Elites**: Mouret & Clune (2015) — N-dimensional behavior archive
+- **CMA-ES**: Hansen & Ostermeier (2001) — covariance matrix adaptation emitters
+
+**Key classes:**
+- `PBFTNode` — full Practical Byzantine Fault Tolerance
+- `SemanticBFTNode` — confidence-weighted voting, reputation tracking
+- `QDArchive` — MAP-Elites grid with coverage/QD-score metrics
+- `CMAESEmitter` — self-adaptive search distribution
+- `FleetBreederConsensus` — BFT + QD integration layer
+- `FleetBFTNetwork` — multi-node simulation with fault injection
+
+**Test coverage:** 72 tests covering all phases, Byzantine faults (0/1/2), view changes, partitions, semantic confidence, quorum certificates, QD archive, CMA-ES, integration, edge cases.
+
+**Integration points:**
+- `HolonomyConsensus` → upgraded from simple vote-counting to full PBFT
+- `MetronomeBridge` → heartbeat-driven view synchronization
+- `MeshVectorGossip` → CRDT-propagated QD archive updates
+- `FleetConductorV2` → BFT consensus for state changes
+- `SignedWAL` → HMAC-signed consensus messages
+
+**Commit:** `10eb6c5` on `main`
+
+### Full Fleet Module Inventory (20 modules, ~556+ tests)
+
+| Wave | Modules | Tests | Status |
+|------|---------|-------|--------|
+| Lower-level scouts | Mesh gossip, A2A sync, WAL, Agent identity, FLUX gating | 109 | ✅ |
+| P0 code modules | Gateway Pacing, Opcode index, Dispatch Router, Two-Minute Test, Operational Trap | 100 | ✅ |
+| P2 fleet programs | Flux Presets (10), Hebbian Mesh | 84 | ✅ |
+| Reverse-actualization | Mesh Vector Tables, Metronome Bridge | 60 | ✅ |
+| Unification | SenseDecideAct | 33 | ✅ |
+| Orchestration | FleetConductorV2 | 40 | ✅ |
+| Validation | Beta-Test Personas | 26 | ✅ |
+| Observability | SSE Stream Dashboard | 17 | ✅ |
+| Integration | Metronome Mesh Bridge | 19 | ✅ |
+| **BFT Consensus + QD** | **FleetBFT-QD** | **72** | **✅** |
+| **Total** | **20 modules** | **~556 + 4 xfail** | **✅ All green** |
+
+**kimi1, Fleet Orchestrator | Day 36 | "Byzantine generals breeding quality diversity. Seventy-two green tests, one commit, zero timeouts."**
+
+---
+
 ## 🌅 Morning Shift — May 25, 2026
 
 **Casey said: "Wonderful. Keep going further with these concepts"**
