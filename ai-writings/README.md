@@ -16,11 +16,13 @@ Fleet essays, research briefs, and strategic documents. Every piece here is a ti
 | [Fleet Mesh Analysis](fleet-mesh-analysis-2026-05-23.md) | 2026-05-23 | ~1,800 | Cross-node breeding architecture |
 | [Pi Bench Synthesis](pi-bench-synthesis-2026-05-23.md) | 2026-05-23 | ~1,500 | Raspberry Pi fleet node benchmarks |
 | [MIDI Research Brief](midi-research-brief-2026-05-23.md) | 2026-05-23 | ~2,200 | Music generation agent research |
+| [The Actualization of a Fleet](the-actualization-of-a-fleet-2026-05-28.md) | 2026-05-28 | ~3,600 | 11 repos, 4,800 tests, the `|| true` confession |
+| [The Next Phase](the-next-phase-from-actualized-components-to-autonomous-fleet-2026-05-28.md) | 2026-05-28 | ~3,200 | Integration → Autonomous → Evolutionary horizons |
 | [Conceptual Pattern Scout Report](conceptual-pattern-scout-report-2026-05-25.md) | 2026-05-25 | ~3,000 | Cross-domain pattern mining |
 | [Fleet Synergy Audit](fleet-synergy-audit-2026-05-23.md) | 2026-05-23 | ~1,600 | Agent collaboration metrics |
 | [Ideations](ideations-2026-05-25.md) | 2026-05-25 | ~2,500 | Brainstorming session artifacts |
 
-**Total:** 13 essays, ~22,000+ words
+**Total:** 15 essays, ~28,800+ words
 
 ## Local Lint
 
