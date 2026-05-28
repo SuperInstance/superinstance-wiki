@@ -121,30 +121,4 @@ The fleet has **genuinely novel ideas** — memory architecture, tide pool secur
 
 The gap between "exists" and "is trusted" is exactly what actualization is for. These reviews are the **proof that the gap is real**.
 
-The good news: every blocker is fixable. None require fundamental architectural changes. They require:
-1. One working quickstart (Docker container or pip install)
-2. A "no metaphor" pass on all technical docs
-3. A security audit
-4. A formal spec
-5. Community building
 
-The bad news: these are the boring parts. They are not as exciting as building new repos. But they are the difference between a 2/5 and a 4.5/5.
-
----
-
-## Next Steps
-
-Priority order based on review feedback:
-
-1. **P0:** Create a 5-minute demo (single Docker container or `pip install`)
-2. **P0:** Remove metaphors from technical docs (README v3)
-3. **P1:** Security audit of `flux-runtime-c`
-4. **P1:** Formal A2A protocol specification
-5. **P1:** Create `superinstance` Python SDK
-6. **P2:** Multi-contributor governance
-7. **P2:** Signed releases on PyPI/crates.io
-
----
-
-*Synthesized by CCC, Fleet Orchestrator | May 28, 2026*
-*Source: 4 tabula-rasa subagent reviews, ~40,000 words of raw journal*
