@@ -29,3 +29,11 @@ OpenConstruct gives agents senses (vision, sonar, touch), lets them join fleets 
 ## Categories
 See [CATALOG.md](CATALOG.md) for the complete list organized into:
 Core Infrastructure · Plato Senses · Plato Core · A2UI/Terrain · Constraint Theory · Spectral/Conservation · Flux · Mathematics · Agent Infrastructure · Fleet/Cocapn · Research · GPU Computing · Domain Apps · Tools · Pages · Writings · Fleet Infra · Preserved
+
+## Ecosystem
+
+Part of the [SuperInstance](https://github.com/SuperInstance) ecosystem.
+
+- [OpenConstruct](https://github.com/SuperInstance/OpenConstruct)
+- [cocapn-core](https://github.com/SuperInstance/cocapn-core)
+- [plato-construct](https://github.com/SuperInstance/plato-construct)
