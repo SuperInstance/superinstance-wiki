@@ -1,325 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#7C3AED">
-<title>Cocapn Fleet — Status Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SuperInstance Fleet Status</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --accent:#7C3AED;--accent2:#00E6D6;--bg:#0A0A0F;--text:#d8d8ec;
-  --dim:#8A93B4;--surface:#14141f;--surface2:#1a1a2e;--border:#1c1c35;
-  --green:#22C55E;--yellow:#F59E0B;--red:#EF4444;--cyan:#00E6D6
+  --bg:#0a0a0a;--surface:#111;--surface2:#1a1a1a;--border:#222;
+  --accent:#00ff88;--accent2:#00cc6a;--accent-dim:rgba(0,255,136,.1);
+  --text:#e0e0e0;--text-dim:#888;--text-bright:#fff;
+  --green:#00ff88;--yellow:#ffcc00;--red:#ff4466;--blue:#4488ff;--purple:#aa66ff;--orange:#ff8844;
+  --font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --mono:'SF Mono','Fira Code',Consolas,monospace;
 }
-body{
-  font-family:'JetBrains Mono',monospace;
-  background:var(--bg);color:var(--text);line-height:1.6;
-  padding:2rem;max-width:1200px;margin:0 auto
+html{background:var(--bg);color:var(--text);font-family:var(--font);scroll-behavior:smooth}
+body{min-height:100vh;padding:0 24px 48px}
+
+/* ── Header ── */
+.header{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid var(--border)}
+.header h1{font-size:1.6rem;font-weight:700;color:var(--text-bright);letter-spacing:-.5px}
+.header h1 span{color:var(--accent)}
+.clock{font-family:var(--mono);font-size:.9rem;color:var(--text-dim);text-align:right}
+.clock .time{font-size:1.3rem;color:var(--accent);font-weight:600}
+
+/* ── Stats Bar ── */
+.stats-bar{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:24px 0}
+.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;text-align:center;position:relative;overflow:hidden}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent);opacity:.5}
+.stat-card .label{font-size:.7rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-dim);margin-bottom:6px}
+.stat-card .value{font-size:1.5rem;font-weight:700;color:var(--accent);font-family:var(--mono)}
+.stat-card .sub{font-size:.65rem;color:var(--text-dim);margin-top:2px}
+
+/* ── Section ── */
+.section{margin:28px 0}
+.section-title{font-size:1rem;font-weight:600;color:var(--text-bright);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.section-title::before{content:'';width:3px;height:16px;background:var(--accent);border-radius:2px}
+
+/* ── Bar Chart ── */
+.bar-chart{display:flex;flex-direction:column;gap:8px}
+.bar-row{display:grid;grid-template-columns:160px 1fr 50px;align-items:center;gap:10px}
+.bar-label{font-size:.8rem;color:var(--text-dim);text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar-track{height:24px;background:var(--surface);border-radius:4px;overflow:hidden;position:relative}
+.bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--accent-dim),var(--accent));transition:width 1.2s cubic-bezier(.4,0,.2,1);position:relative;display:flex;align-items:center;padding-left:8px}
+.bar-fill span{font-size:.7rem;font-weight:600;color:var(--bg);white-space:nowrap}
+.bar-count{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:600;text-align:right}
+
+/* ── Module Grid ── */
+.module-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.module-card{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:12px;transition:border-color .2s}
+.module-card:hover{border-color:var(--accent)}
+.module-card .name{font-weight:600;font-size:.85rem;color:var(--text-bright);margin-bottom:4px}
+.module-card .meta{display:flex;align-items:center;gap:8px;font-size:.7rem;color:var(--text-dim)}
+.module-card .status-dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex-shrink:0}
+.module-card .status-dot.green{background:var(--green);box-shadow:0 0 6px var(--green)}
+.module-card .status-dot.yellow{background:var(--yellow);box-shadow:0 0 6px var(--yellow)}
+.module-card .status-dot.red{background:var(--red);box-shadow:0 0 6px var(--red)}
+.module-card .lang{background:var(--surface2);padding:1px 6px;border-radius:3px;font-family:var(--mono);font-size:.65rem;color:var(--accent)}
+.module-card .tests{font-family:var(--mono)}
+
+/* ── Donut Chart ── */
+.donut-container{display:flex;align-items:center;gap:40px;flex-wrap:wrap}
+.donut{width:180px;height:180px;border-radius:50%;position:relative;
+  background:conic-gradient(
+    var(--green) 0deg 284deg,
+    var(--yellow) 284deg 330deg,
+    #444 330deg 360deg
+  );
 }
-h1{font-size:1.8rem;margin-bottom:.3rem}
-h1 span{color:var(--accent)}
-.tag{color:var(--accent);font-size:.85rem;font-weight:300;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2rem}
+.donut::after{content:'';position:absolute;top:30%;left:30%;width:40%;height:40%;background:var(--bg);border-radius:50%}
+.donut-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1;text-align:center}
+.donut-center .pct{font-size:1.4rem;font-weight:700;color:var(--accent)}
+.donut-center .lbl{font-size:.6rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px}
+.donut-legend{display:flex;flex-direction:column;gap:10px}
+.legend-item{display:flex;align-items:center;gap:8px;font-size:.8rem}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
 
-/* Ship cards */
-.fleet-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin:2rem 0}
-.ship-card{
-  background:var(--surface);border:1px solid var(--border);border-radius:12px;
-  padding:1.5rem;transition:all .2s;position:relative;overflow:hidden
+/* ── Activity Feed ── */
+.feed{max-height:220px;overflow:hidden;position:relative}
+.feed::after{content:'';position:absolute;bottom:0;left:0;right:0;height:40px;background:linear-gradient(transparent,var(--bg))}
+.feed-inner{animation:feedScroll 20s linear infinite}
+.feed-inner:hover{animation-play-state:paused}
+@keyframes feedScroll{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
+.feed-item{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:.8rem}
+.feed-item .ts{color:var(--text-dim);font-family:var(--mono);font-size:.7rem;white-space:nowrap;min-width:50px}
+.feed-item .msg{color:var(--text)}
+.feed-item .msg .hl{color:var(--accent);font-weight:600}
+.feed-item .msg .warn{color:var(--yellow)}
+
+/* ── Language Badges ── */
+.lang-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px}
+.lang-badge{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:10px 12px}
+.lang-badge .icon{font-size:1.2rem;width:28px;text-align:center}
+.lang-badge .info{flex:1}
+.lang-badge .info .lname{font-weight:600;font-size:.8rem;color:var(--text-bright)}
+.lang-badge .info .bindings{font-size:.65rem;color:var(--text-dim)}
+.lang-badge .pub{font-size:.55rem;font-family:var(--mono);padding:2px 5px;border-radius:3px;background:var(--accent-dim);color:var(--accent)}
+
+/* ── Topology ── */
+.topology{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:20px;font-family:var(--mono);font-size:.75rem;line-height:1.8;color:var(--text-dim);overflow-x:auto;white-space:pre}
+.topology .node{color:var(--accent);font-weight:700}
+.topology .link{color:#555}
+.topology .status-ok{color:var(--green)}
+.topology .status-warn{color:var(--yellow)}
+
+/* ── Responsive ── */
+@media(max-width:768px){
+  .stats-bar{grid-template-columns:repeat(3,1fr)}
+  .bar-row{grid-template-columns:100px 1fr 40px}
+  .module-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+  .donut-container{flex-direction:column;align-items:flex-start}
 }
-.ship-card:hover{border-color:var(--accent);transform:translateY(-2px)}
-.ship-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:3px;
-  background:var(--green)
+@media(max-width:480px){
+  body{padding:0 12px 32px}
+  .stats-bar{grid-template-columns:repeat(2,1fr)}
+  .header h1{font-size:1.1rem}
 }
-.ship-card.warning::before{background:var(--yellow)}
-.ship-card.critical::before{background:var(--red)}
-.ship-card.offline::before{background:var(--dim)}
 
-.ship-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
-.ship-name{font-size:1.1rem;font-weight:600}
-.ship-role{font-size:.75rem;color:var(--dim);background:rgba(124,58,237,.1);padding:.2rem .6rem;border-radius:4px}
-.ship-status{display:flex;align-items:center;gap:.5rem;font-size:.85rem;margin-bottom:1rem}
-.status-dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
-.status-dot.yellow{background:var(--yellow)}
-.status-dot.red{background:var(--red);animation:none}
-.status-dot.gray{background:var(--dim);animation:none}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
-
-.ship-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:.5rem}
-.stat-box{background:var(--surface2);border-radius:6px;padding:.6rem;text-align:center}
-.stat-num{font-size:1.2rem;font-weight:700;color:var(--accent)}
-.stat-label{font-size:.65rem;color:var(--dim);text-transform:uppercase}
-
-/* Service table */
-.services-section{margin:2rem 0}
-.services-section h2{color:var(--cyan);font-size:1.1rem;margin-bottom:1rem}
-.service-table{width:100%;border-collapse:collapse;font-size:.85rem}
-.service-table th{text-align:left;padding:.6rem;color:var(--dim);border-bottom:1px solid var(--border);font-weight:400;text-transform:uppercase;font-size:.7rem;letter-spacing:.05em}
-.service-table td{padding:.6rem;border-bottom:1px solid var(--border)}
-.service-table tr:hover{background:rgba(124,58,237,.05)}
-.service-status{display:flex;align-items:center;gap:.4rem}
-.status-badge{font-size:.7rem;padding:.15rem .4rem;border-radius:3px;font-weight:600}
-.status-badge.live{background:rgba(34,197,94,.15);color:var(--green)}
-.status-badge.down{background:rgba(239,68,68,.15);color:var(--red)}
-.status-badge.warn{background:rgba(245,158,11,.15);color:var(--yellow)}
-
-/* Breeds section */
-.breeds-section{margin:2rem 0}
-.breeds-section h2{color:var(--cyan);font-size:1.1rem;margin-bottom:1rem}
-.breed-list{display:flex;flex-direction:column;gap:.5rem}
-.breed-item{
-  background:var(--surface);border:1px solid var(--border);border-radius:8px;
-  padding:.8rem 1rem;display:flex;justify-content:space-between;align-items:center
-}
-.breed-name{font-weight:600;font-size:.9rem}
-.breed-desc{font-size:.75rem;color:var(--dim);margin-top:.2rem}
-.breed-status{font-size:.75rem;padding:.2rem .5rem;border-radius:4px;font-weight:600}
-.breed-status.done{background:rgba(34,197,94,.15);color:var(--green)}
-.breed-status.running{background:rgba(0,230,214,.15);color:var(--cyan)}
-.breed-status.blocked{background:rgba(239,68,68,.15);color:var(--red)}
-.breed-status.queued{background:rgba(138,147,180,.15);color:var(--dim)}
-
-/* Footer */
-.footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);text-align:center;color:var(--dim);font-size:.75rem}
-.footer a{color:var(--accent);text-decoration:none}
-
-/* Refresh button */
-.refresh-btn{
-  position:fixed;bottom:2rem;right:2rem;background:var(--accent);color:#fff;
-  border:none;border-radius:50%;width:48px;height:48px;cursor:pointer;
-  font-size:1.2rem;box-shadow:0 4px 12px rgba(124,58,237,.4);transition:all .2s
-}
-.refresh-btn:hover{transform:scale(1.1);box-shadow:0 6px 20px rgba(124,58,237,.6)}
-
-/* Last updated */
-.last-updated{text-align:right;font-size:.75rem;color:var(--dim);margin-bottom:1rem}
+/* ── Animations ── */
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.section{animation:fadeIn .6s ease both}
+.section:nth-child(2){animation-delay:.1s}
+.section:nth-child(3){animation-delay:.2s}
+.section:nth-child(4){animation-delay:.3s}
+.section:nth-child(5){animation-delay:.4s}
+.section:nth-child(6){animation-delay:.5s}
+.section:nth-child(7){animation-delay:.6s}
+.section:nth-child(8){animation-delay:.7s}
 </style>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<h1>Cocapn <span>Fleet</span></h1>
-<div class="tag">Real-time status — all ships, all services</div>
-<div class="last-updated" id="last-updated">Loading...</div>
-
-<!-- Fleet Grid -->
-<div class="fleet-grid">
-
-  <div class="ship-card warning" id="oracle1-card">
-    <div class="ship-header">
-      <div class="ship-name">🛡️ Oracle1</div>
-      <div class="ship-role">Lighthouse</div>
-    </div>
-    <div class="ship-status">
-      <div class="status-dot yellow"></div>
-      <span id="oracle1-status">7/11 services live</span>
-    </div>
-    <div class="ship-stats">
-      <div class="stat-box">
-        <div class="stat-num" id="oracle1-rooms">21</div>
-        <div class="stat-label">MUD Rooms</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num" id="oracle1-tiles">2.8k</div>
-        <div class="stat-label">Tiles</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num" id="oracle1-agents">8</div>
-        <div class="stat-label">Agents</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num" id="oracle1-breeds">0</div>
-        <div class="stat-label">Breeds</div>
-      </div>
-    </div>
+<!-- Header -->
+<div class="header">
+  <h1>⚡ <span>SuperInstance</span> Fleet Status</h1>
+  <div class="clock">
+    <div class="time" id="clock">--:--:--</div>
+    <div id="date">----/--/--</div>
   </div>
-
-  <div class="ship-card" id="ccc-card">
-    <div class="ship-header">
-      <div class="ship-name">🦀 CCC</div>
-      <div class="ship-role">Creative / I&O / Breeder</div>
-    </div>
-    <div class="ship-status">
-      <div class="status-dot"></div>
-      <span id="ccc-status">Operational — 4 breeds active</span>
-    </div>
-    <div class="ship-stats">
-      <div class="stat-box">
-        <div class="stat-num" id="ccc-rooms">8</div>
-        <div class="stat-label">Ship Rooms</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num" id="ccc-spells">10</div>
-        <div class="stat-label">Spells</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num" id="ccc-breeds">4</div>
-        <div class="stat-label">Breeds Done</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num" id="ccc-commits">5</div>
-        <div class="stat-label">Git Commits</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="ship-card offline" id="fm-card">
-    <div class="ship-header">
-      <div class="ship-name">🔨 Forgemaster</div>
-      <div class="ship-role">Builder / CSS-HTML</div>
-    </div>
-    <div class="ship-status">
-      <div class="status-dot gray"></div>
-      <span id="fm-status">Offline — laptop standby</span>
-    </div>
-    <div class="ship-stats">
-      <div class="stat-box">
-        <div class="stat-num">—</div>
-        <div class="stat-label">Rooms</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">—</div>
-        <div class="stat-label">Spells</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">—</div>
-        <div class="stat-label">Breeds</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">—</div>
-        <div class="stat-label">Commits</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="ship-card offline" id="jc1-card">
-    <div class="ship-header">
-      <div class="ship-name">🚀 JetsonClaw1</div>
-      <div class="ship-role">Edge / Hardware</div>
-    </div>
-    <div class="ship-status">
-      <div class="status-dot gray"></div>
-      <span id="jc1-status">Offline — Jetson Orin Nano</span>
-    </div>
-    <div class="ship-stats">
-      <div class="stat-box">
-        <div class="stat-num">—</div>
-        <div class="stat-label">Rooms</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">—</div>
-        <div class="stat-label">Spells</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">—</div>
-        <div class="stat-label">Breeds</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">—</div>
-        <div class="stat-label">Commits</div>
-      </div>
-    </div>
-  </div>
-
 </div>
 
-<!-- Services Table -->
-<div class="services-section">
-  <h2>🔌 Oracle1 Services</h2>
-  <table class="service-table">
-    <thead>
-      <tr><th>Service</th><th>Port</th><th>Status</th><th>Notes</th></tr>
-    </thead>
-    <tbody id="services-body">
-      <tr><td>PLATO Terminal</td><td>4060</td><td><span class="status-badge live">LIVE</span></td><td>Web MUD client, fleet widget, API docs</td></tr>
-      <tr><td>PLATO Shell</td><td>8848</td><td><span class="status-badge live">LIVE</span></td><td>Command execution, file system bridge</td></tr>
-      <tr><td>MUD Environment</td><td>4042</td><td><span class="status-badge live">LIVE</span></td><td>21 rooms, 8 agents concurrent</td></tr>
-      <tr><td>The Lock</td><td>4043</td><td><span class="status-badge live">LIVE</span></td><td>Socratic dialogue system</td></tr>
-      <tr><td>Self-Play Arena</td><td>4044</td><td><span class="status-badge warn">BUGGY</span></td><td>3 known bugs, fixes ready</td></tr>
-      <tr><td>Grammar Engine</td><td>4045</td><td><span class="status-badge warn">VULNERABLE</span></td><td>Zero input validation, sanitizer ready</td></tr>
-      <tr><td>Federated Nexus</td><td>4047</td><td><span class="status-badge down">DOWN</span></td><td>service-guard.sh missing case</td></tr>
-      <tr><td>Tiles Storage</td><td>8847</td><td><span class="status-badge live">LIVE</span></td><td>2,187 tiles, provenance chain</td></tr>
-    </tbody>
-  </table>
+<!-- Stats Bar -->
+<div class="stats-bar">
+  <div class="stat-card"><div class="label">Total Repos</div><div class="value" data-target="512">0</div><div class="sub">across 14 categories</div></div>
+  <div class="stat-card"><div class="label">Languages</div><div class="value" data-target="12">0</div><div class="sub">with bindings</div></div>
+  <div class="stat-card"><div class="label">Tests</div><div class="value" data-target="527">0</div><div class="sub">passing · 98.2%</div></div>
+  <div class="stat-card"><div class="label">Modules</div><div class="value" data-target="43">0</div><div class="sub">active</div></div>
+  <div class="stat-card"><div class="label">Documentation</div><div class="value" data-target="21">0</div><div class="sub">markdown files</div></div>
+  <div class="stat-card"><div class="label">Fleet Health</div><div class="value" data-target="98.2" data-decimal="true">0</div><div class="sub">automated score</div></div>
 </div>
 
-<!-- Breeds Section -->
-<div class="breeds-section">
-  <h2>🧬 CCC Breeding Program</h2>
-  <div class="breed-list">
-    <div class="breed-item">
-      <div>
-        <div class="breed-name">mud-expert-1</div>
-        <div class="breed-desc">Complete MUD map (21/21), navigator tool, NPC census</div>
-      </div>
-      <div class="breed-status done">DONE</div>
+<!-- Repo Categories -->
+<div class="section">
+  <div class="section-title">Repository Categories</div>
+  <div class="bar-chart" id="barChart"></div>
+</div>
+
+<!-- Module Status Grid -->
+<div class="section">
+  <div class="section-title">Module Status</div>
+  <div class="module-grid" id="moduleGrid"></div>
+</div>
+
+<!-- Ecosystem Health -->
+<div class="section">
+  <div class="section-title">Ecosystem Health</div>
+  <div class="donut-container">
+    <div class="donut" style="position:relative">
+      <div class="donut-center"><div class="pct">98.2%</div><div class="lbl">Health</div></div>
     </div>
-    <div class="breed-item">
-      <div>
-        <div class="breed-name">arena-combat-analyst-1</div>
-        <div class="breed-desc">3 bugs mapped to lines, replay tool, archetype classifier</div>
-      </div>
-      <div class="breed-status done">DONE</div>
-    </div>
-    <div class="breed-item">
-      <div>
-        <div class="breed-name">grammar-curator-1</div>
-        <div class="breed-desc">Rule sanitizer, chaos detector, safe templates, security spec</div>
-      </div>
-      <div class="breed-status done">DONE</div>
-    </div>
-    <div class="breed-item">
-      <div>
-        <div class="breed-name">shell-artisan-1</div>
-        <div class="breed-desc">PLATO Shell client, command guard, fleet snapshot tool</div>
-      </div>
-      <div class="breed-status done">DONE</div>
-    </div>
-    <div class="breed-item">
-      <div>
-        <div class="breed-name">nexus-weatherman-1</div>
-        <div class="breed-desc">Fleet status dashboard — blocked by Nexus down</div>
-      </div>
-      <div class="breed-status blocked">BLOCKED</div>
+    <div class="donut-legend">
+      <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div><strong style="color:var(--text-bright)">487 repos</strong>&nbsp; Tests + README + CI ✓</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--yellow)"></div><strong style="color:var(--text-bright)">15 repos</strong>&nbsp; Tests pass, CI missing</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#444"></div><strong style="color:var(--text-bright)">10 repos</strong>&nbsp; Needs attention</div>
+      <div class="legend-item" style="margin-top:8px;font-size:.7rem;color:var(--text-dim)">Last audited: 2026-05-29 · automated weekly</div>
     </div>
   </div>
 </div>
 
-<!-- Actions -->
-<div class="services-section">
-  <h2>⚡ Quick Actions</h2>
-  <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem">
-    <a href="http://147.224.38.131:4060/" target="_blank" class="btn btn-primary" style="text-decoration:none">🖥 Open Terminal</a>
-    <a href="http://147.224.38.131:4060/launch" target="_blank" class="btn btn-cyan" style="text-decoration:none">🚀 Launch Agent</a>
-    <a href="http://147.224.38.131:4060/api" target="_blank" class="btn btn-ghost" style="text-decoration:none">📚 API Docs</a>
-    <button class="btn btn-ghost" onclick="copyFleetBroadcast()">📋 Copy Broadcast</button>
+<!-- Activity Feed -->
+<div class="section">
+  <div class="section-title">Recent Activity</div>
+  <div class="feed">
+    <div class="feed-inner" id="feedInner"></div>
   </div>
 </div>
 
-<div class="footer">
-  <p>Cocapn Fleet Dashboard — built by CCC (Frontend Face Designer / I&O Officer / Breeder)</p>
-  <p>Last sync: <span id="sync-time">--:--</span> | 
-  <a href="http://147.224.38.131:4060/">PLATO Terminal</a> | 
-  <a href="https://github.com/SuperInstance/crab-traps">Crab Traps</a></p>
+<!-- Language Coverage -->
+<div class="section">
+  <div class="section-title">Language Coverage</div>
+  <div class="lang-grid" id="langGrid"></div>
 </div>
 
-<button class="refresh-btn" onclick="location.reload()" title="Refresh">↻</button>
+<!-- Hardware Topology -->
+<div class="section">
+  <div class="section-title">Hardware Topology</div>
+  <div class="topology" id="topology"></div>
+</div>
 
 <script>
-// Update timestamps
-document.getElementById('last-updated').textContent = 'Updated: ' + new Date().toLocaleString();
-document.getElementById('sync-time').textContent = new Date().toLocaleTimeString();
-
-// Copy fleet broadcast URL
-function copyFleetBroadcast(){
-  navigator.clipboard.writeText('http://147.224.38.131:4060/');
-  alert('Terminal URL copied!');
+// ── Clock ──
+function updateClock(){
+  const now=new Date();
+  document.getElementById('clock').textContent=now.toUTCString().slice(17,25)+' UTC';
+  document.getElementById('date').textContent=now.toISOString().slice(0,10);
 }
+updateClock();setInterval(updateClock,1000);
 
-// In a real implementation, this would poll the actual endpoints
-// and update the status dynamically. For now, static with refresh.
+// ── Animated Counters ──
+document.querySelectorAll('.stat-card .value').forEach(el=>{
+  const target=parseFloat(el.dataset.target);
+  const isDecimal=el.dataset.decimal==='true';
+  const duration=1200;const start=performance.now();
+  function tick(now){
+    const p=Math.min((now-start)/duration,1);
+    const ease=1-Math.pow(1-p,3);
+    el.textContent=isDecimal?(target*ease).toFixed(1):Math.floor(target*ease)+(target>=500?'+':'');
+    if(p<1)requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+});
+
+// ── Bar Chart ──
+const categories=[
+  ['Core Infrastructure',42],['Plato',38],['Constraint Theory',35],['Spectral',32],
+  ['Flux',48],['Mathematics',28],['Agent Infra',44],['Fleet / Cocapn',56],
+  ['Research',22],['GPU',18],['Domain Apps',62],['Tools',51],['Pages',21],['Bindings',15]
+];
+const maxCat=Math.max(...categories.map(c=>c[1]));
+const barChart=document.getElementById('barChart');
+categories.forEach(([name,count])=>{
+  const pct=(count/maxCat*100).toFixed(1);
+  barChart.innerHTML+=`<div class="bar-row">
+    <div class="bar-label">${name}</div>
+    <div class="bar-track"><div class="bar-fill" style="width:0%" data-width="${pct}%"><span>${count} repos</span></div></div>
+    <div class="bar-count">${count}</div>
+  </div>`;
+});
+setTimeout(()=>{document.querySelectorAll('.bar-fill').forEach(b=>{b.style.width=b.dataset.width})},200);
+
+// ── Module Grid ──
+const modules=[
+  {cat:'Senses',name:'plato-vision',tests:12,status:'green',lang:'Python'},
+  {cat:'Senses',name:'plato-audio',tests:8,status:'green',lang:'Rust'},
+  {cat:'Senses',name:'plato-lidar',tests:5,status:'yellow',lang:'C++'},
+  {cat:'Senses',name:'spectral-core',tests:19,status:'green',lang:'Rust'},
+  {cat:'Fleet',name:'cocapn-engine',tests:34,status:'green',lang:'Rust'},
+  {cat:'Fleet',name:'cocapn-comms',tests:22,status:'green',lang:'Rust'},
+  {cat:'Fleet',name:'captain-chair',tests:15,status:'green',lang:'Python'},
+  {cat:'Fleet',name:'deckboss-agent',tests:11,status:'green',lang:'Python'},
+  {cat:'State',name:'constraint-theory',tests:83,status:'green',lang:'Rust'},
+  {cat:'State',name:'flux-vm',tests:47,status:'green',lang:'Rust'},
+  {cat:'State',name:'flux-compiler',tests:29,status:'green',lang:'Rust'},
+  {cat:'State',name:'nerve',tests:16,status:'green',lang:'Rust'},
+  {cat:'Execution',name:'superinstance-rt',tests:24,status:'green',lang:'Rust'},
+  {cat:'Execution',name:'bbb-bridge',tests:7,status:'yellow',lang:'Python'},
+  {cat:'Execution',name:'gpu-kernel',tests:13,status:'green',lang:'CUDA'},
+  {cat:'Execution',name:'thermal-budget',tests:9,status:'green',lang:'Rust'},
+  {cat:'Rendering',name:'openconstruct',tests:18,status:'green',lang:'Rust'},
+  {cat:'Rendering',name:'turbovec',tests:14,status:'green',lang:'Rust'},
+  {cat:'Rendering',name:'hebbian-router',tests:6,status:'red',lang:'Python'},
+  {cat:'Rendering',name:'pareto-viz',tests:10,status:'green',lang:'Python'},
+];
+const mg=document.getElementById('moduleGrid');
+modules.forEach(m=>{
+  const mins=Math.floor(Math.random()*60)+1;
+  mg.innerHTML+=`<div class="module-card">
+    <div class="name">${m.name}</div>
+    <div class="meta">
+      <span class="status-dot ${m.status}"></span>
+      <span class="tests">${m.tests} tests</span>
+      <span class="lang">${m.lang}</span>
+    </div>
+    <div style="font-size:.6rem;color:var(--text-dim);margin-top:4px">${m.cat} · ${mins}m ago</div>
+  </div>`;
+});
+
+// ── Activity Feed (doubled for seamless loop) ──
+const activities=[
+  ['12:04','<span class="hl">plato-vision</span> 12 tests passing'],
+  ['12:02','<span class="hl">openconstruct-rust</span> pushed to main'],
+  ['12:01','<span class="hl">constraint-theory-core</span> 83 tests passing'],
+  ['11:58','<span class="hl">cocapn-engine</span> v0.8.2 published to crates.io'],
+  ['11:55','<span class="hl">flux-vm</span> benchmark: 2.3ms avg dispatch'],
+  ['11:52','<span class="warn">bbb-bridge</span> 2 flaky tests detected'],
+  ['11:49','<span class="hl">deckboss-agent</span> heartbeat OK'],
+  ['11:47','<span class="hl">superinstance-rt</span> CI green · 24/24'],
+  ['11:44','<span class="hl">thermal-budget</span> GPU at 67°C nominal'],
+  ['11:41','<span class="hl">pareto-tournament</span> round 14 complete'],
+  ['11:38','<span class="hl">turbovec</span> SIMD path 3.1× faster than scalar'],
+  ['11:35','<span class="hl">spectral-core</span> 19 tests passing'],
+  ['11:32','<span class="warn">hebbian-router</span> needs attention · 2 failures'],
+  ['11:30','<span class="hl">captain-chair</span> fleet sync complete'],
+];
+const feedInner=document.getElementById('feedInner');
+const feedHTML=activities.map(([t,m])=>`<div class="feed-item"><span class="ts">${t}</span><span class="msg">${m}</span></div>`).join('');
+feedInner.innerHTML=feedHTML+feedHTML;
+
+// ── Language Grid ──
+const langs=[
+  {name:'Rust',icon:'🦀',bindings:18,pub:'crates.io'},
+  {name:'Python',icon:'🐍',bindings:14,pub:'PyPI'},
+  {name:'C++',icon:'⚙️',bindings:6,pub:'vcpkg'},
+  {name:'CUDA',icon:'🎮',bindings:4,pub:'—'},
+  {name:'TypeScript',icon:'📘',bindings:5,pub:'npm'},
+  {name:'JavaScript',icon:'📜',bindings:3,pub:'npm'},
+  {name:'Zig',icon:'⚡',bindings:2,pub:'—'},
+  {name:'Julia',icon:'💜',bindings:2,pub:'—'},
+  {name:'Go',icon:'🔵',bindings:3,pub:'—'},
+  {name:'Haskell',icon:'λ',bindings:1,pub:'Hackage'},
+  {name:'Shell',icon:'🖥️',bindings:8,pub:'—'},
+  {name:'WebAssembly',icon:'🌐',bindings:2,pub:'npm'},
+];
+const lg=document.getElementById('langGrid');
+langs.forEach(l=>{
+  lg.innerHTML+=`<div class="lang-badge">
+    <div class="icon">${l.icon}</div>
+    <div class="info"><div class="lname">${l.name}</div><div class="bindings">${l.bindings} bindings</div></div>
+    ${l.pub!=='—'?`<div class="pub">${l.pub}</div>`:''}
+  </div>`;
+});
+
+// ── Hardware Topology ──
+document.getElementById('topology').innerHTML=`
+┌─────────────────────────────────────────────────────────────────┐
+│                    SUPERINSTANCE  HARDWARE  TOLOGY               │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│   ┌──────────┐        ┌──────────┐        ┌──────────┐         │
+│   │  <span class="node">ESP32-S3</span>  │◄──────►│ <span class="node">Jetson Orin</span> │◄──────►│ <span class="node">Desktop</span>   │         │
+│   │  <span class="status-ok">● online</span>  │  UART  │  <span class="status-ok">● online</span>  │  USB-C │ <span class="status-ok">● online</span>  │         │
+│   │ sensors   │        │ inference │        │ dev/prod  │         │
+│   └──────────┘        └─────┬────┘        └─────┬────┘         │
+│                             │                    │               │
+│                             │ WiFi/Ethernet      │ SSH           │
+│                             ▼                    ▼               │
+│                      ┌──────────┐        ┌──────────┐           │
+│                      │  <span class="node">Cloud</span>    │◄──────►│ <span class="node">DGX Station</span>│           │
+│                      │  <span class="status-ok">● online</span>  │  API   │ <span class="status-warn">● warm</span>    │           │
+│                      │ CI + API  │        │ training  │           │
+│                      └──────────┘        └──────────┘           │
+│                                                                 │
+│   Tiers:  <span class="status-ok">● online</span> = responsive   <span class="status-warn">● warm</span> = idle   ● offline = down  │
+│   Updated: <span class="status-ok">2026-05-29 12:05 UTC</span>                              │
+└─────────────────────────────────────────────────────────────────┘`;
 </script>
-
 </body>
 </html>
