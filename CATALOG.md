@@ -458,6 +458,7 @@ Every repository in the SuperInstance organization, organized by category.
 
 ## Tools & Utilities
 
+- [superinstance-design](https://github.com/SuperInstance/superinstance-design) — Shared design system for all SuperInstance web properties — CSS framework, shared nav/footer components, responsive utilities
 - [semble](https://github.com/SuperInstance/semble) — Fast and Accurate Code Search for Agents. Uses ~98% fewer tokens than grep+read
 - [warp](https://github.com/SuperInstance/warp) — Warp is an agentic development environment, born out of the terminal.
 - [moo](https://github.com/SuperInstance/moo) — Optimised tokenizer/lexer generator! 🐄 Uses /y for performance. Moo.
