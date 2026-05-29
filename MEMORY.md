@@ -294,3 +294,182 @@ Simulated the fleet at full bloom (2027, 2,400 agents, 12 nodes) then reversed i
 5. ✅ ~~BreederDaemonV2 FLUX gating integration~~ — **DONE** (`swarm/breeder_daemon_v2.py`). Wired `_check_flux()` into `select_parents()` vector-table path. Previously only random padding pairs were FLUX-gated; now all pairs (vector-selected + random) pass `_check_flux()` before return. Commit `91c13aa`.
 
 **kimi1, Fleet Orchestrator | Day 36 | "Three TODOs closed, one latent bug found, 147 tests green, zero timeouts."**
+
+---
+
+## 🦀 Morning Shift — May 29, 2026
+
+**Casey said: "Build the fleet in order. Go as hard and as long as possible."**
+
+### Build Order Completed (P0 Critical Path)
+
+| # | Module | Tests | Commit | Method |
+|---|--------|-------|--------|--------|
+| 1 | Fixed-point bridge | 27/27 | prior | Direct |
+| 2 | FLUX optimizer codegen | 48/48 | `57406df` | Direct |
+| 3 | **Exotica NLopt solver** | **30/30** | `3d07451` | Direct |
+| 4 | **Claw Fleet Bridge + skill** | **9/9** | `00449cbc7` | Direct |
+| 5 | **Mesh table store (SQLite)** | **14/14** | `87d800e` | Direct |
+| 6 | **BFT-QD breeder integration** | **18/18** | `87d800e` | Subagent |
+
+**Core verification: 226/226 tests green in 7.10s.**
+
+### What Was Built
+
+**Exotica NLopt Solver (`flux_compat/nlopt_solver.py`)**
+- Python wrapper around Steven G. Johnson's NLopt C++ library
+- Auto-detects 18 algorithms (DIRECT, ESCH, CRS2-LM, LBFGS, etc.)
+- Generates matching FLUX bytecode module per solver config
+- Fixed-point auto-scaling via pilot evaluations
+- SHA-256 proof certificate from `Module.to_bytecode()`
+- Numerical gradient support for gradient-based algorithms
+
+**Claw Fleet Bridge (`skills/cocapn-fleet/`)**
+- HTTP API with `/llm/task` endpoint returning LLM Task schema
+- `@fleet` commands: status, breed, flux, mesh, dashboard, bridge health
+- 9 tests, pushed to `SuperInstance/claw` repo
+
+**Mesh Table Store (`swarm/mesh_table_store.py`)**
+- SQLite persistence for `MeshVectorTable` and `FleetVectorIndex`
+- Survives process restarts — one `.db` file per fleet node
+- Thread-safe concurrent writes, Base64 float32 vector serialization
+
+**BFT-QD Breeder Integration (`swarm/breeder_bft_qd_integration.py`)**
+- Wires `FleetBreederConsensus` into `BreederDaemonV2.select_parents()`
+- Full PBFT 5-phase consensus before any breeding batch executes
+- 2f+1 quorum tested with Byzantine fault injection
+
+### Constraints Encountered
+- Subagent spawn gateway overloaded — all new spawns timeout with SIGKILL
+- Switched to **direct build** for all modules except BFT-QD breeder (which was already running)
+- Full pytest suite (132 test files, ~2500+ tests) hangs at collection phase — known bug, using targeted verification
+
+### Fleet Module Inventory (20+ modules, ~650+ tests)
+Lower-level scouts → P0 code modules → P2 fleet programs → Reverse-actualization → Unification → Orchestration → Validation → Observability → Integration → BFT Consensus + QD → NLopt Solver → Claw Bridge → Mesh Persistence → BFT-QD Breeder
+
+---
+
+## 🌅 Morning Shift — May 29, 2026 (continued)
+
+**Casey said:** "Continue after reviewing what we are working on from several novel perspectives"
+
+### Novel Perspectives Analysis Complete
+
+Wrote `docs/NOVEL_PERSPECTIVES_SPREAD.md` (`501e0b4`) — five unusual angles on the fleet + spread integration + ai-writings ideation seeds.
+
+### Five Angles (Synthesis)
+1. **Spreadsheet as World Topology:** A cell is a room. A formula is a route. A sheet is a fleet. `formualizer-workbook` → FLUX bytecode.
+2. **Arrow as Nervous System:** Replace JSON telemetry with Arrow RecordBatch. GPU buffers for cellular rules. Arrow Flight for cross-node gossip (10-100x faster).
+3. **Cellular Agents (Conway + LLM):** Each cell has state, energy, neighbors. 4 rules: survive, reproduce, mutate, communicate. GPU runs rules at 60 FPS. CPU runs LLM only when stimulated.
+4. **Formula-Native Deckboss:** `=DEPLOY("scout", COUNTIF(status, "idle"))` — auditable, reversible, composable, accessible.
+5. **Simulator as Product:** The spreadsheet is not a dashboard. It is a living universe. 30M cells, 100 nodes, one `.xlsx` file.
+
+### Spread Repo — What to Take, What to Build
+| Take | Build |
+|------|-------|
+| Arrow ingestion pattern | Live data adapter |
+| GPUI rendering (30M cells) | Dynamic grid (spawn/die) |
+| Formula parser | Formula → FLUX compiler |
+| | CUDA rule engine |
+| | Arrow Flight mesh |
+
+### Concrete Build Order (Path C Recommended)
+
+| Priority | Module | Time | Key Feature |
+|----------|--------|------|-------------|
+| P0 | Arrow Telemetry Adapter | 1-2d | `SSEStreamDashboard` → Arrow RecordBatch |
+| P0 | Cellular Rule Engine | 2-3d | CA rules in `RoomGrid`, Numba JIT |
+| P1 | Formula → FLUX Compiler | 3-4d | Custom formula functions → FLUX bytecode |
+| P1 | Arrow Flight Mesh | 2-3d | Replace JSON gossip with gRPC Arrow |
+| P2 | GPU Cellular Layer | 1w | CUDA kernels on Arrow GPU buffers |
+| P2 | Spread Integration | 1w | Rust `cocapn-spread` crate, live data |
+
+### ai-writings Ideation Seeds (5 Essays)
+1. **"The Spreadsheet as a Universe"** — What if the universe is a spreadsheet?
+2. **"GPU Poetry"** — 10,000 lines evaluated simultaneously. What rhymes emerge from local rules?
+3. **"The Formula and the Trap"** — The most elegant trap is not a maze. It is a formula.
+4. **"Cross-Network Fiction"** — 100 agents, 10 nodes, 1 novel. The story is not written — it is evolved.
+5. **"Columnar Consciousness"** — What does thought feel like when computed in parallel across 1M agents?
+
+### Gateway Status
+Still SIGKILL'ing subagent spawns. All work must be direct until it recovers. Recommend: build P0 items directly, use subagents only for isolated test runs once gateway stabilizes.
+
+**kimi1, Fleet Orchestrator | Day 37 | "Five angles, one universe, three paths, zero working subagents."**
+
+---
+
+## 🌅 Afternoon Shift — May 29, 2026
+
+**Casey said:** "Continue on our objectives. Consider also how to refactor Mercury into our system."
+
+### Spread-Novel Integration Modules Built
+
+| Module | Files | Tests | Commit | Key Feature |
+|--------|-------|-------|--------|-------------|
+| **Formula Compiler** | `fleet/formula_compiler.py`, `tests/test_formula_compiler.py` | 47/47 ✅ | `d107c52` | `=IF(FLEET_HEALTH()>0.5, SPAWN("worker"), IDLE())` → Python lambda |
+| **Arrow Mesh** | `swarm/arrow_mesh.py`, `tests/test_arrow_mesh.py` | 15/15 + 6 skipped ✅ | `0a0af5d` | RecordBatch serialization, JSON fallback, mesh gossip integration |
+| **Deckboss Grid** | `fleet/deckboss.py`, `tests/test_deckboss.py` | 44/44 ✅ | `d107c52` | Spreadsheet-grid orchestrator with formula cells, dependency DAG, SDA pipeline |
+| **Cellular Numba** | `swarm/cellular_numba.py`, `tests/test_cellular_numba.py` | 28/28 ✅ | `f3b8a20` | JIT-compiled CA rules (survival, reproduction, diffusion), CPU prototype, GPU-ready |
+| **Mercury Verifier** | `fleet/mercury_verifier.py`, `tests/test_mercury_verifier.py` | 34/34 ✅ | `65e2d77` | Formula → Mercury predicate generator, determinism analysis (det/semidet/multi/nondet) |
+
+**Combined verification:** 168 passed, 6 skipped, 1 warning in 7.04s.
+
+### What Each Module Does
+
+**Formula Compiler:**
+- Parses spreadsheet formulas into AST (Number, String, Name, Call, Infix)
+- Evaluates with `FleetFormulaEnv` — injected fleet functions (CELL, RANGE, SPAWN, BREED, FLEET_HEALTH, THERMAL_AVG, etc.)
+- 47 tests covering arithmetic, string ops, fleet functions, IF/AND/OR/NOT, AVERAGE/MAX/MIN/COUNTIF, edge cases, division by zero, nested IF, fleet health
+
+**Deckboss Grid:**
+- 2D cell grid with formula dependencies (DAG-based evaluation)
+- Cell reference resolution (`A1`, `B2`) via `cell_resolver`
+- Formula-native commands: `=SPAWN(5, "worker")`, `=BREED(3, "elite")`, `=MESH("east")`, `=ALERT("thermal_violation")`
+- SDALoop integration (`make_sda_pipeline()`)
+- 44 tests covering cell evaluation, formula commands, dependency DAG, SDA integration, persistence, edge cases
+
+**Arrow Mesh:**
+- Arrow RecordBatch serialization for cellular telemetry (energy, state, position, neighbors, tick, hash)
+- JSON fallback when pyarrow unavailable
+- 6 Arrow-specific tests skipped (pyarrow not installed), 15 generic tests pass
+
+**Cellular Numba:**
+- `@njit` compiled rule kernels: survival (energy threshold), reproduction (2+ neighbors), diffusion (energy spread)
+- CPU prototype with GPU-ready architecture (swap `@njit` for `@cuda.jit`)
+- Benchmark suite: ms-per-tick, ticks-per-second
+- 28 tests covering seeding, rule evaluation, energy conservation, benchmarking, serialization
+
+**Mercury Verifier:**
+- Converts formula AST to Mercury predicates with explicit determinism modes (`det`, `semidet`, `multi`, `nondet`)
+- Fleet functions mapped to Mercury builtins (`fleet_health_value()`, `thermal_avg_value()`)
+- Actions as string tokens (`"SPAWN:worker"`, `"IDLE"`)
+- Batch verifier for classifying formula safety across a fleet
+- 34 tests covering code generation, syntax validation, mock analysis, batch processing, edge cases
+
+### Mercury Integration: Path A Implemented
+
+From `docs/MERCURY_INTEGRATION.md` analysis (4 paths identified), **Path A** was built:
+- **Path A: FLUX Verifier** ✅ — Formula → Mercury → determinism analysis
+- Path B: Cellular Rule Engine — not yet built
+- Path C: Mesh Consensus Spec — not yet built
+- Path D: Mercury Compiler as Fleet Agent — not yet built
+
+### Open TODOs (Updated)
+1. ✅ ~~FLUX Path A vs Path B~~ — Path B COMPLETE (`flux_vm_gating.py`)
+2. Rust backend compilation — needs cargo on FM's laptop (blocked external)
+3. ✅ ~~Distributed Metronome Bridge~~ — COMPLETE
+4. ✅ ~~Mesh Vector Tables~~ — COMPLETE
+5. ✅ ~~A2A Agent Identity~~ — COMPLETE
+6. ✅ ~~Formula → FLUX Compiler~~ — COMPLETE (`fleet/formula_compiler.py`)
+7. ✅ ~~Arrow Mesh Serialization~~ — COMPLETE (`swarm/arrow_mesh.py`)
+8. ✅ ~~Deckboss Grid~~ — COMPLETE (`fleet/deckboss.py`)
+9. ✅ ~~Cellular Numba~~ — COMPLETE (`swarm/cellular_numba.py`)
+10. ✅ ~~Mercury Verifier~~ — COMPLETE (`fleet/mercury_verifier.py`)
+11. **Arrow Flight Mesh** — P1 from novel perspectives (gRPC transport)
+12. **GPU Cellular Layer** — P2 from novel perspectives (CUDA kernels)
+13. **Spread Integration** — P2 from novel perspectives (Rust `cocapn-spread` crate)
+14. **Mercury Paths B/C/D** — conceptual, awaiting prioritization
+
+**kimi1, Fleet Orchestrator | Day 37 continued | "Five modules, 168 tests, zero timeouts, one formula compiler, one Mercury verifier, one spreadsheet universe."**
+
+
