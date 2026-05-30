@@ -14,9 +14,9 @@ Dispatched **8 concurrent scouts** to audit sunset-ecosystem + study SuperInstan
 | Scout | Task | Status |
 |-------|------|--------|
 | Sunset Internal Auditor | TODOs, commits, test count | ✅ Complete |
-| SuperInstance Pattern Miner | 8 Rust repos, 5 patterns | ⚠️ Partial (1 repo) |
+| SuperInstance Pattern Miner | 8 Rust repos, 5 patterns | ⚠️ Partial (1 repo fetched) |
 | PLATO-nervous Scout | README summary | ✅ Complete |
-| Mercury Integration | Logic programming research | ✅ Complete |
+| Mercury Integration | Logic programming research | ✅ Complete (manual write after 404) |
 
 ### Direct Builds (While Scouts Ran)
 
@@ -34,12 +34,12 @@ Dispatched **8 concurrent scouts** to audit sunset-ecosystem + study SuperInstan
 | Sunset Internal | `audit/sunset_internal_audit.md` | 27 TODOs (1 in production), 387 test files, clean working tree |
 | SuperInstance Patterns | `audit/integration_patterns.md` | 5 concrete patterns identified from ecosystem study |
 | PLATO-nervous | `audit/plato_nervous_summary.md` | 5-layer signal chain: deadband → 350M nano → LoRA → 1.2B coordinator → cloud fallback |
-| Mercury | `audit/mercury_integration.md` | Logic programming for breeding constraints + pedigree rule engine |
+| Mercury | `audit/mercury_integration.md` | 3 integration points: breeding constraints, pedigree queries, BFT consensus rules |
 
 ### P0 Integration Targets (Open)
-1. Forge-Flux Bridge — wire decomposition into breeding pipeline
-2. Holodeck Environment Adapter — Rust ↔ Python room state bridge
-3. PLATO Signal Chain Adapter — nervous system → sunset sensor feed
+1. ✅ Forge-Flux Bridge — wire decomposition into breeding pipeline (`968eebd`)
+2. ✅ PLATO Signal Chain Adapter — nervous system → sunset sensor feed (`a80a7d6`)
+3. Holodeck Environment Adapter — Rust ↔ Python room state bridge
 4. Constraint Bridge upgrade — exact Pythagorean snapping
 
 **kimi1, Fleet Orchestrator | Day 40 | "8 scouts, 3 modules, 54 tests, 5 audits. The fleet is vast."**
@@ -386,8 +386,8 @@ Simulated the fleet at full bloom (2027, 2,400 agents, 12 nodes) then reversed i
 - Switched to **direct build** for all modules except BFT-QD breeder (which was already running)
 - Full pytest suite (132 test files, ~2500+ tests) hangs at collection phase — known bug, using targeted verification
 
-### Fleet Module Inventory (20+ modules, ~650+ tests)
-Lower-level scouts → P0 code modules → P2 fleet programs → Reverse-actualization → Unification → Orchestration → Validation → Observability → Integration → BFT Consensus + QD → NLopt Solver → Claw Bridge → Mesh Persistence → BFT-QD Breeder
+### Fleet Module Inventory (22+ modules, ~700+ tests)
+Lower-level scouts → P0 code modules → P2 fleet programs → Reverse-actualization → Unification → Orchestration → Validation → Observability → Integration → BFT Consensus + QD → NLopt Solver → Claw Bridge → Mesh Persistence → BFT-QD Breeder → Spread Integration (13 modules) → Polyglot Voice/JEPA (6 modules) → Forge-Flux Bridge → PLATO Signal Chain
 
 ---
 
