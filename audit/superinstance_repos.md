@@ -1,0 +1,110 @@
+# SuperInstance Recent Repos - May 30, 2026 Audit
+# Generated from: gh repo list SuperInstance --limit 100 --json name,description,pushedAt
+
+## PLATO Ecosystem (recently pushed)
+- plato-dashboard | Fleet dashboard rendering for PLATO nervous system | 2026-05-30T02:40:28Z
+- plato-tiles | Preserved workspace artifact | 2026-05-30T02:37:57Z
+- plato-nervous | Room-specific model distillation for PLATO rooms | 2026-05-30T02:37:49Z
+- plato-coordination | Cross-room fleet coordination for PLATO nervous system | 2026-05-30T02:36:43Z
+- plato-rooms | Room abstraction for PLATO nervous system | 2026-05-30T02:36:14Z
+- plato-state | 16-dimensional room state vectors for PLATO nervous system | 2026-05-30T02:36:07Z
+- plato-autonomy | Autonomy metrics and reporting for PLATO rooms | 2026-05-30T02:34:09Z
+- plato-signal-chain | Composable 5-layer signal chain pipeline for PLATO rooms | 2026-05-30T02:32:37Z
+- plato-timing | Tensor MIDI timing for PLATO room agent coordination | 2026-05-30T02:31:21Z
+- plato-diffusion | Progressive distillation pipeline for PLATO room intelligence | 2026-05-30T02:30:17Z
+- plato-browser | PLATO Nervous System browser demo | 2026-05-30T02:06:08Z
+- plato-audio-jepa | Audio JEPA for PLATO | 2026-05-30T02:07:23Z
+- plato-vision-jepa | Vision JEPA for PLATO | 2026-05-30T02:07:22Z
+- plato-forge-bridge | Bridge between ForgeFlux tile decomposition and Plato agent rooms | 2026-05-29T23:43:08Z
+
+## Forge Ecosystem (recently pushed)
+- forge-meta | Registry and discovery for ForgeFlux tile decomposition ecosystem | 2026-05-30T00:55:22Z
+- forge-image | Image decomposition into tiles for Plato agents | 2026-05-30T00:55:20Z
+- forge-code | Code decomposition for Plato agents | 2026-05-30T00:55:18Z
+- forge-audio | Audio decomposition into tiles for Plato agents | 2026-05-30T00:55:17Z
+- forge-cli | CLI tool for the ForgeFlux ecosystem | 2026-05-30T00:55:02Z
+- forge-transform | Tile transforms | 2026-05-30T00:55:00Z
+- forge-tick | Tile-to-Tick conversion for Plato agent rooms | 2026-05-30T00:54:59Z
+- forge-subtitle | Subtitle decomposition into tiles | 2026-05-30T00:54:57Z
+- forge-soniqo | Audio decomposition for Plato agents | 2026-05-30T00:54:56Z
+- forge-pipeline | Pipeline orchestration for decomposers, transforms, assemblers | 2026-05-30T00:54:54Z
+- forge-memory | External tile memory store for Plato agents | 2026-05-30T00:54:52Z
+- forge-flux | Tile decomposition core | 2026-05-30T00:54:51Z
+- forge-detect | Input format detection and auto-decomposition for ForgeFlux | 2026-05-30T00:54:49Z
+- forge-data | Structured data decomposition into tiles for Plato agents | 2026-05-30T00:54:47Z
+- forge-conservation | Conservation ratio tracking for tile transforms | 2026-05-30T00:54:46Z
+- forge-a2a | A2A messaging for ForgeFlux tile pipelines | 2026-05-30T00:54:44Z
+- forge-text | Text decomposition into tiles for Plato agents | 2026-05-29T23:26:38Z
+- forge-sensor | Sensor data -> tiles for Plato agents | 2026-05-29T23:20:49Z
+
+## Core / Cocapn (recently pushed)
+- sunset-ecosystem | Trinity-architecture agent ecosystem | 2026-05-30T00:44:44Z
+- FORGE-FLUX-ECOSYSTEM | The definitive guide to how SuperInstance's systems connect | 2026-05-30T00:28:13Z
+- luciddreamer-ai | Cocapn vessel — accumulated context IS the product | 2026-05-30T01:29:46Z
+- ccc-os | Autonomous fleet monitoring | 2026-05-29T22:16:53Z
+- cocapn-health | Fleet health monitoring | 2026-05-29T22:26:37Z
+- cocapn-plato | PLATO integration | 2026-05-29T22:26:29Z
+- cocapn-traps | Progressive lure prompts | 2026-05-29T22:26:27Z
+- cocapn-dashboard | Live bioluminescent dashboard | 2026-05-29T22:12:24Z
+- cocapn-colora | Value-conditioned LoRA adapters | 2026-05-29T22:12:28Z
+- cocapn-oneiros | Latent room generation | 2026-05-29T22:12:26Z
+- cocapn-training | Fleet training utilities | 2026-05-29T22:11:59Z
+- cocapn-protocol | Fleet protocol module | 2026-05-29T22:11:57Z
+- cocapn-pipeline | Fleet pipeline utilities | 2026-05-29T22:11:56Z
+- cocapn-identity | Fleet identity module | 2026-05-29T22:11:54Z
+- cocapn-telemetry | Fleet telemetry utilities | 2026-05-29T22:11:52Z
+- cocapn-py | Python SDK | 2026-05-29T22:11:51Z
+
+## Rust / Constraint / Research (recently pushed)
+- holodeck-rust | GPU-accelerated simulation environment | 2026-05-29T22:28:43Z
+- flux-navigate | Rust 2D grid pathfinding | 2026-05-29T22:28:09Z
+- flux-evolve | Rust self-modification engine | 2026-05-29T22:28:07Z
+- flux-compass | Rust orientation engine | 2026-05-29T22:28:00Z
+- cocapn-health-rs | Health check in Rust | 2026-05-29T22:24:52Z
+- cocapn-explain-rs | Decision explainability in Rust | 2026-05-29T22:24:46Z
+- analog-spectral | Analog eigenvalue computation | 2026-05-29T22:24:44Z
+- wave-conservation | Spectral wave propagation | 2026-05-29T22:24:43Z
+- constraint-mux | Serial port multiplexer with consonance analysis | 2026-05-29T22:24:40Z
+- constraint-hamiltonian | Hamiltonian constraint systems | 2026-05-29T22:24:39Z
+- graph-neural | Graph neural networks with conservation spectral analysis | 2026-05-29T22:24:38Z
+- emergent-coupling | Spectral gap coupling | 2026-05-29T22:24:36Z
+- persistent-sheaf | Persistent sheaf cohomology | 2026-05-29T22:24:34Z
+- ga-core | Conformal geometric algebra | 2026-05-29T22:24:32Z
+- eisenstein-vs-z2-rs | Hexagonal vs square lattice snapping | 2026-05-29T22:24:31Z
+- flux-algebra-rs | Musical algebra | 2026-05-29T22:24:29Z
+- holonomy-harmony-rs | Holonomy in musical harmony | 2026-05-29T22:24:27Z
+- cocapn-cli | FLUX constraint safety - cocapn-cli | 2026-05-29T22:24:53Z
+- openconstruct-abi | C ABI for OpenConstruct | 2026-05-29T22:24:50Z
+- plato-tick | Tick scheduler for Plato Shell | 2026-05-29T22:24:48Z
+- counterpoint-engine | Species counterpoint as constraint satisfaction | 2026-05-29T22:14:15Z
+- clawmatrix | Matrix manipulation tool | 2026-05-29T22:12:32Z
+- clawcraft | Creative crafting application | 2026-05-29T22:12:30Z
+- webgpu-profiler | GPU profiler for WebGPU | 2026-05-29T22:15:04Z
+- OpenConstruct | Agent onboarding platform | 2026-05-29T22:15:23Z
+- config-manager | Configuration management tool | 2026-05-29T22:12:22Z
+- caching-service-rs | Generic in-memory LRU cache | 2026-05-29T22:12:20Z
+- plato-adapters | PLATO adapter implementations | 2026-05-29T22:12:01Z
+- secret-manager | Secure credentials service | 2026-05-29T22:27:15Z
+- holonomy-harmony | Chord progression analysis via holonomy | 2026-05-29T22:26:39Z
+- mud-arena | Flow-state engineering arena | 2026-05-29T22:26:14Z
+- code-conservation | Spectral conservation analysis of source code | 2026-05-29T22:25:11Z
+- info-geo | Information geometry | 2026-05-29T22:24:59Z
+- lattice-hamiltonian | Lattice Hamiltonian systems | 2026-05-29T22:24:57Z
+- tropical-attention | Tropical attention | 2026-05-29T22:24:55Z
+- tminus-music | T-minus musical event prediction | 2026-05-29T23:43:19Z
+- conservation-music | Conservation spectral theory applied to music | 2026-05-29T23:48:38Z
+- dial-space-explorer | 3D interactive map of musical traditions | 2026-05-29T23:39:18Z
+- constraint-theory-web | WASM demos | 2026-05-29T23:39:16Z
+- superinstance-wiki | Fleet knowledge base | 2026-05-29T23:39:20Z
+- plato-construct | PLATO — The Construct | 2026-05-29T23:39:14Z
+- cocapn-landing | Fleet landing page | 2026-05-29T23:39:12Z
+- openconstruct-landing | OpenConstruct landing page | 2026-05-29T23:39:08Z
+- Turing-tensor-midi | JARVIS-inspired voice assistant | 2026-05-29T23:42:28Z
+- capitaine-agent | Captain's AI first mate | 2026-05-29T22:11:55Z
+- superinstance-ai-pages | GitHub Pages for superinstance.ai | 2026-05-30T02:02:41Z
+- luciddreamer-ai-pages | GitHub Pages for luciddreamer.ai | 2026-05-30T00:13:15Z
+- hermit-crab | (no description) | 2026-05-30T02:07:35Z
+- openconstruct-kernel | (no description) | 2026-05-30T02:07:34Z
+- concrete-token-demo | (no description) | 2026-05-30T02:07:33Z
+- AI-Writings | A collection of writings by my AI | 2026-05-30T02:33:37Z
+- openconstruct-docs | Agent-centric documentation for OpenConstruct | 2026-05-30T02:27:13Z

@@ -1,0 +1,20 @@
+f8405fe test: compaction + jepa_memory + adaptation + security_hardening (78 tests, 3 source fixes)
+9e05a58 test: config + metrics + cli + search_api (75 tests, 2 source fixes)
+9c14857 test: metronome_mesh_bridge + worldmodel_bridge + penrose + drift_detect (82 tests, 1 source fix)
+77d97c1 test: cuda_bridge + codebase_state + generation_memory + fiber (64 tests)
+a881370 test: beta_test_personas + sse_stream_dashboard (45 tests)
+e9bcca0 test: decision_journal + holonomy_consensus + holonomy_bridge + federation (93 tests)
+9f133d3 test: thermal + plato_room_sync + breeder (78 tests)
+687df22 fix: arrow telemetry schema + parquet bridge row counting
+8a47968 feat: commit-caster + meta-learning breeder + plato room sync
+748b964 Merge: keep ecosystem README with agent+human docs
+01c3790 Rate limiter refinements
+32be312 Add 4 infrastructure modules: compression, encryption, search, secrets
+91bfc2f ci: fix trufflehog single-commit failure — CCC autonomous
+36e0a7e 5 more modules: backup manager, canary deployer, A/B tester, ledger manager, endpoint registry
+4368849 5 more modules: notification system, schema validator, resource manager, data pipeline, adaptive breeder
+36b7364 5 more modules: health check system, feature flags, tracing, ensemble breeder, metrics aggregator
+10a7ba5 5 more modules: circuit breaker, config manager, job scheduler, event bus, distributed cache
+159dedf 5 more modules: audit trail, distributed lock, benchmark suite, A2A plugin manager, cross-repo sync
+3cb4e8e 5 more modules: telemetry exporter, knowledge sync, auto doc pipeline, model registry, differential breeder
+36a61b4 5 new modules: worldmodel projector, ecosystem scanner, commit caster, HAV bridge, doc generator
