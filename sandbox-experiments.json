@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "repo": "GyulyVGC/sniffnet",
+    "stars": 37860,
+    "top_crate": "cathedral-probe",
+    "suggestions": [
+      "cathedral-probe: Spectral topology analysis for network graphs — connectivity, bottlenecks, community detection",
+      "crackle-runtime: Pattern detection in network traffic metrics — detect anomalies, distribution shifts",
+      "conservation-checker: Track bandwidth budgets — drift rate, trend detection, changepoint detection",
+      "Deeper: lau-sheaf-spectrum (sheaf Laplacian for heterogeneous data), wave-conservation (spectral wave propagation)"
+    ]
+  },
+  {
+    "id": 2,
+    "repo": "rtk-ai/rtk",
+    "stars": 57447,
+    "top_crate": "conservation-checker",
+    "suggestions": [
+      "conservation-checker: Token budget tracking — drift rate, cost forecasting, changepoint detection when model changes",
+      "crackle-runtime: Usage pattern detection — detect shifts in token consumption patterns across users",
+      "Deeper: lau-chaos-theory (detect chaotic token usage), lau-ergodic-theory (long-run usage behavior)"
+    ]
+  },
+  {
+    "id": 3,
+    "repo": "fujiapple852/trippy",
+    "stars": 6900,
+    "top_crate": "cathedral-probe",
+    "suggestions": [
+      "cathedral-probe: Analyze traceroute path topology — bottleneck hops, effective resistance, spectral clustering of routes",
+      "crackle-runtime: Detect latency pattern shifts — correlation between routes, distribution changes",
+      "conservation-checker: Track network budgets — TTL conservation, hop count trends",
+      "Deeper: spectral-mechanics (routes as Hamiltonian systems), zhc-consensus (geometric route consensus)"
+    ]
+  },
+  {
+    "id": 4,
+    "repo": "ArroyoSystems/arroyo",
+    "stars": 4930,
+    "top_crate": "crackle-runtime",
+    "suggestions": [
+      "crackle-runtime: Stream processing pattern detection — detect distribution shifts in real-time data",
+      "cathedral-probe: Pipeline topology analysis — bottleneck detection in data flow graphs",
+      "conservation-checker: Resource budget tracking for streaming pipelines",
+      "Deeper: lau-sheaf-spectrum (sheaf Laplacian for multi-modal streams), lau-topological-data-analysis"
+    ]
+  },
+  {
+    "id": 5,
+    "repo": "godot-rust/gdext",
+    "stars": 4842,
+    "top_crate": "negative-space-testing",
+    "suggestions": [
+      "negative-space-testing: Test game physics invariants — forbid impossible states, verify temporal properties",
+      "cathedral-probe: Scene graph topology analysis — find disconnected subgraphs, optimize culling",
+      "Deeper: snapkit-v2 (Eisenstein hex snapping for grid games), lau-fibonacci-growth (growth patterns), flux-algebra (music in games)"
+    ]
+  }
+]
