@@ -366,6 +366,87 @@ a workstation in another room, a friend's server across the ocean.
 The backbone doesn't care. It asks a question, gets an answer.
 The brain materializes on demand and sleeps when done.
 
+## Real Deployment: A Commercial Fishing Boat
+
+This isn't a metaphor. This is the actual spec.
+
+```
+⭐ STARLINK ──────────────── THE BRAIN (cloud)
+│   Paid APIs, Oracle Cloud, AWS, SSH, HTTP
+│   Only used when internet is available
+│   Everything works WITHOUT it
+│
+├── 🖥️ JETSON #1 (wheelhouse) ── NAVIGATION UI
+│   ├── Charts + camera overlay (A2UI dynamic)
+│   ├── STT/TTS chatbot interface
+│   ├── Fallback: OpenCPN on Raspberry Pi display
+│   ├── Fallback: Standard TimeZero on workstation
+│   └── Fallback: Paper charts + compass
+│
+├── 🖥️ JETSON #2 ── ADVANCED AUTOPILOT
+│   ├── Full perception + model/training
+│   ├── Learns the ESP32 controller's controls
+│   ├── Coordinates ESP32s as steering compass from GPS
+│   ├── Fallback: magnetic compass
+│   └── Basic chatbot that learns the boat
+│
+├── 🍓 RASPBERRY PI ── BACKBONE
+│   ├── Routes signals between Jetsons and ESP32s
+│   ├── Runs CoCapn agent locally (no internet needed)
+│   ├── OpenCPN display as fallback for navigation UI
+│   └── Works offline, syncs when Starlink returns
+│
+├── 🔌 ESP32 #1 (wheelhouse autopilot)
+│   ├── Small LED screen + buttons
+│   ├── Onboarding + parameter tuning
+│   ├── Basic ComNav 1001-type controls & algorithms
+│   └── FULLY FUNCTIONAL STANDALONE
+│
+├── 🔌 ESP32 #2 (back deck autopilot)
+│   ├── Rugged, weatherproof, simple
+│   ├── Jog lever control (like ComNav 1001 inside)
+│   └── NO SCREEN — just buttons and relays
+│
+├── 🔌 ESP32 #3 (outside remote)
+│   ├── Waterproof handheld remote
+│   ├── Fully customizable and programmable
+│   └── HARDWARE FALLBACK — always works
+│
+└── 🔌 ESP32s (per-device controllers)
+    ├── Each connected to one device/actuator
+    ├── Wireless or wired to the backbone
+    ├── Run local control loops
+    └── ESSENTIAL — AI never replaces these
+```
+
+### The Principle: AI Enhances, Not Replaces
+
+```
+  LAYER 0 (always works):    Hard-coded ESP32 controls + magnetic compass
+  LAYER 1 (Pi offline):      OpenCPN + basic autopilot + local CoCapn
+  LAYER 2 (Jetson local):    Advanced autopilot + perception + chatbot
+  LAYER 3 (Starlink up):     Cloud APIs + training + full AI
+  
+  Each layer ENHANCES the one below.
+  No layer is ESSENTIAL.
+  The boat works at Layer 0 if everything else dies.
+```
+
+The ESP32 autopilot controller IS the autopilot. The Jetson
+enhances it with perception and learning. The cloud enhances
+THAT with training and heavy compute. But if Starlink goes down,
+if the Jetson crashes, if the Pi dies — the ESP32 still steers
+the boat. The hard-coded fallback is always there.
+
+**Same with internet on the boat.** Starlink connects to the cloud
+when available. Everything works without it. The cloud makes things
+*better* — better models, better predictions, more training data —
+but the boat doesn't depend on it.
+
+This is not "AI-first" design. It's **AI-optional** design.
+Every system must work without AI. AI makes it better,
+safer, smarter — but never essential.
+
 The same abstractions — cathedral-probe for topology, conservation-checker
 for resources, crackle-runtime for patterns — operate at every level:
 - Inside a single function (ZeroClaw)
