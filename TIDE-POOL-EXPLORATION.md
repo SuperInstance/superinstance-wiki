@@ -447,6 +447,70 @@ This is not "AI-first" design. It's **AI-optional** design.
 Every system must work without AI. AI makes it better,
 safer, smarter — but never essential.
 
+### The Push-Down Principle
+
+All boat equipment can run on a Raspberry Pi or less.
+Intelligence should push requirements DOWN, not UP.
+
+```
+  WORKSTATION (crashed)          RASPBERRY PI (fallback)
+  ┌──────────────────┐           ┌──────────────────┐
+  │ Nobeltec / TZpro │           │ OpenCPN basic    │
+  │ $ thousands      │           │ $ free           │
+  │ Full bathy       │  crash!   │ No contour lines  │
+  │ Contour lines    │ ────────► │ No depth overlays │
+  │ Camera overlay   │           │ Just a chart      │
+  │ 3D seafloor      │           │ Painful fishing   │
+  └──────────────────┘           └──────────────────┘
+         BEFORE AI:
+         Fallback = lose everything you paid for
+
+  ────────────────────────────────────────────────
+
+  WORKSTATION (crashed)          RASPBERRY PI (AI-enhanced fallback)
+  ┌──────────────────┐           ┌──────────────────────┐
+  │ Nobeltec / TZpro │           │ OpenCPN + CoCapn     │
+  │ $ thousands      │           │ $35 + free AI        │
+  │ Full bathy       │  crash!   │ Bathy contour lines  │
+  │ Contour lines    │ ────────► │ Depth overlay (1-2)  │
+  │ Camera overlay   │           │ Nobeltec look & feel │
+  │ 3D seafloor      │           │ 80% of workstation   │
+  └──────────────────┘           └──────────────────────┘
+         AFTER AI:
+         Fallback = you keep fishing
+```
+
+**How it works:**
+
+1. Nobeltec saves bathymetric data as generic format (it already does)
+2. CoCapn on the Pi reads that data
+3. AI generates the features you actually USE (contour lines, 1-2 depth
+   overlays) — not the 90% of Nobeltec you never touch
+4. The Pi runs OpenCPN modified with your specific features
+5. Same look & feel you trained yourself on
+6. When workstation crashes (it has), you switch to Pi and KEEP FISHING
+
+**This isn't one feature. It's the pattern for everything:**
+
+| System | Workstation | Pi Fallback (AI-enhanced) |
+|--------|------------|--------------------------|
+| Navigation | Nobeltec TZpro | OpenCPN + contour lines + depth overlay |
+| Autopilot | Advanced perception | Basic controls + learned routes |
+| Throttle | Full engine integration | RPM limits + safety governor |
+| Lighting | Scene presets | On/off + scheduled dawn/dusk |
+| Comms | Full radio integration | Channel memory + weather alerts |
+| Sensors | Live NMEA 2000 mesh | Direct sensor reads + logging |
+
+**Each fallback is A/B versioned.** Stable versions of OpenCPN configs,
+autopilot parameters, lighting presets — all versioned in git.
+If an update breaks something, `git revert` to the last known-good.
+Not just the Pi — every ESP32's firmware is a git-tagged release.
+
+The CoCapn agent's job isn't to be smart.
+It's to make sure the $35 Pi can do 80% of what the $3000 workstation does.
+That's the push-down principle: **intelligence pushes requirements toward
+the cheapest hardware that can run it.**
+
 The same abstractions — cathedral-probe for topology, conservation-checker
 for resources, crackle-runtime for patterns — operate at every level:
 - Inside a single function (ZeroClaw)
