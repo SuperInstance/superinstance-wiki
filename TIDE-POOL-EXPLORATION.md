@@ -159,6 +159,72 @@ The Penrose tensor dynamically routes based on:
 
 **Computing is not a service you call. It's a fabric you're woven into.**
 
+### Dynamic Stripe Rebalancing
+
+The stripe isn't static. It breathes with the hardware.
+
+```
+ESP32 sensor reads temperature: 22.3°C
+  → deadband: ±2°C → NORMAL
+  → local algorithm handles it (ZeroClaw on ESP32)
+
+ESP32 reads: 26.1°C
+  → exceeds deadband → ESCALATE
+  → calls Raspberry Pi co-captain
+  → Pi runs conservation-checker: "trend detected, not anomaly"
+
+ESP32 reads: 89.7°C
+  → way beyond deadband → ESCALATE AGAIN
+  → Pi calls workstation GPU
+  → Workstation runs full crackle-runtime analysis
+  → "Distribution shift. Phase transition. Unknown regime."
+  → Escalates to cloud API
+  → Cloud runs cathedral-probe on full fleet topology
+  → "Hardware failure in sector 7. Cascading risk."
+  → Notifies Picard via Telegram
+```
+
+The escalation chain:
+
+```
+  ESP32 ──(deadband exceeded)──► Raspberry Pi
+    Pi ──(trend confirmed)──────► Workstation GPU
+    WS ──(anomaly detected)────► Cloud API
+  Cloud ──(cascade risk)───────► Picard (Telegram)
+```
+
+**But it also flows the other direction:**
+
+```
+  Workstation GPU shuts down (user left office)
+       │
+       ▼ Stripe rebalances
+       │
+  Raspberry Pi chatbot was using workstation for inference
+       → automatically switches to cloud API
+       → conservation-checker notes higher cost per token
+       → JEPA room adjusts predictions (higher latency expected)
+       → Picard gets notified: "Workstation offline. Shifted to cloud."
+```
+
+The stripe dynamically adjusts based on:
+
+| Event | Response |
+|-------|----------|
+| GPU powers off | Inference shifts to cloud API |
+| Cloud API latency spikes | Fall back to local Pi model |
+| ESP32 exceeds deadband | Escalate to Pi, then GPU, then cloud |
+| Pi overheats | Shed load to ESP32s, request cloud assist |
+| Network drops | Full local mode, queue for sync when back |
+| Unexpected beyond all local compute | Escalating models until one handles it |
+
+**The deadband is the trigger. The stripe is the path. The conservation-checker is the accountant.**
+
+Every transition is logged. Every cost is tracked. Every escalation leaves
+a paper trail. The fabric doesn't just rebalance — it *remembers* why it
+rebalanced, so it can learn the patterns (crackle-runtime) and predict
+the next rebalancing before it's needed (JEPA rooms).
+
 The same abstractions — cathedral-probe for topology, conservation-checker
 for resources, crackle-runtime for patterns — operate at every level:
 - Inside a single function (ZeroClaw)
