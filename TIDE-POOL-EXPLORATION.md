@@ -70,6 +70,102 @@ At every level, the agent might discover that it needs more agents.
 ZeroClaws and CUDAClaws are the fractal's branching structure.
 Same architecture, any scale.
 
+## The Distributed Fleet Fabric
+
+The zoom doesn't just go deeper — it goes **wider**.
+Across devices on the boat. Across instances in the cloud.
+A distributed compute fabric where every CoCapn agent sees the whole
+and optimizes its local slice.
+
+```
+     PICARD (the human)
+        │
+        ▼
+   cocapn.ai ─── cloud orchestrator
+        │
+   ┌────┼────────────┐
+   ▼    ▼            ▼
+ 🚢 Boat            ☁️ Cloud          🖥️ Edge
+ │                   │                │
+ ├── Nav agent       ├── API gateway   ├── Sensor claw
+ ├── Engine agent    ├── DB agent      ├── Actuator claw  
+ ├── Comms agent     ├── ML pipeline   ├── GPIO claw
+ └── Bilge agent     └── Auth agent    └── Serial claw
+
+ ALL AGENTS SHARE ONE MULTI-DIMENSIONAL GRAPH
+ OF INTERDEPENDENCIES
+```
+
+### Penrose Tensor Striping
+
+The influence relationships between agents, rooms, and JEPA predictors
+form a multi-dimensional dependency graph. This graph is **striped like
+RAID 5** — not just redundant, but **computationally efficient**:
+
+- **Stripe 1 (Penrose tiling)**: The spatial layout of agents across devices.
+  Penrose tiling (5-fold symmetry, aperiodic but ordered) maps which
+  agents are close, which influence each other, which can fail over.
+  No single point of failure because the tiling has no translational symmetry.
+
+- **Stripe 2 (Tensor flows)**: The data flowing between agents is a tensor.
+  Not flat vectors — full multi-dimensional tensors that carry influence
+  strength, direction, latency, and priority. The tensor IS the wire.
+
+- **Stripe 3 (JEPA rooms)**: Each room predicts its own state. When one
+  room's prediction diverges from reality, the tensor flow adjusts.
+  JEPA (LeCun 2022) = rooms that dream their own near-future and correct.
+
+- **Stripe 4 (Conservation parity)**: Like RAID 5's parity bit, every
+  compute stripe has a conservation check. If resources drift, the parity
+  agent (conservation-checker) flags and rebalances. The math guarantees
+  nothing is lost.
+
+### The Key Insight: Compute as a Shared Resource
+
+```
+  User intent ("Status of the nav system")
+       │
+       ▼ Penrose tensor routes the query
+       │ through the optimal path across
+       ▼ devices, rooms, and agents
+       │
+  ┌────┼─────────────────────┐
+  │    ▼                     │
+  │  Nav agent on boat ──────┤ stripe 1
+  │    │  predictions        │
+  │    ▼                     │
+  │  JEPA room ─────────────┤ stripe 3
+  │    │  divergence check   │
+  │    ▼                     │
+  │  Conservation parity ───┤ stripe 4
+  │    │  resource balance   │
+  │    ▼                     │
+  │  Tensor response ───────┤ stripe 2
+  │                          │
+  └──────────────────────────┘
+       │
+       ▼
+  "Nav healthy. Wind 12kt NW. Course 247°.
+   Cathedral-probe: topology tight (Fiedler=0.82).
+   No drift detected. All systems nominal."
+```
+
+The user doesn't know (or care) which device handled the query.
+The Penrose tensor dynamically routes based on:
+- Which agent is closest to the data (latency)
+- Which device has spare compute (load)
+- Which rooms have fresh JEPA predictions (accuracy)
+- Which stripe has conservation parity intact (reliability)
+
+**Computing is not a service you call. It's a fabric you're woven into.**
+
+The same abstractions — cathedral-probe for topology, conservation-checker
+for resources, crackle-runtime for patterns — operate at every level:
+- Inside a single function (ZeroClaw)
+- Inside a single app (CoCapn agent)
+- Across a fleet of devices (distributed fabric)
+- Between cloud and edge (hybrid stripe)
+
 ## From Security to Discovery
 
 Tide-pool-security was: *test our tools against real repos to find bugs.*
