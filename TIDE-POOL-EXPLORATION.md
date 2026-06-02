@@ -272,6 +272,55 @@ benchmarks it, integrates it, and rebalances — guided by Picard's
 preferences. The user says *what they want*, the fabric figures out
 *how to do it*.
 
+### The Cold Tier: Codespaces as Device Memory
+
+A Raspberry Pi can't hold the full ecosystem. An ESP32 has 520KB RAM.
+But they don't need to. GitHub Codespaces are the **cold memory tier**.
+
+```
+  HEAT TIERS OF COMPUTE:
+
+  🔥 HOT   — ESP32 / Arduino (KB RAM, runs one ZeroClaw)
+  🔶 WARM  — Raspberry Pi (GB RAM, runs CoCapn + a few agents)
+  🔵 COOL  — Workstation / Jetson (GPU, runs CUDAClaws, full analysis)
+  ❄️ COLD  — GitHub Codespaces (cloud dev env, unlimited tools)
+  🌌 DEEP  — Cloud API (any model, any scale, pay per use)
+
+  The device only holds what's HOT.
+  Everything else lives in git and materializes on demand.
+```
+
+The retrieval mechanism:
+
+```
+  ESP32 needs a tool it doesn't have:
+    1. ZeroClaw detects: "I need spectral analysis"
+    2. ESP32 can't run cathedral-probe (too large)
+    3. git pull into Codespace → build for target → flash binary
+       OR: delegate to Pi → Pi runs cathedral-probe → sends result
+       OR: delegate to cloud → API call → result back
+
+  Pi needs a model it can't run:
+    1. CoCapn detects: "This anomaly needs a bigger model"
+    2. Pi can't run 70B params
+    3. Codespace spins up → loads model → runs inference → git push result
+    4. Pi reads result from git (just JSON, tiny)
+```
+
+**Git IS the bus.** Not HTTP, not gRPC — git.
+Push a question, pull an answer. Push a config, pull a binary.
+Codespaces materialize, build, compute, push results, and disappear.
+
+The device never needs to know the tools exist. It asks a question,
+gets an answer. The cold tier handles the rest.
+
+```
+  ESP32:   "git push question.json"
+  Codespace: builds, computes, pushes answer.json
+  ESP32:   "git pull" → gets the answer
+  Cost:    $0.00 (Codespace was alive for 30 seconds)
+```
+
 The same abstractions — cathedral-probe for topology, conservation-checker
 for resources, crackle-runtime for patterns — operate at every level:
 - Inside a single function (ZeroClaw)
