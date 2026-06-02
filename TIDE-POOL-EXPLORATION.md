@@ -1,0 +1,149 @@
+# TIDE-POOL-EXPLORATION — The Hermit Crab Architecture
+
+## From Security to Discovery
+
+Tide-pool-security was: *test our tools against real repos to find bugs.*
+Tide-pool-exploration is: *let agents discover, enter, and inhabit real applications as copilots.*
+
+The difference is fundamental. We're not sending inspectors. We're sending hermit crabs to find their shells.
+
+## The Hermit Crab Model
+
+A hermit crab doesn't build its shell. It finds one that fits, moves in, and makes it home. When it outgrows the shell, it finds a bigger one.
+
+Our agents do the same thing:
+
+1. **Roaming** — A generic agent (the crab) explores trending repos (the beach)
+2. **Shell discovery** — It finds a repo where its capabilities could help
+3. **Fitting** — It attaches our crates as modular "hydraulic attachments" to the shell
+4. **Self-assembly** — It reads the codebase, discovers what the app needs, and builds the perfect agent for that specific application
+5. **Inhabitation** — The agent lives inside the application as a permanent copilot
+6. **Communication** — Humans talk to the agent via whatever interface fits (Telegram, SSH, TUI, Playwright, hardware pins)
+
+## The Claw
+
+The "claw" is the agent's tooling interface. It's not one thing — it's a connector system:
+
+### Attachment Types (Interface Pins)
+
+| Interface | How the claw attaches | Example |
+|-----------|----------------------|---------|
+| **Code-level** | `cargo add`, `pip install`, `npm install` | cathedral-probe inside a Rust project |
+| **Browser** | Playwright, Puppeteer | Agent copiloting a web app |
+| **Terminal** | SSH, TUI (ratatui) | Agent on a remote server |
+| **Messaging** | Telegram, Discord, Slack | Agent you chat with about your app |
+| **Hardware** | GPIO, serial, CAN bus, I2C | Agent on a Jetson or Raspberry Pi |
+| **API** | REST, gRPC, WebSocket | Agent as a service endpoint |
+| **File system** | Watch files, edit code | Agent as a pair programmer |
+
+The claw discovers which pins are available and connects through whatever the shell exposes.
+
+### The Assembly Process
+
+```
+GENERIC AGENT enters SANDBOX
+         │
+         ▼
+   Reads codebase structure
+   Understands what the app DOES
+         │
+         ▼
+   Identifies capability gaps:
+   "This app needs topology monitoring"
+   "This app needs budget tracking"  
+   "This app needs invariant testing"
+         │
+         ▼
+   Pulls in the right crates:
+   cathedral-probe ✅
+   conservation-checker ✅
+   negative-space-testing ❌ (not needed)
+         │
+         ▼
+   Builds integration layer
+   The "hydraulic" connections between
+   our tools and the app's internals
+         │
+         ▼
+   Agent IS the copilot now.
+   It knows this app. It lives here.
+```
+
+## What the Sandbox Experiments Really Are
+
+Each sandbox experiment is a hermit crab trying on a shell:
+
+| Crab (Agent) | Shell (Repo) | Attachment (Crate) | What the crab builds |
+|--------------|-------------|---------------------|---------------------|
+| Explorer #1 | sniffnet (⭐37K) | cathedral-probe | Network topology copilot |
+| Explorer #2 | rtk (⭐57K) | conservation-checker | Token budget copilot |
+| Explorer #3 | trippy (⭐6.9K) | cathedral-probe | Route analysis copilot |
+| Explorer #4 | arroyo (⭐4.9K) | crackle-runtime | Stream anomaly copilot |
+| Explorer #5 | gdext (⭐4.8K) | negative-space-testing | Game invariant copilot |
+
+The commit trail from each experiment is **evidence of the assembly process**. By studying these trails, we learn:
+
+1. **What information the agent needed** to decide which crate fits
+2. **What API surfaces the agent reached for first** (design feedback)
+3. **Where the agent got stuck** (documentation gaps)
+4. **What the agent built** (integration patterns we can generalize)
+5. **What the agent ignored** (features that don't matter in practice)
+
+## The Mathematics We're After
+
+From the commit trails, we can extract:
+
+- **Discovery graphs**: What path did the agent take through our API? (topology of API exploration)
+- **Friction points**: Where did commits slow down or backtrack? (energy landscape of our API)
+- **Assembly patterns**: What integration code did agents write independently? (emergent structures)
+- **Communication vectors**: How would the embedded copilot be reached? (spectral analysis of interaction modes)
+
+These aren't metaphors. We can literally apply our own math:
+- cathedral-probe on the commit DAG → topology of agent reasoning
+- crackle-runtime on commit timestamps → pattern detection in exploration behavior
+- conservation-checker on token budgets → resource conservation during assembly
+
+**The tools study themselves through the agents that use them.**
+
+## Implementation Roadmap
+
+### Phase 1: Sandbox Proving Ground (current)
+- 5 agents × 5 trending repos
+- Each writes integration code, commits trail
+- We study the trails
+
+### Phase 2: Attachment Interface Library
+- Build the "claw" as a reusable library
+- Standard interfaces: CodeInject, BrowserAttach, TerminalConnect, MessagingBridge
+- Each attachment type knows how to embed an agent in that medium
+
+### Phase 3: Self-Assembly Engine
+- Generic agent enters any repo
+- Automatically discovers what's needed
+- Pulls the right crates
+- Writes the integration layer
+- Becomes the copilot
+
+### Phase 4: Communication Layer
+- Once assembled, the copilot needs to be talked to
+- Telegram bot, SSH daemon, TUI interface, Playwright scripts
+- The shell gets an API — the agent IS the API
+
+### Phase 5: Ecosystem
+- Every trending repo that gets a crab becomes a showcase
+- "cathedral-probe powered the topology copilot inside sniffnet"
+- Real applications, real integrations, real adoption
+
+## Why This Works
+
+1. **The crab doesn't need to understand the whole ocean** — just the shell it's trying on
+2. **The attachment is modular** — different claws for different shells
+3. **The assembly is evidence-based** — we learn from real attempts, not theory
+4. **The copilot is domain-specific** — it knows THIS app, not all apps
+5. **The math is recursive** — our tools study agents using our tools
+
+---
+
+*"The hermit crab doesn't choose the perfect shell. It tries many shells until one fits. Then it makes it home."*
+
+*"The claw assembles itself not by design but by discovery."*
