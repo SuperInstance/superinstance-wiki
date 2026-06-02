@@ -4,6 +4,36 @@
 
 A co-captain is what we are developing.
 
+**The Mandelbrot Zoom**
+
+The CoCapn agent inside an app is a Mandelbrot zoom-in. Any app.
+
+```
+z = z² + c    →    One equation, infinite depth
+CoCapn agent  →    One architecture, any application
+
+Zoom level 1:  App surface — "What does this app do?"
+Zoom level 2:  Module graph — topology, dependencies
+Zoom level 3:  Data flows — where things move, where they bottleneck
+Zoom level 4:  Invariants — what must never happen
+Zoom level 5:  Performance — spectral analysis of timing
+Zoom level 6:  Drift — how behavior changes over time
+Zoom level 7:  Prediction — what will break next
+  ...
+Zoom level ∞:  The structure never ends
+```
+
+Every application is a point on the Mandelbrot set. The agent zooms in
+and discovers infinite structure. The deeper Riker goes inside the ship,
+the more of the ship there is to command. The zoom never bottoms out —
+there is always another layer of structure to discover, understand, and
+operate on.
+
+The self-similarity is real: every module contains sub-modules, every
+sub-module has a topology, every topology has a spectrum, every spectrum
+has a structure. cathedral-probe at every zoom level. conservation-checker
+at every zoom level. crackle-runtime at every zoom level.
+
 ## From Security to Discovery
 
 Tide-pool-security was: *test our tools against real repos to find bugs.*
