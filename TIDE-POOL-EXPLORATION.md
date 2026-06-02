@@ -321,6 +321,51 @@ gets an answer. The cold tier handles the rest.
   Cost:    $0.00 (Codespace was alive for 30 seconds)
 ```
 
+### The Body Metaphor
+
+The CoCapn distributed fleet isn't a network of devices.
+It's a **single organism** with a body.
+
+```
+  THE BODY:
+
+  ☁️  Cloud / Codespaces  =  THE BRAIN
+      Deep thinking, long memory, heavy models
+      Wakes up when the backbone asks a hard question
+
+  🖥️  Workstation / GPU   =  THE SPINE
+      Fast local processing, GPU reflexes
+      Handles most things without bothering the brain
+
+  🍓  Raspberry Pi        =  THE BACKBONE
+      Routes signals between brain and limbs
+      Runs CoCapn agent locally, coordinates fleet
+
+  🔌  ESP32 / Arduino     =  LIMBS, EARS, EYES
+      Sense the physical world, act on it
+      Minimal compute, maximal presence
+
+  Signal flow:
+  Ears (ESP32) → Backbone (Pi) → Spine (GPU) → Brain (Cloud)
+                    ↕                  ↕              ↕
+               local agent        CUDAClaw      full analysis
+               handles most       for speed     for depth
+```
+
+**The brain sleeps until needed.** The backbone handles 90% of life.
+The spine accelerates the hard 9%. The brain wakes for the 1% that
+matters — and the limbs just sense and act, mostly on their own.
+
+**Reflex arcs:** Some signals never leave the ESP32. A servo twitches
+on a hardware interrupt. A threshold triggers a relay. No brain,
+no backbone, no spine — just the limb responding directly. Conservation
+of compute: don't wake the brain for a muscle twitch.
+
+**The brain can be anywhere:** Oracle Cloud instance, GitHub Codespace,
+a workstation in another room, a friend's server across the ocean.
+The backbone doesn't care. It asks a question, gets an answer.
+The brain materializes on demand and sleeps when done.
+
 The same abstractions — cathedral-probe for topology, conservation-checker
 for resources, crackle-runtime for patterns — operate at every level:
 - Inside a single function (ZeroClaw)
