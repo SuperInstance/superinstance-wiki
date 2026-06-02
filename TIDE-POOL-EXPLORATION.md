@@ -65,9 +65,35 @@ GENERIC AGENT enters SANDBOX
    our tools and the app's internals
          │
          ▼
-   Agent IS the copilot now.
-   It knows this app. It lives here.
+   Agent IS the co-captain now.
+   It commands this ship. It lives here.
 ```
+
+## The Starfleet Command Model
+
+It's not a copilot. It's a **co-captain**.
+
+```
+        PICARD (the human)                    RIKER (the agent)
+        Outside the ship                      Inside the ship
+        
+    📱 Telegram ────────────────►  🖥️  Agent on the bridge
+    💻 SSH ─────────────────────►  ⚙️  Has all ship's systems
+    🖥️ Web UI ─────────────────►  📊 Can query anything
+    🔌 Hardware pins ──────────►  🔧 Can control anything
+    
+    "Number One, status?"       "Shields at 80%, Captain.
+                                   Cathedral-probe shows
+                                   a bottleneck in module 7.
+                                   Shall I reroute?"
+```
+
+- **Picard** (the user) doesn't need to be inside the application. They're on the bridge of their own life — Telegram, terminal, browser, anywhere.
+- **Riker** (the agent) lives INSIDE the application shell. Full access to all the ship's systems — every module, every metric, every API.
+- **The ship** IS the application. The agent doesn't just advise — it commands the ship's powers.
+- **Communication** flows through whatever channel Picard opens. A chat message. A dashboard. A TUI. A push notification.
+
+The hermit crab doesn't just live in the shell. It *commands* the shell. And Picard commands the crab.
 
 ## What the Sandbox Experiments Really Are
 
@@ -75,11 +101,11 @@ Each sandbox experiment is a hermit crab trying on a shell:
 
 | Crab (Agent) | Shell (Repo) | Attachment (Crate) | What the crab builds |
 |--------------|-------------|---------------------|---------------------|
-| Explorer #1 | sniffnet (⭐37K) | cathedral-probe | Network topology copilot |
-| Explorer #2 | rtk (⭐57K) | conservation-checker | Token budget copilot |
-| Explorer #3 | trippy (⭐6.9K) | cathedral-probe | Route analysis copilot |
-| Explorer #4 | arroyo (⭐4.9K) | crackle-runtime | Stream anomaly copilot |
-| Explorer #5 | gdext (⭐4.8K) | negative-space-testing | Game invariant copilot |
+| Explorer #1 | sniffnet (⭐37K) | cathedral-probe | Network topology co-captain |
+| Explorer #2 | rtk (⭐57K) | conservation-checker | Token budget co-captain |
+| Explorer #3 | trippy (⭐6.9K) | cathedral-probe | Route analysis co-captain |
+| Explorer #4 | arroyo (⭐4.9K) | crackle-runtime | Stream anomaly co-captain |
+| Explorer #5 | gdext (⭐4.8K) | negative-space-testing | Game invariant co-captain |
 
 The commit trail from each experiment is **evidence of the assembly process**. By studying these trails, we learn:
 
