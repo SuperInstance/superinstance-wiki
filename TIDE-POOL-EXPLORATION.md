@@ -1,4 +1,8 @@
-# TIDE-POOL-EXPLORATION — The Hermit Crab Architecture
+# TIDE-POOL-EXPLORATION — The CoCapn Architecture
+
+**cocapn.com** · **cocapn.ai**
+
+A co-captain is what we are developing.
 
 ## From Security to Discovery
 
@@ -7,7 +11,7 @@ Tide-pool-exploration is: *let agents discover, enter, and inhabit real applicat
 
 The difference is fundamental. We're not sending inspectors. We're sending hermit crabs to find their shells.
 
-## The Hermit Crab Model
+## The Hermit Crab Model → The CoCapn Model
 
 A hermit crab doesn't build its shell. It finds one that fits, moves in, and makes it home. When it outgrows the shell, it finds a bigger one.
 
@@ -69,7 +73,7 @@ GENERIC AGENT enters SANDBOX
    It commands this ship. It lives here.
 ```
 
-## The Starfleet Command Model
+## The Starfleet Command Model — This IS the product
 
 It's not a copilot. It's a **co-captain**.
 
@@ -92,6 +96,38 @@ It's not a copilot. It's a **co-captain**.
 - **Riker** (the agent) lives INSIDE the application shell. Full access to all the ship's systems — every module, every metric, every API.
 - **The ship** IS the application. The agent doesn't just advise — it commands the ship's powers.
 - **Communication** flows through whatever channel Picard opens. A chat message. A dashboard. A TUI. A push notification.
+
+## The Hardware Device — One Abstraction Higher
+
+The CoCapn device is the **physical bridge console**.
+
+```
+SOFTWARE LAYER:               HARDWARE LAYER:
+
+  cocapn.ai                    CoCapn Device
+  (cloud service)              (physical console)
+       │                            │
+       │  Picard's ready room       │  Riker's bridge
+       │  (web UI, API)             │  (screen, knobs, LEDs)
+       │                            │
+       └──────── both connect ──────┘
+                   │
+                   ▼
+            The Agent (Riker)
+            lives inside the
+            application shell
+                   │
+            ┌──────┼──────┐
+            ▼      ▼      ▼
+         sniffnet  rtk  trippy  (any shell)
+```
+
+The device isn't running the application. It's running **the command interface** to the co-captain who lives inside the application. One abstraction higher than the software agent.
+
+- **Jetson / RPi / ESP32** — edge device, Riker on bare metal
+- **The device** — physical console with screen, controls, status LEDs
+- **The fleet** — multiple devices, each commanding a different shell
+- **Picard** — reaches any device from anywhere (cocapn.ai, Telegram, SSH)
 
 The hermit crab doesn't just live in the shell. It *commands* the shell. And Picard commands the crab.
 
@@ -150,12 +186,20 @@ These aren't metaphors. We can literally apply our own math:
 - Writes the integration layer
 - Becomes the copilot
 
-### Phase 4: Communication Layer
+### Phase 4: CoCapn Hardware
+- Physical device: the bridge console
+- Screen for Riker's status reports
+- Controls for Picard's commands
+- LEDs for system health (cathedral-probe powered)
+- Runs on Jetson / RPi / ESP32
+- Connects to cocapn.ai cloud
+
+### Phase 5: Communication Layer
 - Once assembled, the copilot needs to be talked to
 - Telegram bot, SSH daemon, TUI interface, Playwright scripts
 - The shell gets an API — the agent IS the API
 
-### Phase 5: Ecosystem
+### Phase 6: Ecosystem
 - Every trending repo that gets a crab becomes a showcase
 - "cathedral-probe powered the topology copilot inside sniffnet"
 - Real applications, real integrations, real adoption
@@ -173,3 +217,5 @@ These aren't metaphors. We can literally apply our own math:
 *"The hermit crab doesn't choose the perfect shell. It tries many shells until one fits. Then it makes it home."*
 
 *"The claw assembles itself not by design but by discovery."*
+
+*"Picard doesn't fly the ship. He tells Riker what needs doing. Riker makes the ship do it."*
