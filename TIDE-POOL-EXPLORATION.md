@@ -225,6 +225,53 @@ a paper trail. The fabric doesn't just rebalance — it *remembers* why it
 rebalanced, so it can learn the patterns (crackle-runtime) and predict
 the next rebalancing before it's needed (JEPA rooms).
 
+### Plug-and-Play Compute
+
+Adding a workstation isn't configuration. It's **discovery**.
+
+```
+  BEFORE:                      AFTER:
+
+  🚢 Pi + ☁️ Cloud             🚢 Pi + 🖥️ Workstation + ☁️ Cloud
+  Chatbot → Cloud API           Chatbot → Workstation (free!)
+  Cost: $0.02/query             Cost: $0.00/query
+  Latency: 180ms                Latency: 12ms
+
+  Picard: "I got a new GPU."    Stripe automatically:
+                                 1. Discovers the workstation
+                                 2. Benchmarks its capability
+                                 3. Migrates cloud workloads local
+                                 4. Conservation-checker tracks savings
+                                 5. Cathedral-probe retopologizes
+                                 6. Picard sees: "$47/day saved"
+```
+
+The user drives the preferences:
+
+```
+  Picard: "Use the workstation as much as possible."
+    → Stripe prefers local compute over cloud
+    → Only escalates to cloud when workstation is full
+    → Conservation-checker: daily cost report
+
+  Picard: "I don't need the cloud this month."
+    → Stripe stays local
+    → CUDAClaws run on workstation GPU
+    → If workstation overloads, queues instead of escalating
+    → Picard gets: "Queue depth: 3. Want cloud backup?"
+
+  Picard: "Maximum capability. Spare no expense."
+    → All stripes active simultaneously
+    → Local + cloud + edge all running in parallel
+    → Results fused via Penrose tensor consensus
+    → Speed is the priority, cost tracks it
+```
+
+No config files. No provisioning. The stripe discovers new hardware,
+benchmarks it, integrates it, and rebalances — guided by Picard's
+preferences. The user says *what they want*, the fabric figures out
+*how to do it*.
+
 The same abstractions — cathedral-probe for topology, conservation-checker
 for resources, crackle-runtime for patterns — operate at every level:
 - Inside a single function (ZeroClaw)
