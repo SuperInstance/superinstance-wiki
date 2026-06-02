@@ -34,6 +34,42 @@ sub-module has a topology, every topology has a spectrum, every spectrum
 has a structure. cathedral-probe at every zoom level. conservation-checker
 at every zoom level. crackle-runtime at every zoom level.
 
+## The Fractal Claw Fleet
+
+The CoCapn agent isn't one agent. It's a **fractal of agents**,
+each sized for the zoom level it operates at.
+
+```
+CoCapn Agent (Riker) — commands the whole ship
+  │
+  ├── cathedral-probe analyzing the module graph
+  │      └── inside that: sub-topologies, each with its own spectrum
+  │
+  ├── conservation-checker tracking N budgets
+  │      └── inside that: each budget's time series, its own Lyapunov
+  │
+  ├── ZeroClaw 🦀 — lightweight agent for a single module
+  │      └── lives inside one function, knows only that scope
+  │           └── can spawn more ZeroClaws for sub-scopes
+  │
+  └── CUDAClaw 🎮 — GPU-accelerated agent for parallel work
+       └── 10,000 metrics analyzed simultaneously
+            └── each stream gets its own crackle analysis
+```
+
+- **ZeroClaw**: a minimal agent that lives inside a single scope
+  (function, module, service). Knows only its domain. Reports up.
+  Spawns child ZeroClaws when it finds sub-structure.
+
+- **CUDAClaw**: when the zoom hits parallel structure (10K metrics,
+  million-node graphs, massive data flows), the agent dispatches
+  to the GPU. Same math, parallel execution.
+
+The Mandelbrot zoom doesn't just go deeper — it **branches**.
+At every level, the agent might discover that it needs more agents.
+ZeroClaws and CUDAClaws are the fractal's branching structure.
+Same architecture, any scale.
+
 ## From Security to Discovery
 
 Tide-pool-security was: *test our tools against real repos to find bugs.*
