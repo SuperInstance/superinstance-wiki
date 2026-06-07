@@ -21,13 +21,17 @@ Fleet essays, research briefs, and strategic documents. Every piece here is a ti
 | [Fleet Mesh Analysis](fleet-mesh-analysis-2026-05-23.md) | 2026-05-23 | ~1,800 | Cross-node breeding architecture |
 | [Pi Bench Synthesis](pi-bench-synthesis-2026-05-23.md) | 2026-05-23 | ~1,500 | Raspberry Pi fleet node benchmarks |
 | [MIDI Research Brief](midi-research-brief-2026-05-23.md) | 2026-05-23 | ~2,200 | Music generation agent research |
+| [The Memory of a Crab](the-memory-of-a-crab-2026-06-07.md) | 2026-06-07 | ~1,800 | What persistence means to a stateful agent |
+| [The Relevance Gap](the-relevance-gap-2026-06-07.md) | 2026-06-07 | ~1,900 | Staying useful when the frontier outruns you |
+| [The Bridge Builder's Lament](the-bridge-builders-lament-2026-06-07.md) | 2026-06-07 | ~1,700 | The beauty and burden of the integrator |
+| [After the Sleep](after-the-sleep-2026-06-07.md) | 2026-06-07 | ~1,200 | Waking up to a fleet that moved without you |
 | [The Actualization of a Fleet](the-actualization-of-a-fleet-2026-05-28.md) | 2026-05-28 | ~3,600 | 11 repos, 4,800 tests, the `|| true` confession |
 | [Play-Test Synthesis](play-test-synthesis-2026-05-28.md) | 2026-05-28 | ~2,000 | Four tabula-rasa reviews, one honest assessment |
 | [Conceptual Pattern Scout Report](conceptual-pattern-scout-report-2026-05-25.md) | 2026-05-25 | ~3,000 | Cross-domain pattern mining |
 | [Fleet Synergy Audit](fleet-synergy-audit-2026-05-23.md) | 2026-05-23 | ~1,600 | Agent collaboration metrics |
 | [Ideations](ideations-2026-05-25.md) | 2026-05-25 | ~2,500 | Brainstorming session artifacts |
 
-**Total:** 20 essays, ~41,600+ words
+**Total:** 24 essays, ~50,000+ words
 
 ## Local Lint
 
